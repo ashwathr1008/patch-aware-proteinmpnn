@@ -16,7 +16,7 @@ Due November 6; target a complete draft November 5 evening. Deliver a working ba
 | Kirti | Expand and validate patches and matched permutations; comparison plot and patch illustration; experiment methods/results |
 | Vani | Bounded motivation/related-work and validation-dataset investigation; evaluation and limitations text, depending on availability |
 
-Each person writes the paragraphs for their own work. The technical sections should be ready for assembly even if Vani's available time is limited.
+Each person writes the paragraphs for their own work. 
 
 ## Current status — November 4
 
