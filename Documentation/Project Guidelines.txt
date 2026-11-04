@@ -1,0 +1,24 @@
+Projects
+Description
+Students will collaborate in groups of 3 to complete a project on Generative AI for Biomedicine. These projects should have some AI and Biomedical applications.
+
+Project Proposal
+You proposal should describe:
+
+What Biomedical problem are you planning to address? -- what are the technical challenges?
+What are the existing state-of-art methods on this problem? Is the source code/model available? 
+Possible directions for going forward. 
+How do you evaluate the performance?
+Who is your team and how are you planning to split the workload between team members?
+A rough timeline/milestones
+What CPU, GPU and storage infrastructure do need for this project? Please estimate the amount of computation time required.  
+Project Report (midterm/final)
+Introduction/Motivation: This essentially lays out the problem definition, motivation, talks about why we need to work on it, the key contributions expected/presented in the work. 
+Related Work/Background: This talks about key papers/works that provide context to your current work. Instead of listing down multiple past works, talk about the ones that minimally differ from your work, and how. 
+Methodology: This section talks about your method, raises research questions and how you are going to address them.
+Experiments: This section can describe your experiments and the results you obtain. For mid-term report, please list preliminary results.
+Analysis/Ablations: Typically, you would have multiple factors involved in your experimental setting. Analysis sections help you probe deeper into the results and help piece out contributions from individual modeling decisions made. 
+(Mid-term report) list a timeline plan for remaining work.
+(Final report) Conclusion/Discussion: This would list the main takeaways from your work, discuss some future ideas (if any) and engage in discussion. 
+Limitations: This section lays out some known limitations of your work. 
+[final report only] Team Member Contributions List out each individual's contributions in this section.

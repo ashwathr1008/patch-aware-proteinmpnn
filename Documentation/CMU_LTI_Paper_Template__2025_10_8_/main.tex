@@ -1,0 +1,95 @@
+\documentclass[11pt, logo, nonumbering]{preprint}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{graphicx}
+%\usepackage{times}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\definecolor{mydarkblue}{rgb}{0,0.08,0.45}
+\usepackage[colorlinks=true,linkcolor=mydarkblue,citecolor=mydarkblue,filecolor=mydarkblue,urlcolor=mydarkblue]{hyperref}
+\usepackage{xspace}
+\usepackage{cleveref}
+
+\usepackage[style=numeric-comp,maxbibnames=3,minnames=1,backend=bibtex, doi=false,eprint=false,url=false]{biblatex}
+% \setlength{\bibsep}{0pt}
+
+\addbibresource{ref.bib}
+
+\input{pre}
+
+
+
+
+% for tableofcontent
+% \usepackage{tocloft}
+% \renewcommand{\contentsname}{\hfill\bfseries\Large Contents\hfill}   
+% \renewcommand{\cftaftertoctitle}{\hfill}
+% \renewcommand{\listtablename}{\hfill\bfseries\Large List of Tables} % no \hfill after "List of Tables"...
+%%% using the command "\renewcommand{\cftlottitlefont}{\hfill\bfseries\Large}" works too...
+% \renewcommand{\cftafterlottitle}{\hfill}
+
+
+% Custom styling (add your own as needed)
+
+
+\newcommand{\method}{LingoLLM\xspace}
+
+
+\begin{document}
+
+\title{\method: Your Paper Title Here} 
+ 
+
+\author{
+\textbf{Author Name}$^{1}$ \quad
+\textbf{Another Author}$^{1}$ \quad
+\textbf{Third Author}$^{1}$ \\
+\textsuperscript{1}Carnegie Mellon University, Language Technologies Institute\\
+\texttt{\{author1, author2, author3\}@cs.cmu.edu} \\
+    \href{https://github.com/your-username/your-repo}{\includegraphics[height=0.4cm]{logo/github.png} \textbf{your-username/your-repo}} ~ ~ ~ \href{https://huggingface.co/datasets/your-username/your-dataset}{\includegraphics[height=0.4cm]{logo/huggingface.png} \textbf{your-username/your-dataset}}
+    % Alternative without logos (comment above and uncomment below to use):
+    % \href{https://github.com/your-username/your-repo}{\textbf{GitHub: your-username/your-repo}} ~ ~ ~ \href{https://huggingface.co/datasets/your-username/your-dataset}{\textbf{HF: your-username/your-dataset}} 
+}
+
+\maketitle
+
+
+\begin{abstract}
+\input{sec/000abstract}
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+\input{sec/010intro}
+
+\section{Related Work}
+\label{sec:related}
+\input{sec/020related}
+
+\section{Proposed Method}
+\label{sec:method}
+\input{sec/030method}
+
+\section{Experiments}
+\label{sec:experiment}
+\input{sec/040experiment}
+
+\section{Analysis}
+\label{sec:analysis}
+\input{sec/050analysis}
+
+\section{Conclusion}
+\label{sec:conclusion}
+\input{sec/060conclusion}
+
+\clearpage
+\printbibliography
+
+\newpage
+\appendix
+\section{Additional Details}
+\label{sec:appendix}
+\input{sec/070appendix}
+
+\end{document}

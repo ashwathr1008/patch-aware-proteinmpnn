@@ -1,0 +1,8 @@
+Strengths
+Composition-matched permutations are a useful way to test sensitivity to residue arrangement, and separate interface/non-interface objectives reflect a real design tradeoff. Starting with reranking is a sensible first test before fine-tuning.
+
+Suggestions for improvement
+- Validate the score against independent aggregation or solubility measurements before using it as a reward. Permuted patches are not established aggregation-positive examples, so without those labels the safer claim is patch compatibility.
+- Test the proposed decoding issue directly. Random-order autoregression still models a joint sequence distribution; compare controlled orders and an order-controlled ProteinMPNN baseline before attributing gains to decoding-order blindness.
+- Split proteins, complexes, and close homologues before generating patches or mutation pairs. This avoids leakage through overlapping patches. Evaluate SKEMPI mutation effects separately from arbitrary patch scores.
+- Include an independent developability endpoint alongside fold/interface checks. TM-score and binder confidence alone cannot show reduced aggregation. Complete the references and distinguish computational success rates from experimental evidence.
