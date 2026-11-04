@@ -1,20 +1,34 @@
-# Controlled patch scoring: first result and frozen expansion
+# Controlled patch scoring: completed pilot
 
-Completed November 4, 2026. We scored the previously constructed ubiquitin pair with frozen vanilla and soluble ProteinMPNN `v_48_020` checkpoints. The original and permuted sequences differ at six positions within the eight-residue patch A:6–13. Backbone geometry, patch membership, amino-acid counts and identities outside the patch remain fixed in the computational input. Both sequences use the same eight explicitly recorded decoding orders, all-residue masks, evaluation mode and zero coordinate noise.
+Frozen vanilla/soluble ProteinMPNN `v_48_020` use identical backbone coordinates, masks and eight verified decoding orders, evaluation mode and zero noise. Positive gaps mean **permuted minus original full-chain mean NLL**, in nats/residue. Arithmetic averaging across orders is not an order-marginalized joint likelihood. Patch-position terms are selected full-chain terms, not isolated patch likelihoods.
 
-The primary score is full-chain mean negative log probability in **nats per residue**, averaged arithmetically across orders. The reported gap is permuted minus original; positive values favor the original assignment. This average is not the negative log of an order-marginalized joint probability. Each pair is scored within each checkpoint; gap magnitudes do not establish comparative checkpoint quality.
+First ubiquitin pair: six changed positions within A:6–13.
 
-| Checkpoint | Original mean NLL | Permuted mean NLL | Mean gap | Original preferred |
+| Checkpoint | Original NLL | Permuted NLL | Gap | Original preferred |
 | --- | ---: | ---: | ---: | ---: |
 | Vanilla | 1.3561 | 1.5739 | +0.2178 | 8/8 orders |
 | Soluble | 1.2531 | 1.4818 | +0.2287 | 8/8 orders |
 
-Observed gaps ranged from +0.2044 to +0.2244 for vanilla and +0.2155 to +0.2402 for soluble. These are ranges across fixed orders, not confidence intervals. [Per-order scores](../../Analysis/paired_first/pair_scores.csv), [pair summaries](../../Analysis/paired_first/pair_summary.csv), [comparison figure](../../Analysis/paired_first/paired_gaps.pdf), and [order-sensitivity figure](../../Analysis/paired_first/order_sensitivity.pdf) preserve the measurements.
+Its 66 forward calls verified actual decoding orders; null/reversed-presentation differences and first-order explicit/rank-derived differences were exactly zero. [First-pair provenance](../../Analysis/paired_first/run_record.json).
 
-All **66 forward calls**, including audits, verified the actual decoding-order tensor used to construct the model's causal mask. Identical-sequence and reversed-presentation audits produced exactly zero differences for both checkpoints under every order. Explicit-order and rank-derived-order calculations also agreed exactly for each checkpoint's first order. Composition and shared-geometry controls tied. The simple hydrophobic-contact descriptor tied at zero for both arrangements across 15 eligible contacts. [Controls](../../Analysis/paired_first/pair_controls.csv) and [provenance/audits](../../Analysis/paired_first/run_record.json) are retained.
+The expansion completed **85 pairs, 17 patches, seven sources and six conservative source groups**: 1,360 paired-order rows, 2,958 audited forward calls, 41.468 seconds. All 112 null/reversed-presentation audits and explicit/rank-derived checks agreed exactly. Independent recomputation from 2,720 per-residue arrays found zero arithmetic discrepancies. Fixed rules retained four fewer patches than requested; eight patches are discontinuous in sequence.
 
-Secondary patch-position NLL-term gaps were +1.8701 for vanilla and +1.9898 for soluble. These are selected terms from full-chain autoregressive scoring, not isolated patch likelihoods; identity changes can also affect later outside-patch terms.
+Both checkpoints favored original assignments in **84/85 order-averaged pairs**.
 
-In plain language, shuffling the same eight amino-acid identities made this sequence less plausible to both existing models across every tested order. This establishes an arrangement-sensitive compatibility response in one example. It does not demonstrate a benefit from a new patch scorer, physical folding failure, improved solubility or reduced aggregation.
+| Source | Split | Pairs | Vanilla gap | Soluble gap | Original: vanilla | Original: soluble |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| 1UBQ:A | Development | 15 | +0.1910 | +0.2046 | 15/15 | 15/15 |
+| 1VII:A | Development | 15 | +0.2224 | +0.2251 | 15/15 | 15/15 |
+| 1CRN:A | Development | 15 | +0.5741 | +0.5463 | 15/15 | 15/15 |
+| 2CI2:I | Development | 15 | +0.2422 | +0.2296 | 15/15 | 15/15 |
+| 1L2Y:A | Diagnostic | 5 | +0.7651 | +0.7357 | 5/5 | 5/5 |
+| 1ENH:A | Diagnostic | 5 | +0.1602 | +0.1770 | 4/5 | 4/5 |
+| 1SHG:A | Diagnostic | 15 | +0.2532 | +0.2400 | 15/15 | 15/15 |
 
-The [frozen expansion](../../Data/compatibility_pairs/metadata/summary.json) contains **85 pairs from 17 patches across seven source proteins and six conservative source groups**. Three diagnostic sources occupy three groups; the within-pilot similarity screen does not establish exclusion from pretraining. Fixed selection/overlap rules yielded four fewer patches than requested, with no threshold relaxation. **Expanded scoring is planned and has not yet been run in this report version.** Its purpose is to assess consistency and failures across proteins; variants and overlapping patches are dependent observations.
+The three diagnostic protein/group rates average **93.3%** equally; pooling gives 24/25 pairs (96%). Neither is an independent-sample inferential estimate. All 85 composition/geometry controls tied; the spatial descriptor changed in 41 pairs: 26 increases, 15 decreases and 44 ties. No descriptor direction is labeled favorable. [Tables](../../Analysis/paired_expanded/protein_summary.csv), [split summaries](../../Analysis/paired_expanded/split_summary.csv), [gap figure](../../Analysis/paired_expanded/paired_gaps.pdf), [descriptor figure](../../Analysis/paired_expanded/spatial_descriptor.pdf), [audits](../../Analysis/paired_expanded/run_record.json).
+
+## Failure/edge case
+
+`1ENH_A_patch_01_perm_005` swaps R/E at PDB A:18–19 (observed indices 16–17). Mean gaps are −0.009217 vanilla and −0.002422 soluble. Preference reverses across orders: original wins 1/8 and 2/8, respectively. Its hydrophobic descriptor ties. [Order values](edge_case_orders.csv), [order-sensitivity figure](../../Analysis/paired_expanded/order_sensitivity.pdf). This is a model-preference exception, not a biological negative. Follow-up should examine more independent proteins and stratify by changed-position count, with order settings frozen before evaluation.
+
+Existing ProteinMPNN detects most rearrangements despite identical ingredient counts. Decoding blindness, added-scorer benefit and folding/aggregation improvement remain unestablished. Input limitations include designed 1L2Y, first NMR conformers, truncated domains and unconstrained disulfides. Original need not mean natural native. Pretraining overlap, dependent variants and tiny diagnostic groups limit generalization.

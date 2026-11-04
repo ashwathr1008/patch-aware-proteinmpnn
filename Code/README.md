@@ -2,7 +2,7 @@
 
 The [baseline runner](baseline/README.md) runs pinned, frozen vanilla and soluble ProteinMPNN checkpoints and validates every output. The November 4 local pilot is complete; see [actual results](../Analysis/README.md).
 
-The [patch starter](patches/README.md) constructs one reproducible, backbone-only, composition-preserving patch permutation example and records its geometry, assignments, residue mapping, and invariant checks. It is a development demonstration; training and evaluation are not implemented.
+The [patch starter](patches/README.md) constructs one reproducible, backbone-only, composition-preserving patch permutation example and records its geometry, assignments, residue mapping, and invariant checks. The expanded compatibility comparison below is now implemented; training a new patch scorer and independent biological-outcome evaluation remain future work.
 
 Keep experiment parameters and dataset manifests separate from implementation. Existing compute/transfer utilities live in `Compute/psc/`.
 

@@ -1,5 +1,7 @@
 # Kirti's mid-report handoff — November 4
 
+**Status update:** this is the original provisional handoff. Ashwath subsequently completed the first controlled comparison and the expanded 85-pair/17-patch pilot across seven sources, including controls, per-protein/group analysis and draft result text. The steps below record the planned workflow, not a fresh assignment. See [current results](../Documentation/Midreport/controlled_scoring_results.md) and [remaining scope](Midreport_vs_Final_Scope.md). Remaining owners will be decided at today's end; independent review, label-dataset feasibility and report assembly are still needed.
+
 Ashwath's setup, frozen-model pilot and first patch example are complete. Your main task is the **controlled patch comparison**, using the existing tools and mappings. There is no trained patch model yet. Aim for a small defensible experiment and your methods/results paragraphs by November 5; reduce the number of proteins before dropping the controls.
 
 ## What is ready
@@ -24,4 +26,4 @@ Ashwath's setup, frozen-model pilot and first patch example are complete. Your m
 
 A versioned input/pair manifest; validated mappings and invariants; exact composition ties; actual spatial and paired ProteinMPNN results on more than one independent protein; a per-protein comparison figure; and report-ready methods/results. If time is tight, reduce pair count and document the limitation. A learned scorer, fine-tuning and folding campaigns are outside the critical path.
 
-No PSC job is required for the existing baseline: six model subprocesses totaled 39.4 seconds locally. Ashwath's separate H100 smoke test checks a compute option and is not your controlled experiment. Coordinate additional submissions with Ashwath and retrieve outputs before the outage.
+No PSC job is required for the current baseline or controlled pilot. Expanded scoring took 41.5 seconds locally. The separate H100 smoke test also completed and all 22 files were retrieved/verified; it is an infrastructure check. Coordinate additional submissions with Ashwath and retrieve outputs before the outage.

@@ -262,7 +262,7 @@
     "metadata/structures.json": "9cff23f997c94ab3df725568e45a95e394ac3342f7ce24c66500c068cb416b85",
     "metadata/environment.json": "d0c4866c0436129fc30ec8822902856667ccc363c85424ae341ab8a677369268"
   },
-  "analysis_script_sha256": "713381eae3ee92e18e994605d2e032812c20a545a55d1471dabbea33706e053c",
+  "analysis_script_sha256": "ac9e52e9d4aec8a10cd522a4f52e106c4f0bd9729d1a4275dc79e67102a99ad8",
   "definitions": {
     "primary_gap": "permuted full-chain mean NLL minus original full-chain mean NLL; positive means original preferred",
     "pair_summary": "Arithmetic average over the same explicit decoding orders for both pair members",
@@ -307,11 +307,11 @@
     "split_summary.csv": "ebf026c3cabb3e488a54abbf9b3785edc65502735e531437a5bd6fd7d0439784",
     "pair_controls.csv": "7f13f098cf3754552f9c1d1c4ca6cbba4486786fc30e0b39cf9f2053835645e2",
     "decoding_orders.json": "83fba73e44695d4a075ceb1d34ec3bc9d378e54555f196b00ced0c987d33384e",
-    "paired_gaps.png": "b51e10cbfe457c57c4bcdc0caa11ef9e32f4581d68d2f1462236e85182ce98a9",
-    "paired_gaps.pdf": "d4d0528e9073c91d4c370cb62a89dd9f5cba4c9d729a23d590d93499e0733ac5",
-    "order_sensitivity.png": "ba427e87fff54ce2e45b4b23ec768a6380a5cb2204eb9d836e55339eb6ed2db2",
-    "order_sensitivity.pdf": "d5473a03e70260388b8974add517e1352cdaa431f7a863d9331d5e370469aa18",
-    "spatial_descriptor.png": "4a2b0897436e49698eb924ca60bde4c141a3e17a80856eba409e25d7df2584ac",
-    "spatial_descriptor.pdf": "17626502451ddb4f76e9dc8f7f2e1956bd12086b5a379e86818ea51e1f5437c0"
+    "paired_gaps.png": "db1564c0ca031baf16aa48680ced7393d35476d05c95d816571b4ffaaec43378",
+    "paired_gaps.pdf": "e9d0e17053562b8b981f2d2d5ae8ecd4f2b03b75aaf22eff0c8f0b73d2143807",
+    "order_sensitivity.png": "efe95eb3ed4c2454a51acd29520ad808db9a26e2a5f2e53f45d49237cfd33e13",
+    "order_sensitivity.pdf": "b1c305b1458c9b71e5ee69e7242a5988e8f70a1c1064f697baacfa61188dfcb8",
+    "spatial_descriptor.png": "f97886d0d0be1f464994f65b30f2f03e55d5af5326ee3bb1187e5c53e41b6a61",
+    "spatial_descriptor.pdf": "c1f95510ed10e0f688998670c5d86d6d3c92fe9cf13a7f40775cc8c800ca7c29"
   }
 }

@@ -1,6 +1,6 @@
 # Ashwath's mid-report contribution: baseline and reproducible patch example
 
-Draft based on completed November 4, 2026 runs. This covers the implemented baseline and handoff; Kirti's controlled patch experiment and the team's background/evaluation sections must be assembled separately. All numbers come from the [pilot table](../../Analysis/baseline_pilot/summary.csv), [run record](../../Analysis/baseline_pilot/run_record.json), and [handoff checks](../../Analysis/handoff_20261104/handoff_checks.json).
+Draft based on completed November 4, 2026 runs. This covers the baseline and first patch construction. The subsequently completed [controlled scoring results](controlled_scoring_results.md) extend it with the 85-pair experiment; combine the two when assembling the report. The team's background/evaluation sections remain to be assembled. Baseline numbers come from the [pilot table](../../Analysis/baseline_pilot/summary.csv), [run record](../../Analysis/baseline_pilot/run_record.json), and [handoff checks](../../Analysis/handoff_20261104/handoff_checks.json).
 
 ## Methods: frozen-model development baseline
 
@@ -40,7 +40,7 @@ Using permutation seed 7, we reassigned existing patch identities while keeping 
 
 The completed work establishes engineering feasibility and an example control, not the benefit of a patch-aware model. The three proteins were used for development; no homology-based held-out split or exclusion from ProteinMPNN pretraining was established. Crambin's three native disulfides were not constrained during full-chain redesign, and 1VII uses a single deposited NMR minimized-average conformer. No folding, function, binding, stability, solubility or aggregation measurements were performed. Higher native recovery is not sufficient evidence for any of those outcomes. The soluble checkpoint's name likewise does not establish improved solubility for these samples.
 
-The next experiment will expand validated pairs across independent proteins and compare composition-only controls, a simple spatial descriptor and frozen ProteinMPNN compatibility under matched decoding orders. Exact composition matching makes deterministic composition-only scores tie by construction; it does not supply an aggregation label. Current generation-run scores are not a substitute for that paired rescoring experiment. Protein-level summaries and an independent measured-endpoint validation plan are needed before drawing broader conclusions or training a new reward model.
+The subsequent controlled experiment expanded to seven source structures in six conservative groups, with composition/geometry controls, a simple spatial descriptor and explicit shared decoding orders. Its [separate results section](controlled_scoring_results.md) reports actual paired scores rather than reusing generation-run scores. Exact composition matching does not supply an aggregation label. Independent measured-endpoint validation and evidence of added value beyond frozen ProteinMPNN remain necessary before stronger claims or a new reward model.
 
 ## References for report assembly
 

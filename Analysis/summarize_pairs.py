@@ -401,11 +401,11 @@ def plot_results(pair_table, protein_table, output):
                 axis.scatter([i + shift for shift in shifts], values, s=25, color=model_colors[model], alpha=0.8, zorder=3)
                 axis.plot([i - 0.2, i + 0.2], [statistics.mean(values)] * 2, color="#222222", linewidth=2.2)
                 record = next(r for r in protein_table if (r["structure_id"], r["chain"], r["model_type"]) == (sid, chain, model))
-                label = "{} pairs; {:.0%} preferred".format(record["pair_count"], record["native_preference_fraction"])
-                axis.text(i, 0.97, label, transform=axis.get_xaxis_transform(), ha="center", va="top", fontsize=7)
+                label = "n={}\n{:.0%} original".format(record["pair_count"], record["native_preference_fraction"])
+                axis.text(i, 0.97, label, transform=axis.get_xaxis_transform(), ha="center", va="top", fontsize=8)
             axis.margins(y=0.22)
             axis.set_title(model.capitalize() + " checkpoint", loc="left", fontsize=10)
-            axis.set_ylabel("Full-chain NLL gap\n(permuted − original)")
+            axis.set_ylabel("Full-chain NLL gap\n(permuted − original; nats/residue)")
             axis.grid(axis="y", alpha=0.2)
         axes[-1, 0].set_xticks(range(len(proteins)), [sid + ":" + chain + "\n" + split for sid, chain, split in proteins])
         figure.suptitle("Controlled arrangement comparison by source protein", fontsize=13)
@@ -423,14 +423,14 @@ def plot_results(pair_table, protein_table, output):
                 color = colors[key[:2]]
                 axis.plot([i, i], [row["full_nll_gap_min"], row["full_nll_gap_max"]], color=color, alpha=0.8, linewidth=1)
                 axis.scatter([i], [row["full_nll_gap_mean"]], color=[color], s=12, zorder=3)
-            axis.set_ylabel("NLL gap")
+            axis.set_ylabel("NLL gap\n(nats/residue)")
             axis.set_title(model.capitalize() + " checkpoint", loc="left", fontsize=10)
             axis.grid(axis="y", alpha=0.2)
         tick_positions, labels = [], []
         for sid, chain, split in proteins:
             positions = [i for i, key in enumerate(pair_keys) if key[:2] == (sid, chain)]
             tick_positions.append(statistics.mean(positions))
-            labels.append(sid + ":" + chain)
+            labels.append(sid + "\n" + chain)
         axes[-1, 0].set_xticks(tick_positions, labels)
         figure.suptitle("Sensitivity to the shared decoding order", fontsize=13)
         figure.text(0.5, 0.025, "All pairs shown in identifier order. Line: observed min–max across orders; dot: mean.\nThese ranges are not confidence intervals. Positive gap: original preferred.", ha="center", fontsize=8)
@@ -450,7 +450,7 @@ def plot_results(pair_table, protein_table, output):
                 axis.set_title(model.capitalize())
                 axis.set_xlabel("Hydrophobic-contact fraction change\n(permuted − original)")
                 axis.grid(alpha=0.15)
-            axes[0, 0].set_ylabel("Order-averaged full-chain NLL gap")
+            axes[0, 0].set_ylabel("Order-averaged full-chain NLL gap\n(nats/residue)")
             handles = [Line2D([], [], color=colors[k[:2]], marker="o", linestyle="none", label=k[0] + ":" + k[1]) for k in proteins]
             figure.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, 0.91), ncol=min(7, len(proteins)), fontsize=8)
             figure.suptitle("Spatial descriptor and model response", fontsize=13)

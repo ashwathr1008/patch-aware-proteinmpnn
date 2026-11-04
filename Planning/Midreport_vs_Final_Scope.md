@@ -19,8 +19,10 @@ Fine-tuning/DPO, multiple property heads, SKEMPI/interface prediction, region-sp
 
 ## Work still needed for the mid-report
 
-1. Finish/audit expanded scoring: mappings, exclusions, patch overlap, composition ties, decoding orders and per-protein results. Keep source-protein descendants together; this convenience panel is not a representative benchmark.
-2. Inspect failures and order sensitivity. Distinguish sequence identity from structural recovery and arrangement sensitivity from added predictive value.
+Completed today: expanded scoring of 85 pairs/17 patches/seven sources/six groups, per-protein/group summaries, explicit-order and null audits, controls and the first exception analysis. Both checkpoints prefer the original in 84/85 averaged comparisons. [Actual results](../Documentation/Midreport/controlled_scoring_results.md) provide the evidence; this convenience panel remains a limited diagnostic.
+
+1. Obtain an independent team review of the experiment and interpretation, including mappings, exclusions, patch overlap and leakage precautions. Expand data only if a concrete limitation warrants it.
+2. Review the order-sensitive exception and whether further diagnostics are needed. Distinguish sequence identity from structural recovery and arrangement sensitivity from added predictive value.
 3. Audit one measured-outcome dataset: label meaning, access, mapping coverage, exclusions and feasible protein/family splits. Report feasibility honestly if validation remains unfinished.
 4. Finish background, methods, actual results, limitations and revised timeline. Compile the report PDF and cross-check claims/figures against outputs.
 5. Review final scope and deferrals after seeing the pilot and label audit. Keep local copies; PSC availability must not block report completion.

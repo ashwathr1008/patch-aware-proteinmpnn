@@ -2,6 +2,10 @@
 
 The [controlled pair-scoring results](../Documentation/Midreport/controlled_scoring_results.md) extend the generation pilot. The first ubiquitin pair is scored in [paired_first/](paired_first/), with all per-order values, source-protein/group summaries, explicit decoding permutations, control audits and PNG/PDF figures. Both checkpoints prefer the original under all eight shared orders. This establishes sensitivity for one pair; it does not establish an added patch scorer's benefit.
 
+The completed expansion is in [paired_expanded/](paired_expanded/). It contains 85 pairs from 17 patches/seven sources/six groups, scored by both checkpoints under eight shared orders: 1,360 paired order-level rows and 2,958 audited model forward calls. Both checkpoints prefer the original in 84/85 order-averaged comparisons; the same 1ENH pair is the exception and changes sign across orders. All composition/geometry controls tie. The simple hydrophobic-contact descriptor changes in 41/85 pairs, without a validated favorable direction. Read [per-protein results](paired_expanded/protein_summary.csv), [group/split summaries](paired_expanded/split_summary.csv), [paired gaps](paired_expanded/paired_gaps.pdf), [order ranges](paired_expanded/order_sensitivity.pdf), and [descriptor plot](paired_expanded/spatial_descriptor.pdf). Do not interpret pooled pair counts as 85 independent biological replicates.
+
+Raw expanded run: `Results/paired-expanded-20261104`. Exact input: `Data/compatibility_pairs/pairs.json`, already shared with its small staged backbones and provenance. Replace `Data/first_pair/pairs.json` with this path in the scoring/export commands below to repeat the expansion. The initial single pair and expanded set are separate runs; the first pair is not an extra independent protein.
+
 The November 4 **development baseline** generated 48 sequences across three structures and two checkpoints. These outputs establish pipeline feasibility; no patch benefit, folding, stability or solubility improvement has been tested.
 
 | Artifact | Contents |
