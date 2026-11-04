@@ -6,6 +6,8 @@ The [patch starter](patches/README.md) constructs one reproducible, backbone-onl
 
 Keep experiment parameters and dataset manifests separate from implementation. Existing compute/transfer utilities live in `Compute/psc/`.
 
+The [controlled scorer](scoring/README.md) compares existing original/permuted sequences under explicit shared decoding orders. The [multi-patch builder](patches/DATASET.md) expands the starter to several patches and distinct composition-preserving permutations, with a fixed spatial descriptor and full validation. These are compatibility diagnostics, without aggregation labels.
+
 ## Local setup
 
 Run from the repository root. The verified local environment is Python 3.12.6, PyTorch 2.7.0+cu128, NumPy 2.0.2 and Matplotlib 3.9.4 on an RTX 4090 Laptop GPU. Create a project environment rather than modifying a homework environment:

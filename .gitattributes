@@ -12,6 +12,11 @@
 # Preserve exact bytes for result checksums and the recorded input manifest.
 *.csv -text whitespace=cr-at-eol
 Data/development_manifest.json -text whitespace=cr-at-eol
+Data/compatibility_manifest.json -text whitespace=cr-at-eol
+Data/compatibility_pairs/** -text whitespace=cr-at-eol
+Data/first_pair/** -text whitespace=cr-at-eol
+Analysis/paired_*/** -text whitespace=cr-at-eol
+*.pdb -text -whitespace
 *.fasta text eol=lf
 *.pdf binary
 *.docx binary

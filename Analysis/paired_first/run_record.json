@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "purpose": "patch_compatibility_pilot",
+  "source_run_status": "complete",
+  "started_utc": "2026-11-04T18:32:53.880722+00:00",
+  "finished_utc": "2026-11-04T18:32:57.213493+00:00",
+  "counts": {
+    "source_protein_chains": 1,
+    "source_groups": 1,
+    "patches": 1,
+    "pairs": 1,
+    "checkpoints": 2,
+    "orders_per_pair": 8,
+    "per_order_score_rows": 16,
+    "model_forward_calls_including_audits": 66,
+    "composition_ties": 1,
+    "shared_geometry_ties": 1,
+    "pairs_with_defined_spatial_descriptor": 1
+  },
+  "config": {
+    "pairs_sha256": "9efb34d270beb68a09a239a34ab4cb978a17fc1b94bae12f49482fd6202d7571",
+    "upstream_commit": "8907e6671bfbfc92303b5f79c4b5e6ce47cdef57",
+    "model_name": "v_48_020",
+    "models": [
+      "vanilla",
+      "soluble"
+    ],
+    "orders": 8,
+    "order_seed": 137,
+    "tie_tolerance": 1e-06,
+    "backbone_noise": 0,
+    "device": "cuda",
+    "script_sha256": "47ea6fddb349af83c976e96f1fa9cc281fbc9ef66167dd72cf735eaf26dbf951",
+    "baseline_helper_sha256": "f83350d036979ecab16fbe61c8e3aa596601864fc2145a49aee5a9ba18365668",
+    "upstream_files": {
+      "protein_mpnn_run.py": {
+        "sha256": "61f2c519a7f73fa12da9eb90da97b97ec2f8d5f31d42605639c7600cbd321cbe",
+        "bytes": 29312
+      },
+      "protein_mpnn_utils.py": {
+        "sha256": "74c8f9b7553422a7a0bbd705874844ee103c8926c2c96f154a87e0b824071e1b",
+        "bytes": 63491
+      },
+      "vanilla_model_weights/v_48_020.pt": {
+        "sha256": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd",
+        "bytes": 6681301
+      },
+      "soluble_model_weights/v_48_020.pt": {
+        "sha256": "7af52d090172c230c7f0e9d21e02203f6b3a38b16db58d3c7a3960e0a9a6e31a",
+        "bytes": 6681301
+      }
+    },
+    "score_definition": "Mean negative log probability in natural-log units over the complete chain under each explicit autoregressive order; gap = permuted minus original",
+    "patch_score_definition": "Mean of full-chain autoregressive NLL terms at patch positions; not a standalone patch likelihood or fixed-outside-context conditional probability",
+    "order_average_definition": "Arithmetic mean of per-order NLLs, not negative log of an order-marginalized sequence probability",
+    "outside_patch_policy": "Identities are unchanged; all positions participate in each full-chain autoregressive order, so sequence-context effects can propagate outside the patch",
+    "inference_temperature": "Unscaled model probabilities; no sampling or temperature transformation"
+  },
+  "environment": {
+    "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "torch": "2.7.0+cu128",
+    "numpy": "2.0.2",
+    "device_requested": "cuda",
+    "torch_cuda_version": "12.8",
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "gpu_compute_capability": [
+      8,
+      9
+    ],
+    "preflight": {
+      "status": "passed",
+      "operations": "arange, divide, sin, matmul, add, isfinite; CUDA synchronize if requested",
+      "elapsed_seconds": 0.23400000005494803
+    }
+  },
+  "structures": [
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "length": 76,
+      "split": "development",
+      "group": "ubiquitin",
+      "raw_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+      "staged_sha256": "becd2832214945844df0de523d58e13086689c224fe6a667adfdfcf418299b1a",
+      "preprocessing": "first model; selected chain; complete canonical N/CA/C/O only; original residue IDs retained"
+    }
+  ],
+  "elapsed_seconds": 3.327999999979511,
+  "audits": [
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "order_index": 1,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "order_index": 2,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "order_index": 3,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "order_index": 4,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "order_index": 5,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "order_index": 6,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "order_index": 7,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "order_index": 8,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "order_index": 1,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "order_index": 2,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "order_index": 3,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "order_index": 4,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "order_index": 5,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "order_index": 6,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "order_index": 7,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "order_index": 8,
+      "identical_sequence_max_abs_difference": 0.0,
+      "reversed_presentation_max_abs_difference": 0.0,
+      "explicit_vs_rank_derived_max_abs_difference": null,
+      "status": "passed"
+    }
+  ],
+  "order_audit": {
+    "method": "Observe actual tensor passed to one_hot for decoding mask; require exact shared order",
+    "verified_forward_calls": 66
+  },
+  "source_file_sha256": {
+    "pair_scores.csv": "3d99c565ef83bfc5ffd6111f1b9e32f27b62ddaf66f476099f89b637c4027a7b",
+    "pair_summary.csv": "79efbffd58ab2ec5fda94c33f2b18ba7351956c3be539b5464f3c5878d33d2d5",
+    "metadata/summary.json": "4c60ad74e56356718ddfd05ff51bdf0cbfb3c0f83aab6a86d7cf9d5b9ce14318",
+    "metadata/config.json": "a0c2eeaa72c7cdb4974543d7222f08b1f247535d4f25df8020063fcb17e1f8fb",
+    "metadata/orders.json": "83fba73e44695d4a075ceb1d34ec3bc9d378e54555f196b00ced0c987d33384e",
+    "metadata/structures.json": "9cff23f997c94ab3df725568e45a95e394ac3342f7ce24c66500c068cb416b85",
+    "metadata/environment.json": "d0c4866c0436129fc30ec8822902856667ccc363c85424ae341ab8a677369268"
+  },
+  "analysis_script_sha256": "713381eae3ee92e18e994605d2e032812c20a545a55d1471dabbea33706e053c",
+  "definitions": {
+    "primary_gap": "permuted full-chain mean NLL minus original full-chain mean NLL; positive means original preferred",
+    "pair_summary": "Arithmetic average over the same explicit decoding orders for both pair members",
+    "native_preference_fields": "Legacy names mean original-input preference, including designed scaffolds; not necessarily biological native sequence",
+    "native_preference_fraction": "Fraction of pairs with positive order-averaged gap; ties within 1e-6 count as half",
+    "protein_summary": "Each source protein/chain summarizes its own pairs; overlapping patches are not independent proteins",
+    "group_summary": "Equal-weight average of member protein summaries within predeclared conservative source groups",
+    "split_summary": "Descriptive equal-protein and equal-group means within split and checkpoint; neither is pair-pooled accuracy",
+    "order_sign_disagreement": "At least one order gap is below -1e-6 and another above +1e-6",
+    "order_range": "Observed min/max across fixed decoding orders; not a confidence interval",
+    "patch_terms": "Mean conditional NLL terms at patch positions under full sequence context; not an isolated patch likelihood",
+    "spatial_descriptor": "Fraction of within-patch nonadjacent CA contacts joining two AVILMFWY identities; delta is permuted minus original"
+  },
+  "limitations": [
+    "This is a compatibility diagnostic on selected proteins, not a solubility or aggregation measurement.",
+    "Original preference does not establish that a permuted protein is nonfunctional or fails to fold.",
+    "No statistical independence is claimed for overlapping patches, variants or decoding orders.",
+    "Fixed diagnostic inputs do not establish exclusion from ProteinMPNN training.",
+    "A changed hydrophobic descriptor has no validated favorable direction in this experiment.",
+    "No inferential confidence intervals, fitted predictor or biological improvement claims are reported."
+  ],
+  "analysis_status": "complete",
+  "plots": {
+    "artifacts": [
+      "paired_gaps.png",
+      "paired_gaps.pdf",
+      "order_sensitivity.png",
+      "order_sensitivity.pdf",
+      "spatial_descriptor.png",
+      "spatial_descriptor.pdf"
+    ],
+    "matplotlib": "3.9.4",
+    "png_dpi": 220,
+    "pair_point_order": "identifier order; deterministic jitter",
+    "intervals": "none; order ranges are observed min/max"
+  },
+  "artifacts_sha256": {
+    "pair_scores.csv": "c1d76e7aa3f7ba9b8b6f0374522547e320ac8d21b967ea79db146011d8b8f830",
+    "pair_summary.csv": "ef155ac0c68abef0fc39f468cc935e4757bfc2f75a6409fe778d2bc78ca803c3",
+    "protein_summary.csv": "767f65a89d22fa34fe4ceff9bb3e01bb35ae79b1e955a914d8b0a79d8b684a5d",
+    "group_summary.csv": "193b1dca9151c18da35024b91fca11e822215f7d8cd19257dd8d41133892cc1c",
+    "split_summary.csv": "ebf026c3cabb3e488a54abbf9b3785edc65502735e531437a5bd6fd7d0439784",
+    "pair_controls.csv": "7f13f098cf3754552f9c1d1c4ca6cbba4486786fc30e0b39cf9f2053835645e2",
+    "decoding_orders.json": "83fba73e44695d4a075ceb1d34ec3bc9d378e54555f196b00ced0c987d33384e",
+    "paired_gaps.png": "b51e10cbfe457c57c4bcdc0caa11ef9e32f4581d68d2f1462236e85182ce98a9",
+    "paired_gaps.pdf": "d4d0528e9073c91d4c370cb62a89dd9f5cba4c9d729a23d590d93499e0733ac5",
+    "order_sensitivity.png": "ba427e87fff54ce2e45b4b23ec768a6380a5cb2204eb9d836e55339eb6ed2db2",
+    "order_sensitivity.pdf": "d5473a03e70260388b8974add517e1352cdaa431f7a863d9331d5e370469aa18",
+    "spatial_descriptor.png": "4a2b0897436e49698eb924ca60bde4c141a3e17a80856eba409e25d7df2584ac",
+    "spatial_descriptor.pdf": "17626502451ddb4f76e9dc8f7f2e1956bd12086b5a379e86818ea51e1f5437c0"
+  }
+}

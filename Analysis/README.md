@@ -1,5 +1,7 @@
 # Analysis
 
+The [controlled pair-scoring results](../Documentation/Midreport/controlled_scoring_results.md) extend the generation pilot. The first ubiquitin pair is scored in [paired_first/](paired_first/), with all per-order values, source-protein/group summaries, explicit decoding permutations, control audits and PNG/PDF figures. Both checkpoints prefer the original under all eight shared orders. This establishes sensitivity for one pair; it does not establish an added patch scorer's benefit.
+
 The November 4 **development baseline** generated 48 sequences across three structures and two checkpoints. These outputs establish pipeline feasibility; no patch benefit, folding, stability or solubility improvement has been tested.
 
 | Artifact | Contents |
@@ -27,3 +29,12 @@ Use the project environment described in [Code/README.md](../Code/README.md). To
 Raw generation scores use different decoding orders for native and generated sequences and different distributions for the checkpoints. Do not use their differences as a controlled matched-pair experiment or calibrated model-quality comparison. Report future patch comparisons by source protein rather than treating overlapping patches as independent replicates.
 
 Full run artifacts and automatic downloads belong in the ignored `Runs/` and `Results/` directories. Their existence does not establish a successful experiment; inspect job state and the run summary.
+
+To score a prepared pair dataset and curate its results, use new destinations:
+
+```powershell
+python Code/scoring/score_pairs.py --pairs Data/first_pair/pairs.json --mpnn-dir Runs/local-vendor/vendor/ProteinMPNN --output Results/my-paired-run --device cuda --orders 8 --order-seed 137 --models vanilla,soluble
+python Analysis/summarize_pairs.py --run-dir Results/my-paired-run --pairs Data/first_pair/pairs.json --output Results/my-paired-summary
+```
+
+The pair runner loads models once and scores with explicit shared orders, without generating new sequences. Use the project environment and its hardware-compatible torch installation. [Scoring definitions and audits](../Code/scoring/README.md) explain why these outputs differ from raw generation scores.

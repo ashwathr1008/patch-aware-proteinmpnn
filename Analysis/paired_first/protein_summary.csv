@@ -1,0 +1,3 @@
+structure_id,chain,split,group,model_type,model_name,pair_count,patch_count,orders_per_pair,full_nll_gap_mean,full_nll_gap_min,full_nll_gap_max,native_preferred_count,tie_count,permuted_preferred_count,native_preference_fraction,order_sign_disagreement_pair_count,mean_order_gap_range,patch_nll_gap_mean
+1UBQ,A,development,ubiquitin,soluble,v_48_020,1,1,8,0.22871195295776584,0.22871195295776584,0.22871195295776584,1,0,0,1.0,0,0.024770142902669434,1.9897923422977328
+1UBQ,A,development,ubiquitin,vanilla,v_48_020,1,1,8,0.2178233967677347,0.2178233967677347,0.2178233967677347,1,0,0,1.0,0,0.01999840532478525,1.8700761813670397

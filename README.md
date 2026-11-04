@@ -25,8 +25,10 @@ Each person writes the paragraphs for their own work. The technical sections sho
 - The local RTX 4090 Laptop GPU completed the development baseline: **48 generated sequences**, three structures, two frozen checkpoints, eight samples per combination. All six runs passed validation. A repeat of 1UBQ reproduced all 16 generated sequences and scores exactly on the same machine.
 - A checked eight-residue 1UBQ patch permutation preserves geometry, membership, composition and outside-patch context; its mapping agrees with the ProteinMPNN input at all 76 residues and 304 backbone atoms.
 - [Ashwath's report draft](Documentation/Midreport/ashwath_section.md), [results and figures](Analysis/README.md), and [Kirti's handoff](Planning/Kirti_Handoff_2026-11-04.md) contain the completed work and next steps.
-- Replacement PSC H100 test `50216628` was submitted and was still pending at the last check. A local collector is watching it; the successful baseline is already stored locally. See the compute notes for status and retrieval details.
-- The expanded patch dataset, controlled paired scoring experiment and learned scorer remain future work. The three structures are development examples, not an independent benchmark.
+- Controlled scoring of the previously illustrated ubiquitin pair is complete: both frozen checkpoints prefer the original arrangement under all eight explicit shared decoding orders. The [scoring results](Documentation/Midreport/controlled_scoring_results.md) explain the gaps and limitations.
+- A frozen expansion contains 85 matched pairs from 17 patches across seven source structures and six conservative similarity groups. See the [experiment specification](Planning/Scoring_Experiment_2026-11-04.md). Expanded model scoring is the next step; no learned patch scorer has been trained.
+- PSC H100 smoke job `50216628` completed successfully; all 22 files were retrieved and checksum-verified locally. Its eight generated sequences are an infrastructure check separate from the baseline and paired experiment.
+- [Mid-report versus final scope](Planning/Midreport_vs_Final_Scope.md) explains what the current study can claim and what the final project must establish. Remaining team assignments will be decided at the end of today's work.
 - No training or experiment starts automatically by cloning this repository or running its tests.
 
 ## Repository layout
