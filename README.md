@@ -10,15 +10,15 @@ We investigate whether explicitly scoring local arrangements of residues on prot
 
 Due November 6; target a complete draft November 5 evening. Deliver a working baseline, a small controlled patch experiment, quantitative preliminary results, and a plan for independent solubility/developability validation. See the [detailed plan](Planning/Midreport_Plan_2026-11-04.md).
 
-| Owner | Mid-report responsibility |
+| Owner | Mid-report responsibility and completed work |
 |---|---|
-| Ashwath | Working setup and first example; ProteinMPNN baseline outputs; reproducible handoff and baseline-methods text |
+| Ashwath | **Completed:** local and PSC setup with verified retrieval; reproducible ProteinMPNN baseline (48 generated sequences across three structures and two checkpoints, plus a repeat check); first patch control and illustration; expanded, validated dataset (85 matched pairs, 17 patches, seven structures); controlled scoring with two checkpoints and eight shared decoding orders; composition/geometry controls, spatial-descriptor comparison, per-protein results/figures, and order-sensitive exception analysis; reproducible code, curated data/results, and [baseline methods](Documentation/Midreport/ashwath_section.md) and [controlled-scoring results](Documentation/Midreport/controlled_scoring_results.md) drafts. |
 | Kirti | Expand and validate patches and matched permutations; comparison plot and patch illustration; experiment methods/results |
 | Vani | Bounded motivation/related-work and validation-dataset investigation; evaluation and limitations text, depending on availability |
 
 Each person writes the paragraphs for their own work. 
 
-**November 4 update:** the table above records the initial provisional split. Ashwath has now taken forward dataset expansion and controlled patch scoring with the assistant. We will divide the remaining work at the end of today's session; do not repeat completed tasks from the old handoff.
+**November 4 update:** Ashwath's row now records completed work, including the dataset expansion, patch illustration, comparison figures, and experiment methods/results originally listed under Kirti. Kirti's and Vani's rows retain their initial provisional responsibilities; we will divide the remaining work at the end of today's session. Do not repeat completed tasks from the old handoff. Team review, the validation-dataset audit, remaining report text, and final report assembly are still outstanding.
 
 ## Current status — November 4
 
