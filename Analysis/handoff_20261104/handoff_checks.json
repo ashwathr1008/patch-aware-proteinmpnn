@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "scope": "Development inputs and one same-machine rerun; not generalization or biological validation",
+  "repeat": {
+    "structures": [
+      [
+        "1UBQ",
+        "A"
+      ]
+    ],
+    "generated_sequences_checked": 16,
+    "native_records_checked": 2,
+    "sequences_identical": true,
+    "maximum_absolute_score_difference": 0.0,
+    "primary_csv_sha256": "7c4e05b0820108d29f5af127ce786ba38e11d1ca6ba1402b70df6d72c8abd605",
+    "repeat_csv_sha256": "b765c44cf23199be44dd003457e408928bcc3166a79524292f36299d53aaee53"
+  },
+  "patch_to_model_mapping": {
+    "structure_id": "1UBQ",
+    "chain": "A",
+    "residues_checked": 76,
+    "backbone_atoms_checked": 304,
+    "native_sequence_equal": true,
+    "residue_identifiers_equal": true,
+    "backbone_coordinates_equal": true,
+    "raw_input_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+    "patch_original_manifest_sha256": "0a1494286b4dcdfc4a5515692b3763471d0ddb3e0074af52950c0d5ad77ec567"
+  },
+  "patch_invariants": {
+    "patch_composition_equal": true,
+    "chain_composition_equal": true,
+    "backbone_geometry_unchanged": true,
+    "patch_membership_unchanged": true,
+    "outside_patch_unchanged": true,
+    "nonidentity_assignment": true,
+    "chain_length_unchanged": true
+  }
+}

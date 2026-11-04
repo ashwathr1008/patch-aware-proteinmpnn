@@ -1,0 +1,274 @@
+{
+  "patch_indices": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "center_index": 11,
+  "ca_pair_distances": [
+    {
+      "left_index": 6,
+      "right_index": 7,
+      "ca_distance_angstrom": 3.811836958737875,
+      "sequence_nonadjacent": false,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 6,
+      "right_index": 8,
+      "ca_distance_angstrom": 6.852317637121034,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 6,
+      "right_index": 9,
+      "ca_distance_angstrom": 8.333011820464437,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 6,
+      "right_index": 10,
+      "ca_distance_angstrom": 6.789596379756314,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 6,
+      "right_index": 11,
+      "ca_distance_angstrom": 6.131488644693068,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 6,
+      "right_index": 12,
+      "ca_distance_angstrom": 4.302711470689155,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 6,
+      "right_index": 13,
+      "ca_distance_angstrom": 6.477391913417004,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 7,
+      "right_index": 8,
+      "ca_distance_angstrom": 3.8322732157297965,
+      "sequence_nonadjacent": false,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 7,
+      "right_index": 9,
+      "ca_distance_angstrom": 5.5031717218345975,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 7,
+      "right_index": 10,
+      "ca_distance_angstrom": 5.810486554497825,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 7,
+      "right_index": 11,
+      "ca_distance_angstrom": 5.571434106224356,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 7,
+      "right_index": 12,
+      "ca_distance_angstrom": 6.059430583809009,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 7,
+      "right_index": 13,
+      "ca_distance_angstrom": 7.988525333251436,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 8,
+      "right_index": 9,
+      "ca_distance_angstrom": 3.8177507776176256,
+      "sequence_nonadjacent": false,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 8,
+      "right_index": 10,
+      "ca_distance_angstrom": 5.573020904321101,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 8,
+      "right_index": 11,
+      "ca_distance_angstrom": 7.356886297884452,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 8,
+      "right_index": 12,
+      "ca_distance_angstrom": 9.075043856643337,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 8,
+      "right_index": 13,
+      "ca_distance_angstrom": 11.588413653300435,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 9,
+      "right_index": 10,
+      "ca_distance_angstrom": 3.773481283907474,
+      "sequence_nonadjacent": false,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 9,
+      "right_index": 11,
+      "ca_distance_angstrom": 5.571339964496872,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 9,
+      "right_index": 12,
+      "ca_distance_angstrom": 8.680483857481676,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 9,
+      "right_index": 13,
+      "ca_distance_angstrom": 11.349041104868725,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 10,
+      "right_index": 11,
+      "ca_distance_angstrom": 3.768352690500187,
+      "sequence_nonadjacent": false,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 10,
+      "right_index": 12,
+      "ca_distance_angstrom": 6.3970556508443766,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 10,
+      "right_index": 13,
+      "ca_distance_angstrom": 9.830300554916924,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 11,
+      "right_index": 12,
+      "ca_distance_angstrom": 3.80617248689546,
+      "sequence_nonadjacent": false,
+      "descriptor_contact": false
+    },
+    {
+      "left_index": 11,
+      "right_index": 13,
+      "ca_distance_angstrom": 6.556416322961804,
+      "sequence_nonadjacent": true,
+      "descriptor_contact": true
+    },
+    {
+      "left_index": 12,
+      "right_index": 13,
+      "ca_distance_angstrom": 3.7925682591088585,
+      "sequence_nonadjacent": false,
+      "descriptor_contact": false
+    }
+  ],
+  "descriptor_contacts": [
+    [
+      6,
+      8
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      6,
+      11
+    ],
+    [
+      6,
+      12
+    ],
+    [
+      6,
+      13
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      7,
+      10
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      7,
+      12
+    ],
+    [
+      7,
+      13
+    ],
+    [
+      8,
+      10
+    ],
+    [
+      8,
+      11
+    ],
+    [
+      9,
+      11
+    ],
+    [
+      10,
+      12
+    ],
+    [
+      11,
+      13
+    ]
+  ],
+  "geometry_sha256": "cacd155bdf62355f90cfd8f0df97130884f69c1e1923a7bba088d82d3dec9277"
+}

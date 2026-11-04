@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "purpose": "patch_compatibility_pilot",
+  "interpretation": "The previously shown seed-7 pair is preserved exactly; no new permutation, aggregation label or biological outcome.",
+  "config": {
+    "source_example_manifest_sha256": "02a81fcf53df41cb32656cf4448c4251d945af099d4444d17d7bfdf8cb3ca5db",
+    "packer_sha256": "4e652994d5e36027433e3c006d6d326be421475e3f983aa90022d051e84559c9",
+    "permutation_preserved_exactly": true,
+    "original_patch_parameters": {
+      "seed": 7,
+      "neighbor_radius_angstrom": 10.0,
+      "patch_radius_angstrom": 8.0,
+      "min_patch_size": 8
+    },
+    "descriptor": {
+      "hydrophobic_set": "AVILMFWY",
+      "contact_distance_angstrom": 8.0,
+      "exclude_observed_sequence_separation_at_most": 1,
+      "delta_sign": "permuted minus original; no preferred biological direction"
+    }
+  },
+  "structures": [
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "pdb_path": "inputs/1UBQ.pdb",
+      "sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+      "raw_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+      "group": "ubiquitin",
+      "split": "development",
+      "expected_length": 76
+    }
+  ],
+  "pairs": [
+    {
+      "pair_id": "1UBQ_A_existing_seed7",
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "patch_id": "1UBQ_A_existing_patch",
+      "group": "ubiquitin",
+      "split": "development",
+      "original_sequence": "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+      "permuted_sequence": "MQIFVTILGKTTKTLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+      "patch_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "patch_size": 8,
+      "changed_identity_count": 6,
+      "patch_contiguous_in_sequence": true,
+      "permutation_seed": 7,
+      "identity_source_indices": [
+        12,
+        13,
+        8,
+        10,
+        6,
+        9,
+        7,
+        11
+      ],
+      "original_sequence_sha256": "233b4b0b8c4616095bc3249f9375fc345d32af7deaef07117d0383c51d6f19aa",
+      "permuted_sequence_sha256": "2bef785947b1923d98ca3c561e40175b6ae990ac9dde82b0a4e3b45844904c1c",
+      "geometry_original_sha256": "cacd155bdf62355f90cfd8f0df97130884f69c1e1923a7bba088d82d3dec9277",
+      "geometry_permuted_sha256": "cacd155bdf62355f90cfd8f0df97130884f69c1e1923a7bba088d82d3dec9277",
+      "checks": {
+        "patch_composition_equal": true,
+        "chain_composition_equal": true,
+        "backbone_geometry_unchanged": true,
+        "patch_membership_unchanged": true,
+        "outside_patch_unchanged": true,
+        "nonidentity_assignment": true,
+        "chain_length_unchanged": true
+      },
+      "controls": {
+        "composition_original": {
+          "A": 0,
+          "C": 0,
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "G": 1,
+          "H": 0,
+          "I": 1,
+          "K": 2,
+          "L": 1,
+          "M": 0,
+          "N": 0,
+          "P": 0,
+          "Q": 0,
+          "R": 0,
+          "S": 0,
+          "T": 3,
+          "V": 0,
+          "W": 0,
+          "Y": 0
+        },
+        "composition_permuted": {
+          "A": 0,
+          "C": 0,
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "G": 1,
+          "H": 0,
+          "I": 1,
+          "K": 2,
+          "L": 1,
+          "M": 0,
+          "N": 0,
+          "P": 0,
+          "Q": 0,
+          "R": 0,
+          "S": 0,
+          "T": 3,
+          "V": 0,
+          "W": 0,
+          "Y": 0
+        },
+        "composition_tie": true,
+        "geometry_tie": true,
+        "contact_count": 15,
+        "hydrophobic_contacts_original": 0,
+        "hydrophobic_contacts_permuted": 0,
+        "hydrophobic_fraction_original": 0.0,
+        "hydrophobic_fraction_permuted": 0.0,
+        "hydrophobic_fraction_delta": 0.0
+      }
+    }
+  ]
+}

@@ -30,6 +30,12 @@ def main():
     cuda = torch.cuda.is_available()
     if args.require_cuda and not cuda:
         raise RuntimeError("GPU smoke test requires a usable CUDA device")
+    if cuda:
+        try:
+            torch.arange(4, device="cuda", dtype=torch.float32).square().sum().item()
+            torch.cuda.synchronize()
+        except RuntimeError as exc:
+            raise RuntimeError("CUDA was detected but a kernel failed; use a compatible GPU/PyTorch build.") from exc
     summary = {"purpose": config["purpose"], "job_id": os.environ.get("SLURM_JOB_ID"),
                "host": platform.node(), "started_utc": datetime.now(timezone.utc).isoformat(),
                "python": sys.version, "torch": torch.__version__, "numpy": np.__version__,

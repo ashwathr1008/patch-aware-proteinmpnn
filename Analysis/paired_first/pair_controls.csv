@@ -1,0 +1,2 @@
+pair_id,structure_id,chain,split,group,patch_id,patch_size,changed_identity_count,patch_contiguous_in_sequence,composition_tie,geometry_tie,contact_count,hydrophobic_contacts_original,hydrophobic_contacts_permuted,hydrophobic_fraction_original,hydrophobic_fraction_permuted,hydrophobic_fraction_delta
+1UBQ_A_existing_seed7,1UBQ,A,development,ubiquitin,1UBQ_A_existing_patch,8,6,True,True,True,15,0,0,0.0,0.0,0.0

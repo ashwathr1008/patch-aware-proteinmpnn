@@ -1,0 +1,26 @@
+{
+  "neighbor_radius": 10.0,
+  "patch_radius": 8.0,
+  "contact_radius": 8.0,
+  "min_patch_size": 8,
+  "patches_per_structure": 3,
+  "permutations_per_patch": 5,
+  "max_jaccard": 0.5,
+  "seed": 7,
+  "source_manifest_sha256": "915d0aa5f93c77c053873fc3e209ae313621d7443374ca951fad1750923ffa9a",
+  "builder_sha256": "20c5a9984139f2ff98a3353caa51d788f9044faf366cb250c659b2c8ebbca938",
+  "parser_sha256": "bc4b431dd070df8c297c6828fa0b50e3daf6117f2bf950168ad72c11e57f8a7b",
+  "stager_sha256": "f83350d036979ecab16fbe61c8e3aa596601864fc2145a49aee5a9ba18365668",
+  "selection_rule": "Rank bottom-quartile neighbor-count centers by count, then observed sequence index; require sufficient heterogeneous membership; skip duplicate memberships; greedily retain patches only when Jaccard overlap with every retained patch is at most max_jaccard.",
+  "surface_proxy": "Other CA atoms within neighbor_radius; lower is surface-like, not SASA.",
+  "heterogeneity_rule": "At least two identity types is required only for a nonidentity permutation to exist; scores never inform selection.",
+  "descriptor": {
+    "hydrophobic_set": "AVILMFWY",
+    "contact_distance_angstrom": 8.0,
+    "exclude_observed_sequence_separation_at_most": 1,
+    "definition": "Number of patch contacts with both endpoints hydrophobic divided by all eligible patch contacts; zero contacts yields null.",
+    "delta_sign": "permuted minus original; no biological preferred direction"
+  },
+  "geometry_control": "Both pair members share exactly one stored backbone geometry, membership set and contact graph.",
+  "max_shuffle_attempts_per_patch": 10000
+}

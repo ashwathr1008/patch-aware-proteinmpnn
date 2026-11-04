@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "pair_count": 1,
+  "pair_id": "1UBQ_A_existing_seed7",
+  "source_example_manifest_sha256": "02a81fcf53df41cb32656cf4448c4251d945af099d4444d17d7bfdf8cb3ca5db",
+  "pairs_sha256": "9efb34d270beb68a09a239a34ab4cb978a17fc1b94bae12f49482fd6202d7571",
+  "source_pdb_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+  "original_and_permuted_sequences_preserved_exactly": true,
+  "changed_identity_count": 6,
+  "residue_mappings_checked": 76,
+  "backbone_atoms_checked": 304,
+  "all_pair_invariants_passed": true
+}
