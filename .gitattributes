@@ -9,6 +9,10 @@
 *.json text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
+# Preserve exact bytes for result checksums and the recorded input manifest.
+*.csv -text whitespace=cr-at-eol
+Data/development_manifest.json -text whitespace=cr-at-eol
+*.fasta text eol=lf
 *.pdf binary
 *.docx binary
 *.png binary

@@ -1,0 +1,3 @@
+# Install the hardware-appropriate PyTorch build separately; see Code/README.md.
+numpy==2.0.2
+matplotlib==3.9.4
