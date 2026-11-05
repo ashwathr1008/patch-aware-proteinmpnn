@@ -149,6 +149,138 @@
     "pools_individually_significant": 2,
     "significance_threshold_note": "Each pool holds eight samples, so only |rho| > 0.71 reaches p < 0.05 alone; the agreement of sign across pools carries the result"
   },
+  "two_regime": {
+    "soluble": {
+      "rearrangement": {
+        "pair_count": 85,
+        "pooled_spearman": 0.0016415868673050615,
+        "pooled_pearson": 0.04260545047431107,
+        "per_structure": [
+          {
+            "structure_id": "1CRN",
+            "pair_count": 15,
+            "spearman": 0.5428571428571428
+          },
+          {
+            "structure_id": "1ENH",
+            "pair_count": 5,
+            "spearman": 0.3
+          },
+          {
+            "structure_id": "1L2Y",
+            "pair_count": 5,
+            "spearman": -0.1
+          },
+          {
+            "structure_id": "1SHG",
+            "pair_count": 15,
+            "spearman": -0.2571428571428571
+          },
+          {
+            "structure_id": "1UBQ",
+            "pair_count": 15,
+            "spearman": 0.6107142857142858
+          },
+          {
+            "structure_id": "1VII",
+            "pair_count": 15,
+            "spearman": -0.025
+          },
+          {
+            "structure_id": "2CI2",
+            "pair_count": 15,
+            "spearman": 0.3892857142857143
+          }
+        ]
+      },
+      "generation": {
+        "pool_count": 3,
+        "per_pool": [
+          {
+            "structure_id": "1CRN",
+            "spearman": 0.7142857142857143,
+            "sample_count": 8
+          },
+          {
+            "structure_id": "1UBQ",
+            "spearman": 0.9047619047619048,
+            "sample_count": 8
+          },
+          {
+            "structure_id": "1VII",
+            "spearman": 0.5238095238095238,
+            "sample_count": 8
+          }
+        ],
+        "mean_spearman": 0.7142857142857143
+      }
+    },
+    "vanilla": {
+      "rearrangement": {
+        "pair_count": 85,
+        "pooled_spearman": 0.04801641586867305,
+        "pooled_pearson": 0.05444086751808964,
+        "per_structure": [
+          {
+            "structure_id": "1CRN",
+            "pair_count": 15,
+            "spearman": 0.4607142857142857
+          },
+          {
+            "structure_id": "1ENH",
+            "pair_count": 5,
+            "spearman": 0.3
+          },
+          {
+            "structure_id": "1L2Y",
+            "pair_count": 5,
+            "spearman": -0.1
+          },
+          {
+            "structure_id": "1SHG",
+            "pair_count": 15,
+            "spearman": -0.325
+          },
+          {
+            "structure_id": "1UBQ",
+            "pair_count": 15,
+            "spearman": 0.6214285714285714
+          },
+          {
+            "structure_id": "1VII",
+            "pair_count": 15,
+            "spearman": 0.26785714285714285
+          },
+          {
+            "structure_id": "2CI2",
+            "pair_count": 15,
+            "spearman": 0.4785714285714286
+          }
+        ]
+      },
+      "generation": {
+        "pool_count": 3,
+        "per_pool": [
+          {
+            "structure_id": "1CRN",
+            "spearman": 0.2857142857142857,
+            "sample_count": 8
+          },
+          {
+            "structure_id": "1UBQ",
+            "spearman": 0.3333333333333333,
+            "sample_count": 8
+          },
+          {
+            "structure_id": "1VII",
+            "spearman": 0.35714285714285715,
+            "sample_count": 8
+          }
+        ],
+        "mean_spearman": 0.3253968253968254
+      }
+    }
+  },
   "limitations": [
     "Backbone-derived burial is a surrogate for side-chain SAP; the staged inputs carry no side chains, so a weak correlation may reflect surrogate error as well as a genuine difference",
     "Generation scores were produced under per-sample decoding orders, so the candidate ranking carries order noise that the paired experiment controls for",

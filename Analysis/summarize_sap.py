@@ -274,6 +274,109 @@ def summarize_candidates(rows):
     }
 
 
+def two_regime(pair_rows, decomposition_by_model, candidate_rows):
+    """Compare each checkpoint's agreement with SAP in two regimes.
+
+    Rearrangement holds composition exactly equal, so the SAP change reflects only where
+    residues sit. Generation lets composition vary freely, so SAP moves mostly with which
+    residues were chosen. Spearman is used in both regimes so the two are one statistic.
+    """
+    generated = [r for r in candidate_rows if r["record_type"] != "native"]
+    pools = defaultdict(list)
+    for row in generated:
+        pools[(row["structure_id"], row["model_type"])].append(row)
+    result = {}
+    for model_type, reference in sorted(decomposition_by_model.items()):
+        paired = [(r, reference[r["pair_id"]]) for r in pair_rows if r["pair_id"] in reference]
+        by_structure = defaultdict(list)
+        for row, entry in paired:
+            by_structure[row["structure_id"]].append((row, entry))
+        pool_values = []
+        for key in sorted(pools):
+            if key[1] != model_type:
+                continue
+            pool = pools[key]
+            value = spearman([r["generation_score"] for r in pool],
+                             [r["sap_simple"] for r in pool])
+            if value is not None:
+                pool_values.append({"structure_id": key[0], "spearman": value,
+                                    "sample_count": len(pool)})
+        result[model_type] = {
+            "rearrangement": {
+                "pair_count": len(paired),
+                "pooled_spearman": spearman([r["delta_sap_simple"] for r, _ in paired],
+                                            [e["delta_fo_total"] for _, e in paired]),
+                "pooled_pearson": pearson([r["delta_sap_simple"] for r, _ in paired],
+                                          [e["delta_fo_total"] for _, e in paired]),
+                "per_structure": [
+                    {"structure_id": key, "pair_count": len(group),
+                     "spearman": spearman([r["delta_sap_simple"] for r, _ in group],
+                                          [e["delta_fo_total"] for _, e in group])}
+                    for key, group in sorted(by_structure.items())],
+            },
+            "generation": {
+                "pool_count": len(pool_values), "per_pool": pool_values,
+                "mean_spearman": statistics.fmean(p["spearman"] for p in pool_values)
+                if pool_values else None,
+            },
+        }
+    return result
+
+
+def figure_two_regime(regimes, path):
+    """Grouped bars of each checkpoint's SAP agreement, with the underlying units overlaid.
+
+    Colour encodes the checkpoint here because the checkpoint comparison is the subject of
+    this figure, unlike the decomposition figure where colour encodes the term.
+    """
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    colors = {"vanilla": "#2a78d6", "soluble": "#eb6834"}
+    models = [m for m in ("vanilla", "soluble") if m in regimes]
+    labels = ["Arrangement\n(composition fixed)", "Composition\n(generation)"]
+    figure_, axis = plt.subplots(figsize=(7.0, 4.4))
+    width = 0.36
+    for offset, model_type in enumerate(models):
+        block = regimes[model_type]
+        centres = [index + (offset - 0.5) * width for index in range(2)]
+        heights = [block["rearrangement"]["pooled_spearman"],
+                   block["generation"]["mean_spearman"]]
+        axis.bar(centres, heights, width=width * 0.92, color=colors[model_type],
+                 edgecolor="white", linewidth=1.0, zorder=3, label=model_type)
+        spread = [[item["spearman"] for item in block["rearrangement"]["per_structure"]
+                   if item["spearman"] is not None],
+                  [item["spearman"] for item in block["generation"]["per_pool"]]]
+        for centre, points in zip(centres, spread):
+            axis.scatter([centre] * len(points), points, s=16, facecolor="white",
+                         edgecolor="#2b2b2b", linewidth=0.8, zorder=4)
+        for centre, height in zip(centres, heights):
+            axis.text(centre, height + (0.04 if height >= 0 else -0.07),
+                      "{:+.2f}".format(height), ha="center", fontsize=8, color="#595959",
+                      zorder=5)
+    axis.axhline(0, color="#595959", linewidth=1.0, zorder=2)
+    axis.set_xticks(range(2))
+    axis.set_xticklabels(labels, fontsize=9, color="#2b2b2b")
+    axis.set_ylabel("Spearman correlation with SAP", fontsize=9, color="#2b2b2b")
+    axis.set_title("Both checkpoints track SAP when choosing residues, neither when placing them",
+                   fontsize=9.5, color="#2b2b2b", loc="left", pad=12)
+    axis.set_ylim(-0.75, 1.05)
+    axis.yaxis.grid(True, color="#b4b4b4", linewidth=0.6, alpha=0.5, zorder=0)
+    axis.set_axisbelow(True)
+    axis.legend(frameon=False, fontsize=8.5, loc="upper left", labelcolor="#595959")
+    axis.spines[["top", "right"]].set_visible(False)
+    axis.spines[["left", "bottom"]].set_color("#b4b4b4")
+    axis.tick_params(colors="#595959", labelsize=8, length=3)
+    # Open dots are the per-structure and per-pool values behind each bar.
+    axis.text(0.5, -0.70, "open dots: per-structure (left) and per-pool (right) values",
+              fontsize=7.5, color="#595959", ha="center")
+    figure_.tight_layout()
+    for suffix in (".png", ".pdf"):
+        figure_.savefig(path.with_suffix(suffix), dpi=300, bbox_inches="tight")
+    plt.close(figure_)
+
+
 def figure(pair_rows, candidate_rows, path):
     import matplotlib
     matplotlib.use("Agg")
@@ -341,14 +444,15 @@ def run(args):
         raise ValueError("Expected a schema-1 pair dataset")
     scaffolds = build_scaffolds(dataset, pairs_path.parent, args.window_radius,
                                 args.sphere_points)
-    decomposition = {}
+    decomposition, by_model = {}, defaultdict(dict)
     if args.decomposition:
         for row in read_csv(args.decomposition):
+            entry = {"delta_fo_total": float(row["delta_fo_total"]),
+                     "delta_full_total": float(row["delta_full_total"]),
+                     "model_type": row["model_type"]}
+            by_model[row["model_type"]][row["pair_id"]] = entry
             if row["model_type"] == args.decomposition_model:
-                decomposition[row["pair_id"]] = {
-                    "delta_fo_total": float(row["delta_fo_total"]),
-                    "delta_full_total": float(row["delta_full_total"]),
-                    "model_type": row["model_type"]}
+                decomposition[row["pair_id"]] = entry
         if not decomposition:
             raise ValueError("No decomposition rows for checkpoint " + args.decomposition_model)
     pair_rows = score_pairs(dataset, scaffolds, decomposition)
@@ -363,6 +467,8 @@ def run(args):
         "window_radius_angstrom": args.window_radius, "sphere_points": args.sphere_points,
         "pairs": summarize_pairs(pair_rows),
         "candidates": summarize_candidates(candidate_rows) if candidate_rows else None,
+        "two_regime": two_regime(pair_rows, by_model, candidate_rows)
+        if by_model and candidate_rows else None,
         "limitations": [
             "Backbone-derived burial is a surrogate for side-chain SAP; the staged inputs carry "
             "no side chains, so a weak correlation may reflect surrogate error as well as a "
@@ -378,6 +484,8 @@ def run(args):
     write_json(output / "sap_summary.json", summary)
     if not args.no_figure and decomposition and candidate_rows:
         figure(pair_rows, candidate_rows, output / "sap_surrogate")
+        if summary["two_regime"]:
+            figure_two_regime(summary["two_regime"], output / "sap_two_regime")
     block = summary["pairs"]
     print("Pairs: contact-count ties {}/{}, SAP ties {}/{}".format(
         block["contact_descriptor_ties"], block["pair_count"],
