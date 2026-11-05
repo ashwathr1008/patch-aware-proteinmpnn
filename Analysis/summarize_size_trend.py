@@ -149,29 +149,58 @@ def analyze(records):
 
 
 def verdict(analysis):
+    """Describe what was actually found. Every clause is built from the run, never asserted.
+
+    This statement is the quotable output the report paraphrases, so it must not claim a
+    structure count or a pattern of disagreement that the run did not produce.
+    """
     significant = [(model, measure)
                    for model, block in analysis.items()
                    for measure, stats in block["measures"].items()
                    if stats["significant_at_0.05"]]
     directions = {}
-    for model, block in analysis.items():
+    for block in analysis.values():
         for measure, stats in block["measures"].items():
             directions.setdefault(measure, set()).add(
                 "positive" if stats["pearson_r"] > 0 else "negative")
+    # Compare each normalization against the reference measure's direction. If the reference
+    # was never computed there is nothing to disagree with, so say so rather than silently
+    # reporting agreement.
+    reference = directions.get("joint_total")
+    comparable = [m for m in directions if m not in ("full_gap_total", "joint_total")]
+    if reference is None:
+        disagree, disagreement_known = [], False
+    else:
+        disagree = sorted(m for m in comparable if directions[m] != reference)
+        disagreement_known = True
+    counts = sorted({block["structure_count"] for block in analysis.values()})
+    count_phrase = ("{} structures".format(counts[0]) if len(counts) == 1
+                    else "{} to {} structures".format(counts[0], counts[-1]))
+    if significant:
+        statement = ("At least one length relationship reached significance at {}; see "
+                     "measures for which.".format(count_phrase))
+    else:
+        statement = ("No relationship between chain length and the joint arrangement term "
+                     "reaches significance at {}.".format(count_phrase))
+        if not disagreement_known:
+            statement += (" The reference measure joint_total was not computed, so the "
+                          "normalizations could not be compared.")
+        elif disagree:
+            statement += (" The normalizations disagree in sign ({}), so the variation across "
+                          "these proteins is protein-specific rather than size-specific."
+                          .format(", ".join(disagree)))
+        else:
+            statement += (" All normalizations agree in sign, so the absence of significance "
+                          "reflects sample size rather than conflicting evidence.")
+        statement += (" This is a non-result reported to close the question, not evidence that "
+                      "size does not matter.")
     return {
         "significant_relationships": [{"model_type": m, "measure": s} for m, s in significant],
         "any_significant": bool(significant),
-        "normalizations_disagree": sorted(
-            measure for measure, signs in directions.items() if measure != "full_gap_total"
-            and signs != directions.get("joint_total", signs)),
-        "statement":
-            "No relationship between chain length and the joint arrangement term reaches "
-            "significance at seven structures, and the three normalizations do not agree in "
-            "sign. The variation across these proteins is protein-specific rather than "
-            "size-specific. This is a non-result reported to close the question, not evidence "
-            "that size does not matter"
-            if not significant else
-            "At least one length relationship reached significance; see measures",
+        "structure_counts": counts,
+        "normalizations_disagree": disagree,
+        "disagreement_assessable": disagreement_known,
+        "statement": statement,
     }
 
 

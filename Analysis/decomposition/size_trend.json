@@ -278,10 +278,14 @@
   "verdict": {
     "significant_relationships": [],
     "any_significant": false,
+    "structure_counts": [
+      7
+    ],
     "normalizations_disagree": [
       "first_order_share",
       "joint_per_residue"
     ],
-    "statement": "No relationship between chain length and the joint arrangement term reaches significance at seven structures, and the three normalizations do not agree in sign. The variation across these proteins is protein-specific rather than size-specific. This is a non-result reported to close the question, not evidence that size does not matter"
+    "disagreement_assessable": true,
+    "statement": "No relationship between chain length and the joint arrangement term reaches significance at 7 structures. The normalizations disagree in sign (first_order_share, joint_per_residue), so the variation across these proteins is protein-specific rather than size-specific. This is a non-result reported to close the question, not evidence that size does not matter."
   }
 }

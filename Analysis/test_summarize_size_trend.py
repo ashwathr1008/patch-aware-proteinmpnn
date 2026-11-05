@@ -95,6 +95,40 @@ class VerdictTest(unittest.TestCase):
         self.assertTrue(result["any_significant"])
         self.assertIn("joint_total", [r["measure"] for r in result["significant_relationships"]])
 
+    def test_the_statement_reports_the_actual_structure_count(self):
+        """The statement is quotable output, so it must not hardcode a sample size."""
+        for count in (4, 5, 6):
+            records = analysis.collect(
+                self.rows([(10 * (i + 1), 1.0) for i in range(count)]))
+            statement = analysis.verdict(analysis.analyze(records))["statement"]
+            self.assertIn("{} structures".format(count), statement)
+
+    def test_the_statement_only_claims_disagreement_when_it_exists(self):
+        # All measures rise together, so nothing disagrees and the statement must not say so.
+        records = analysis.collect(
+            self.rows([(10, 1.0), (20, 4.0), (30, 9.0), (40, 16.0)]))
+        result = analysis.verdict(analysis.analyze(records))
+        self.assertEqual(result["normalizations_disagree"], [])
+        self.assertNotIn("disagree in sign", result["statement"])
+        self.assertIn("agree in sign", result["statement"])
+
+    def test_disagreeing_normalizations_are_named_in_the_statement(self):
+        records = analysis.collect(
+            self.rows([(10, 5.0), (20, 5.2), (30, 5.4), (40, 5.6)]))
+        result = analysis.verdict(analysis.analyze(records))
+        # joint_total rises while joint_per_residue falls, so they must be reported apart.
+        self.assertIn("joint_per_residue", result["normalizations_disagree"])
+        self.assertIn("joint_per_residue", result["statement"])
+
+    def test_an_absent_reference_measure_is_reported_rather_than_read_as_agreement(self):
+        """With joint_total constant it lands in undefined_measures and cannot be compared."""
+        records = analysis.collect(self.rows([(10, 3.0), (20, 3.0), (30, 3.0), (40, 3.0)]))
+        block = analysis.analyze(records)["vanilla"]
+        self.assertIn("joint_total", [u["measure"] for u in block["undefined_measures"]])
+        result = analysis.verdict({"vanilla": block})
+        self.assertFalse(result["disagreement_assessable"])
+        self.assertIn("could not be compared", result["statement"])
+
     def test_four_points_cannot_reach_significance(self):
         """At n=4 the smallest attainable p is 2/24, so no result can be significant."""
         records = analysis.collect(self.rows([(10, 1.0), (20, 2.0), (30, 3.0), (40, 4.0)]))

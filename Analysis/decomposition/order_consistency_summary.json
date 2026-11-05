@@ -18,6 +18,7 @@
   "checkpoints": {
     "soluble": {
       "pair_count": 85,
+      "pairs_with_measurable_gap": 85,
       "order_sd_nats_per_chain": {
         "count": 85,
         "mean": 1.0550898848528028,
@@ -80,6 +81,7 @@
     },
     "vanilla": {
       "pair_count": 85,
+      "pairs_with_measurable_gap": 85,
       "order_sd_nats_per_chain": {
         "count": 85,
         "mean": 0.9198694134478604,

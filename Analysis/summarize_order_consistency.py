@@ -220,15 +220,20 @@ def build_summary(sequence_rows, pair_rows, sources):
     for model_type in sorted(by_model):
         group = by_model[model_type]
         ratios = [r["inconsistency_ratio"] for r in group if r["inconsistency_ratio"] is not None]
+        shares = [r["outside_share_of_full_gap"] for r in group
+                  if r["outside_share_of_full_gap"] is not None]
+        # Both lists are empty exactly when every pair's gap is within tie tolerance of zero,
+        # which is the degenerate case the ratio exists to diagnose. Report it rather than
+        # raising, so the diagnostic still reaches the reader.
         checkpoints[model_type] = {
             "pair_count": len(group),
+            "pairs_with_measurable_gap": len(ratios),
             "order_sd_nats_per_chain": distribution([r["order_sd_mean"] for r in group], "order_sd"),
             "absolute_full_gap_nats_per_chain": distribution([r["full_gap_total_abs"] for r in group], "gap"),
-            "inconsistency_ratio": distribution(ratios, "ratio"),
+            "inconsistency_ratio": distribution(ratios, "ratio") if ratios else None,
             "pairs_with_order_sd_above_gap": sum(1 for r in ratios if r >= 1.0),
             "outside_gap_nats_per_chain": distribution([r["outside_gap_total_mean"] for r in group], "outside"),
-            "outside_share_of_full_gap_median": statistics.median(
-                [r["outside_share_of_full_gap"] for r in group if r["outside_share_of_full_gap"] is not None]),
+            "outside_share_of_full_gap_median": statistics.median(shares) if shares else None,
             "full_gap_sign_test": sign_test([r["full_gap_total_mean"] for r in group]),
             "outside_gap_sign_test": sign_test([r["outside_gap_total_mean"] for r in group]),
             "patch_gap_sign_test": sign_test([r["patch_gap_total_mean"] for r in group]),
@@ -305,11 +310,13 @@ def run(args):
     if not args.no_figure:
         figure(pair_rows, output / "order_consistency")
     for model_type, block in summary["checkpoints"].items():
-        print("{}: order SD median {:.4f} nats, |gap| median {:.4f} nats, ratio median {:.3f}, "
+        ratio = block["inconsistency_ratio"]
+        print("{}: order SD median {:.4f} nats, |gap| median {:.4f} nats, ratio median {}, "
               "SD >= gap in {}/{} pairs".format(
                   model_type, block["order_sd_nats_per_chain"]["median"],
                   block["absolute_full_gap_nats_per_chain"]["median"],
-                  block["inconsistency_ratio"]["median"], block["pairs_with_order_sd_above_gap"],
+                  "{:.3f}".format(ratio["median"]) if ratio else "n/a (no measurable gap)",
+                  block["pairs_with_order_sd_above_gap"],
                   block["pair_count"]), flush=True)
         outside = block["outside_gap_sign_test"]
         print("    outside-patch gap: {} positive, {} negative, {} ties, p = {}".format(

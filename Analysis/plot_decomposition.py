@@ -21,6 +21,8 @@ TEXT_PRIMARY = "#2b2b2b"
 TEXT_SECONDARY = "#595959"
 AXIS_COLOR = "#b4b4b4"
 MARKERS = {"vanilla": "o", "soluble": "^"}
+# Below this, a mean gap carries no meaningful first-order share.
+SHARE_TOLERANCE = 1e-9
 REQUIRED = frozenset(
     "pair_id structure_id chain model_type delta_full_total delta_fo_total delta_joint_total".split())
 
@@ -75,22 +77,32 @@ def draw(rows, destination, dpi):
         1, 2, figsize=(11.2, 4.8), gridspec_kw={"width_ratios": [1.15, 1.0]})
 
     positions = list(range(len(records)))[::-1]
+    # The stacked bars assume the terms run in one direction from zero. A protein whose mean
+    # gap is zero has no share to report, and a negative one would draw outside the axis, so
+    # both are labelled rather than silently mis-drawn.
+    span = max(abs(r["full"]) for r in records) * 1.14 or 1.0
     for position, record in zip(positions, records):
         left.barh(position, record["first_order"], height=0.68,
                   color=FIRST_ORDER_COLOR, edgecolor="white", linewidth=1.0, zorder=3)
         left.barh(position, record["joint"], height=0.68, left=record["first_order"],
                   color=JOINT_COLOR, edgecolor="white", linewidth=1.0, zorder=3)
         # One direct label per bar carries the share the burial term accounts for.
-        left.text(record["full"] + 0.45, position,
-                  "{:.0f}%".format(100 * record["first_order"] / record["full"]),
-                  va="center", ha="left", fontsize=7.5, color=TEXT_SECONDARY, zorder=4)
+        if abs(record["full"]) > SHARE_TOLERANCE:
+            label = "{:.0f}%".format(100 * record["first_order"] / record["full"])
+        else:
+            label = "n/a"
+        offset = 0.45 if record["full"] >= 0 else -0.45
+        left.text(record["full"] + offset, position, label, va="center",
+                  ha="left" if record["full"] >= 0 else "right",
+                  fontsize=7.5, color=TEXT_SECONDARY, zorder=4)
     left.set_yticks(positions)
     left.set_yticklabels([r["label"] for r in records], fontsize=8, color=TEXT_PRIMARY)
     left.set_xlabel("Mean gap, permuted minus original (nats per chain)",
                     fontsize=8.5, color=TEXT_PRIMARY)
     left.set_title("Burial accounts for most of every protein's gap",
                    fontsize=9.5, color=TEXT_PRIMARY, loc="left", pad=10)
-    left.set_xlim(0, max(r["full"] for r in records) * 1.14)
+    low = min(0.0, min(r["full"] for r in records) * 1.14)
+    left.set_xlim(low, span)
     left.xaxis.grid(True, color=AXIS_COLOR, linewidth=0.6, alpha=0.5, zorder=0)
     left.set_axisbelow(True)
     left.legend(handles=[

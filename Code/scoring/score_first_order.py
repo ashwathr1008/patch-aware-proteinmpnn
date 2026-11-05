@@ -130,7 +130,7 @@ def read_full_gaps(path):
         if missing:
             raise ValueError("pair_scores.csv is missing columns: " + ", ".join(sorted(missing)))
         rows = list(reader)
-    collected = defaultdict(dict)
+    collected, lengths = defaultdict(dict), {}
     for row in rows:
         key = (row["pair_id"], row["model_type"])
         index = int(row["order_index"])
@@ -140,16 +140,21 @@ def read_full_gaps(path):
         if not math.isfinite(total):
             raise ValueError("Nonfinite full_nll_gap for " + row["pair_id"])
         collected[key][index] = total
+        lengths.setdefault(key[0], set()).add(int(row["length"]))
     gaps = {}
     for key, members in collected.items():
         if sorted(members) != list(range(1, len(members) + 1)):
             raise ValueError("Order indices are not a complete run for " + key[0])
         gaps[key] = {"delta_full_total": statistics.fmean(members.values()),
-                     "order_count": len(members)}
+                     "order_count": len(members),
+                     "length": next(iter(lengths[key[0]]))}
+    for pair_id, seen in lengths.items():
+        if len(seen) > 1:
+            raise ValueError("Conflicting chain lengths for " + pair_id)
     return gaps
 
 
-def first_order_log_probs(model, features, torch, numpy):
+def first_order_log_probs(model, features, torch):
     """Return an (L, 21) array of log p(aa_i | backbone) with no sequence context."""
     with torch.inference_mode():
         log_probs = model.unconditional_probs(
@@ -324,10 +329,10 @@ def run(args):
                 raise ValueError("Scoring requires evaluation mode and zero backbone noise")
             marginals = {}
             for key, features in features_by_key.items():
-                marginals[key] = first_order_log_probs(model, features, torch, np)
+                marginals[key] = first_order_log_probs(model, features, torch)
                 summary["unconditional_forward_calls"] += 1
                 # A repeat pass must agree exactly; the first-order term has no sampling.
-                repeat = first_order_log_probs(model, features, torch, np)
+                repeat = first_order_log_probs(model, features, torch)
                 summary["unconditional_forward_calls"] += 1
                 drift = float(np.max(np.abs(marginals[key] - repeat)))
                 if drift > TOLERANCE:
@@ -342,6 +347,15 @@ def run(args):
                 reference = full_gaps.get((pair["pair_id"], model_type))
                 if reference is None:
                     raise ValueError("No scored full-chain gap for " + pair["pair_id"])
+                # delta_full is reconstructed as a per-residue mean times the length recorded
+                # in the scored run, while every term computed here uses the freshly staged
+                # backbone. If those lengths differ, the referenced run staged a different
+                # structure and delta_full would be silently rescaled, with delta_joint
+                # absorbing the entire error.
+                if reference["length"] != structure["length"]:
+                    raise ValueError(
+                        "Scored-run length {} differs from the staged backbone length {} for {}"
+                        .format(reference["length"], structure["length"], pair["pair_id"]))
                 positions = [i - 1 for i in pair["patch_indices"]]
                 chain_totals, patch_totals = {}, {}
                 for label in ("original", "permuted"):
