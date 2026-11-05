@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "purpose": "chain_length_trend_in_the_joint_term",
+  "method": "Exact permutation test over all orderings of the per-structure values; no normal approximation",
+  "normalization_note": "joint_total grows with length almost arithmetically, so its positive correlation is weak evidence; joint_per_residue and first_order_share are the informative normalizations and they point opposite ways",
+  "structures": [
+    {
+      "structure_id": "1L2Y",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "diagnostic",
+      "group": "trp_cage",
+      "length": 20,
+      "pair_count": 5,
+      "joint_total": 1.0079003686085353,
+      "joint_per_residue": 0.05039501843042676,
+      "first_order_share": 0.9467485835903442,
+      "full_gap_total": 14.714332660473882
+    },
+    {
+      "structure_id": "1VII",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "development",
+      "group": "villin_headpiece",
+      "length": 36,
+      "pair_count": 15,
+      "joint_total": 0.5061897742251538,
+      "joint_per_residue": 0.014060827061809826,
+      "first_order_share": 0.9250799381469823,
+      "full_gap_total": 8.105284123371042
+    },
+    {
+      "structure_id": "1CRN",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "development",
+      "group": "crambin",
+      "length": 46,
+      "pair_count": 15,
+      "joint_total": 2.1594131398635588,
+      "joint_per_residue": 0.04694376391007737,
+      "first_order_share": 0.894080557261098,
+      "full_gap_total": 25.128060607953614
+    },
+    {
+      "structure_id": "1ENH",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "diagnostic",
+      "group": "engrailed_homeodomain",
+      "length": 54,
+      "pair_count": 5,
+      "joint_total": 1.730780440196397,
+      "joint_per_residue": 0.032051489633266615,
+      "first_order_share": 0.8412229903141495,
+      "full_gap_total": 9.559701448306443
+    },
+    {
+      "structure_id": "1SHG",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "diagnostic",
+      "group": "spectrin_sh3",
+      "length": 57,
+      "pair_count": 15,
+      "joint_total": 1.7773681981489065,
+      "joint_per_residue": 0.03118189821313871,
+      "first_order_share": 0.8681123783260373,
+      "full_gap_total": 13.678911827815076
+    },
+    {
+      "structure_id": "2CI2",
+      "chain": "I",
+      "model_type": "soluble",
+      "split": "development",
+      "group": "barley_ci2+ubiquitin",
+      "length": 65,
+      "pair_count": 15,
+      "joint_total": 2.6854211590563244,
+      "joint_per_residue": 0.041314171677789606,
+      "first_order_share": 0.8314490578806448,
+      "full_gap_total": 14.925155843483903
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "development",
+      "group": "barley_ci2+ubiquitin",
+      "length": 76,
+      "pair_count": 15,
+      "joint_total": 1.616882255859673,
+      "joint_per_residue": 0.02127476652446938,
+      "first_order_share": 0.9261992389384015,
+      "full_gap_total": 15.549769787179928
+    },
+    {
+      "structure_id": "1L2Y",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "diagnostic",
+      "group": "trp_cage",
+      "length": 20,
+      "pair_count": 5,
+      "joint_total": 1.0409881085157395,
+      "joint_per_residue": 0.052049405425786975,
+      "first_order_share": 0.9147823348036769,
+      "full_gap_total": 15.301784594357013
+    },
+    {
+      "structure_id": "1VII",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "development",
+      "group": "villin_headpiece",
+      "length": 36,
+      "pair_count": 15,
+      "joint_total": 0.5591841686517003,
+      "joint_per_residue": 0.015532893573658342,
+      "first_order_share": 0.8847932261410515,
+      "full_gap_total": 8.00655132420361
+    },
+    {
+      "structure_id": "1CRN",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "development",
+      "group": "crambin",
+      "length": 46,
+      "pair_count": 15,
+      "joint_total": 2.024195497234662,
+      "joint_per_residue": 0.04400424993988396,
+      "first_order_share": 0.9042659494492923,
+      "full_gap_total": 26.406319696704546
+    },
+    {
+      "structure_id": "1ENH",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "diagnostic",
+      "group": "engrailed_homeodomain",
+      "length": 54,
+      "pair_count": 5,
+      "joint_total": 0.9316992036998277,
+      "joint_per_residue": 0.017253688957404218,
+      "first_order_share": 0.85221344809164,
+      "full_gap_total": 8.652856086939574
+    },
+    {
+      "structure_id": "1SHG",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "diagnostic",
+      "group": "spectrin_sh3",
+      "length": 57,
+      "pair_count": 15,
+      "joint_total": 2.097382573286691,
+      "joint_per_residue": 0.03679618549625774,
+      "first_order_share": 0.8789801511176241,
+      "full_gap_total": 14.434047054251034
+    },
+    {
+      "structure_id": "2CI2",
+      "chain": "I",
+      "model_type": "vanilla",
+      "split": "development",
+      "group": "barley_ci2+ubiquitin",
+      "length": 65,
+      "pair_count": 15,
+      "joint_total": 3.0741569443295416,
+      "joint_per_residue": 0.047294722220454485,
+      "first_order_share": 0.8207905064717335,
+      "full_gap_total": 15.744140292083225
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "development",
+      "group": "barley_ci2+ubiquitin",
+      "length": 76,
+      "pair_count": 15,
+      "joint_total": 1.4188288032387688,
+      "joint_per_residue": 0.01866880004261538,
+      "first_order_share": 0.9163236886632324,
+      "full_gap_total": 14.512921703793108
+    }
+  ],
+  "by_checkpoint": {
+    "soluble": {
+      "structure_count": 7,
+      "lengths": [
+        20,
+        36,
+        46,
+        54,
+        57,
+        65,
+        76
+      ],
+      "measures": {
+        "joint_total": {
+          "pearson_r": 0.6153021267422388,
+          "pearson_exact_p": 0.1378968253968254,
+          "spearman_rho": 0.5,
+          "spearman_exact_p": 0.26666666666666666,
+          "significant_at_0.05": false
+        },
+        "joint_per_residue": {
+          "pearson_r": -0.34547882449429634,
+          "pearson_exact_p": 0.4490079365079365,
+          "spearman_rho": -0.35714285714285715,
+          "spearman_exact_p": 0.4444444444444444,
+          "significant_at_0.05": false
+        },
+        "first_order_share": {
+          "pearson_r": -0.49899230955355334,
+          "pearson_exact_p": 0.25595238095238093,
+          "spearman_rho": -0.42857142857142855,
+          "spearman_exact_p": 0.3535714285714286,
+          "significant_at_0.05": false
+        },
+        "full_gap_total": {
+          "pearson_r": 0.07954163045802341,
+          "pearson_exact_p": 0.8507936507936508,
+          "spearman_rho": 0.35714285714285715,
+          "spearman_exact_p": 0.4444444444444444,
+          "significant_at_0.05": false
+        }
+      },
+      "undefined_measures": []
+    },
+    "vanilla": {
+      "structure_count": 7,
+      "lengths": [
+        20,
+        36,
+        46,
+        54,
+        57,
+        65,
+        76
+      ],
+      "measures": {
+        "joint_total": {
+          "pearson_r": 0.4968365029808803,
+          "pearson_exact_p": 0.25873015873015875,
+          "spearman_rho": 0.5714285714285714,
+          "spearman_exact_p": 0.2,
+          "significant_at_0.05": false
+        },
+        "joint_per_residue": {
+          "pearson_r": -0.32495214668951833,
+          "pearson_exact_p": 0.46944444444444444,
+          "spearman_rho": -0.10714285714285714,
+          "spearman_exact_p": 0.8396825396825397,
+          "significant_at_0.05": false
+        },
+        "first_order_share": {
+          "pearson_r": -0.3257517929898253,
+          "pearson_exact_p": 0.4744047619047619,
+          "spearman_rho": -0.17857142857142858,
+          "spearman_exact_p": 0.7130952380952381,
+          "significant_at_0.05": false
+        },
+        "full_gap_total": {
+          "pearson_r": 0.019959320025003016,
+          "pearson_exact_p": 0.9621031746031746,
+          "spearman_rho": 0.10714285714285714,
+          "spearman_exact_p": 0.8396825396825397,
+          "significant_at_0.05": false
+        }
+      },
+      "undefined_measures": []
+    }
+  },
+  "verdict": {
+    "significant_relationships": [],
+    "any_significant": false,
+    "normalizations_disagree": [
+      "first_order_share",
+      "joint_per_residue"
+    ],
+    "statement": "No relationship between chain length and the joint arrangement term reaches significance at seven structures, and the three normalizations do not agree in sign. The variation across these proteins is protein-specific rather than size-specific. This is a non-result reported to close the question, not evidence that size does not matter"
+  }
+}
