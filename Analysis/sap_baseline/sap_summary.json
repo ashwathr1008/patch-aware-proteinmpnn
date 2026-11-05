@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "purpose": "sap_surrogate_baseline",
+  "burial_definition": "Relative accessibility of {N, CA, C, O, virtual CB} by Shrake-Rupley, normalized by the same residue in isolation; independent of residue identity",
+  "hydrophobicity_scale": "Black and Mould (1991) normalized, shifted so glycine is zero",
+  "window_radius_angstrom": 10.0,
+  "sphere_points": 960,
+  "pairs": {
+    "pair_count": 85,
+    "contact_descriptor_ties": 44,
+    "sap_simple_ties": 0,
+    "sap_window_ties": 0,
+    "delta_sap_simple_sign_test": {
+      "positive": 47,
+      "negative": 38,
+      "ties": 0,
+      "nonties": 85,
+      "p_value": 0.38566942011927957
+    },
+    "delta_sap_window_sign_test": {
+      "positive": 43,
+      "negative": 42,
+      "ties": 0,
+      "nonties": 85,
+      "p_value": 1.0
+    },
+    "pooled_sap_simple_vs_first_order": {
+      "pearson_r": 0.05444086751808964,
+      "spearman_rho": 0.04801641586867305,
+      "pearson_r_vs_full_gap": 0.07053571216070953,
+      "pair_count": 85
+    },
+    "pooled_sap_window_vs_first_order": {
+      "pearson_r": 0.2716802099433062,
+      "spearman_rho": 0.306077779949189,
+      "pearson_r_vs_full_gap": 0.2816261605830378,
+      "pair_count": 85
+    },
+    "within_structure_simple_vs_first_order": {
+      "1CRN": {
+        "pair_count": 15,
+        "pearson_r": 0.6968560046339972
+      },
+      "1ENH": {
+        "pair_count": 5,
+        "pearson_r": 0.5069663692765477
+      },
+      "1L2Y": {
+        "pair_count": 5,
+        "pearson_r": -0.09781272454630426
+      },
+      "1SHG": {
+        "pair_count": 15,
+        "pearson_r": -0.3259012216287494
+      },
+      "1UBQ": {
+        "pair_count": 15,
+        "pearson_r": 0.7351930326032082
+      },
+      "1VII": {
+        "pair_count": 15,
+        "pearson_r": 0.23799575100523043
+      },
+      "2CI2": {
+        "pair_count": 15,
+        "pearson_r": 0.40876953212983674
+      }
+    }
+  },
+  "candidates": {
+    "generated_count": 48,
+    "pool_count": 6,
+    "pools": [
+      {
+        "structure_id": "1CRN",
+        "model_type": "soluble",
+        "sample_count": 8,
+        "spearman_nll_vs_sap_simple": 0.7142857142857143,
+        "spearman_nll_vs_sap_window": 0.47619047619047616,
+        "generation_score_min": 0.7894524335861206,
+        "generation_score_max": 0.8661794066429138,
+        "sap_simple_mean": -0.5427030780976816,
+        "native_sap_simple": 1.0934770428928042
+      },
+      {
+        "structure_id": "1CRN",
+        "model_type": "vanilla",
+        "sample_count": 8,
+        "spearman_nll_vs_sap_simple": 0.2857142857142857,
+        "spearman_nll_vs_sap_window": 0.35714285714285715,
+        "generation_score_min": 0.7870044708251953,
+        "generation_score_max": 0.8853836059570312,
+        "sap_simple_mean": -0.4067007324815018,
+        "native_sap_simple": 1.0934770428928042
+      },
+      {
+        "structure_id": "1UBQ",
+        "model_type": "soluble",
+        "sample_count": 8,
+        "spearman_nll_vs_sap_simple": 0.9047619047619048,
+        "spearman_nll_vs_sap_window": 0.8333333333333334,
+        "generation_score_min": 0.7531733512878418,
+        "generation_score_max": 0.8114690184593201,
+        "sap_simple_mean": -2.0201366417156015,
+        "native_sap_simple": -0.8086904312676755
+      },
+      {
+        "structure_id": "1UBQ",
+        "model_type": "vanilla",
+        "sample_count": 8,
+        "spearman_nll_vs_sap_simple": 0.3333333333333333,
+        "spearman_nll_vs_sap_window": 0.3333333333333333,
+        "generation_score_min": 0.7906246185302734,
+        "generation_score_max": 0.8333555459976196,
+        "sap_simple_mean": -1.1399574459311925,
+        "native_sap_simple": -0.8086904312676755
+      },
+      {
+        "structure_id": "1VII",
+        "model_type": "soluble",
+        "sample_count": 8,
+        "spearman_nll_vs_sap_simple": 0.5238095238095238,
+        "spearman_nll_vs_sap_window": 0.42857142857142855,
+        "generation_score_min": 0.9054853916168213,
+        "generation_score_max": 1.0442396402359009,
+        "sap_simple_mean": -1.5070938122232165,
+        "native_sap_simple": 0.4769926757565464
+      },
+      {
+        "structure_id": "1VII",
+        "model_type": "vanilla",
+        "sample_count": 8,
+        "spearman_nll_vs_sap_simple": 0.35714285714285715,
+        "spearman_nll_vs_sap_window": 0.35714285714285715,
+        "generation_score_min": 0.9712696075439453,
+        "generation_score_max": 1.0747332572937012,
+        "sap_simple_mean": -1.5405464710995733,
+        "native_sap_simple": 0.4769926757565464
+      }
+    ],
+    "mean_spearman_simple": 0.5198412698412699,
+    "pool_sign_test": {
+      "positive": 6,
+      "negative": 0,
+      "ties": 0,
+      "nonties": 6,
+      "p_value": 0.03125
+    },
+    "pools_individually_significant": 2,
+    "significance_threshold_note": "Each pool holds eight samples, so only |rho| > 0.71 reaches p < 0.05 alone; the agreement of sign across pools carries the result"
+  },
+  "limitations": [
+    "Backbone-derived burial is a surrogate for side-chain SAP; the staged inputs carry no side chains, so a weak correlation may reflect surrogate error as well as a genuine difference",
+    "Generation scores were produced under per-sample decoding orders, so the candidate ranking carries order noise that the paired experiment controls for",
+    "Eight samples per pool and seven structures do not support per-pool inference"
+  ]
+}
