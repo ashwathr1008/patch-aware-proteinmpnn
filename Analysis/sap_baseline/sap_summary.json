@@ -76,6 +76,7 @@
         "model_type": "soluble",
         "sample_count": 8,
         "spearman_nll_vs_sap_simple": 0.7142857142857143,
+        "spearman_exact_p": 0.05758928571428571,
         "spearman_nll_vs_sap_window": 0.47619047619047616,
         "generation_score_min": 0.7894524335861206,
         "generation_score_max": 0.8661794066429138,
@@ -87,6 +88,7 @@
         "model_type": "vanilla",
         "sample_count": 8,
         "spearman_nll_vs_sap_simple": 0.2857142857142857,
+        "spearman_exact_p": 0.5007936507936508,
         "spearman_nll_vs_sap_window": 0.35714285714285715,
         "generation_score_min": 0.7870044708251953,
         "generation_score_max": 0.8853836059570312,
@@ -98,6 +100,7 @@
         "model_type": "soluble",
         "sample_count": 8,
         "spearman_nll_vs_sap_simple": 0.9047619047619048,
+        "spearman_exact_p": 0.004563492063492064,
         "spearman_nll_vs_sap_window": 0.8333333333333334,
         "generation_score_min": 0.7531733512878418,
         "generation_score_max": 0.8114690184593201,
@@ -109,6 +112,7 @@
         "model_type": "vanilla",
         "sample_count": 8,
         "spearman_nll_vs_sap_simple": 0.3333333333333333,
+        "spearman_exact_p": 0.4278769841269841,
         "spearman_nll_vs_sap_window": 0.3333333333333333,
         "generation_score_min": 0.7906246185302734,
         "generation_score_max": 0.8333555459976196,
@@ -120,6 +124,7 @@
         "model_type": "soluble",
         "sample_count": 8,
         "spearman_nll_vs_sap_simple": 0.5238095238095238,
+        "spearman_exact_p": 0.19662698412698412,
         "spearman_nll_vs_sap_window": 0.42857142857142855,
         "generation_score_min": 0.9054853916168213,
         "generation_score_max": 1.0442396402359009,
@@ -131,12 +136,16 @@
         "model_type": "vanilla",
         "sample_count": 8,
         "spearman_nll_vs_sap_simple": 0.35714285714285715,
+        "spearman_exact_p": 0.38938492063492064,
         "spearman_nll_vs_sap_window": 0.35714285714285715,
         "generation_score_min": 0.9712696075439453,
         "generation_score_max": 1.0747332572937012,
         "sap_simple_mean": -1.5405464710995733,
         "native_sap_simple": 0.4769926757565464
       }
+    ],
+    "pool_sizes": [
+      8
     ],
     "mean_spearman_simple": 0.5198412698412699,
     "pool_sign_test": {
@@ -146,9 +155,11 @@
       "nonties": 6,
       "p_value": 0.03125
     },
-    "pools_individually_significant": 2,
-    "significance_threshold_note": "Each pool holds eight samples, so only |rho| > 0.71 reaches p < 0.05 alone; the agreement of sign across pools carries the result"
+    "pools_individually_significant": 1,
+    "pools_without_exact_p": 0,
+    "significance_note": "Each pool's p-value is exact, enumerated over that pool's own orderings, so pools of different sizes are handled correctly. Individual pools of this size rarely reach significance alone; the agreement of sign across pools carries the result"
   },
+  "skipped_candidates": [],
   "two_regime": {
     "soluble": {
       "rearrangement": {

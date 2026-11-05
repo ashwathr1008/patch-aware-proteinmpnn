@@ -58,6 +58,10 @@ Three further limits belong in the text rather than a footnote.
 - **The checkpoint difference in the generation regime is not established.** Soluble exceeds
   vanilla on all three structures, but that is three paired observations, p = 0.25. The
   direction is consistent; the magnitude is not supported.
+- **Only one of the six pools is individually significant.** Each pool's p-value is exact,
+  enumerated over that pool's own orderings: 1UBQ soluble reaches p = 0.0046, while 1CRN
+  soluble at rho = +0.714 does not (p = 0.0576). What carries the generation result is that
+  all six pools agree in sign, which is itself significant (p = 0.031).
 - **Low SAP is not the objective.** SAP is a proxy developed largely on antibodies, and it has
   no upper guard: minimizing it rewards stripping surface hydrophobics without limit, at a cost
   to folding and function that SAP does not score. Stock ProteinMPNN already produces sequences

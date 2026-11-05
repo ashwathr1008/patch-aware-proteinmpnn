@@ -75,6 +75,32 @@ class PairScoringTest(unittest.TestCase):
         rows = analysis.score_pairs(self.dataset, self.scaffolds, {})
         self.assertIsNone(rows[0]["delta_fo_total"])
 
+    def test_a_pair_whose_composition_differs_is_rejected(self):
+        """The script's premise is exact composition matching, so it must verify it."""
+        bad = {**self.dataset, "pairs": [{**self.dataset["pairs"][0],
+                                          "permuted_sequence": "LLLK"}]}
+        with self.assertRaises(ValueError):
+            analysis.score_pairs(bad, self.scaffolds, {})
+
+    def test_a_pair_changing_an_outside_patch_position_is_rejected(self):
+        bad = {**self.dataset, "pairs": [{**self.dataset["pairs"][0],
+                                          "permuted_sequence": "RFLF"}]}
+        with self.assertRaises(ValueError):
+            analysis.score_pairs(bad, self.scaffolds, {})
+
+    def test_a_pair_not_matching_the_backbone_native_sequence_is_rejected(self):
+        """Catches a manifest regenerated against different residue selection."""
+        scaffolds = {k: {**v, "native_sequence": "KKKK"}
+                     for k, v in self.scaffolds.items()}
+        with self.assertRaises(ValueError):
+            analysis.score_pairs(self.dataset, scaffolds, {})
+
+    def test_a_pair_referencing_an_absent_structure_is_rejected(self):
+        bad = {**self.dataset, "pairs": [{**self.dataset["pairs"][0],
+                                          "structure_id": "nope"}]}
+        with self.assertRaisesRegex(ValueError, "absent structure"):
+            analysis.score_pairs(bad, self.scaffolds, {})
+
     def test_summary_counts_ties_for_both_descriptors(self):
         rows = analysis.score_pairs(self.dataset, self.scaffolds, {})
         summary = analysis.summarize_pairs(rows)
@@ -101,6 +127,41 @@ class CandidateSummaryTest(unittest.TestCase):
             self.assertAlmostEqual(pool["spearman_nll_vs_sap_simple"], 1.0)
         self.assertAlmostEqual(summary["mean_spearman_simple"], 1.0)
 
+    def test_candidates_are_matched_on_structure_and_chain(self):
+        """Two chains of one entry must not collide onto a single burial profile."""
+        import numpy as np
+        scaffolds = {}
+        for chain, burial in (("A", [0.1, 0.9, 0.5, 0.5]), ("B", [0.9, 0.1, 0.5, 0.5])):
+            scaffolds[("p1", chain)] = {
+                "burial": np.array(burial), "window": np.eye(4, dtype=bool),
+                "native_sequence": "FRLK", "length": 4, "split": "d", "group": "g"}
+        candidates = [{"sequence_id": "a", "structure_id": "p1", "chain": "A",
+                       "model_type": "vanilla", "record_type": "generated",
+                       "sample_index": "0", "sequence": "FRLK", "score": "1.0",
+                       "native_recovery": "1.0"},
+                      {"sequence_id": "b", "structure_id": "p1", "chain": "B",
+                       "model_type": "vanilla", "record_type": "generated",
+                       "sample_index": "0", "sequence": "FRLK", "score": "1.0",
+                       "native_recovery": "1.0"}]
+        rows, skipped = analysis.score_candidates(candidates, scaffolds)
+        self.assertEqual(skipped, [])
+        self.assertNotAlmostEqual(rows[0]["sap_simple"], rows[1]["sap_simple"])
+
+    def test_a_candidate_without_a_matching_scaffold_is_recorded_not_dropped(self):
+        import numpy as np
+        scaffolds = {("p1", "A"): {"burial": np.array([0.5] * 4),
+                                   "window": np.eye(4, dtype=bool),
+                                   "native_sequence": "FRLK", "length": 4,
+                                   "split": "d", "group": "g"}}
+        candidates = [{"sequence_id": "x", "structure_id": "p1", "chain": "Z",
+                       "model_type": "vanilla", "record_type": "generated",
+                       "sample_index": "0", "sequence": "FRLK", "score": "1.0",
+                       "native_recovery": "1.0"}]
+        rows, skipped = analysis.score_candidates(candidates, scaffolds)
+        self.assertEqual(rows, [])
+        self.assertEqual(len(skipped), 1)
+        self.assertEqual(skipped[0]["chain"], "Z")
+
     def test_native_records_are_excluded_from_the_pools(self):
         rows = self.pool("s1", "vanilla", [(1.0, 1.0), (2.0, 2.0), (3.0, 3.0)])
         rows.append({**rows[0], "record_type": "native", "sequence_id": "native"})
@@ -116,10 +177,39 @@ class CandidateSummaryTest(unittest.TestCase):
         self.assertEqual(summary["pool_sign_test"]["positive"], 1)
         self.assertEqual(summary["pool_sign_test"]["negative"], 1)
 
-    def test_the_significance_threshold_counts_only_strong_pools(self):
+    def test_significance_uses_each_pool_s_own_exact_p_value(self):
+        """A perfect four-sample pool cannot reach p < 0.05: its smallest attainable p is 2/24."""
         rows = self.pool("s1", "vanilla", [(1.0, 1.0), (2.0, 2.0), (3.0, 3.0), (4.0, 4.0)])
         summary = analysis.summarize_candidates(rows)
+        pool = summary["pools"][0]
+        self.assertAlmostEqual(pool["spearman_nll_vs_sap_simple"], 1.0)
+        self.assertAlmostEqual(pool["spearman_exact_p"], 2 / 24)
+        self.assertEqual(summary["pools_individually_significant"], 0)
+
+    def test_a_larger_perfect_pool_does_reach_significance(self):
+        rows = self.pool("s1", "vanilla",
+                         [(float(i), float(i)) for i in range(1, 7)])
+        summary = analysis.summarize_candidates(rows)
+        self.assertAlmostEqual(summary["pools"][0]["spearman_exact_p"], 2 / 720)
         self.assertEqual(summary["pools_individually_significant"], 1)
+
+    def test_pools_of_different_sizes_are_each_judged_on_their_own(self):
+        """The old code applied one n=8 critical value to every pool regardless of size."""
+        rows = (self.pool("small", "vanilla", [(float(i), float(i)) for i in range(1, 5)])
+                + self.pool("large", "vanilla", [(float(i), float(i)) for i in range(1, 8)]))
+        summary = analysis.summarize_candidates(rows)
+        self.assertEqual(summary["pool_sizes"], [4, 7])
+        by_structure = {p["structure_id"]: p for p in summary["pools"]}
+        self.assertGreater(by_structure["small"]["spearman_exact_p"], 0.05)
+        self.assertLess(by_structure["large"]["spearman_exact_p"], 0.05)
+        self.assertEqual(summary["pools_individually_significant"], 1)
+
+    def test_an_oversized_pool_reports_no_exact_p_rather_than_enumerating(self):
+        rows = self.pool("big", "vanilla",
+                         [(float(i), float(i)) for i in range(analysis.MAXIMUM_EXACT_POOL + 1)])
+        summary = analysis.summarize_candidates(rows)
+        self.assertIsNone(summary["pools"][0]["spearman_exact_p"])
+        self.assertEqual(summary["pools_without_exact_p"], 1)
 
 
 if __name__ == "__main__":

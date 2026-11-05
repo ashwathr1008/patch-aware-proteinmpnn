@@ -26,6 +26,7 @@ scaffold scores every assignment on a structure. See Code/descriptors/sap.py.
 import argparse
 import csv
 from collections import defaultdict
+import itertools
 import json
 import math
 from pathlib import Path
@@ -35,10 +36,14 @@ import tempfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "Code" / "baseline"))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "Code" / "descriptors"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "Code" / "scoring"))
 import run_baseline as baseline
 import sap as surrogate
+import score_pairs as pair_scoring
 
 TIE_TOLERANCE = 1e-9
+# Enumerating a pool's orderings is exact but factorial; above this, report no p-value.
+MAXIMUM_EXACT_POOL = 8
 PAIR_FIELDS = (
     "pair_id structure_id chain split group patch_id patch_size changed_identity_count "
     "original_sap_simple permuted_sap_simple delta_sap_simple "
@@ -66,6 +71,11 @@ def write_csv(path, fields, rows):
 def read_csv(path):
     with Path(path).open(newline="", encoding="utf-8-sig") as handle:
         return list(csv.DictReader(handle))
+
+
+def format_optional(value, pattern="{:+.3f}"):
+    """Render a statistic that may be undefined, so a summary never fails on None."""
+    return "n/a" if value is None else pattern.format(value)
 
 
 def pearson(xs, ys):
@@ -98,6 +108,24 @@ def ranks(values):
 
 def spearman(xs, ys):
     return pearson(ranks(xs), ranks(ys))
+
+
+def exact_spearman_p(xs, ys):
+    """Two-sided exact p by enumerating orderings; None when the pool is too large.
+
+    The pools here hold a handful of samples each, where an asymptotic p-value is not
+    trustworthy and a single hardcoded critical value would silently assume one pool size.
+    """
+    observed = spearman(xs, ys)
+    if observed is None or len(xs) > MAXIMUM_EXACT_POOL:
+        return observed, None
+    total = extreme = 0
+    for permuted in itertools.permutations(ys):
+        value = spearman(xs, list(permuted))
+        total += 1
+        if value is not None and abs(value) >= abs(observed) - 1e-12:
+            extreme += 1
+    return observed, extreme / total
 
 
 def sign_test(values):
@@ -154,10 +182,21 @@ def build_scaffolds(dataset, dataset_root, window_radius, sphere_points):
 
 
 def score_pairs(dataset, scaffolds, decomposition):
+    """Score every pair, after checking each one still satisfies the premise.
+
+    The claim this script supports is that composition is held exactly equal, so the SAP
+    change reflects only rearrangement. That premise is checked here rather than assumed:
+    a regenerated manifest with different residue selection or shifted patch indices would
+    otherwise be scored against the wrong burial positions and reported as a rearrangement
+    effect, with only the length check inside sap_profile standing in the way.
+    """
     rows = []
     for pair in dataset["pairs"]:
         key = (pair["structure_id"], pair["chain"])
+        if key not in scaffolds:
+            raise ValueError("Pair references an absent structure: " + pair["pair_id"])
         scaffold = scaffolds[key]
+        score_pairs_validate(pair, scaffold)
         positions = [i - 1 for i in pair["patch_indices"]]
         original = surrogate.descriptors(
             scaffold["burial"], pair["original_sequence"], scaffold["window"], positions)
@@ -188,12 +227,22 @@ def score_pairs(dataset, scaffolds, decomposition):
     return rows
 
 
+def score_pairs_validate(pair, scaffold):
+    """Reuse the scoring module's invariants, then tie the pair to this backbone."""
+    pair_scoring.validate_pair(pair, scaffold["length"], scaffold["native_sequence"])
+
+
 def score_candidates(candidates, scaffolds):
-    rows = []
-    by_identifier = {key[0]: value for key, value in scaffolds.items()}
+    """Score candidates against the backbone of their own structure AND chain."""
+    rows, skipped = [], []
     for row in candidates:
-        scaffold = by_identifier.get(row["structure_id"])
+        key = (row["structure_id"], row.get("chain", ""))
+        scaffold = scaffolds.get(key)
         if scaffold is None:
+            skipped.append({"sequence_id": row.get("sequence_id", ""),
+                            "structure_id": row["structure_id"],
+                            "chain": row.get("chain", ""),
+                            "reason": "no scaffold for this structure and chain"})
             continue
         sequence = row["sequence"]
         if len(sequence) != scaffold["length"]:
@@ -207,7 +256,7 @@ def score_candidates(candidates, scaffolds):
             "sap_simple": surrogate.score(scaffold["burial"], sequence),
             "sap_window": surrogate.score(scaffold["burial"], sequence, scaffold["window"]),
         })
-    return rows
+    return rows, skipped
 
 
 def summarize_pairs(rows):
@@ -252,9 +301,11 @@ def summarize_candidates(rows):
     for key in sorted(grouped):
         pool = grouped[key]
         scores = [r["generation_score"] for r in pool]
+        simple_rho, simple_p = exact_spearman_p(scores, [r["sap_simple"] for r in pool])
         pools.append({
             "structure_id": key[0], "model_type": key[1], "sample_count": len(pool),
-            "spearman_nll_vs_sap_simple": spearman(scores, [r["sap_simple"] for r in pool]),
+            "spearman_nll_vs_sap_simple": simple_rho,
+            "spearman_exact_p": simple_p,
             "spearman_nll_vs_sap_window": spearman(scores, [r["sap_window"] for r in pool]),
             "generation_score_min": min(scores), "generation_score_max": max(scores),
             "sap_simple_mean": statistics.fmean(r["sap_simple"] for r in pool),
@@ -262,15 +313,21 @@ def summarize_candidates(rows):
         })
     simple = [p["spearman_nll_vs_sap_simple"] for p in pools
               if p["spearman_nll_vs_sap_simple"] is not None]
+    sizes = sorted({p["sample_count"] for p in pools})
     return {
         "generated_count": len(generated), "pool_count": len(pools), "pools": pools,
+        "pool_sizes": sizes,
         "mean_spearman_simple": statistics.fmean(simple) if simple else None,
         "pool_sign_test": sign_test(simple),
-        # At eight samples a two-sided Spearman needs |rho| > 0.71 to reach p < 0.05.
-        "pools_individually_significant": sum(1 for v in simple if abs(v) > 0.71),
-        "significance_threshold_note":
-            "Each pool holds eight samples, so only |rho| > 0.71 reaches p < 0.05 alone; "
-            "the agreement of sign across pools carries the result",
+        # Significance is decided per pool by its own exact p-value, so pools of differing
+        # size are not judged against one borrowed critical value.
+        "pools_individually_significant": sum(
+            1 for p in pools if p["spearman_exact_p"] is not None and p["spearman_exact_p"] < 0.05),
+        "pools_without_exact_p": sum(1 for p in pools if p["spearman_exact_p"] is None),
+        "significance_note":
+            "Each pool's p-value is exact, enumerated over that pool's own orderings, so pools "
+            "of different sizes are handled correctly. Individual pools of this size rarely "
+            "reach significance alone; the agreement of sign across pools carries the result",
     }
 
 
@@ -341,8 +398,12 @@ def figure_two_regime(regimes, path):
     for offset, model_type in enumerate(models):
         block = regimes[model_type]
         centres = [index + (offset - 0.5) * width for index in range(2)]
-        heights = [block["rearrangement"]["pooled_spearman"],
-                   block["generation"]["mean_spearman"]]
+        raw = [block["rearrangement"]["pooled_spearman"],
+               block["generation"]["mean_spearman"]]
+        # Either regime can be undefined: too few matched pairs for a correlation, or no
+        # candidate pool for this checkpoint. Draw nothing there rather than failing after
+        # the tables have already been written.
+        heights = [0.0 if h is None else h for h in raw]
         axis.bar(centres, heights, width=width * 0.92, color=colors[model_type],
                  edgecolor="white", linewidth=1.0, zorder=3, label=model_type)
         spread = [[item["spearman"] for item in block["rearrangement"]["per_structure"]
@@ -351,10 +412,10 @@ def figure_two_regime(regimes, path):
         for centre, points in zip(centres, spread):
             axis.scatter([centre] * len(points), points, s=16, facecolor="white",
                          edgecolor="#2b2b2b", linewidth=0.8, zorder=4)
-        for centre, height in zip(centres, heights):
+        for centre, height, value in zip(centres, heights, raw):
             axis.text(centre, height + (0.04 if height >= 0 else -0.07),
-                      "{:+.2f}".format(height), ha="center", fontsize=8, color="#595959",
-                      zorder=5)
+                      "n/a" if value is None else "{:+.2f}".format(value),
+                      ha="center", fontsize=8, color="#595959", zorder=5)
     axis.axhline(0, color="#595959", linewidth=1.0, zorder=2)
     axis.set_xticks(range(2))
     axis.set_xticklabels(labels, fontsize=9, color="#2b2b2b")
@@ -456,8 +517,8 @@ def run(args):
         if not decomposition:
             raise ValueError("No decomposition rows for checkpoint " + args.decomposition_model)
     pair_rows = score_pairs(dataset, scaffolds, decomposition)
-    candidate_rows = score_candidates(read_csv(args.candidates), scaffolds) \
-        if args.candidates else []
+    candidate_rows, skipped_candidates = (
+        score_candidates(read_csv(args.candidates), scaffolds) if args.candidates else ([], []))
     summary = {
         "schema_version": 1, "purpose": "sap_surrogate_baseline",
         "burial_definition":
@@ -467,6 +528,7 @@ def run(args):
         "window_radius_angstrom": args.window_radius, "sphere_points": args.sphere_points,
         "pairs": summarize_pairs(pair_rows),
         "candidates": summarize_candidates(candidate_rows) if candidate_rows else None,
+        "skipped_candidates": skipped_candidates,
         "two_regime": two_regime(pair_rows, by_model, candidate_rows)
         if by_model and candidate_rows else None,
         "limitations": [
@@ -492,12 +554,13 @@ def run(args):
         block["sap_simple_ties"], block["pair_count"]), flush=True)
     if "pooled_sap_simple_vs_first_order" in block:
         fit = block["pooled_sap_simple_vs_first_order"]
-        print("  SAP change vs model first-order term: r = {:+.3f}, rho = {:+.3f}".format(
-            fit["pearson_r"], fit["spearman_rho"]), flush=True)
+        print("  SAP change vs model first-order term: r = {}, rho = {}".format(
+            format_optional(fit["pearson_r"]), format_optional(fit["spearman_rho"])), flush=True)
     if summary["candidates"]:
         candidates = summary["candidates"]
-        print("Candidates: mean rho(NLL, SAP) = {:+.3f} over {} pools; {} individually "
-              "significant".format(candidates["mean_spearman_simple"], candidates["pool_count"],
+        print("Candidates: mean rho(NLL, SAP) = {} over {} pools; {} individually "
+              "significant".format(format_optional(candidates["mean_spearman_simple"]),
+                                   candidates["pool_count"],
                                    candidates["pools_individually_significant"]), flush=True)
     print("Complete: " + str(output / "sap_summary.json"), flush=True)
 
