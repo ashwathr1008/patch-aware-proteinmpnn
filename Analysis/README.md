@@ -4,6 +4,8 @@ The [controlled pair-scoring results](../Documentation/Midreport/controlled_scor
 
 The completed expansion is in [paired_expanded/](paired_expanded/). It contains 85 pairs from 17 patches/seven sources/six groups, scored by both checkpoints under eight shared orders: 1,360 paired order-level rows and 2,958 audited model forward calls. Both checkpoints prefer the original in 84/85 order-averaged comparisons; the same 1ENH pair is the exception and changes sign across orders. All composition/geometry controls tie. The simple hydrophobic-contact descriptor changes in 41/85 pairs, without a validated favorable direction. Read [per-protein results](paired_expanded/protein_summary.csv), [group/split summaries](paired_expanded/split_summary.csv), [paired gaps](paired_expanded/paired_gaps.pdf), [order ranges](paired_expanded/order_sensitivity.pdf), and [descriptor plot](paired_expanded/spatial_descriptor.pdf). Do not interpret pooled pair counts as 85 independent biological replicates.
 
+The expanded gaps are decomposed in [decomposition/](decomposition/). ProteinMPNN's own unconditional probabilities supply a first-order burial score, `p(aa_i | backbone)` with no sequence context, and the order-averaged full-chain gap is split into that term and a joint residual. The first-order term accounts for a median **88.5% (vanilla) and 89.3% (soluble)** of the gap and predicts it with R² = 0.95, so most of the published effect is burial-weighted composition rather than arrangement. The joint residual is small but systematic, favouring the original in 74/85 and 71/85 pairs. The same directory measures decoding-order inconsistency from the existing 1,360 rows: the order spread is 6–7% of the effect, so the 84/85 result is not an artifact of decoding order, and the 1ENH exception is the one pair whose order spread exceeds its own gap. Read the [decomposition results](../Documentation/Midreport/decomposition_results.md), [per-pair terms](decomposition/first_order_scores.csv), [summary statistics](decomposition/first_order_summary.json), [decomposition figure](decomposition/decomposition.pdf) and [order-spread figure](decomposition/order_consistency.pdf). The joint residual absorbs amortization error as well as coupling, and is not a per-pair quantity.
+
 Raw expanded run: `Results/paired-expanded-20261104`. Exact input: `Data/compatibility_pairs/pairs.json`, already shared with its small staged backbones and provenance. Replace `Data/first_pair/pairs.json` with this path in the scoring/export commands below to repeat the expansion. The initial single pair and expanded set are separate runs; the first pair is not an extra independent protein.
 
 The November 4 **development baseline** generated 48 sequences across three structures and two checkpoints. These outputs establish pipeline feasibility; no patch benefit, folding, stability or solubility improvement has been tested.
@@ -40,5 +42,15 @@ To score a prepared pair dataset and curate its results, use new destinations:
 python Code/scoring/score_pairs.py --pairs Data/first_pair/pairs.json --mpnn-dir Runs/local-vendor/vendor/ProteinMPNN --output Results/my-paired-run --device cuda --orders 8 --order-seed 137 --models vanilla,soluble
 python Analysis/summarize_pairs.py --run-dir Results/my-paired-run --pairs Data/first_pair/pairs.json --output Results/my-paired-summary
 ```
+
+To decompose an existing scored run into its first-order and joint terms, and to measure its decoding-order spread:
+
+```powershell
+python Code/scoring/score_first_order.py --pairs Data/compatibility_pairs/pairs.json --mpnn-dir Runs/local-vendor/vendor/ProteinMPNN --scores Analysis/paired_expanded/pair_scores.csv --output Results/my-first-order-run --device cpu
+python Analysis/summarize_order_consistency.py --scores Analysis/paired_expanded/pair_scores.csv --output Results/my-order-consistency
+python Analysis/plot_decomposition.py --scores Results/my-first-order-run/first_order_scores.csv --output Results/my-first-order-run/decomposition
+```
+
+The first-order control runs one unconditional forward pass per structure and checkpoint, takes no decoding order, and reuses the scored run for the full-chain term, so it adds 14 passes rather than a new scoring campaign. It asserts per pair that outside-patch positions contribute exactly zero to the first-order gap; all 85 pairs returned `0.00e+00`, which also checks patch indices against the model's featurization. The order-consistency script needs no model or GPU.
 
 The pair runner loads models once and scores with explicit shared orders, without generating new sequences. Use the project environment and its hardware-compatible torch installation. [Scoring definitions and audits](../Code/scoring/README.md) explain why these outputs differ from raw generation scores.

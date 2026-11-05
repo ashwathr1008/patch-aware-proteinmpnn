@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "purpose": "first_order_burial_control",
+  "status": "complete",
+  "started_utc": "2026-11-05T01:15:57.254086+00:00",
+  "unconditional_forward_calls": 28,
+  "invariant_checks": [
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1VII",
+      "chain": "A",
+      "model_type": "vanilla",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1CRN",
+      "chain": "A",
+      "model_type": "vanilla",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1L2Y",
+      "chain": "A",
+      "model_type": "vanilla",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1ENH",
+      "chain": "A",
+      "model_type": "vanilla",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1SHG",
+      "chain": "A",
+      "model_type": "vanilla",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "2CI2",
+      "chain": "I",
+      "model_type": "vanilla",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1VII",
+      "chain": "A",
+      "model_type": "soluble",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1CRN",
+      "chain": "A",
+      "model_type": "soluble",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1L2Y",
+      "chain": "A",
+      "model_type": "soluble",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1ENH",
+      "chain": "A",
+      "model_type": "soluble",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "1SHG",
+      "chain": "A",
+      "model_type": "soluble",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "structure_id": "2CI2",
+      "chain": "I",
+      "model_type": "soluble",
+      "check": "deterministic_repeat",
+      "max_abs_difference": 0.0,
+      "status": "passed"
+    }
+  ],
+  "row_count": 170,
+  "scores_sha256": "f7da058d8a4c7ea025a4adb98d61f978866a7882c861b14a09a2710d2d2f0f9b",
+  "finished_utc": "2026-11-05T01:16:01.803093+00:00",
+  "elapsed_seconds": 4.5490291790047195
+}

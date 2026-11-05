@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "purpose": "first_order_burial_control",
+  "units": "nats per chain unless a field name says otherwise",
+  "pair_count": 85,
+  "row_count": 170,
+  "checkpoints": {
+    "soluble": {
+      "pair_count": 85,
+      "delta_full_total": {
+        "count": 85,
+        "mean": 15.084445922246532,
+        "median": 13.3109791688621,
+        "p25": 9.529358949046584,
+        "p75": 20.47490053763613,
+        "min": -0.13079485762864185,
+        "max": 36.505649290047586
+      },
+      "delta_fo_total": {
+        "count": 85,
+        "mean": 13.380063311054426,
+        "median": 11.944233678281307,
+        "p25": 8.138590708374977,
+        "p75": 18.44009816646576,
+        "min": -0.3567667007446289,
+        "max": 36.6139502748847
+      },
+      "delta_joint_total": {
+        "count": 85,
+        "mean": 1.7043826111921048,
+        "median": 1.4711857279762626,
+        "p25": 0.7023666752502304,
+        "p75": 2.794601518660782,
+        "min": -2.055550129152836,
+        "max": 7.225834053941071
+      },
+      "delta_fo_share_of_full": {
+        "count": 85,
+        "mean": 0.9095447966599758,
+        "median": 0.8926161517934033,
+        "p25": 0.83999524218448,
+        "p75": 0.9508803920000706,
+        "min": 0.44822114043526035,
+        "max": 2.727681402869642
+      },
+      "delta_full_sign_test": {
+        "positive": 84,
+        "negative": 1,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 4.446095792472524e-24
+      },
+      "delta_fo_sign_test": {
+        "positive": 84,
+        "negative": 1,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 4.446095792472524e-24
+      },
+      "delta_joint_sign_test": {
+        "positive": 71,
+        "negative": 14,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 2.427174154689865e-10
+      },
+      "full_on_first_order_fit": {
+        "pearson_r": 0.9775716437707612,
+        "r_squared": 0.9556463187046681,
+        "slope": 1.0350192906384028
+      },
+      "pairs_where_first_order_dominates": 83,
+      "pairs_where_joint_reverses_sign": 0
+    },
+    "vanilla": {
+      "pair_count": 85,
+      "delta_full_total": {
+        "count": 85,
+        "mean": 15.368622405553127,
+        "median": 13.680662641301751,
+        "p25": 9.773096369113773,
+        "p75": 21.525130525697023,
+        "min": -0.49772052001207767,
+        "max": 37.294511194340885
+      },
+      "delta_fo_total": {
+        "count": 85,
+        "mean": 13.633685271880205,
+        "median": 12.194242417812347,
+        "p25": 8.305507466197014,
+        "p75": 19.00704223662615,
+        "min": 0.27954769134521484,
+        "max": 36.38379453867674
+      },
+      "delta_joint_total": {
+        "count": 85,
+        "mean": 1.7349371336729211,
+        "median": 1.419260227121411,
+        "p25": 0.7478670491836974,
+        "p75": 2.510036547668278,
+        "min": -2.6762995012104547,
+        "max": 8.41885379422456
+      },
+      "delta_fo_share_of_full": {
+        "count": 85,
+        "mean": 0.8709392154716069,
+        "median": 0.8848905205948383,
+        "p25": 0.8352659521314748,
+        "p75": 0.9405770597225984,
+        "min": -0.5616559496852397,
+        "max": 1.5099156661183577
+      },
+      "delta_full_sign_test": {
+        "positive": 84,
+        "negative": 1,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 4.446095792472524e-24
+      },
+      "delta_fo_sign_test": {
+        "positive": 85,
+        "negative": 0,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 5.169878828456423e-26
+      },
+      "delta_joint_sign_test": {
+        "positive": 74,
+        "negative": 11,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 1.2888315230163817e-12
+      },
+      "full_on_first_order_fit": {
+        "pearson_r": 0.9748015231660003,
+        "r_squared": 0.9502380095667543,
+        "slope": 1.0362221470789652
+      },
+      "pairs_where_first_order_dominates": 83,
+      "pairs_where_joint_reverses_sign": 1
+    }
+  },
+  "proteins": [
+    {
+      "structure_id": "1CRN",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "development",
+      "group": "crambin",
+      "pair_count": 15,
+      "delta_full_total_mean": 25.128060607953614,
+      "delta_fo_total_mean": 22.968647468090058,
+      "delta_joint_total_mean": 2.1594131398635588,
+      "delta_fo_share_median": 0.894080557261098,
+      "joint_positive_count": 13
+    },
+    {
+      "structure_id": "1CRN",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "development",
+      "group": "crambin",
+      "pair_count": 15,
+      "delta_full_total_mean": 26.406319696704546,
+      "delta_fo_total_mean": 24.382124199469885,
+      "delta_joint_total_mean": 2.024195497234662,
+      "delta_fo_share_median": 0.9042659494492923,
+      "joint_positive_count": 14
+    },
+    {
+      "structure_id": "1ENH",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "diagnostic",
+      "group": "engrailed_homeodomain",
+      "pair_count": 5,
+      "delta_full_total_mean": 9.559701448306443,
+      "delta_fo_total_mean": 7.828921008110046,
+      "delta_joint_total_mean": 1.730780440196397,
+      "delta_fo_share_median": 0.8412229903141495,
+      "joint_positive_count": 5
+    },
+    {
+      "structure_id": "1ENH",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "diagnostic",
+      "group": "engrailed_homeodomain",
+      "pair_count": 5,
+      "delta_full_total_mean": 8.652856086939574,
+      "delta_fo_total_mean": 7.721156883239746,
+      "delta_joint_total_mean": 0.9316992036998277,
+      "delta_fo_share_median": 0.85221344809164,
+      "joint_positive_count": 4
+    },
+    {
+      "structure_id": "1L2Y",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "diagnostic",
+      "group": "trp_cage",
+      "pair_count": 5,
+      "delta_full_total_mean": 14.714332660473882,
+      "delta_fo_total_mean": 13.70643229186535,
+      "delta_joint_total_mean": 1.0079003686085353,
+      "delta_fo_share_median": 0.9467485835903442,
+      "joint_positive_count": 3
+    },
+    {
+      "structure_id": "1L2Y",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "diagnostic",
+      "group": "trp_cage",
+      "pair_count": 5,
+      "delta_full_total_mean": 15.301784594357013,
+      "delta_fo_total_mean": 14.260796485841274,
+      "delta_joint_total_mean": 1.0409881085157395,
+      "delta_fo_share_median": 0.9147823348036769,
+      "joint_positive_count": 4
+    },
+    {
+      "structure_id": "1SHG",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "diagnostic",
+      "group": "spectrin_sh3",
+      "pair_count": 15,
+      "delta_full_total_mean": 13.678911827815076,
+      "delta_fo_total_mean": 11.90154362966617,
+      "delta_joint_total_mean": 1.7773681981489065,
+      "delta_fo_share_median": 0.8681123783260373,
+      "joint_positive_count": 13
+    },
+    {
+      "structure_id": "1SHG",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "diagnostic",
+      "group": "spectrin_sh3",
+      "pair_count": 15,
+      "delta_full_total_mean": 14.434047054251034,
+      "delta_fo_total_mean": 12.336664480964343,
+      "delta_joint_total_mean": 2.097382573286691,
+      "delta_fo_share_median": 0.8789801511176241,
+      "joint_positive_count": 13
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "development",
+      "group": "barley_ci2+ubiquitin",
+      "pair_count": 15,
+      "delta_full_total_mean": 15.549769787179928,
+      "delta_fo_total_mean": 13.932887531320254,
+      "delta_joint_total_mean": 1.616882255859673,
+      "delta_fo_share_median": 0.9261992389384015,
+      "joint_positive_count": 13
+    },
+    {
+      "structure_id": "1UBQ",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "development",
+      "group": "barley_ci2+ubiquitin",
+      "pair_count": 15,
+      "delta_full_total_mean": 14.512921703793108,
+      "delta_fo_total_mean": 13.094092900554338,
+      "delta_joint_total_mean": 1.4188288032387688,
+      "delta_fo_share_median": 0.9163236886632324,
+      "joint_positive_count": 12
+    },
+    {
+      "structure_id": "1VII",
+      "chain": "A",
+      "model_type": "soluble",
+      "split": "development",
+      "group": "villin_headpiece",
+      "pair_count": 15,
+      "delta_full_total_mean": 8.105284123371042,
+      "delta_fo_total_mean": 7.599094349145889,
+      "delta_joint_total_mean": 0.5061897742251538,
+      "delta_fo_share_median": 0.9250799381469823,
+      "joint_positive_count": 11
+    },
+    {
+      "structure_id": "1VII",
+      "chain": "A",
+      "model_type": "vanilla",
+      "split": "development",
+      "group": "villin_headpiece",
+      "pair_count": 15,
+      "delta_full_total_mean": 8.00655132420361,
+      "delta_fo_total_mean": 7.447367155551911,
+      "delta_joint_total_mean": 0.5591841686517003,
+      "delta_fo_share_median": 0.8847932261410515,
+      "joint_positive_count": 12
+    },
+    {
+      "structure_id": "2CI2",
+      "chain": "I",
+      "model_type": "soluble",
+      "split": "development",
+      "group": "barley_ci2+ubiquitin",
+      "pair_count": 15,
+      "delta_full_total_mean": 14.925155843483903,
+      "delta_fo_total_mean": 12.23973468442758,
+      "delta_joint_total_mean": 2.6854211590563244,
+      "delta_fo_share_median": 0.8314490578806448,
+      "joint_positive_count": 13
+    },
+    {
+      "structure_id": "2CI2",
+      "chain": "I",
+      "model_type": "vanilla",
+      "split": "development",
+      "group": "barley_ci2+ubiquitin",
+      "pair_count": 15,
+      "delta_full_total_mean": 15.744140292083225,
+      "delta_fo_total_mean": 12.669983347753684,
+      "delta_joint_total_mean": 3.0741569443295416,
+      "delta_fo_share_median": 0.8207905064717335,
+      "joint_positive_count": 15
+    }
+  ]
+}
