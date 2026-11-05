@@ -22,6 +22,7 @@ documentation for retrieval commands and the dataset licence.
 import argparse
 import csv
 import json
+import math
 from pathlib import Path
 import statistics
 
@@ -41,13 +42,21 @@ def read_delimited(path, delimiter=","):
 
 
 def number(value):
+    """Parse a measurement, rejecting the non-finite values float() otherwise accepts.
+
+    float("nan") and float("inf") parse happily and would survive into the distribution
+    means, where json.dumps(allow_nan=False) fails only after esol_mapped.csv is written.
+    """
     try:
-        return float((value or "").strip())
+        parsed = float((value or "").strip())
     except (TypeError, ValueError):
         return None
+    return parsed if math.isfinite(parsed) else None
 
 
 def distribution(values):
+    if not values:
+        return None
     ordered = sorted(values)
     quartiles = statistics.quantiles(ordered, n=4) if len(ordered) > 1 else [ordered[0]] * 3
     return {"count": len(ordered), "mean": statistics.fmean(ordered),
@@ -194,9 +203,11 @@ def figure(records, path):
     axis.hist(without, bins=bins, color="#2a78d6", alpha=0.75, label="no structure", zorder=3)
     axis.hist(with_structure, bins=bins, color="#eb6834", alpha=0.75,
               label="has structure", zorder=3)
+    # Either subset is empty if every mapped protein has a structure, or none does.
     for values, color in ((without, "#2a78d6"), (with_structure, "#eb6834")):
-        axis.axvline(statistics.median(values), color=color, linestyle="--", linewidth=1.4,
-                     zorder=4)
+        if values:
+            axis.axvline(statistics.median(values), color=color, linestyle="--",
+                         linewidth=1.4, zorder=4)
     axis.set_xlabel("eSOL solubility (%)", fontsize=9, color="#2b2b2b")
     axis.set_ylabel("Proteins", fontsize=9, color="#2b2b2b")
     axis.set_title("Proteins with solved structures are the more soluble ones",
@@ -238,15 +249,19 @@ def run(args):
     if not args.no_figure:
         figure(records, output / "esol_coverage")
     coverage = summary["coverage"]
-    print("eSOL records {}; with measurement {}; mapped {} ({:.1%}); with structure {} ({:.1%})"
+    share = lambda v: "n/a" if v is None else "{:.1%}".format(v)
+    print("eSOL records {}; with measurement {}; mapped {} ({}); with structure {} ({})"
           .format(counts["esol_records"], coverage["records_with_measurement"],
-                  coverage["mapped_to_uniprot"], coverage["mapped_fraction"],
+                  coverage["mapped_to_uniprot"], share(coverage["mapped_fraction"]),
                   coverage["with_experimental_structure"],
-                  coverage["structure_fraction_of_measured"]), flush=True)
+                  share(coverage["structure_fraction_of_measured"])), flush=True)
     print("usable after exclusions: {}".format(coverage["usable_after_exclusions"]), flush=True)
-    print("median solubility with structure {:.1f}% vs without {:.1f}%".format(
-        summary["solubility_distribution"]["with_structure"]["median"],
-        summary["solubility_distribution"]["without_structure"]["median"]), flush=True)
+    spread = summary["solubility_distribution"]
+    print("median solubility with structure {} vs without {}".format(
+        "n/a" if not spread["with_structure"] else
+        "{:.1f}%".format(spread["with_structure"]["median"]),
+        "n/a" if not spread["without_structure"] else
+        "{:.1f}%".format(spread["without_structure"]["median"])), flush=True)
     print("overlap with the current pilot structures: 0 (eSOL is E. coli only)", flush=True)
     print("Complete: " + str(output / "esol_audit.json"), flush=True)
 

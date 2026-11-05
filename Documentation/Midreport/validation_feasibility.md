@@ -63,6 +63,11 @@ The 226 records above 100% are a normalization artefact of the assay readout; va
 high as 147%. They are **excluded rather than clipped**, so the decision is visible in the
 counts instead of silently compressing the soluble end of the scale.
 
+The exclusion categories are disjoint, applied in the order listed, which is why the usable
+count cannot be obtained by subtracting 226 from 1,453. Of the 226 records above 100%, only
+**125 also had a structure**; the remaining 101 are already counted inside the 1,585 with no
+structure. The reconciliation is therefore 1,453 − 125 = 1,328.
+
 ## The finding that constrains how eSOL can be used
 
 **Structure availability is confounded with solubility.** Crystallography and cryo-EM succeed
@@ -130,8 +135,9 @@ project moves to antibody variable domains; it is not an option for the current 
 > We audited eSOL (Niwa et al., PNAS 2009), which reports chaperone-free cell-free solubility
 > for E. coli K-12 proteins, as a candidate measured outcome. Of 4,132 records, 3,173 carry a
 > solubility value, 3,139 (98.9%) map cleanly to reviewed UniProt entries via B number or JW
-> ID with no ambiguous mappings, and 1,453 have at least one experimental structure; 1,328
-> remain after excluding 226 records whose reported solubility exceeds 100%. The labels are
+> ID with no ambiguous mappings, and 1,453 have at least one experimental structure. Excluding
+> the 125 of those whose reported solubility exceeds 100%, a normalization artefact of the
+> assay readout, leaves **1,328 usable records**. The labels are
 > whole-protein, single-condition and in vitro, not patch-level or formulation measurements.
 > Two findings constrain their use. Structure availability is confounded with the label —
 > proteins with solved structures have a median solubility of 56% against 33% for those
