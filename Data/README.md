@@ -13,3 +13,25 @@ Verify raw inputs with `python Code/prepare_compatibility_inputs.py --data-dir D
 Track small manifests here: structure source/identifier, chain and residue mapping, homology/complex group, split, patch identifiers, preprocessing configuration, and input hashes. Split by source protein/complex and close homologues before deriving patches or variants.
 
 Keep large downloaded and processed datasets in ignored `raw/`, `processed/`, or `cache/` subdirectories. Record how to obtain or regenerate them. A local software smoke-test input is not automatically part of the biological evaluation set.
+
+## eSOL (candidate measured-outcome dataset, audited November 4, 2026)
+
+Not committed; downloaded per run. Public download, no registration:
+
+```bash
+curl -L -o esol.zip https://dbarchive.biosciencedbc.jp/data/esol/LATEST/esol.zip   # 197452 bytes
+# sha256 29afdd2fa5be4947c9cbb1756197f4382e5184f8a2e4ae9162689ad74643d54b
+unzip esol.zip                                                                    # esol.csv
+curl -s --compressed 'https://rest.uniprot.org/uniprotkb/search?query=%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29&fields=accession%2Cgene_primary%2Cgene_oln%2Cxref_pdb&format=tsv&size=500'
+# follow the Link rel="next" header to page through all entries
+```
+
+Licensed CC Attribution-Share Alike 2.1 Japan. Any redistribution must carry the attribution
+string "eSOL (c) Hideki Taguchi (Tokyo Institute of Technology) licensed under CC
+Attribution-Share Alike 2.1 Japan", and share-alike applies to derivatives. The UniProt stream
+endpoint returned truncated responses during this audit; the paginated search endpoint with
+compression worked.
+
+See the [feasibility audit](../Documentation/Midreport/validation_feasibility.md) and
+[artifacts](../Analysis/esol_audit/). eSOL overlap with the current pilot structures is zero:
+it covers E. coli K-12 only.

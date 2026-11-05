@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "purpose": "measured_outcome_dataset_audit",
+  "dataset": "eSOL",
+  "label_definition": "Percentage of each individually translated E. coli K-12 protein that remained soluble in the chaperone-free PURE cell-free system (Niwa et al., PNAS 2009). Whole-protein, one organism, one in vitro condition; not a patch-level label, not an aggregation rate, not a formulation measurement",
+  "licence": "CC Attribution-Share Alike 2.1 Japan; attribution string required: \"eSOL (c) Hideki Taguchi (Tokyo Institute of Technology) licensed under CC Attribution-Share Alike 2.1 Japan\"",
+  "identifiers": [
+    "B number",
+    "JW_ID"
+  ],
+  "counts": {
+    "esol_records": 4132,
+    "missing_solubility": 959,
+    "unmapped": 34,
+    "ambiguous_mapping": 0,
+    "above_maximum_solubility": 226,
+    "no_structure": 1585,
+    "usable": 1328
+  },
+  "coverage": {
+    "records_with_measurement": 3173,
+    "mapped_to_uniprot": 3139,
+    "mapped_fraction": 0.9892845887173022,
+    "with_experimental_structure": 1453,
+    "structure_fraction_of_measured": 0.4579262527576426,
+    "usable_after_exclusions": 1328,
+    "total_pdb_entries": 33528
+  },
+  "solubility_distribution": {
+    "all_measured": {
+      "count": 3173,
+      "mean": 48.91585250551528,
+      "median": 43.0,
+      "p25": 18.0,
+      "p75": 79.0,
+      "min": 0.0,
+      "max": 147.0,
+      "fraction_below_30": 0.3844941695556256,
+      "fraction_above_70": 0.31452883706271667
+    },
+    "with_structure": {
+      "count": 1453,
+      "mean": 55.68341362697866,
+      "median": 56.0,
+      "p25": 24.5,
+      "p75": 84.0,
+      "min": 0.0,
+      "max": 136.0,
+      "fraction_below_30": 0.2924982794218858,
+      "fraction_above_70": 0.3874741913282863
+    },
+    "without_structure": {
+      "count": 1686,
+      "mean": 43.09371293001186,
+      "median": 33.0,
+      "p25": 15.0,
+      "p75": 71.0,
+      "min": 1.0,
+      "max": 147.0,
+      "fraction_below_30": 0.4626334519572954,
+      "fraction_above_70": 0.2508896797153025
+    }
+  },
+  "selection_bias": "Proteins with solved structures are measurably more soluble than those without, so restricting to structures removes part of the aggregation-prone range. The two distributions are reported side by side so the shift is explicit",
+  "pilot_overlap": {
+    "pilot_structures": [
+      "1CRN",
+      "1ENH",
+      "1L2Y",
+      "1SHG",
+      "1UBQ",
+      "1VII",
+      "2CI2"
+    ],
+    "overlapping_records": 0,
+    "note": "eSOL covers E. coli K-12 only. Every current pilot structure is from another source organism or is a designed sequence, so the overlap with the existing seven-structure set is zero by construction. Using eSOL means assembling a new E. coli structure set, not labelling the pilot"
+  },
+  "planned_split": "Not executed here. A homology-aware split requires clustering the usable sequences at a fixed identity threshold and assigning whole clusters to development and held-out groups. Ordered-locus proximity and gene names do not imply homology and must not be used as the grouping key. Sequences are not in the joined files and must be retrieved before clustering",
+  "exclusions_applied": {
+    "no solubility measurement": 959,
+    "no UniProt entry for either identifier": 34,
+    "solubility above 100%": 226,
+    "no experimental structure in UniProt": 1585
+  },
+  "open_questions": [
+    "PDB cross-references are counted per protein, not checked for covering the full chain, resolution or mutation status; a usable structure set needs that filter",
+    "The 788-protein chaperone subset measures a different quantity and is excluded from the usable count rather than merged",
+    "Transfer from E. coli cell-free solubility to designed miniproteins or to formulation behaviour is unestablished"
+  ]
+}
