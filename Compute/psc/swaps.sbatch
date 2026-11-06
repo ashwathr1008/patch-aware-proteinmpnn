@@ -32,10 +32,22 @@ if [[ $(TZ=America/New_York date +%Y%m%d%H%M) -ge ${OUTAGE} ]]; then
     exit 1
 fi
 
-: "${TASK_PYTHON:?Set TASK_PYTHON to your own Python with a working GPU PyTorch build}"
+# A batch job does not inherit the modules loaded in an interactive shell, so load here.
+# TASK_MODULE defaults to the PyTorch build verified for this project; override it to use
+# your own environment instead, in which case set TASK_PYTHON and leave TASK_MODULE empty.
+TASK_MODULE="${TASK_MODULE-pytorch/26.05-2.11-py3}"
+if [[ -n "$TASK_MODULE" ]]; then
+    module load "$TASK_MODULE"
+fi
+: "${TASK_PYTHON:=/jet/packages/AI/pytorch_26.05-py3/bin/python}"
 test -x "$TASK_PYTHON"
 export OMP_NUM_THREADS=2
 export MKL_NUM_THREADS=2
+
+# Record which GPU architectures this build actually carries kernels for. On a login node
+# this list is empty because no device is present; here it is meaningful, and a device whose
+# architecture is absent is exactly how the November 4 V100 job failed.
+"$TASK_PYTHON" -c 'import torch; print("torch", torch.__version__, "cuda", torch.version.cuda); print("arch list:", torch.cuda.get_arch_list()); print("device:", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "NONE")'
 
 hostname
 nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
