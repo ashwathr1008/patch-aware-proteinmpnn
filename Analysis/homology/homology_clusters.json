@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "purpose": "homology_clustering_of_source_structures",
+  "method": "Smith-Waterman score against a composition-preserving shuffled null; a pair is related only when its Z reaches the threshold and its end-to-end identity clears the floor. Single-linkage merging.",
+  "why_not_identity_alone": "Percent identity is unreliable on short domains. Among these structures unrelated pairs reach 39% identity, so a 30% threshold would chain them into one cluster.",
+  "settings": {
+    "z_threshold": 4.0,
+    "identity_threshold": 0.25,
+    "shuffles": 500,
+    "candidate_quantile": 0.8,
+    "matrix": "blosum62",
+    "gap_open": 11,
+    "gap_extend": 1
+  },
+  "sequences": {
+    "1CRN_A": 46,
+    "1ENH_A": 54,
+    "1L2Y_A": 20,
+    "1SHG_A": 57,
+    "1UBQ_A": 76,
+    "1VII_A": 36,
+    "2CI2_I": 65
+  },
+  "clusters": {
+    "1CRN_A": [
+      "1CRN_A"
+    ],
+    "1ENH_A": [
+      "1ENH_A"
+    ],
+    "1L2Y_A": [
+      "1L2Y_A"
+    ],
+    "1SHG_A": [
+      "1SHG_A"
+    ],
+    "1UBQ_A": [
+      "1UBQ_A"
+    ],
+    "1VII_A": [
+      "1VII_A"
+    ],
+    "2CI2_I": [
+      "2CI2_I"
+    ]
+  },
+  "related_pairs": [],
+  "comparison_with_recorded_groups": {
+    "recorded_group_count": 6,
+    "measured_cluster_count": 7,
+    "over_merged": [
+      {
+        "recorded_group": "barley_ci2+ubiquitin",
+        "members": [
+          "1UBQ_A",
+          "2CI2_I"
+        ],
+        "measured_clusters": [
+          "1UBQ_A",
+          "2CI2_I"
+        ]
+      }
+    ],
+    "under_merged": [],
+    "leakage_risk": false,
+    "independent_sources_recorded": 6,
+    "independent_sources_measured": 7
+  },
+  "evidence": [
+    {
+      "a": "1CRN_A",
+      "b": "1ENH_A",
+      "score": 13,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1CRN_A",
+      "b": "1L2Y_A",
+      "score": 12,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1CRN_A",
+      "b": "1SHG_A",
+      "score": 16,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1CRN_A",
+      "b": "1UBQ_A",
+      "score": 17,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1CRN_A",
+      "b": "1VII_A",
+      "score": 14,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1CRN_A",
+      "b": "2CI2_I",
+      "score": 19,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1ENH_A",
+      "b": "1L2Y_A",
+      "score": 13,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1ENH_A",
+      "b": "1SHG_A",
+      "score": 15,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1ENH_A",
+      "b": "1UBQ_A",
+      "screened": false,
+      "related": false,
+      "score": 21,
+      "null_mean": 21.664,
+      "null_sd": 4.089878237796328,
+      "z": -0.16235202159900292,
+      "identity": 0.12962962962962962
+    },
+    {
+      "a": "1ENH_A",
+      "b": "1VII_A",
+      "screened": false,
+      "related": false,
+      "score": 25,
+      "null_mean": 19.358,
+      "null_sd": 3.6394829303075458,
+      "z": 1.550220212057221,
+      "identity": 0.3055555555555556
+    },
+    {
+      "a": "1ENH_A",
+      "b": "2CI2_I",
+      "score": 18,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1L2Y_A",
+      "b": "1SHG_A",
+      "score": 14,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1L2Y_A",
+      "b": "1UBQ_A",
+      "score": 17,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1L2Y_A",
+      "b": "1VII_A",
+      "score": 11,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1L2Y_A",
+      "b": "2CI2_I",
+      "score": 20,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1SHG_A",
+      "b": "1UBQ_A",
+      "screened": false,
+      "related": false,
+      "score": 30,
+      "null_mean": 22.056,
+      "null_sd": 4.015079575799215,
+      "z": 1.978541109840574,
+      "identity": 0.15789473684210525
+    },
+    {
+      "a": "1SHG_A",
+      "b": "1VII_A",
+      "score": 17,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    },
+    {
+      "a": "1SHG_A",
+      "b": "2CI2_I",
+      "screened": false,
+      "related": false,
+      "score": 21,
+      "null_mean": 22.41,
+      "null_sd": 4.508425445762634,
+      "z": -0.3127477690299231,
+      "identity": 0.19298245614035087
+    },
+    {
+      "a": "1UBQ_A",
+      "b": "1VII_A",
+      "screened": false,
+      "related": false,
+      "score": 21,
+      "null_mean": 19.04,
+      "null_sd": 3.5370043822421255,
+      "z": 0.5541412416225355,
+      "identity": 0.3888888888888889
+    },
+    {
+      "a": "1UBQ_A",
+      "b": "2CI2_I",
+      "screened": false,
+      "related": false,
+      "score": 23,
+      "null_mean": 24.528,
+      "null_sd": 4.973652179234088,
+      "z": -0.3072189097540193,
+      "identity": 0.24615384615384617
+    },
+    {
+      "a": "1VII_A",
+      "b": "2CI2_I",
+      "score": 19,
+      "screened": true,
+      "z": null,
+      "identity": null,
+      "related": false
+    }
+  ],
+  "proposed_split": {
+    "development": [
+      "1CRN_A",
+      "1ENH_A",
+      "1SHG_A",
+      "1VII_A"
+    ],
+    "holdout": [
+      "1L2Y_A",
+      "1UBQ_A",
+      "2CI2_I"
+    ]
+  }
+}
