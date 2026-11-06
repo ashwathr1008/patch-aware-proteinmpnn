@@ -15,7 +15,7 @@
 #SBATCH --partition=GPU-shared
 #SBATCH --nodes=1
 #SBATCH --gpus=l40s-48:1
-#SBATCH --time=04:00:00
+#SBATCH --time=01:30:00
 #SBATCH --output=logs/slurm-%j.out
 #SBATCH --error=logs/slurm-%j.err
 
