@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "purpose": "structure_quality_filter",
+  "criteria": {
+    "methods_allowed": [
+      "ELECTRON CRYSTALLOGRAPHY",
+      "ELECTRON MICROSCOPY",
+      "NEUTRON DIFFRACTION",
+      "SOLID-STATE NMR",
+      "SOLUTION NMR",
+      "X-RAY DIFFRACTION"
+    ],
+    "max_resolution_angstrom": 2.5,
+    "coverage_band": [
+      0.9,
+      1.25
+    ],
+    "mutations_allowed": false,
+    "declared_before_inspection": true
+  },
+  "selection_rule": "best resolution, NMR last, then lowest entry identifier",
+  "candidates": 185,
+  "kept": 138,
+  "dropped": 47,
+  "drop_reasons": {
+    "resolution above cutoff": 20,
+    "construct length outside coverage band": 17,
+    "engineered mutation": 10
+  },
+  "survivors": {
+    "solubility_median": 83.5,
+    "solubility_sd": 22.197936214673568,
+    "solubility_below_60": 26,
+    "length_median": 113.0,
+    "resolution_median": 1.85
+  }
+}

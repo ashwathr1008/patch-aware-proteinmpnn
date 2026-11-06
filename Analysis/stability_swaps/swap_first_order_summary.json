@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "purpose": "model_versus_measured_arrangement_effect",
+  "model_type": "vanilla",
+  "model_name": "v_48_020",
+  "term": "first-order only; the joint term requires full autoregressive scoring",
+  "domains_scored": 208,
+  "domains_skipped": [],
+  "contrasts_scored": 100572,
+  "contrasts_dropped": 0,
+  "all_contrasts": {
+    "count": 100572,
+    "spearman": -0.37328213019490175,
+    "sign_agreement": 0.6263174641053176
+  },
+  "resolved_contrasts_only": {
+    "count": 69633,
+    "spearman": -0.4377674239565917,
+    "sign_agreement": 0.6703861674780636
+  }
+}
