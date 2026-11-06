@@ -83,6 +83,28 @@ python Code/prepare_stability_data.py
 
 The command downloads three selected archives, checks their published MD5 and local SHA256, and records the archive members and CSV headers. It does not download raw sequencing counts, run PSC jobs, filter training examples or start training.
 
+### Pair-geometry bias for the contextual interaction scorer (proposed)
+
+This module belongs to the sequence-conditioned attention head described in the patch-scorer architecture, rather than the additive/regression baseline above. It lets each attention head learn how residue proximity should influence attention. It is not a physical interaction energy, and it has not yet been trained.
+
+| Step | Calculation | Output |
+| --- | --- | --- |
+| 1. Measure geometry | For every pair in the patch-plus-context region, compute Cα distance `d_ij` in Å and sequence-index separation `abs(i-j)`. Use the same parent backbone for both assignments. | Two fixed measurements per pair. |
+| 2. Encode distance | Eight radial features `r_m = exp(-(d_ij-c_m)^2 / (2*sigma^2))`, centers `c_m = 2,4,...,16 Å`, width `sigma = 2 Å`. | Eight distance channels. |
+| 3. Add separation/contact | Append `min(abs(i-j)/32, 1)` and `1[d_ij <= 8 Å]`. | Ten geometry features per pair. |
+| 4. Learn per-head bias | Shared network `Linear(10,16) -> ReLU -> Linear(16,4)`. | Four scalar biases: one for each attention head. |
+| 5. Adjust attention | For head h, add `b_ij,h` to `Q_i,h · K_j,h / sqrt(16)`, then softmax over valid key residues j. | Geometry-adjusted attention weights. |
+
+For B assignments and T patch/context residues, geometry features have shape **`[B,T,T,10]`**. The network produces biases **`[B,T,T,4]`**, rearranged to **`[B,4,T,T]`** to match attention logits. Four heads each have 16 channels in a 64-channel token representation.
+
+**Example:** if two residues are 6 Å apart and 12 positions apart in sequence, the appended channels are `12/32 = 0.375` and contact `1`; the distance feature centered at 6 Å equals `1`. The network learns how these features affect each head's attention. Positive bias increases a pair's relative attention logit; negative bias decreases it.
+
+**Initialization and training:** initialize the final linear layer's weights and bias to zero, so the module starts with no geometry adjustment. Train the bias network jointly with the small attention head using measured swap-ranking loss, keeping ProteinMPNN frozen. Backbone geometry and its encoded features are fixed; only the mapping from geometry to attention bias is learned. Symmetric pair inputs give `b_ij = b_ji`, although the complete Q/K attention need not be symmetric. Compute biases for all region pairs, including self-pairs; the 8 Å indicator is a feature, not a hard attention cutoff. Mask padded key tokens before softmax and exclude padded tokens from pooling.
+
+**Required comparison:** train an otherwise identical head with the geometry bias fixed at zero. Compare on the same held-out clusters, with matched training settings and seeds, to test whether explicit geometry bias adds value. The settings above are proposed starting values, not validated optimum values.
+
+An editable process diagram and its reproducible builder are in [Analysis/path_scorer/figures/](Analysis/path_scorer/figures/). This folder follows the requested `path_scorer` spelling and is separate from `Analysis/patch_scorer/`.
+
 ## Repository layout
 
 | Directory | Contents |
