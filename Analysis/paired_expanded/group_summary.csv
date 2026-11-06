@@ -1,6 +1,6 @@
 group,split,model_type,model_name,protein_count,pair_count,patch_count,equal_protein_mean_full_nll_gap,equal_protein_native_preference_fraction
-barley_ci2+ubiquitin,development,soluble,v_48_020,2,30,6,0.2171100081246429,1.0
-barley_ci2+ubiquitin,development,vanilla,v_48_020,2,30,6,0.21658851952883373,1.0
+barley_ci2,development,soluble,v_48_020,1,15,3,0.22961778220744467,1.0
+barley_ci2,development,vanilla,v_48_020,1,15,3,0.24221754295512654,1.0
 crambin,development,soluble,v_48_020,1,15,3,0.5462621871294264,1.0
 crambin,development,vanilla,v_48_020,1,15,3,0.5740504281892292,1.0
 engrailed_homeodomain,diagnostic,soluble,v_48_020,1,5,1,0.17703150830197117,0.8
@@ -9,5 +9,7 @@ spectrin_sh3,diagnostic,soluble,v_48_020,1,15,3,0.2399809092599136,1.0
 spectrin_sh3,diagnostic,vanilla,v_48_020,1,15,3,0.2532288956886146,1.0
 trp_cage,diagnostic,soluble,v_48_020,1,5,1,0.7357166330236942,1.0
 trp_cage,diagnostic,vanilla,v_48_020,1,5,1,0.7650892297178506,1.0
+ubiquitin,development,soluble,v_48_020,1,15,3,0.20460223404184114,1.0
+ubiquitin,development,vanilla,v_48_020,1,15,3,0.1909594961025409,1.0
 villin_headpiece,development,soluble,v_48_020,1,15,3,0.2251467812047512,1.0
 villin_headpiece,development,vanilla,v_48_020,1,15,3,0.22240420345010029,1.0

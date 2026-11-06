@@ -1,0 +1,1905 @@
+{
+  "schema_version": 1,
+  "purpose": "esol_cohort_definition",
+  "cohort": "eSOL proteins, 20-150 residues, structure-filtered, homology-clustered",
+  "protein_count": 138,
+  "cluster_count": 103,
+  "related_pair_count": 35,
+  "proteins_in_multiprotein_clusters": 60,
+  "power": {
+    "unit_of_analysis": "cluster",
+    "n": 103,
+    "detection_threshold_r": 0.273,
+    "smallest_detectable_true_r": 0.359,
+    "note": "Per-protein analysis would overstate power; clusters are the independent unit."
+  },
+  "clustering_settings": {
+    "z_threshold": 4.0,
+    "identity_threshold": 0.25,
+    "shuffles": 300,
+    "candidate_quantile": 0.8,
+    "matrix": "blosum62",
+    "gap_open": 11,
+    "gap_extend": 1
+  },
+  "clusters": {
+    "b0101": [
+      "b0101"
+    ],
+    "b0131": [
+      "b0131"
+    ],
+    "b0196": [
+      "b0196"
+    ],
+    "b0226": [
+      "b0226",
+      "b2387",
+      "b3953"
+    ],
+    "b0249": [
+      "b0249",
+      "b1531"
+    ],
+    "b0416": [
+      "b0416",
+      "b0884",
+      "b3342"
+    ],
+    "b0435": [
+      "b0435",
+      "b2259",
+      "b4142"
+    ],
+    "b0450": [
+      "b0450",
+      "b2553",
+      "b2790"
+    ],
+    "b0460": [
+      "b0460",
+      "b0471"
+    ],
+    "b0483": [
+      "b0483",
+      "b1530",
+      "b3082",
+      "b3231"
+    ],
+    "b0487": [
+      "b0487",
+      "b1823",
+      "b3556"
+    ],
+    "b0543": [
+      "b0543"
+    ],
+    "b0549": [
+      "b0549",
+      "b3186"
+    ],
+    "b0550": [
+      "b0550"
+    ],
+    "b0597": [
+      "b0597",
+      "b1686"
+    ],
+    "b0610": [
+      "b0610"
+    ],
+    "b0637": [
+      "b0637"
+    ],
+    "b0721": [
+      "b0721"
+    ],
+    "b0722": [
+      "b0722"
+    ],
+    "b0736": [
+      "b0736"
+    ],
+    "b0785": [
+      "b0785"
+    ],
+    "b0881": [
+      "b0881"
+    ],
+    "b0912": [
+      "b0912",
+      "b4000"
+    ],
+    "b0976": [
+      "b0976"
+    ],
+    "b1038": [
+      "b1038"
+    ],
+    "b1051": [
+      "b1051"
+    ],
+    "b1103": [
+      "b1103"
+    ],
+    "b1396": [
+      "b1396"
+    ],
+    "b1438": [
+      "b1438"
+    ],
+    "b1518": [
+      "b1518"
+    ],
+    "b1549": [
+      "b1549"
+    ],
+    "b1639": [
+      "b1639"
+    ],
+    "b1651": [
+      "b1651",
+      "b4222"
+    ],
+    "b1654": [
+      "b1654"
+    ],
+    "b1716": [
+      "b1716"
+    ],
+    "b1738": [
+      "b1738"
+    ],
+    "b1759": [
+      "b1759",
+      "b1865"
+    ],
+    "b1797": [
+      "b1797"
+    ],
+    "b1842": [
+      "b1842"
+    ],
+    "b1882": [
+      "b1882"
+    ],
+    "b1892": [
+      "b1892"
+    ],
+    "b2004": [
+      "b2004",
+      "b2597",
+      "b2645",
+      "b3203"
+    ],
+    "b2017": [
+      "b2017"
+    ],
+    "b2061": [
+      "b2061"
+    ],
+    "b2181": [
+      "b2181"
+    ],
+    "b2185": [
+      "b2185"
+    ],
+    "b2187": [
+      "b2187",
+      "b4393"
+    ],
+    "b2288": [
+      "b2288",
+      "b3175"
+    ],
+    "b2415": [
+      "b2415",
+      "b3206"
+    ],
+    "b2434": [
+      "b2434",
+      "b4012"
+    ],
+    "b2457": [
+      "b2457"
+    ],
+    "b2462": [
+      "b2462"
+    ],
+    "b2518": [
+      "b2518",
+      "b3938"
+    ],
+    "b2525": [
+      "b2525"
+    ],
+    "b2529": [
+      "b2529"
+    ],
+    "b2563": [
+      "b2563"
+    ],
+    "b2765": [
+      "b2765"
+    ],
+    "b2792": [
+      "b2792"
+    ],
+    "b2811": [
+      "b2811"
+    ],
+    "b2900": [
+      "b2900"
+    ],
+    "b2910": [
+      "b2910"
+    ],
+    "b2934": [
+      "b2934",
+      "b4202"
+    ],
+    "b3021": [
+      "b3021"
+    ],
+    "b3022": [
+      "b3022"
+    ],
+    "b3065": [
+      "b3065"
+    ],
+    "b3083": [
+      "b3083"
+    ],
+    "b3167": [
+      "b3167",
+      "b3311"
+    ],
+    "b3185": [
+      "b3185"
+    ],
+    "b3294": [
+      "b3294"
+    ],
+    "b3297": [
+      "b3297"
+    ],
+    "b3298": [
+      "b3298"
+    ],
+    "b3301": [
+      "b3301"
+    ],
+    "b3306": [
+      "b3306",
+      "b3315"
+    ],
+    "b3310": [
+      "b3310"
+    ],
+    "b3313": [
+      "b3313",
+      "b3986",
+      "b4127"
+    ],
+    "b3316": [
+      "b3316",
+      "b4090"
+    ],
+    "b3318": [
+      "b3318"
+    ],
+    "b3366": [
+      "b3366"
+    ],
+    "b3470": [
+      "b3470"
+    ],
+    "b3481": [
+      "b3481"
+    ],
+    "b3637": [
+      "b3637"
+    ],
+    "b3649": [
+      "b3649"
+    ],
+    "b3670": [
+      "b3670"
+    ],
+    "b3703": [
+      "b3703"
+    ],
+    "b3704": [
+      "b3704"
+    ],
+    "b3737": [
+      "b3737"
+    ],
+    "b3775": [
+      "b3775"
+    ],
+    "b3781": [
+      "b3781"
+    ],
+    "b3887": [
+      "b3887"
+    ],
+    "b3901": [
+      "b3901"
+    ],
+    "b3936": [
+      "b3936"
+    ],
+    "b3981": [
+      "b3981"
+    ],
+    "b4042": [
+      "b4042"
+    ],
+    "b4045": [
+      "b4045"
+    ],
+    "b4101": [
+      "b4101"
+    ],
+    "b4172": [
+      "b4172"
+    ],
+    "b4200": [
+      "b4200"
+    ],
+    "b4201": [
+      "b4201"
+    ],
+    "b4203": [
+      "b4203"
+    ],
+    "b4243": [
+      "b4243",
+      "b4248"
+    ],
+    "b4259": [
+      "b4259"
+    ],
+    "b4372": [
+      "b4372"
+    ],
+    "b4513": [
+      "b4513"
+    ]
+  },
+  "related_pairs": [
+    {
+      "a": "b0226",
+      "b": "b2387"
+    },
+    {
+      "a": "b0249",
+      "b": "b1531"
+    },
+    {
+      "a": "b0416",
+      "b": "b0884"
+    },
+    {
+      "a": "b0435",
+      "b": "b2259"
+    },
+    {
+      "a": "b0450",
+      "b": "b2553"
+    },
+    {
+      "a": "b0450",
+      "b": "b2790"
+    },
+    {
+      "a": "b0460",
+      "b": "b0471"
+    },
+    {
+      "a": "b0483",
+      "b": "b1530"
+    },
+    {
+      "a": "b0483",
+      "b": "b3082"
+    },
+    {
+      "a": "b0483",
+      "b": "b3231"
+    },
+    {
+      "a": "b0487",
+      "b": "b1823"
+    },
+    {
+      "a": "b0549",
+      "b": "b3186"
+    },
+    {
+      "a": "b0597",
+      "b": "b1686"
+    },
+    {
+      "a": "b0884",
+      "b": "b3342"
+    },
+    {
+      "a": "b0912",
+      "b": "b4000"
+    },
+    {
+      "a": "b1651",
+      "b": "b4222"
+    },
+    {
+      "a": "b1759",
+      "b": "b1865"
+    },
+    {
+      "a": "b1823",
+      "b": "b3556"
+    },
+    {
+      "a": "b2004",
+      "b": "b2645"
+    },
+    {
+      "a": "b2187",
+      "b": "b4393"
+    },
+    {
+      "a": "b2259",
+      "b": "b4142"
+    },
+    {
+      "a": "b2288",
+      "b": "b3175"
+    },
+    {
+      "a": "b2387",
+      "b": "b3953"
+    },
+    {
+      "a": "b2415",
+      "b": "b3206"
+    },
+    {
+      "a": "b2434",
+      "b": "b4012"
+    },
+    {
+      "a": "b2518",
+      "b": "b3938"
+    },
+    {
+      "a": "b2597",
+      "b": "b3203"
+    },
+    {
+      "a": "b2645",
+      "b": "b3203"
+    },
+    {
+      "a": "b2934",
+      "b": "b4202"
+    },
+    {
+      "a": "b3167",
+      "b": "b3311"
+    },
+    {
+      "a": "b3306",
+      "b": "b3315"
+    },
+    {
+      "a": "b3313",
+      "b": "b4127"
+    },
+    {
+      "a": "b3316",
+      "b": "b4090"
+    },
+    {
+      "a": "b3986",
+      "b": "b4127"
+    },
+    {
+      "a": "b4243",
+      "b": "b4248"
+    }
+  ],
+  "split": {
+    "development": [
+      "b0131",
+      "b0226",
+      "b0249",
+      "b0416",
+      "b0435",
+      "b0450",
+      "b0460",
+      "b0471",
+      "b0483",
+      "b0487",
+      "b0543",
+      "b0549",
+      "b0597",
+      "b0610",
+      "b0721",
+      "b0736",
+      "b0881",
+      "b0884",
+      "b0912",
+      "b1038",
+      "b1103",
+      "b1438",
+      "b1530",
+      "b1531",
+      "b1549",
+      "b1651",
+      "b1654",
+      "b1686",
+      "b1738",
+      "b1759",
+      "b1823",
+      "b1842",
+      "b1865",
+      "b1892",
+      "b2004",
+      "b2061",
+      "b2185",
+      "b2187",
+      "b2259",
+      "b2288",
+      "b2387",
+      "b2415",
+      "b2434",
+      "b2462",
+      "b2518",
+      "b2529",
+      "b2553",
+      "b2597",
+      "b2645",
+      "b2765",
+      "b2790",
+      "b2811",
+      "b2910",
+      "b2934",
+      "b3022",
+      "b3082",
+      "b3083",
+      "b3167",
+      "b3175",
+      "b3186",
+      "b3203",
+      "b3206",
+      "b3231",
+      "b3294",
+      "b3298",
+      "b3306",
+      "b3310",
+      "b3311",
+      "b3313",
+      "b3315",
+      "b3342",
+      "b3366",
+      "b3481",
+      "b3556",
+      "b3649",
+      "b3703",
+      "b3737",
+      "b3781",
+      "b3901",
+      "b3938",
+      "b3953",
+      "b3981",
+      "b3986",
+      "b4000",
+      "b4012",
+      "b4045",
+      "b4127",
+      "b4142",
+      "b4172",
+      "b4201",
+      "b4202",
+      "b4222",
+      "b4243",
+      "b4248",
+      "b4259",
+      "b4393",
+      "b4513"
+    ],
+    "holdout": [
+      "b0101",
+      "b0196",
+      "b0550",
+      "b0637",
+      "b0722",
+      "b0785",
+      "b0976",
+      "b1051",
+      "b1396",
+      "b1518",
+      "b1639",
+      "b1716",
+      "b1797",
+      "b1882",
+      "b2017",
+      "b2181",
+      "b2457",
+      "b2525",
+      "b2563",
+      "b2792",
+      "b2900",
+      "b3021",
+      "b3065",
+      "b3185",
+      "b3297",
+      "b3301",
+      "b3316",
+      "b3318",
+      "b3470",
+      "b3637",
+      "b3670",
+      "b3704",
+      "b3775",
+      "b3887",
+      "b3936",
+      "b4042",
+      "b4090",
+      "b4101",
+      "b4200",
+      "b4203",
+      "b4372"
+    ]
+  },
+  "split_sizes": {
+    "development": 97,
+    "holdout": 41
+  },
+  "proteins": {
+    "b0101": {
+      "accession": "P0A8H8",
+      "gene": "yacG",
+      "length": 65,
+      "solubility_percent": 92.0,
+      "pdb": "1LV3",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b0131": {
+      "accession": "P0A790",
+      "gene": "panD",
+      "length": 126,
+      "solubility_percent": 75.0,
+      "pdb": "1PYQ",
+      "resolution": 1.9,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0196": {
+      "accession": "P69411",
+      "gene": "rcsF",
+      "length": 134,
+      "solubility_percent": 82.0,
+      "pdb": "2Y1B",
+      "resolution": 2.0,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0226": {
+      "accession": "Q47150",
+      "gene": "dinJ",
+      "length": 86,
+      "solubility_percent": 83.0,
+      "pdb": "4Q2U",
+      "resolution": 1.8,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0249": {
+      "accession": "P75677",
+      "gene": "ykfF",
+      "length": 79,
+      "solubility_percent": 87.0,
+      "pdb": "2HJJ",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b0416": {
+      "accession": "P0A780",
+      "gene": "nusB",
+      "length": 139,
+      "solubility_percent": 97.0,
+      "pdb": "1EY1",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b0435": {
+      "accession": "P0ABE2",
+      "gene": "bolA",
+      "length": 105,
+      "solubility_percent": 81.0,
+      "pdb": "2DHM",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b0450": {
+      "accession": "P0AC55",
+      "gene": "glnK",
+      "length": 112,
+      "solubility_percent": 41.0,
+      "pdb": "1GNK",
+      "resolution": 2.0,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0460": {
+      "accession": "P0ACE3",
+      "gene": "hha",
+      "length": 72,
+      "solubility_percent": 99.0,
+      "pdb": "1JW2",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b0471": {
+      "accession": "P0A8B5",
+      "gene": "ybaB",
+      "length": 109,
+      "solubility_percent": 83.0,
+      "pdb": "1PUG",
+      "resolution": 2.2,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0483": {
+      "accession": "P0A9T6",
+      "gene": "ybaQ",
+      "length": 113,
+      "solubility_percent": 81.0,
+      "pdb": "2EBY",
+      "resolution": 2.25,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0487": {
+      "accession": "P0A9G4",
+      "gene": "cueR",
+      "length": 135,
+      "solubility_percent": 66.0,
+      "pdb": "1Q06",
+      "resolution": 2.07,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0543": {
+      "accession": "P23895",
+      "gene": "emrE",
+      "length": 110,
+      "solubility_percent": 7.0,
+      "pdb": "8UWU",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b0549": {
+      "accession": "P68661",
+      "gene": "ybcO",
+      "length": 96,
+      "solubility_percent": 98.0,
+      "pdb": "3G27",
+      "resolution": 2.1,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0550": {
+      "accession": "P0AG74",
+      "gene": "rusA",
+      "length": 120,
+      "solubility_percent": 76.0,
+      "pdb": "1Q8R",
+      "resolution": 1.899,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0597": {
+      "accession": "P0A8Y8",
+      "gene": "ybdB",
+      "length": 137,
+      "solubility_percent": 80.0,
+      "pdb": "4K4C",
+      "resolution": 1.85,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0610": {
+      "accession": "P0AFW4",
+      "gene": "rnk",
+      "length": 136,
+      "solubility_percent": 95.0,
+      "pdb": "3BMB",
+      "resolution": 1.91,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0637": {
+      "accession": "P0AAT6",
+      "gene": "ybeB",
+      "length": 105,
+      "solubility_percent": 95.0,
+      "pdb": "30QZ",
+      "resolution": 2.23,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b0721": {
+      "accession": "P69054",
+      "gene": "sdhC",
+      "length": 129,
+      "solubility_percent": 43.0,
+      "pdb": "2WDQ",
+      "resolution": 2.4,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0722": {
+      "accession": "P0AC44",
+      "gene": "sdhD",
+      "length": 115,
+      "solubility_percent": 44.0,
+      "pdb": "2WDQ",
+      "resolution": 2.4,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0736": {
+      "accession": "P0A8Z3",
+      "gene": "ybgC",
+      "length": 134,
+      "solubility_percent": 70.0,
+      "pdb": "1S5U",
+      "resolution": 1.7,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0785": {
+      "accession": "P30749",
+      "gene": "moaE",
+      "length": 150,
+      "solubility_percent": 84.0,
+      "pdb": "1FM0",
+      "resolution": 1.45,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0881": {
+      "accession": "P0A8Q6",
+      "gene": "clpS",
+      "length": 106,
+      "solubility_percent": 63.0,
+      "pdb": "2W9R",
+      "resolution": 1.7,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0884": {
+      "accession": "P69222",
+      "gene": "infA",
+      "length": 72,
+      "solubility_percent": 94.0,
+      "pdb": "9FDA",
+      "resolution": 2.0,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b0912": {
+      "accession": "P0A6Y1",
+      "gene": "ihfB",
+      "length": 94,
+      "solubility_percent": 23.0,
+      "pdb": "2HT0",
+      "resolution": 2.0,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b0976": {
+      "accession": "P19931",
+      "gene": "hyaE",
+      "length": 132,
+      "solubility_percent": 100.0,
+      "pdb": "2HFD",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b1038": {
+      "accession": "P0AE98",
+      "gene": "csgF",
+      "length": 138,
+      "solubility_percent": 30.0,
+      "pdb": "5M1U",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b1051": {
+      "accession": "P25738",
+      "gene": "msyB",
+      "length": 124,
+      "solubility_percent": 91.0,
+      "pdb": "8IMQ",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b1103": {
+      "accession": "P0ACE7",
+      "gene": "hinT",
+      "length": 119,
+      "solubility_percent": 84.0,
+      "pdb": "3N1S",
+      "resolution": 1.45,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1396": {
+      "accession": "P76084",
+      "gene": "paaI",
+      "length": 140,
+      "solubility_percent": 77.0,
+      "pdb": "2FS2",
+      "resolution": 2.0,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1438": {
+      "accession": "P67697",
+      "gene": "ydcQ",
+      "length": 138,
+      "solubility_percent": 87.0,
+      "pdb": "6HPC",
+      "resolution": 2.26,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1518": {
+      "accession": "P64461",
+      "gene": "lsrG",
+      "length": 96,
+      "solubility_percent": 77.0,
+      "pdb": "3QMQ",
+      "resolution": 1.8,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1530": {
+      "accession": "P27245",
+      "gene": "marR",
+      "length": 144,
+      "solubility_percent": 81.0,
+      "pdb": "1JGS",
+      "resolution": 2.3,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1531": {
+      "accession": "P0ACH5",
+      "gene": "marA",
+      "length": 127,
+      "solubility_percent": 12.0,
+      "pdb": "1BL0",
+      "resolution": 2.3,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1549": {
+      "accession": "P76156",
+      "gene": "ydfO",
+      "length": 136,
+      "solubility_percent": 77.0,
+      "pdb": "2HH8",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b1639": {
+      "accession": "P28224",
+      "gene": "ydhA",
+      "length": 109,
+      "solubility_percent": 53.0,
+      "pdb": "2F09",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b1651": {
+      "accession": "P0AC81",
+      "gene": "gloA",
+      "length": 135,
+      "solubility_percent": 100.0,
+      "pdb": "1F9Z",
+      "resolution": 1.5,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1654": {
+      "accession": "P0AC69",
+      "gene": "ydhD",
+      "length": 115,
+      "solubility_percent": 91.0,
+      "pdb": "2WCI",
+      "resolution": 1.9,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1686": {
+      "accession": "P77781",
+      "gene": "ydiI",
+      "length": 136,
+      "solubility_percent": 78.0,
+      "pdb": "1VH5",
+      "resolution": 1.34,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1716": {
+      "accession": "P0A7L3",
+      "gene": "rplT",
+      "length": 118,
+      "solubility_percent": 100.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b1738": {
+      "accession": "P69795",
+      "gene": "chbB",
+      "length": 106,
+      "solubility_percent": 98.0,
+      "pdb": "1H9C",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b1759": {
+      "accession": "P77788",
+      "gene": "nudG",
+      "length": 135,
+      "solubility_percent": 90.0,
+      "pdb": "2RRK",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b1797": {
+      "accession": "P64488",
+      "gene": "yeaR",
+      "length": 119,
+      "solubility_percent": 97.0,
+      "pdb": "3BB6",
+      "resolution": 2.3,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1823": {
+      "accession": "P0A9Y6",
+      "gene": "cspC",
+      "length": 69,
+      "solubility_percent": 94.0,
+      "pdb": "8XYF",
+      "resolution": 1.67,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1842": {
+      "accession": "P0ABS8",
+      "gene": "holE",
+      "length": 76,
+      "solubility_percent": 96.0,
+      "pdb": "1DU2",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b1865": {
+      "accession": "P0AFC0",
+      "gene": "nudB",
+      "length": 150,
+      "solubility_percent": 53.0,
+      "pdb": "5U7F",
+      "resolution": 1.789,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1882": {
+      "accession": "P0AE67",
+      "gene": "cheY",
+      "length": 129,
+      "solubility_percent": 95.0,
+      "pdb": "1JBE",
+      "resolution": 1.08,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b1892": {
+      "accession": "P0A8S9",
+      "gene": "flhD",
+      "length": 116,
+      "solubility_percent": 88.0,
+      "pdb": "1G8E",
+      "resolution": 1.8,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2004": {
+      "accession": "P76364",
+      "gene": "yeeU",
+      "length": 122,
+      "solubility_percent": 83.0,
+      "pdb": "2H28",
+      "resolution": 2.1,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2017": {
+      "accession": "P69346",
+      "gene": "yefM",
+      "length": 83,
+      "solubility_percent": 84.0,
+      "pdb": "2A6Q",
+      "resolution": 2.05,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2061": {
+      "accession": "P0AAB2",
+      "gene": "wzb",
+      "length": 147,
+      "solubility_percent": 25.0,
+      "pdb": "2FEK",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b2181": {
+      "accession": "P0AD21",
+      "gene": "yejG",
+      "length": 114,
+      "solubility_percent": 91.0,
+      "pdb": "6BI6",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b2185": {
+      "accession": "P68919",
+      "gene": "rplY",
+      "length": 94,
+      "solubility_percent": 86.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b2187": {
+      "accession": "P0AD24",
+      "gene": "yejL",
+      "length": 75,
+      "solubility_percent": 84.0,
+      "pdb": "2JRX",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b2259": {
+      "accession": "P37590",
+      "gene": "pmrD",
+      "length": 88,
+      "solubility_percent": 91.0,
+      "pdb": "4HN7",
+      "resolution": 2.352,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2288": {
+      "accession": "P0AFC3",
+      "gene": "nuoA",
+      "length": 147,
+      "solubility_percent": 49.0,
+      "pdb": "7Z7V",
+      "resolution": 2.29,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b2387": {
+      "accession": "P69808",
+      "gene": "ypdH",
+      "length": 108,
+      "solubility_percent": 95.0,
+      "pdb": "2KYR",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b2415": {
+      "accession": "P0AA04",
+      "gene": "ptsH",
+      "length": 85,
+      "solubility_percent": 88.0,
+      "pdb": "1POH",
+      "resolution": 2.0,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2434": {
+      "accession": "P76539",
+      "gene": "ypeA",
+      "length": 141,
+      "solubility_percent": 80.0,
+      "pdb": "4QUS",
+      "resolution": 1.28,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2457": {
+      "accession": "P0ABF4",
+      "gene": "cchA",
+      "length": 97,
+      "solubility_percent": 89.0,
+      "pdb": "3MPY",
+      "resolution": 2.0,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2462": {
+      "accession": "P63746",
+      "gene": "ypfE",
+      "length": 111,
+      "solubility_percent": 93.0,
+      "pdb": "3I96",
+      "resolution": 1.65,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2518": {
+      "accession": "P0A763",
+      "gene": "ndk",
+      "length": 143,
+      "solubility_percent": 65.0,
+      "pdb": "2HUR",
+      "resolution": 1.62,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2525": {
+      "accession": "P0A9R4",
+      "gene": "fdx",
+      "length": 111,
+      "solubility_percent": 82.0,
+      "pdb": "1I7H",
+      "resolution": 1.7,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2529": {
+      "accession": "P0ACD4",
+      "gene": "iscU",
+      "length": 128,
+      "solubility_percent": 97.0,
+      "pdb": "2L4X",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b2553": {
+      "accession": "P0A9Z1",
+      "gene": "glnB",
+      "length": 112,
+      "solubility_percent": 95.0,
+      "pdb": "2PII",
+      "resolution": 1.9,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2563": {
+      "accession": "P24224",
+      "gene": "acpS",
+      "length": 126,
+      "solubility_percent": 84.0,
+      "pdb": "5XU7",
+      "resolution": 1.84,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2597": {
+      "accession": "P0AD49",
+      "gene": "yfiA",
+      "length": 113,
+      "solubility_percent": 98.0,
+      "pdb": "9SLG",
+      "resolution": 2.16,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b2645": {
+      "accession": "P52141",
+      "gene": "yfjZ",
+      "length": 105,
+      "solubility_percent": 65.0,
+      "pdb": "2EA9",
+      "resolution": 2.1,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2765": {
+      "accession": "P65870",
+      "gene": "ygcM",
+      "length": 121,
+      "solubility_percent": 91.0,
+      "pdb": "4NTN",
+      "resolution": 1.99,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2790": {
+      "accession": "P65367",
+      "gene": "yqcA",
+      "length": 149,
+      "solubility_percent": 94.0,
+      "pdb": "2M6R",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b2792": {
+      "accession": "Q46919",
+      "gene": "yqcC",
+      "length": 109,
+      "solubility_percent": 87.0,
+      "pdb": "2HGK",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b2811": {
+      "accession": "P0AGF2",
+      "gene": "ygdK",
+      "length": 147,
+      "solubility_percent": 81.0,
+      "pdb": "5EEP",
+      "resolution": 2.4,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2900": {
+      "accession": "P67603",
+      "gene": "yqfB",
+      "length": 103,
+      "solubility_percent": 87.0,
+      "pdb": "9KYG",
+      "resolution": 1.47,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2910": {
+      "accession": "P0ADS2",
+      "gene": "zapA",
+      "length": 109,
+      "solubility_percent": 98.0,
+      "pdb": "4P1M",
+      "resolution": 1.95,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b2934": {
+      "accession": "P69824",
+      "gene": "cmtB",
+      "length": 147,
+      "solubility_percent": 97.0,
+      "pdb": "2OQ3",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b3021": {
+      "accession": "Q46864",
+      "gene": "ygiT",
+      "length": 131,
+      "solubility_percent": 46.0,
+      "pdb": "3O9X",
+      "resolution": 2.0999,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3022": {
+      "accession": "Q46865",
+      "gene": "ygiU",
+      "length": 98,
+      "solubility_percent": 74.0,
+      "pdb": "3HI2",
+      "resolution": 2.0,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3065": {
+      "accession": "P68679",
+      "gene": "rpsU",
+      "length": 71,
+      "solubility_percent": 100.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3082": {
+      "accession": "P67701",
+      "gene": "ygjM",
+      "length": 138,
+      "solubility_percent": 85.0,
+      "pdb": "6JQ4",
+      "resolution": 2.0,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3083": {
+      "accession": "P64578",
+      "gene": "ygjN",
+      "length": 104,
+      "solubility_percent": 15.0,
+      "pdb": "6KML",
+      "resolution": 2.095,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3167": {
+      "accession": "P0A7G2",
+      "gene": "rbfA",
+      "length": 133,
+      "solubility_percent": 68.0,
+      "pdb": "7AFQ",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b3175": {
+      "accession": "P0AG99",
+      "gene": "secG",
+      "length": 110,
+      "solubility_percent": 49.0,
+      "pdb": "9RBF",
+      "resolution": 2.44,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3185": {
+      "accession": "P0A7L8",
+      "gene": "rpmA",
+      "length": 85,
+      "solubility_percent": 34.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3186": {
+      "accession": "P0AG48",
+      "gene": "rplU",
+      "length": 103,
+      "solubility_percent": 56.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3203": {
+      "accession": "P0AFX0",
+      "gene": "yhbH",
+      "length": 95,
+      "solubility_percent": 89.0,
+      "pdb": "2RQL",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b3206": {
+      "accession": "P0A9N0",
+      "gene": "npr",
+      "length": 90,
+      "solubility_percent": 78.0,
+      "pdb": "5T17",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b3231": {
+      "accession": "P0AA10",
+      "gene": "rplM",
+      "length": 142,
+      "solubility_percent": 76.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3294": {
+      "accession": "P0AG44",
+      "gene": "rplQ",
+      "length": 127,
+      "solubility_percent": 77.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3297": {
+      "accession": "P0A7R9",
+      "gene": "rpsK",
+      "length": 129,
+      "solubility_percent": 81.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3298": {
+      "accession": "P0A7S9",
+      "gene": "rpsM",
+      "length": 118,
+      "solubility_percent": 99.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3301": {
+      "accession": "P02413",
+      "gene": "rplO",
+      "length": 144,
+      "solubility_percent": 64.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3306": {
+      "accession": "P0A7W7",
+      "gene": "rpsH",
+      "length": 130,
+      "solubility_percent": 86.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3310": {
+      "accession": "P0ADY3",
+      "gene": "rplN",
+      "length": 123,
+      "solubility_percent": 71.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3311": {
+      "accession": "P0AG63",
+      "gene": "rpsQ",
+      "length": 84,
+      "solubility_percent": 83.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3313": {
+      "accession": "P0ADY7",
+      "gene": "rplP",
+      "length": 136,
+      "solubility_percent": 90.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3315": {
+      "accession": "P61175",
+      "gene": "rplV",
+      "length": 110,
+      "solubility_percent": 82.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3316": {
+      "accession": "P0A7U3",
+      "gene": "rpsS",
+      "length": 92,
+      "solubility_percent": 91.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3318": {
+      "accession": "P0ADZ0",
+      "gene": "rplW",
+      "length": 100,
+      "solubility_percent": 70.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3342": {
+      "accession": "P0A7S3",
+      "gene": "rpsL",
+      "length": 124,
+      "solubility_percent": 84.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3366": {
+      "accession": "P0A9I8",
+      "gene": "nirD",
+      "length": 108,
+      "solubility_percent": 92.0,
+      "pdb": "2JO6",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b3470": {
+      "accession": "P0A890",
+      "gene": "yhhP",
+      "length": 81,
+      "solubility_percent": 97.0,
+      "pdb": "1DCJ",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b3481": {
+      "accession": "P0A6Z6",
+      "gene": "nikR",
+      "length": 133,
+      "solubility_percent": 80.0,
+      "pdb": "2HZA",
+      "resolution": 2.1,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3556": {
+      "accession": "P0A9X9",
+      "gene": "cspA",
+      "length": 70,
+      "solubility_percent": 92.0,
+      "pdb": "1MJC",
+      "resolution": 2.0,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3637": {
+      "accession": "P0A7M2",
+      "gene": "rpmB",
+      "length": 78,
+      "solubility_percent": 55.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3649": {
+      "accession": "P0A800",
+      "gene": "rpoZ",
+      "length": 91,
+      "solubility_percent": 82.0,
+      "pdb": "8FVW",
+      "resolution": 2.1,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3670": {
+      "accession": "P0ADF8",
+      "gene": "ilvN",
+      "length": 96,
+      "solubility_percent": 99.0,
+      "pdb": "5YPP",
+      "resolution": 1.9,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3703": {
+      "accession": "P0A7P5",
+      "gene": "rpmH",
+      "length": 46,
+      "solubility_percent": 90.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3704": {
+      "accession": "P0A7Y8",
+      "gene": "rnpA",
+      "length": 119,
+      "solubility_percent": 96.0,
+      "pdb": "2LJP",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b3737": {
+      "accession": "P68699",
+      "gene": "atpE",
+      "length": 79,
+      "solubility_percent": 56.0,
+      "pdb": "1A91",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b3775": {
+      "accession": "P0A9L5",
+      "gene": "ppiC",
+      "length": 93,
+      "solubility_percent": 86.0,
+      "pdb": "1JNS",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b3781": {
+      "accession": "P0AA25",
+      "gene": "trxA",
+      "length": 109,
+      "solubility_percent": 89.0,
+      "pdb": "2TRX",
+      "resolution": 1.68,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3887": {
+      "accession": "P0A6M4",
+      "gene": "dtd",
+      "length": 145,
+      "solubility_percent": 38.0,
+      "pdb": "1JKE",
+      "resolution": 1.55,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3901": {
+      "accession": "P32156",
+      "gene": "yiiL",
+      "length": 104,
+      "solubility_percent": 94.0,
+      "pdb": "1X8D",
+      "resolution": 1.8,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3936": {
+      "accession": "P0A7M9",
+      "gene": "rpmE",
+      "length": 70,
+      "solubility_percent": 66.0,
+      "pdb": "8FTO",
+      "resolution": 1.85,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3938": {
+      "accession": "P0A8U6",
+      "gene": "metJ",
+      "length": 105,
+      "solubility_percent": 89.0,
+      "pdb": "1CMB",
+      "resolution": 1.8,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3953": {
+      "accession": "P32676",
+      "gene": "frwD",
+      "length": 113,
+      "solubility_percent": 44.0,
+      "pdb": "4TN5",
+      "resolution": 2.285,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b3981": {
+      "accession": "P0AG96",
+      "gene": "secE",
+      "length": 127,
+      "solubility_percent": 8.0,
+      "pdb": "9RBF",
+      "resolution": 2.44,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b3986": {
+      "accession": "P0A7K2",
+      "gene": "rplL",
+      "length": 121,
+      "solubility_percent": 99.0,
+      "pdb": "1RQU",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b4000": {
+      "accession": "P0ACF0",
+      "gene": "hupA",
+      "length": 90,
+      "solubility_percent": 96.0,
+      "pdb": "1MUL",
+      "resolution": 2.3,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4012": {
+      "accession": "P09163",
+      "gene": "yjaB",
+      "length": 147,
+      "solubility_percent": 87.0,
+      "pdb": "2KCW",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b4042": {
+      "accession": "P0ABN1",
+      "gene": "dgkA",
+      "length": 122,
+      "solubility_percent": 31.0,
+      "pdb": "2KDC",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b4045": {
+      "accession": "P68206",
+      "gene": "yjbJ",
+      "length": 69,
+      "solubility_percent": 83.0,
+      "pdb": "1RYK",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b4090": {
+      "accession": "P37351",
+      "gene": "rpiB",
+      "length": 149,
+      "solubility_percent": 40.0,
+      "pdb": "1NN4",
+      "resolution": 2.2,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4101": {
+      "accession": "P16685",
+      "gene": "phnG",
+      "length": 150,
+      "solubility_percent": 27.0,
+      "pdb": "4XB6",
+      "resolution": 1.7,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4127": {
+      "accession": "P39274",
+      "gene": "yjdJ",
+      "length": 90,
+      "solubility_percent": 84.0,
+      "pdb": "5I0C",
+      "resolution": 1.92,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4142": {
+      "accession": "P0A6F9",
+      "gene": "groS",
+      "length": 97,
+      "solubility_percent": 86.0,
+      "pdb": "8BKZ",
+      "resolution": 2.3,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b4172": {
+      "accession": "P0A6X3",
+      "gene": "hfq",
+      "length": 102,
+      "solubility_percent": 76.0,
+      "pdb": "9H45",
+      "resolution": 2.08,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4200": {
+      "accession": "P02358",
+      "gene": "rpsF",
+      "length": 135,
+      "solubility_percent": 98.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b4201": {
+      "accession": "P07013",
+      "gene": "priB",
+      "length": 104,
+      "solubility_percent": 72.0,
+      "pdb": "1TXY",
+      "resolution": 2.0,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4202": {
+      "accession": "P0A7T7",
+      "gene": "rpsR",
+      "length": 75,
+      "solubility_percent": 64.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b4203": {
+      "accession": "P0A7R1",
+      "gene": "rplI",
+      "length": 149,
+      "solubility_percent": 84.0,
+      "pdb": "8B0X",
+      "resolution": 1.55,
+      "method": "ELECTRON MICROSCOPY"
+    },
+    "b4222": {
+      "accession": "P0AE48",
+      "gene": "ytfP",
+      "length": 113,
+      "solubility_percent": 98.0,
+      "pdb": "1XHS",
+      "resolution": null,
+      "method": "SOLUTION NMR"
+    },
+    "b4243": {
+      "accession": "P0AF93",
+      "gene": "yjgF",
+      "length": 128,
+      "solubility_percent": 76.0,
+      "pdb": "1QU9",
+      "resolution": 1.2,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4248": {
+      "accession": "P39332",
+      "gene": "yjgH",
+      "length": 131,
+      "solubility_percent": 87.0,
+      "pdb": "1PF5",
+      "resolution": 2.5,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4259": {
+      "accession": "P28905",
+      "gene": "holC",
+      "length": 147,
+      "solubility_percent": 70.0,
+      "pdb": "3SXU",
+      "resolution": 1.85,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4372": {
+      "accession": "P28632",
+      "gene": "holD",
+      "length": 137,
+      "solubility_percent": 32.0,
+      "pdb": "3SXU",
+      "resolution": 1.85,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4393": {
+      "accession": "P0A881",
+      "gene": "trpR",
+      "length": 108,
+      "solubility_percent": 77.0,
+      "pdb": "6ENI",
+      "resolution": 1.1,
+      "method": "X-RAY DIFFRACTION"
+    },
+    "b4513": {
+      "accession": "P36937",
+      "gene": "kdpF",
+      "length": 29,
+      "solubility_percent": 29.0,
+      "pdb": "9OC4",
+      "resolution": 2.1,
+      "method": "ELECTRON MICROSCOPY"
+    }
+  }
+}

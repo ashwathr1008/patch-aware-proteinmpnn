@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "purpose": "model_nonadditivity_versus_measured_coupling",
+  "model_coupling": "root-mean-square residual from an additive fit to the model's predicted scores across identity combinations",
+  "site_pairs_with_model_estimate": 554,
+  "site_pairs_skipped_too_few_cells": 24,
+  "minimum_cells": 100,
+  "comparisons": {
+    "max_ep_dG": {
+      "pairs": 554,
+      "pooled_spearman": 0.24968875365073326,
+      "domains": 196,
+      "one_per_domain_spearman": 0.10484584306194168,
+      "within_domain_centred_spearman": 0.2384965395756013,
+      "within_domain_points": 472
+    },
+    "wt_ep_dG": {
+      "pairs": 548,
+      "pooled_spearman": 0.19517263919420172,
+      "domains": 192,
+      "one_per_domain_spearman": 0.10073473987015572,
+      "within_domain_centred_spearman": 0.21890880056746936,
+      "within_domain_points": 469
+    }
+  }
+}
