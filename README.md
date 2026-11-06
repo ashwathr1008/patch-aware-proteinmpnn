@@ -33,6 +33,56 @@ Each person writes the paragraphs for their own work.
 - [Mid-report versus final scope](Planning/Midreport_vs_Final_Scope.md) explains what the current study can claim and what the final project must establish. Remaining team assignments will be decided at the end of today's work.
 - No training or experiment starts automatically by cloning this repository or running its tests.
 
+## Next-step plan: supervised stability scorers
+
+**Goal:** test whether learning stability-specific position preferences helps, and whether adding residue interactions helps further. This is a proposed folding-stability experiment; neither scorer is implemented yet, and stability is a separate endpoint from aggregation or binding.
+
+| Scorer | One concrete method | What the comparison tests |
+| --- | --- | --- |
+| Supervised additive scorer | A small shared neural network scores each residue from its amino-acid identity and fixed backbone geometry; sum the residue scores. | Benefit of learning stability-specific position preferences. |
+| Supervised interaction scorer | The same additive model plus a small symmetric pair network over nonadjacent Cα contacts within 8 Å. Pair inputs are both identities, distance and sequence separation; count each contact once. | Additional predictive benefit from explicit identity interactions. |
+
+1. **Use measured stability data.** Use the pinned [Tsuboyama et al. (2023)](https://doi.org/10.1038/s41586-023-06328-6) [MegaScale release](https://zenodo.org/records/7992926), version `v2_230420`, described below. Audit quality and usable structure mappings before committing to a training-set size. Our original/shuffled pairs have no experimental stability labels and cannot supply these targets.
+2. **Prepare examples and labels.** Use the published numeric `ddG_ML` target (positive means stabilizing, kcal/mol), rather than subtracting an arbitrary wild-type replicate. Each example needs `WT_name`, reference/variant sequences, mutation positions and a mapped parent backbone. Preserve uncertainty fields and exclude unusable/censored labels under the rules below. Keep all variants of a parent and close homologues in the same train/validation/test group.
+3. **Build controlled features.** Use amino-acid identity and backbone-only features such as neighbor counts and contact distances. Keep geometry identical for a parent and its variants. The additive model must not see neighboring identities or sequence-conditioned embeddings. Train domain-level summed scores against domain-level labels; do not copy a whole-protein label onto individual patches. Use existing surface patches for subsequent inspection.
+4. **Train both scorers the same way.** Predict the difference between variant and reference scores. Use Huber regression loss, AdamW and early stopping on validation proteins. Train small models locally, balance contributions across parent proteins, and use the same examples, splits and tuning budget. Keep ProteinMPNN frozen. Include a wider additive model as a capacity control.
+5. **Test added value.** On held-out protein families, compare composition features, frozen ProteinMPNN, the additive scorer and the interaction scorer using per-protein Spearman correlation and MAE. Report variation across proteins and training seeds. Where matched single/double mutants exist, also test nonadditivity: double-mutant effect minus the two single-mutant effects. This directly challenges the additive model, whose predicted nonadditivity is zero on fixed geometry.
+6. **Decide whether to proceed.** Use the interaction scorer for candidate reranking only if it adds held-out value over the additive and frozen-model baselines. Higher predicted stability alone is not proof of improved folding, solubility or binding; arbitrary shuffled sequences may be outside the training distribution.
+
+**Deliverables:** versioned data/split manifest in `Data/`, scorer and training code in `Code/`, and held-out tables, plots and limitations in `Analysis/`. Acquisition is separate from training: the downloaded release still needs filtering, structure mapping and splits before any scorer training or evaluation.
+
+### Exact dataset, locations and methods
+
+**Source:** MegaScale / Tsuboyama 2023, Zenodo record **7992926**, version **v2_230420**, DOI **10.5281/zenodo.7992926**, license **CC BY 4.0**. Retain the paper citation and dataset attribution. Local archives are in **`Data/raw/megascale/`**; [Data/megascale_manifest.json](Data/megascale_manifest.json) records source URLs, exact sizes, published MD5 checksums, local SHA256 hashes and CSV schemas. Raw downloads remain ignored by Git.
+
+| Local archive | Exact contents used | Role |
+| --- | --- | --- |
+| `Data/raw/megascale/Processed_K50_dG_datasets.zip` | `Processed_K50_dG_datasets/Tsuboyama2023_Dataset2_Dataset3_20230416.csv` | Primary source of sequences and machine-learning stability labels. Use rows with valid numeric `ddG_ML`; the file also contains rows without usable mutation-effect targets. |
+| Same archive | `Single_DMS_list.csv`, `Double_DMS_list.csv` (under the archive's dataset directory) | Metadata for reference domains and single/double-mutant scans. Confirm mappings using sequences, not filenames alone. |
+| Same archive | `Tsuboyama2023_Dataset1_20230416.csv` | Broader source table retained for audit; not the default training table. |
+| `Data/raw/megascale/AlphaFold_model_PDBs.zip` | Released parent/domain structure models | Backbone geometry; predicted structures must be distinguished from experimental structures and checked against reference sequences. |
+| `Data/raw/megascale/Pipeline_figure_model.zip` | `Pipeline_figure_model/Data_quality_filtering_script.ipynb`, `Additive_model_Fig4.ipynb` | Authors' filtering and additive-analysis reference methods. Downloading does not execute these notebooks. Our proposed scorers are separate implementations. |
+
+**How the source labels were obtained:** cDNA-display proteolysis with trypsin and chymotrypsin; five-minute digestion at room temperature; sequencing counts and Bayesian inference of protease resistance and folding stability. The authors screen scan quality and assay-disrupting mutants. Their `_ML` columns mark filtered values with `-`; `dG_ML` can also contain censored bounds such as `<-1` or `>5`. See the [original experimental and filtering methods](https://pmc.ncbi.nlm.nih.gov/articles/PMC10412457/). These are folding-stability estimates, not aggregation or binding measurements.
+
+**Proposed database preparation (not yet run):**
+
+1. Stream the primary CSV inside the ZIP with Python `zipfile` + `csv`; no full in-memory load is needed. Read `aa_seq` as the domain sequence; keep `aa_seq_full` only for assay-context provenance because it contains flanking sequences.
+2. Keep `name`, `WT_name`, `WT_cluster`, `mut_type`, `aa_seq`, `dG_ML`, `ddG_ML`, `deltaG_95CI_low`, `deltaG_95CI_high` and `pair_name`. Require finite numeric `dG_ML` and `ddG_ML`; do not replace `-` or bound strings with numbers, or recover filtered labels from unfiltered `deltaG` columns.
+3. Start with canonical, same-length single/double substitutions. Verify mutation identities and one-based positions against the reference sequence; exclude insertions/deletions for this fixed-backbone pilot. Consolidate synonymous/repeated measurements of the same parent/sequence and retain replicate provenance.
+4. Match `WT_name` to a sequence-verified parent structure. Use that same backbone for its variants, validate complete backbone coverage, and record mapping failures. Supplied AlphaFold models do not automatically cover every usable label.
+5. Freeze parent/homology groups before splitting; use `WT_cluster` as a grouping aid, not proof of homology separation. Assign groups to approximately 70/15/15 train/validation/test partitions with seed 7. Report actual group and example counts. No mutant-level random split.
+
+**Concrete initial training configuration (proposed):** small residue and symmetric pair networks with one 32-unit ReLU hidden layer; domain score differences predict `ddG_ML`. Use Huber loss (`delta=1` kcal/mol), AdamW (`lr=0.001`, `weight_decay=0.0001`), batches of 64 variant/reference pairs, at most 100 epochs and early stopping after 10 epochs without improved validation MAE. Balance parent-protein contributions, run seeds 7/17/27 and tune only on validation groups. Pair terms use each nonadjacent Cα contact within 8 Å once. The held-out comparison tests interactions beyond learned position preferences; it does not fine-tune ProteinMPNN.
+
+Reproduce or verify acquisition from the repository root with a local Python 3.9+ interpreter:
+
+```powershell
+python Code/prepare_stability_data.py
+```
+
+The command downloads three selected archives, checks their published MD5 and local SHA256, and records the archive members and CSV headers. It does not download raw sequencing counts, run PSC jobs, filter training examples or start training.
+
 ## Repository layout
 
 | Directory | Contents |
