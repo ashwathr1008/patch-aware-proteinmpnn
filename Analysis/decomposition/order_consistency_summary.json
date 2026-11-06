@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "purpose": "order_consistency_and_outside_patch_joint_component",
+  "sources": {
+    "pair_scores": "pair_scores.csv",
+    "score_row_count": 1360
+  },
+  "units": "nats per chain unless a field name says otherwise",
+  "sequence_row_count": 340,
+  "pair_row_count": 170,
+  "order_count": 8,
+  "theory": {
+    "consistent_joint_prediction": "Zero spread of chain-total NLL across decoding orders",
+    "observed_spread_meaning": "Amortization error: the network's conditionals are not mutually consistent with one joint distribution",
+    "outside_patch_first_order_gap": "Exactly zero, because identities outside the patch are unchanged and unconditional probabilities ignore sequence context",
+    "outside_gap_interpretation": "Attributable to sequence coupling; a lower bound on the magnitude of the joint component, not the full decomposition"
+  },
+  "checkpoints": {
+    "soluble": {
+      "pair_count": 85,
+      "pairs_with_measurable_gap": 85,
+      "order_sd_nats_per_chain": {
+        "count": 85,
+        "mean": 1.0550898848528028,
+        "median": 1.0912975292182692,
+        "min": 0.37912979841985467,
+        "max": 1.7983044673890225,
+        "p25": 0.8384995873314306,
+        "p75": 1.3041767062999423
+      },
+      "absolute_full_gap_nats_per_chain": {
+        "count": 85,
+        "mean": 15.087523448308382,
+        "median": 13.310979168862104,
+        "min": 0.1307948576286435,
+        "max": 36.50564929004759,
+        "p25": 9.529358949046582,
+        "p75": 20.47490053763613
+      },
+      "inconsistency_ratio": {
+        "count": 85,
+        "mean": 0.21096917896821996,
+        "median": 0.06581201408725289,
+        "min": 0.020405780834304544,
+        "max": 10.100995442800814,
+        "p25": 0.04496791998826089,
+        "p75": 0.11544899263437536
+      },
+      "pairs_with_order_sd_above_gap": 1,
+      "outside_gap_nats_per_chain": {
+        "count": 85,
+        "mean": 0.9765946104300814,
+        "median": 0.8072327971458435,
+        "min": -0.968525493517518,
+        "max": 4.480219935066998,
+        "p25": 0.23354874458163977,
+        "p75": 1.645919808652252
+      },
+      "outside_share_of_full_gap_median": 0.04532976289737648,
+      "full_gap_sign_test": {
+        "positive": 84,
+        "negative": 1,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 4.446095792472524e-24
+      },
+      "outside_gap_sign_test": {
+        "positive": 72,
+        "negative": 13,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 4.628573788074828e-11
+      },
+      "patch_gap_sign_test": {
+        "positive": 84,
+        "negative": 1,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 4.446095792472524e-24
+      }
+    },
+    "vanilla": {
+      "pair_count": 85,
+      "pairs_with_measurable_gap": 85,
+      "order_sd_nats_per_chain": {
+        "count": 85,
+        "mean": 0.9198694134478604,
+        "median": 0.9331007900916546,
+        "min": 0.5078858120937079,
+        "max": 1.4379879776847586,
+        "p25": 0.7660314221466871,
+        "p75": 1.0493021045451214
+      },
+      "absolute_full_gap_nats_per_chain": {
+        "count": 85,
+        "mean": 15.380333476612234,
+        "median": 13.680662641301751,
+        "min": 0.49772052001208067,
+        "max": 37.294511194340885,
+        "p25": 9.773096369113773,
+        "p75": 21.525130525697023
+      },
+      "inconsistency_ratio": {
+        "count": 85,
+        "mean": 0.10341600991107297,
+        "median": 0.0634196238541972,
+        "min": 0.022246707460465615,
+        "max": 2.021899389127837,
+        "p25": 0.043900683928479164,
+        "p75": 0.09623504683264016
+      },
+      "pairs_with_order_sd_above_gap": 1,
+      "outside_gap_nats_per_chain": {
+        "count": 85,
+        "mean": 0.9893651844714494,
+        "median": 1.1117333592847007,
+        "min": -1.1080283150076866,
+        "max": 5.074804282747209,
+        "p25": 0.2739686998538682,
+        "p75": 1.6815967899747175
+      },
+      "outside_share_of_full_gap_median": 0.06570447028936859,
+      "full_gap_sign_test": {
+        "positive": 84,
+        "negative": 1,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 4.446095792472524e-24
+      },
+      "outside_gap_sign_test": {
+        "positive": 73,
+        "negative": 12,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 8.090689460813064e-12
+      },
+      "patch_gap_sign_test": {
+        "positive": 84,
+        "negative": 1,
+        "ties": 0,
+        "nonties": 85,
+        "p_value": 4.446095792472524e-24
+      }
+    }
+  }
+}
