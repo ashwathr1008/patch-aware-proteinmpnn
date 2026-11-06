@@ -37,19 +37,73 @@ validated target.
 
 ## Architecture
 
-**Frozen ProteinMPNN encoder as a feature extractor, with a small trained head pooling over
-patch members.** No gradient enters ProteinMPNN.
+Two measurements constrain this, and the first rules out the obvious design.
 
-The reason is interpretability, not cost. The project's claim is that a patch term adds
-something beyond frozen ProteinMPNN. If the scorer sees less of the protein than ProteinMPNN
-does, a negative result cannot be read: the objective may have failed, or the encoder may have
-been starved. Sharing the representation isolates the one variable under test.
+### The encoder cannot be the feature source
 
-- **Node features**: per-residue encoder embeddings from frozen ProteinMPNN, under the same
-  k = 48 neighbour graph the checkpoint defines. The whole chain is encoded; localization
-  happens at the readout, never by cropping the input.
-- **Readout**: attention pooling over the patch's member positions, with mean pooling as the
-  ablation. For a two-site patch this is a pooling over two positions.
+**ProteinMPNN's encoder takes no sequence.** In `unconditional_probs` and in `forward` alike,
+the node state is initialised as `h_V = torch.zeros(...)` and the edge features come from
+`self.features(X, mask, residue_idx, chain_encoding_all)` — backbone geometry only. Sequence
+enters at the decoder.
+
+So encoder embeddings are **identical for every assignment on one backbone**. A head built on
+them would receive the same input for the original and the permuted arrangement and could not
+distinguish them at all, let alone notice a third residue. An earlier draft of this spec
+specified exactly that; it would have failed silently at the first training step, with a model
+that learned a constant.
+
+**Features therefore come from the decoder, conditioned on sequence.** `conditional_probs`
+(`protein_mpnn_utils.py:1292`) gives p(aa_i | backbone, rest of the sequence), so a
+representation read at position i already depends on everything else in the chain. Mask the
+patch's own positions, condition on the remainder, and read the decoder states there.
+
+This keeps the argument that motivated a frozen design: the scorer still sees exactly what
+ProteinMPNN sees, so a negative result means the objective failed rather than that the
+representation was starved. Only the method called changes.
+
+The cost is that features depend on the sequence, so they cannot be cached once per structure
+the way the first-order term could. One pass per variant, the same cost as the scoring already
+done.
+
+### How much many-body capacity is needed
+
+Measured, rather than assumed. Across 74 networks from the 28 triples whose three pairs were
+all scored, holding a pair's residues in both arrangements while setting a third site in the
+same network to each of the twenty identities:
+
+| | |
+| --- | ---: |
+| Median swap effect | 4.730 nats |
+| Median spread across the third residue | 0.458 nats |
+| **Median relative spread** | **10.0%** |
+| Networks under 20% spread | 58 of 74 |
+| Networks where the preference reverses | 5 of 74 |
+
+**About ninety per cent of a swap effect is independent of the third residue.** Pairwise labels
+therefore carry to patch scale, and the 100,572 measured contrasts are usable for training a
+patch-level model. This is the result that keeps the whole strategy viable.
+
+The remaining tenth is real. The five networks that reverse are mostly weak-effect pairs, mean
+magnitude between 0.1 and 1.2 nats, where context decides a question the pair alone leaves
+open. Those are also the cases a scorer would be most useful on, since they are where the model
+is currently least certain. Relative spread is unstable for the seven networks whose swap
+effect is under one nat, so the median is the figure to quote rather than the maximum.
+
+Sequence-conditioned features cover this tenth without extra machinery, which is the second
+reason to take them over encoder features. A pairwise-only model would capture most of the
+effect and systematically miss the marginal cases.
+
+### The design
+
+- **Node features**: decoder states from frozen ProteinMPNN under `conditional_probs`, with the
+  patch's positions masked and the rest of the sequence conditioned on. Same k = 48 neighbour
+  graph the checkpoint defines. The whole chain is encoded; localization happens at the
+  readout, never by cropping the input.
+- **Readout**: attention pooling over the patch's members **and their nearest neighbours**,
+  each carrying its identity embedding alongside its geometry, so three-body terms can be
+  represented explicitly rather than having to survive pooling. Mean pooling over members
+  alone is the ablation, and the difference between them measures what the many-body capacity
+  buys.
 - **Head**: two or three dense layers to one scalar. Deliberately small; a large head over
   frozen features will memorize domains rather than learn arrangement.
 - **Output**: one scalar per patch per assignment, where a higher value means more stable.
@@ -59,9 +113,10 @@ side-chain coordinates after identities are reassigned, and any composition summ
 patch. Composition is matched exactly within every training contrast, so a composition feature
 carries no gradient there, but it would carry one across domains.
 
-Fine-tuning the encoder is now permissible but is **not** the starting point. Start frozen: it
-trains in minutes, it isolates the objective, and if it fails the failure is informative. Only
-after a frozen head is understood does unfreezing answer a question rather than muddy one.
+Fine-tuning is now permissible, since measured ΔΔG is a validated target, but it is **not** the
+starting point. Start frozen: it trains in minutes, it isolates the objective, and a failure is
+informative. Only once a frozen head is understood does unfreezing answer a question rather
+than muddy one.
 
 ## Training signal
 
