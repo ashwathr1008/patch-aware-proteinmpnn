@@ -1,0 +1,12 @@
+{
+  "source_url": "https://dbarchive.biosciencedbc.jp/data/esol/LATEST/esol.zip",
+  "documentation_url": "https://dbarchive.biosciencedbc.jp/data/esol/LATEST/README_e.html",
+  "zip_sha256": "29afdd2fa5be4947c9cbb1756197f4382e5184f8a2e4ae9162689ad74643d54b",
+  "attribution": "eSOL \u00a9 Hideki Taguchi (Tokyo Institute of Technology) licensed under CC Attribution-Share Alike 2.1 Japan",
+  "license": "CC BY-SA 2.1 Japan (dataset and derived tables)",
+  "local_path": "Data/raw/esol/esol.zip",
+  "download_observed_utc": "2026-11-06T05:28:26.993059+00:00",
+  "archive_bytes": 197452,
+  "archive_member": "esol.csv",
+  "acquisition_note": "Official ZIP downloaded during this task; timestamp records acquisition manifest creation, not a server release date."
+}
