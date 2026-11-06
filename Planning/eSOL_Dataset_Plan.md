@@ -146,9 +146,40 @@ answer about this proxy on this organism at this size, and it belongs in the rep
 - These proteins are almost certainly inside ProteinMPNN's pretraining set, as the pilot
   structures are. A cluster-held-out split does not establish otherwise.
 
-## Immediate next step
+## Decided: the cohort is built
 
-Run the structure filter in step 1 and **re-run the power table on the survivors**. Every number
-above is computed on the unfiltered 185, so the cohort decision is provisional until that count
-is known. If the filter leaves fewer than roughly 120 proteins, the 20–300 cohort becomes the
-only viable option and the size scope has to be reconsidered on its own terms.
+The structure filter and clustering have run, and the cohort is fixed at
+[Analysis/esol_cohort/cohort.json](../Analysis/esol_cohort/cohort.json). Each correctness step
+cost statistical power, and all three numbers are recorded because the last one is the only
+honest one:
+
+| Stage | Unit | n | Smallest detectable true r |
+| --- | --- | ---: | ---: |
+| Unfiltered candidates | proteins | 185 | ~0.28 |
+| After structure filter | proteins | 138 | 0.309 |
+| **After homology clustering** | **clusters** | **103** | **0.359** |
+
+Structure filtering kept 138 of 185, dropping 20 for resolution, 17 for construct length and 10
+for engineered mutations. It also tightened the label spread, from SD 24.1 to 22.2, because it
+removes proteins non-randomly.
+
+Clustering then found 35 related pairs, placing **60 of the 138 proteins in a multi-protein
+cluster**. Nearly half the cohort has a relative in it. Treating proteins as independent would
+inflate significance, so the cluster is the unit of analysis and n is 103, not 138.
+
+The split is fixed: 97 proteins in development, 41 in holdout, assigned by whole cluster and
+verified so that no cluster is divided. **Do not redraw it.**
+
+### What this cohort can and cannot establish
+
+It can detect a true correlation of about **0.36 or stronger** between a protein-level patch
+score and measured solubility. That is a moderate-to-strong relationship.
+
+It probably cannot establish the **incremental** claim, that a patch score adds predictive
+value beyond composition and frozen ProteinMPNN, because an increment would have to be that
+large on its own after the baselines have taken their share. The raw-correlation test stays
+primary and powered; the incremental test stays secondary and exploratory, exactly as this plan
+declared before the numbers were known.
+
+The resolution cutoff was not revisited after seeing the power. It was declared before
+inspection so that it could not be tuned toward a more comfortable answer.
