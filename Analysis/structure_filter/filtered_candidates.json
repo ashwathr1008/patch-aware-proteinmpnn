@@ -1,0 +1,2486 @@
+[
+  {
+    "b": "b0101",
+    "acc": "P0A8H8",
+    "gene": "yacG",
+    "len": 65,
+    "sol": 92.0,
+    "entries_considered": 2,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1LV3",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0461538461538462,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0131",
+    "acc": "P0A790",
+    "gene": "panD",
+    "len": 126,
+    "sol": 75.0,
+    "entries_considered": 19,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "1PYQ",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.9,
+      "coverage": 1.1428571428571428,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0196",
+    "acc": "P69411",
+    "gene": "rcsF",
+    "len": 134,
+    "sol": 82.0,
+    "entries_considered": 5,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2Y1B",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "coverage": 0.9552238805970149,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0226",
+    "acc": "Q47150",
+    "gene": "dinJ",
+    "len": 86,
+    "sol": 83.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "4Q2U",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.8,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0249",
+    "acc": "P75677",
+    "gene": "ykfF",
+    "len": 79,
+    "sol": 87.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2HJJ",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.1012658227848102,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0416",
+    "acc": "P0A780",
+    "gene": "nusB",
+    "len": 139,
+    "sol": 97.0,
+    "entries_considered": 9,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1EY1",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0435",
+    "acc": "P0ABE2",
+    "gene": "bolA",
+    "len": 105,
+    "sol": 81.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2DHM",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.019047619047619,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0450",
+    "acc": "P0AC55",
+    "gene": "glnK",
+    "len": 112,
+    "sol": 41.0,
+    "entries_considered": 4,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "1GNK",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0460",
+    "acc": "P0ACE3",
+    "gene": "hha",
+    "len": 72,
+    "sol": 99.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "1JW2",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0471",
+    "acc": "P0A8B5",
+    "gene": "ybaB",
+    "len": 109,
+    "sol": 83.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1PUG",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.2,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0483",
+    "acc": "P0A9T6",
+    "gene": "ybaQ",
+    "len": 113,
+    "sol": 81.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2EBY",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.25,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0487",
+    "acc": "P0A9G4",
+    "gene": "cueR",
+    "len": 135,
+    "sol": 66.0,
+    "entries_considered": 9,
+    "entries_passing": 4,
+    "chosen": {
+      "entry": "1Q06",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.07,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0543",
+    "acc": "P23895",
+    "gene": "emrE",
+    "len": 110,
+    "sol": 7.0,
+    "entries_considered": 14,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "8UWU",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0549",
+    "acc": "P68661",
+    "gene": "ybcO",
+    "len": 96,
+    "sol": 98.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "3G27",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.1,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0550",
+    "acc": "P0AG74",
+    "gene": "rusA",
+    "len": 120,
+    "sol": 76.0,
+    "entries_considered": 3,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1Q8R",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.899,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0597",
+    "acc": "P0A8Y8",
+    "gene": "ybdB",
+    "len": 137,
+    "sol": 80.0,
+    "entries_considered": 3,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "4K4C",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.85,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0610",
+    "acc": "P0AFW4",
+    "gene": "rnk",
+    "len": 136,
+    "sol": 95.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "3BMB",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.91,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0637",
+    "acc": "P0AAT6",
+    "gene": "ybeB",
+    "len": 105,
+    "sol": 95.0,
+    "entries_considered": 7,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "30QZ",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.23,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0721",
+    "acc": "P69054",
+    "gene": "sdhC",
+    "len": 129,
+    "sol": 43.0,
+    "entries_considered": 12,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "2WDQ",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.4,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0722",
+    "acc": "P0AC44",
+    "gene": "sdhD",
+    "len": 115,
+    "sol": 44.0,
+    "entries_considered": 10,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2WDQ",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.4,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0736",
+    "acc": "P0A8Z3",
+    "gene": "ybgC",
+    "len": 134,
+    "sol": 70.0,
+    "entries_considered": 4,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "1S5U",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.7,
+      "coverage": 1.0298507462686568,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0785",
+    "acc": "P30749",
+    "gene": "moaE",
+    "len": 150,
+    "sol": 84.0,
+    "entries_considered": 5,
+    "entries_passing": 5,
+    "chosen": {
+      "entry": "1FM0",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.45,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0881",
+    "acc": "P0A8Q6",
+    "gene": "clpS",
+    "len": 106,
+    "sol": 63.0,
+    "entries_considered": 20,
+    "entries_passing": 8,
+    "chosen": {
+      "entry": "2W9R",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.7,
+      "coverage": 1.0188679245283019,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0884",
+    "acc": "P69222",
+    "gene": "infA",
+    "len": 72,
+    "sol": 94.0,
+    "entries_considered": 11,
+    "entries_passing": 4,
+    "chosen": {
+      "entry": "9FDA",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.0,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0912",
+    "acc": "P0A6Y1",
+    "gene": "ihfB",
+    "len": 94,
+    "sol": 23.0,
+    "entries_considered": 15,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "2HT0",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b0976",
+    "acc": "P19931",
+    "gene": "hyaE",
+    "len": 132,
+    "sol": 100.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2HFD",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0606060606060606,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1038",
+    "acc": "P0AE98",
+    "gene": "csgF",
+    "len": 138,
+    "sol": 30.0,
+    "entries_considered": 7,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "5M1U",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 0.9202898550724637,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1051",
+    "acc": "P25738",
+    "gene": "msyB",
+    "len": 124,
+    "sol": 91.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "8IMQ",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1103",
+    "acc": "P0ACE7",
+    "gene": "hinT",
+    "len": 119,
+    "sol": 84.0,
+    "entries_considered": 3,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "3N1S",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.45,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1396",
+    "acc": "P76084",
+    "gene": "paaI",
+    "len": 140,
+    "sol": 77.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "2FS2",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "coverage": 1.0785714285714285,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1438",
+    "acc": "P67697",
+    "gene": "ydcQ",
+    "len": 138,
+    "sol": 87.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "6HPC",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.26,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1518",
+    "acc": "P64461",
+    "gene": "lsrG",
+    "len": 96,
+    "sol": 77.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "3QMQ",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.8,
+      "coverage": 1.03125,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1530",
+    "acc": "P27245",
+    "gene": "marR",
+    "len": 144,
+    "sol": 81.0,
+    "entries_considered": 6,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "1JGS",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.3,
+      "coverage": 0.9583333333333334,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1531",
+    "acc": "P0ACH5",
+    "gene": "marA",
+    "len": 127,
+    "sol": 12.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "1BL0",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.3,
+      "coverage": 1.015748031496063,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1549",
+    "acc": "P76156",
+    "gene": "ydfO",
+    "len": 136,
+    "sol": 77.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2HH8",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0955882352941178,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1639",
+    "acc": "P28224",
+    "gene": "ydhA",
+    "len": 109,
+    "sol": 53.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2F09",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 0.9357798165137615,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1651",
+    "acc": "P0AC81",
+    "gene": "gloA",
+    "len": 135,
+    "sol": 100.0,
+    "entries_considered": 5,
+    "entries_passing": 5,
+    "chosen": {
+      "entry": "1F9Z",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.5,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1654",
+    "acc": "P0AC69",
+    "gene": "ydhD",
+    "len": 115,
+    "sol": 91.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "2WCI",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.9,
+      "coverage": 1.173913043478261,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1686",
+    "acc": "P77781",
+    "gene": "ydiI",
+    "len": 136,
+    "sol": 78.0,
+    "entries_considered": 6,
+    "entries_passing": 6,
+    "chosen": {
+      "entry": "1VH5",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.34,
+      "coverage": 1.088235294117647,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1716",
+    "acc": "P0A7L3",
+    "gene": "rplT",
+    "len": 118,
+    "sol": 100.0,
+    "entries_considered": 623,
+    "entries_passing": 98,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1738",
+    "acc": "P69795",
+    "gene": "chbB",
+    "len": 106,
+    "sol": 98.0,
+    "entries_considered": 5,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "1H9C",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1759",
+    "acc": "P77788",
+    "gene": "nudG",
+    "len": 135,
+    "sol": 90.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2RRK",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.037037037037037,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1797",
+    "acc": "P64488",
+    "gene": "yeaR",
+    "len": 119,
+    "sol": 97.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "3BB6",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.3,
+      "coverage": 1.0672268907563025,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1823",
+    "acc": "P0A9Y6",
+    "gene": "cspC",
+    "len": 69,
+    "sol": 94.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "8XYF",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.67,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1842",
+    "acc": "P0ABS8",
+    "gene": "holE",
+    "len": 76,
+    "sol": 96.0,
+    "entries_considered": 5,
+    "entries_passing": 4,
+    "chosen": {
+      "entry": "1DU2",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1865",
+    "acc": "P0AFC0",
+    "gene": "nudB",
+    "len": 150,
+    "sol": 53.0,
+    "entries_considered": 5,
+    "entries_passing": 4,
+    "chosen": {
+      "entry": "5U7F",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.789,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1882",
+    "acc": "P0AE67",
+    "gene": "cheY",
+    "len": 129,
+    "sol": 95.0,
+    "entries_considered": 64,
+    "entries_passing": 17,
+    "chosen": {
+      "entry": "1JBE",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.08,
+      "coverage": 0.9922480620155039,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b1892",
+    "acc": "P0A8S9",
+    "gene": "flhD",
+    "len": 116,
+    "sol": 88.0,
+    "entries_considered": 3,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1G8E",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.8,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2004",
+    "acc": "P76364",
+    "gene": "yeeU",
+    "len": 122,
+    "sol": 83.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2H28",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.1,
+      "coverage": 1.0655737704918034,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2017",
+    "acc": "P69346",
+    "gene": "yefM",
+    "len": 83,
+    "sol": 84.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2A6Q",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.05,
+      "coverage": 1.036144578313253,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2061",
+    "acc": "P0AAB2",
+    "gene": "wzb",
+    "len": 147,
+    "sol": 25.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2FEK",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.1360544217687074,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2181",
+    "acc": "P0AD21",
+    "gene": "yejG",
+    "len": 114,
+    "sol": 91.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "6BI6",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0087719298245614,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2185",
+    "acc": "P68919",
+    "gene": "rplY",
+    "len": 94,
+    "sol": 86.0,
+    "entries_considered": 607,
+    "entries_passing": 103,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2187",
+    "acc": "P0AD24",
+    "gene": "yejL",
+    "len": 75,
+    "sol": 84.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2JRX",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.1066666666666667,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2259",
+    "acc": "P37590",
+    "gene": "pmrD",
+    "len": 88,
+    "sol": 91.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "4HN7",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.352,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2288",
+    "acc": "P0AFC3",
+    "gene": "nuoA",
+    "len": 147,
+    "sol": 49.0,
+    "entries_considered": 30,
+    "entries_passing": 5,
+    "chosen": {
+      "entry": "7Z7V",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.29,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2387",
+    "acc": "P69808",
+    "gene": "ypdH",
+    "len": 108,
+    "sol": 95.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2KYR",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0277777777777777,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2415",
+    "acc": "P0AA04",
+    "gene": "ptsH",
+    "len": 85,
+    "sol": 88.0,
+    "entries_considered": 24,
+    "entries_passing": 14,
+    "chosen": {
+      "entry": "1POH",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2434",
+    "acc": "P76539",
+    "gene": "ypeA",
+    "len": 141,
+    "sol": 80.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "4QUS",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.28,
+      "coverage": 1.0567375886524824,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2457",
+    "acc": "P0ABF4",
+    "gene": "cchA",
+    "len": 97,
+    "sol": 89.0,
+    "entries_considered": 3,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "3MPY",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "coverage": 1.0618556701030928,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2462",
+    "acc": "P63746",
+    "gene": "ypfE",
+    "len": 111,
+    "sol": 93.0,
+    "entries_considered": 2,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "3I96",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.65,
+      "coverage": 1.072072072072072,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2518",
+    "acc": "P0A763",
+    "gene": "ndk",
+    "len": 143,
+    "sol": 65.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2HUR",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.62,
+      "coverage": 0.993006993006993,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2525",
+    "acc": "P0A9R4",
+    "gene": "fdx",
+    "len": 111,
+    "sol": 82.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1I7H",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.7,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2529",
+    "acc": "P0ACD4",
+    "gene": "iscU",
+    "len": 128,
+    "sol": 97.0,
+    "entries_considered": 2,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2L4X",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2553",
+    "acc": "P0A9Z1",
+    "gene": "glnB",
+    "len": 112,
+    "sol": 95.0,
+    "entries_considered": 3,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "2PII",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.9,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2563",
+    "acc": "P24224",
+    "gene": "acpS",
+    "len": 126,
+    "sol": 84.0,
+    "entries_considered": 4,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "5XU7",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.84,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2597",
+    "acc": "P0AD49",
+    "gene": "yfiA",
+    "len": 113,
+    "sol": 98.0,
+    "entries_considered": 31,
+    "entries_passing": 14,
+    "chosen": {
+      "entry": "9SLG",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.16,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2645",
+    "acc": "P52141",
+    "gene": "yfjZ",
+    "len": 105,
+    "sol": 65.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "2EA9",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.1,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2765",
+    "acc": "P65870",
+    "gene": "ygcM",
+    "len": 121,
+    "sol": 91.0,
+    "entries_considered": 6,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "4NTN",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.99,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2790",
+    "acc": "P65367",
+    "gene": "yqcA",
+    "len": 149,
+    "sol": 94.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "2M6R",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2792",
+    "acc": "Q46919",
+    "gene": "yqcC",
+    "len": 109,
+    "sol": 87.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2HGK",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.073394495412844,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2811",
+    "acc": "P0AGF2",
+    "gene": "ygdK",
+    "len": 147,
+    "sol": 81.0,
+    "entries_considered": 5,
+    "entries_passing": 4,
+    "chosen": {
+      "entry": "5EEP",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.4,
+      "coverage": 1.0204081632653061,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2900",
+    "acc": "P67603",
+    "gene": "yqfB",
+    "len": 103,
+    "sol": 87.0,
+    "entries_considered": 4,
+    "entries_passing": 4,
+    "chosen": {
+      "entry": "9KYG",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.47,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2910",
+    "acc": "P0ADS2",
+    "gene": "zapA",
+    "len": 109,
+    "sol": 98.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "4P1M",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.95,
+      "coverage": 1.128440366972477,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b2934",
+    "acc": "P69824",
+    "gene": "cmtB",
+    "len": 147,
+    "sol": 97.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2OQ3",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0204081632653061,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3021",
+    "acc": "Q46864",
+    "gene": "ygiT",
+    "len": 131,
+    "sol": 46.0,
+    "entries_considered": 6,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "3O9X",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0999,
+      "coverage": 1.015267175572519,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3022",
+    "acc": "Q46865",
+    "gene": "ygiU",
+    "len": 98,
+    "sol": 74.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "3HI2",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "coverage": 1.030612244897959,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3065",
+    "acc": "P68679",
+    "gene": "rpsU",
+    "len": 71,
+    "sol": 100.0,
+    "entries_considered": 525,
+    "entries_passing": 78,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3082",
+    "acc": "P67701",
+    "gene": "ygjM",
+    "len": 138,
+    "sol": 85.0,
+    "entries_considered": 4,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "6JQ4",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3083",
+    "acc": "P64578",
+    "gene": "ygjN",
+    "len": 104,
+    "sol": 15.0,
+    "entries_considered": 3,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "6KML",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.095,
+      "coverage": 1.1346153846153846,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3167",
+    "acc": "P0A7G2",
+    "gene": "rbfA",
+    "len": 133,
+    "sol": 68.0,
+    "entries_considered": 6,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "7AFQ",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3175",
+    "acc": "P0AG99",
+    "gene": "secG",
+    "len": 110,
+    "sol": 49.0,
+    "entries_considered": 7,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "9RBF",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.44,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3185",
+    "acc": "P0A7L8",
+    "gene": "rpmA",
+    "len": 85,
+    "sol": 34.0,
+    "entries_considered": 629,
+    "entries_passing": 121,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3186",
+    "acc": "P0AG48",
+    "gene": "rplU",
+    "len": 103,
+    "sol": 56.0,
+    "entries_considered": 644,
+    "entries_passing": 122,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3203",
+    "acc": "P0AFX0",
+    "gene": "yhbH",
+    "len": 95,
+    "sol": 89.0,
+    "entries_considered": 6,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2RQL",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3206",
+    "acc": "P0A9N0",
+    "gene": "npr",
+    "len": 90,
+    "sol": 78.0,
+    "entries_considered": 3,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "5T17",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 0.9444444444444444,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3231",
+    "acc": "P0AA10",
+    "gene": "rplM",
+    "len": 142,
+    "sol": 76.0,
+    "entries_considered": 667,
+    "entries_passing": 137,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3294",
+    "acc": "P0AG44",
+    "gene": "rplQ",
+    "len": 127,
+    "sol": 77.0,
+    "entries_considered": 603,
+    "entries_passing": 100,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3297",
+    "acc": "P0A7R9",
+    "gene": "rpsK",
+    "len": 129,
+    "sol": 81.0,
+    "entries_considered": 572,
+    "entries_passing": 84,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3298",
+    "acc": "P0A7S9",
+    "gene": "rpsM",
+    "len": 118,
+    "sol": 99.0,
+    "entries_considered": 550,
+    "entries_passing": 75,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3301",
+    "acc": "P02413",
+    "gene": "rplO",
+    "len": 144,
+    "sol": 64.0,
+    "entries_considered": 676,
+    "entries_passing": 148,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3306",
+    "acc": "P0A7W7",
+    "gene": "rpsH",
+    "len": 130,
+    "sol": 86.0,
+    "entries_considered": 563,
+    "entries_passing": 82,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3310",
+    "acc": "P0ADY3",
+    "gene": "rplN",
+    "len": 123,
+    "sol": 71.0,
+    "entries_considered": 607,
+    "entries_passing": 101,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3311",
+    "acc": "P0AG63",
+    "gene": "rpsQ",
+    "len": 84,
+    "sol": 83.0,
+    "entries_considered": 564,
+    "entries_passing": 82,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3313",
+    "acc": "P0ADY7",
+    "gene": "rplP",
+    "len": 136,
+    "sol": 90.0,
+    "entries_considered": 618,
+    "entries_passing": 96,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3315",
+    "acc": "P61175",
+    "gene": "rplV",
+    "len": 110,
+    "sol": 82.0,
+    "entries_considered": 664,
+    "entries_passing": 143,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3316",
+    "acc": "P0A7U3",
+    "gene": "rpsS",
+    "len": 92,
+    "sol": 91.0,
+    "entries_considered": 546,
+    "entries_passing": 74,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3318",
+    "acc": "P0ADZ0",
+    "gene": "rplW",
+    "len": 100,
+    "sol": 70.0,
+    "entries_considered": 602,
+    "entries_passing": 94,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3342",
+    "acc": "P0A7S3",
+    "gene": "rpsL",
+    "len": 124,
+    "sol": 84.0,
+    "entries_considered": 569,
+    "entries_passing": 81,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3366",
+    "acc": "P0A9I8",
+    "gene": "nirD",
+    "len": 108,
+    "sol": 92.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2JO6",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0462962962962963,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3470",
+    "acc": "P0A890",
+    "gene": "yhhP",
+    "len": 81,
+    "sol": 97.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1DCJ",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3481",
+    "acc": "P0A6Z6",
+    "gene": "nikR",
+    "len": 133,
+    "sol": 80.0,
+    "entries_considered": 8,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "2HZA",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.1,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3556",
+    "acc": "P0A9X9",
+    "gene": "cspA",
+    "len": 70,
+    "sol": 92.0,
+    "entries_considered": 6,
+    "entries_passing": 4,
+    "chosen": {
+      "entry": "1MJC",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "coverage": 0.9857142857142858,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3637",
+    "acc": "P0A7M2",
+    "gene": "rpmB",
+    "len": 78,
+    "sol": 55.0,
+    "entries_considered": 555,
+    "entries_passing": 94,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3649",
+    "acc": "P0A800",
+    "gene": "rpoZ",
+    "len": 91,
+    "sol": 82.0,
+    "entries_considered": 372,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "8FVW",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.1,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3670",
+    "acc": "P0ADF8",
+    "gene": "ilvN",
+    "len": 96,
+    "sol": 99.0,
+    "entries_considered": 6,
+    "entries_passing": 5,
+    "chosen": {
+      "entry": "5YPP",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.9,
+      "coverage": 1.0208333333333333,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3703",
+    "acc": "P0A7P5",
+    "gene": "rpmH",
+    "len": 46,
+    "sol": 90.0,
+    "entries_considered": 649,
+    "entries_passing": 110,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3704",
+    "acc": "P0A7Y8",
+    "gene": "rnpA",
+    "len": 119,
+    "sol": 96.0,
+    "entries_considered": 5,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2LJP",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3737",
+    "acc": "P68699",
+    "gene": "atpE",
+    "len": 79,
+    "sol": 56.0,
+    "entries_considered": 30,
+    "entries_passing": 5,
+    "chosen": {
+      "entry": "1A91",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3775",
+    "acc": "P0A9L5",
+    "gene": "ppiC",
+    "len": 93,
+    "sol": 86.0,
+    "entries_considered": 2,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "1JNS",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 0.989247311827957,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3781",
+    "acc": "P0AA25",
+    "gene": "trxA",
+    "len": 109,
+    "sol": 89.0,
+    "entries_considered": 78,
+    "entries_passing": 19,
+    "chosen": {
+      "entry": "2TRX",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.68,
+      "coverage": 0.9908256880733946,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3887",
+    "acc": "P0A6M4",
+    "gene": "dtd",
+    "len": 145,
+    "sol": 38.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1JKE",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3901",
+    "acc": "P32156",
+    "gene": "yiiL",
+    "len": 104,
+    "sol": 94.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1X8D",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.8,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3936",
+    "acc": "P0A7M9",
+    "gene": "rpmE",
+    "len": 70,
+    "sol": 66.0,
+    "entries_considered": 365,
+    "entries_passing": 77,
+    "chosen": {
+      "entry": "8FTO",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.85,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3938",
+    "acc": "P0A8U6",
+    "gene": "metJ",
+    "len": 105,
+    "sol": 89.0,
+    "entries_considered": 10,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "1CMB",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.8,
+      "coverage": 0.9904761904761905,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3953",
+    "acc": "P32676",
+    "gene": "frwD",
+    "len": 113,
+    "sol": 44.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "4TN5",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.285,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3981",
+    "acc": "P0AG96",
+    "gene": "secE",
+    "len": 127,
+    "sol": 8.0,
+    "entries_considered": 10,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "9RBF",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.44,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b3986",
+    "acc": "P0A7K2",
+    "gene": "rplL",
+    "len": 121,
+    "sol": 99.0,
+    "entries_considered": 58,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "1RQU",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 0.9917355371900827,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4000",
+    "acc": "P0ACF0",
+    "gene": "hupA",
+    "len": 90,
+    "sol": 96.0,
+    "entries_considered": 11,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "1MUL",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.3,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4012",
+    "acc": "P09163",
+    "gene": "yjaB",
+    "len": 147,
+    "sol": 87.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2KCW",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4042",
+    "acc": "P0ABN1",
+    "gene": "dgkA",
+    "len": 122,
+    "sol": 31.0,
+    "entries_considered": 20,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "2KDC",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 0.9918032786885246,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4045",
+    "acc": "P68206",
+    "gene": "yjbJ",
+    "len": 69,
+    "sol": 83.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1RYK",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4090",
+    "acc": "P37351",
+    "gene": "rpiB",
+    "len": 149,
+    "sol": 40.0,
+    "entries_considered": 2,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1NN4",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.2,
+      "coverage": 1.087248322147651,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4101",
+    "acc": "P16685",
+    "gene": "phnG",
+    "len": 150,
+    "sol": 27.0,
+    "entries_considered": 6,
+    "entries_passing": 4,
+    "chosen": {
+      "entry": "4XB6",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.7,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4127",
+    "acc": "P39274",
+    "gene": "yjdJ",
+    "len": 90,
+    "sol": 84.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "5I0C",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.92,
+      "coverage": 1.0333333333333334,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4142",
+    "acc": "P0A6F9",
+    "gene": "groS",
+    "len": 97,
+    "sol": 86.0,
+    "entries_considered": 31,
+    "entries_passing": 3,
+    "chosen": {
+      "entry": "8BKZ",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.3,
+      "coverage": 0.9896907216494846,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4172",
+    "acc": "P0A6X3",
+    "gene": "hfq",
+    "len": 102,
+    "sol": 76.0,
+    "entries_considered": 24,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "9H45",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.08,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4200",
+    "acc": "P02358",
+    "gene": "rpsF",
+    "len": 135,
+    "sol": 98.0,
+    "entries_considered": 589,
+    "entries_passing": 84,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4201",
+    "acc": "P07013",
+    "gene": "priB",
+    "len": 104,
+    "sol": 72.0,
+    "entries_considered": 9,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "1TXY",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4202",
+    "acc": "P0A7T7",
+    "gene": "rpsR",
+    "len": 75,
+    "sol": 64.0,
+    "entries_considered": 558,
+    "entries_passing": 80,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4203",
+    "acc": "P0A7R1",
+    "gene": "rplI",
+    "len": 149,
+    "sol": 84.0,
+    "entries_considered": 568,
+    "entries_passing": 97,
+    "chosen": {
+      "entry": "8B0X",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.55,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4222",
+    "acc": "P0AE48",
+    "gene": "ytfP",
+    "len": 113,
+    "sol": 98.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1XHS",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "coverage": 1.0707964601769913,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4243",
+    "acc": "P0AF93",
+    "gene": "yjgF",
+    "len": 128,
+    "sol": 76.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1QU9",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.2,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4248",
+    "acc": "P39332",
+    "gene": "yjgH",
+    "len": 131,
+    "sol": 87.0,
+    "entries_considered": 1,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "1PF5",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.5,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4259",
+    "acc": "P28905",
+    "gene": "holC",
+    "len": 147,
+    "sol": 70.0,
+    "entries_considered": 3,
+    "entries_passing": 2,
+    "chosen": {
+      "entry": "3SXU",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.85,
+      "coverage": 1.0204081632653061,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4372",
+    "acc": "P28632",
+    "gene": "holD",
+    "len": 137,
+    "sol": 32.0,
+    "entries_considered": 22,
+    "entries_passing": 1,
+    "chosen": {
+      "entry": "3SXU",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.85,
+      "coverage": 1.0072992700729928,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4393",
+    "acc": "P0A881",
+    "gene": "trpR",
+    "len": 108,
+    "sol": 77.0,
+    "entries_considered": 29,
+    "entries_passing": 25,
+    "chosen": {
+      "entry": "6ENI",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.1,
+      "coverage": 1.0740740740740742,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  },
+  {
+    "b": "b4513",
+    "acc": "P36937",
+    "gene": "kdpF",
+    "len": 29,
+    "sol": 29.0,
+    "entries_considered": 25,
+    "entries_passing": 4,
+    "chosen": {
+      "entry": "9OC4",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.1,
+      "coverage": 1.0,
+      "mutation": null,
+      "passes": true,
+      "reason": "ok"
+    }
+  }
+]

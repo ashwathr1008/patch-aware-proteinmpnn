@@ -13,3 +13,22 @@ Verify raw inputs with `python Code/prepare_compatibility_inputs.py --data-dir D
 Track small manifests here: structure source/identifier, chain and residue mapping, homology/complex group, split, patch identifiers, preprocessing configuration, and input hashes. Split by source protein/complex and close homologues before deriving patches or variants.
 
 Keep large downloaded and processed datasets in ignored `raw/`, `processed/`, or `cache/` subdirectories. Record how to obtain or regenerate them. A local software smoke-test input is not automatically part of the biological evaluation set.
+
+## RCSB structure metadata (for the eSOL candidate filter)
+
+Not committed; ~11 MB, fetched per run. The candidate PDB identifiers come from the eSOL
+audit's `esol_mapped.csv`; metadata is fetched from the RCSB GraphQL API in batches of 100:
+
+```
+POST https://data.rcsb.org/graphql
+query($ids:[String!]!){entries(entry_ids:$ids){rcsb_id exptl{method}
+  rcsb_entry_info{resolution_combined}
+  polymer_entities{entity_poly{rcsb_sample_sequence_length}
+    rcsb_polymer_entity{pdbx_mutation}
+    rcsb_polymer_entity_container_identifiers{auth_asym_ids
+      reference_sequence_identifiers{database_accession database_name}}}}}
+```
+
+2,103 unique entries cover the 185 candidates in the 20–150 residue cohort. RCSB data is
+released under CC0. See [the filter](../Analysis/filter_structures.py) and
+[its results](../Analysis/structure_filter/).
