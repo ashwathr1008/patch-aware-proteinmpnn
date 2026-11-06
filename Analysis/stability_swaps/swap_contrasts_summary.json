@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "purpose": "composition_matched_arrangement_contrasts",
+  "definition": "Two variants of one site pair carrying the same two residue identities in opposite arrangements, both measured. The difference in folding stability is a measured arrangement effect at fixed composition.",
+  "source_rows": 222265,
+  "rows_skipped": 0,
+  "site_pairs": 578,
+  "domains": 208,
+  "combinations_per_site_pair": {
+    "median": 400.0,
+    "min": 23,
+    "max": 400
+  },
+  "contrasts": 100572,
+  "contrasts_resolved": 69633,
+  "resolved_fraction": 0.6923696456270135,
+  "magnitude_kcal_per_mol": {
+    "median": 0.5310774876699631,
+    "p75": 1.1252222018125453,
+    "p90": 2.107746603943429,
+    "max": 11.979288629974892
+  },
+  "uncertainty_kcal_per_mol_median": 0.11900556757144623,
+  "contrasts_per_domain_median": 365.0
+}

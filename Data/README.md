@@ -32,3 +32,24 @@ query($ids:[String!]!){entries(entry_ids:$ids){rcsb_id exptl{method}
 2,103 unique entries cover the 185 candidates in the 20–150 residue cohort. RCSB data is
 released under CC0. See [the filter](../Analysis/filter_structures.py) and
 [its results](../Analysis/structure_filter/).
+
+## Mega-scale folding stability (Tsuboyama et al. 2023)
+
+Not committed. Zenodo record 10.5281/zenodo.7401275, CC-BY-4.0. Only two of its files are
+needed; the 1 GB processed table is not:
+
+```bash
+# Data_tables_for_figs.zip (69 MB) -> dG_for_double_mutants_Fig4.csv
+# AlphaFold_model_PDBs.zip   (14 MB) -> 862 structures named by PDB identifier
+curl -s https://zenodo.org/api/records/7401275 | python3 -c "import json,sys;[print(f['key'],f['links']['self']) for f in json.load(sys.stdin)['files']]"
+```
+
+Regenerate the derived tables with:
+
+```bash
+python Analysis/extract_swap_contrasts.py --variants <dG_for_double_mutants_Fig4.csv> --output Results/swaps
+python Analysis/test_site_pair_geometry.py --pairs <site pairs csv> --structures <AlphaFold_model_PDBs> --output Results/geom
+```
+
+`swap_contrasts.csv` is about 10 MB and stays outside Git; the summary and the geometry test
+results are committed.

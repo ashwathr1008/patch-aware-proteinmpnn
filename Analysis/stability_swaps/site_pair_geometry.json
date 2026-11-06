@@ -1,0 +1,1486 @@
+{
+  "contact_cutoff_angstrom": 8.0,
+  "selected_pairs_measured": 578,
+  "domains_measured": 208,
+  "domains_without_structure": [],
+  "domains_without_structure_count": 0,
+  "selected": {
+    "median_distance": 5.622189956143204,
+    "mean_distance": 6.565671709658081,
+    "contact_fraction": 0.7923875432525952
+  },
+  "all_possible_pairs_same_domains": {
+    "count": 328447,
+    "median_distance": 13.984195650805233,
+    "contact_fraction": 0.15194536713685922
+  },
+  "sequence_separation": {
+    "median": 12.0,
+    "fraction_local": 0.2093425605536332,
+    "local_threshold": 4
+  },
+  "per_domain": [
+    {
+      "domain": "1A0N",
+      "pairs": 1,
+      "residues": 58,
+      "median_pair_distance": 6.3645416174301195,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1CSQ",
+      "pairs": 1,
+      "residues": 67,
+      "median_pair_distance": 5.8815222519344434,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1E0L",
+      "pairs": 2,
+      "residues": 37,
+      "median_pair_distance": 5.341079351061412,
+      "mean_distance_between_pair_centres": 9.645742765593534
+    },
+    {
+      "domain": "1E6H",
+      "pairs": 1,
+      "residues": 61,
+      "median_pair_distance": 4.547048603215057,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1EKL",
+      "pairs": 2,
+      "residues": 64,
+      "median_pair_distance": 6.0024407744800445,
+      "mean_distance_between_pair_centres": 8.952733395449682
+    },
+    {
+      "domain": "1EM7",
+      "pairs": 1,
+      "residues": 56,
+      "median_pair_distance": 4.443237220765959,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1ENH",
+      "pairs": 1,
+      "residues": 48,
+      "median_pair_distance": 12.78985512036786,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1F0M",
+      "pairs": 2,
+      "residues": 66,
+      "median_pair_distance": 7.2291188694330675,
+      "mean_distance_between_pair_centres": 11.298205853143232
+    },
+    {
+      "domain": "1GL5",
+      "pairs": 8,
+      "residues": 58,
+      "median_pair_distance": 5.930490850143755,
+      "mean_distance_between_pair_centres": 11.839566669332
+    },
+    {
+      "domain": "1GXI",
+      "pairs": 2,
+      "residues": 72,
+      "median_pair_distance": 6.442587882420335,
+      "mean_distance_between_pair_centres": 10.616460627252378
+    },
+    {
+      "domain": "1GYZ",
+      "pairs": 1,
+      "residues": 59,
+      "median_pair_distance": 4.411034685875865,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1H8K",
+      "pairs": 1,
+      "residues": 56,
+      "median_pair_distance": 4.556731942960876,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1H92",
+      "pairs": 3,
+      "residues": 57,
+      "median_pair_distance": 5.354094041011981,
+      "mean_distance_between_pair_centres": 11.619776945406388
+    },
+    {
+      "domain": "1I2T",
+      "pairs": 1,
+      "residues": 58,
+      "median_pair_distance": 6.140119054220365,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1I6C",
+      "pairs": 1,
+      "residues": 39,
+      "median_pair_distance": 4.896764339847284,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1IFY",
+      "pairs": 1,
+      "residues": 44,
+      "median_pair_distance": 3.61268279814323,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1IGD",
+      "pairs": 3,
+      "residues": 57,
+      "median_pair_distance": 5.3145035516029155,
+      "mean_distance_between_pair_centres": 8.80013685462036
+    },
+    {
+      "domain": "1K1V",
+      "pairs": 2,
+      "residues": 41,
+      "median_pair_distance": 6.21396296938629,
+      "mean_distance_between_pair_centres": 14.944625472055163
+    },
+    {
+      "domain": "1LP1",
+      "pairs": 3,
+      "residues": 55,
+      "median_pair_distance": 5.570230156824762,
+      "mean_distance_between_pair_centres": 17.280204016871302
+    },
+    {
+      "domain": "1MSJ",
+      "pairs": 1,
+      "residues": 64,
+      "median_pair_distance": 5.060023912986973,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1O6X",
+      "pairs": 2,
+      "residues": 72,
+      "median_pair_distance": 6.743894203362334,
+      "mean_distance_between_pair_centres": 9.645025686850191
+    },
+    {
+      "domain": "1OPS",
+      "pairs": 2,
+      "residues": 63,
+      "median_pair_distance": 4.855148728916561,
+      "mean_distance_between_pair_centres": 2.3331081200835935
+    },
+    {
+      "domain": "1ORC",
+      "pairs": 3,
+      "residues": 63,
+      "median_pair_distance": 5.996847838656572,
+      "mean_distance_between_pair_centres": 17.109916824581912
+    },
+    {
+      "domain": "1PGA",
+      "pairs": 3,
+      "residues": 56,
+      "median_pair_distance": 4.654615773616551,
+      "mean_distance_between_pair_centres": 2.2906839628759452
+    },
+    {
+      "domain": "1PGX",
+      "pairs": 3,
+      "residues": 59,
+      "median_pair_distance": 5.389219052886976,
+      "mean_distance_between_pair_centres": 7.144963896712352
+    },
+    {
+      "domain": "1PSE",
+      "pairs": 1,
+      "residues": 68,
+      "median_pair_distance": 4.364988545231247,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1PV0",
+      "pairs": 6,
+      "residues": 44,
+      "median_pair_distance": 6.434355507742129,
+      "mean_distance_between_pair_centres": 3.994741076789685
+    },
+    {
+      "domain": "1PWT",
+      "pairs": 1,
+      "residues": 57,
+      "median_pair_distance": 5.215213226705117,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1QKH",
+      "pairs": 3,
+      "residues": 68,
+      "median_pair_distance": 4.2308497964357,
+      "mean_distance_between_pair_centres": 2.243847897882835
+    },
+    {
+      "domain": "1QKX",
+      "pairs": 1,
+      "residues": 56,
+      "median_pair_distance": 5.206143582345765,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1QLY",
+      "pairs": 2,
+      "residues": 58,
+      "median_pair_distance": 5.102906787783686,
+      "mean_distance_between_pair_centres": 14.773428520489075
+    },
+    {
+      "domain": "1QP2",
+      "pairs": 9,
+      "residues": 63,
+      "median_pair_distance": 5.35947348160246,
+      "mean_distance_between_pair_centres": 12.40738772554298
+    },
+    {
+      "domain": "1R69",
+      "pairs": 1,
+      "residues": 61,
+      "median_pair_distance": 7.7771069813909595,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1S1N",
+      "pairs": 1,
+      "residues": 59,
+      "median_pair_distance": 10.203486364963693,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1SRM",
+      "pairs": 1,
+      "residues": 55,
+      "median_pair_distance": 4.383768584220659,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1TG0",
+      "pairs": 3,
+      "residues": 64,
+      "median_pair_distance": 5.661010952118006,
+      "mean_distance_between_pair_centres": 16.297967989040902
+    },
+    {
+      "domain": "1TUC",
+      "pairs": 1,
+      "residues": 59,
+      "median_pair_distance": 4.457888850117285,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1TUD",
+      "pairs": 8,
+      "residues": 60,
+      "median_pair_distance": 7.753221839563148,
+      "mean_distance_between_pair_centres": 10.666733579896365
+    },
+    {
+      "domain": "1UFM",
+      "pairs": 6,
+      "residues": 72,
+      "median_pair_distance": 8.027170481933295,
+      "mean_distance_between_pair_centres": 4.070792846080453
+    },
+    {
+      "domain": "1UZC",
+      "pairs": 3,
+      "residues": 63,
+      "median_pair_distance": 8.278684617739705,
+      "mean_distance_between_pair_centres": 3.670552556826791
+    },
+    {
+      "domain": "1V1C",
+      "pairs": 6,
+      "residues": 65,
+      "median_pair_distance": 5.585790287779391,
+      "mean_distance_between_pair_centres": 9.552192329444578
+    },
+    {
+      "domain": "1VII",
+      "pairs": 1,
+      "residues": 36,
+      "median_pair_distance": 5.7204059296521965,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "1W4F",
+      "pairs": 2,
+      "residues": 41,
+      "median_pair_distance": 5.963937730853046,
+      "mean_distance_between_pair_centres": 9.425273815651193
+    },
+    {
+      "domain": "1W4G",
+      "pairs": 3,
+      "residues": 44,
+      "median_pair_distance": 11.87923541310635,
+      "mean_distance_between_pair_centres": 11.280606940643748
+    },
+    {
+      "domain": "1W4H",
+      "pairs": 3,
+      "residues": 44,
+      "median_pair_distance": 5.634936290678006,
+      "mean_distance_between_pair_centres": 2.786381885554633
+    },
+    {
+      "domain": "1WCL",
+      "pairs": 2,
+      "residues": 69,
+      "median_pair_distance": 7.497259958233313,
+      "mean_distance_between_pair_centres": 12.986512137598764
+    },
+    {
+      "domain": "1Y0M",
+      "pairs": 9,
+      "residues": 58,
+      "median_pair_distance": 6.672356705093036,
+      "mean_distance_between_pair_centres": 9.208492252318134
+    },
+    {
+      "domain": "1YP5",
+      "pairs": 6,
+      "residues": 57,
+      "median_pair_distance": 5.613088258046478,
+      "mean_distance_between_pair_centres": 11.177104329722622
+    },
+    {
+      "domain": "1YU5",
+      "pairs": 4,
+      "residues": 65,
+      "median_pair_distance": 6.120402417295185,
+      "mean_distance_between_pair_centres": 8.708348472635507
+    },
+    {
+      "domain": "1ZLM",
+      "pairs": 5,
+      "residues": 56,
+      "median_pair_distance": 5.225471749038549,
+      "mean_distance_between_pair_centres": 12.701701854984517
+    },
+    {
+      "domain": "1ZRJ",
+      "pairs": 6,
+      "residues": 44,
+      "median_pair_distance": 5.694889419019972,
+      "mean_distance_between_pair_centres": 7.130068171434768
+    },
+    {
+      "domain": "2AME",
+      "pairs": 1,
+      "residues": 64,
+      "median_pair_distance": 5.060272917541108,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2AMI",
+      "pairs": 3,
+      "residues": 72,
+      "median_pair_distance": 5.097851802475235,
+      "mean_distance_between_pair_centres": 5.539128910831313
+    },
+    {
+      "domain": "2BTH",
+      "pairs": 1,
+      "residues": 44,
+      "median_pair_distance": 5.592165680664334,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2BTT",
+      "pairs": 8,
+      "residues": 61,
+      "median_pair_distance": 5.4244798597660155,
+      "mean_distance_between_pair_centres": 14.806997168533687
+    },
+    {
+      "domain": "2CDT",
+      "pairs": 3,
+      "residues": 56,
+      "median_pair_distance": 5.680638960539562,
+      "mean_distance_between_pair_centres": 11.889232848656464
+    },
+    {
+      "domain": "2D1U",
+      "pairs": 2,
+      "residues": 72,
+      "median_pair_distance": 5.196048399375617,
+      "mean_distance_between_pair_centres": 13.697819735271741
+    },
+    {
+      "domain": "2EKK",
+      "pairs": 2,
+      "residues": 42,
+      "median_pair_distance": 4.285390963321563,
+      "mean_distance_between_pair_centres": 5.583709877850029
+    },
+    {
+      "domain": "2EXD",
+      "pairs": 1,
+      "residues": 58,
+      "median_pair_distance": 6.140652571184922,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2HBB",
+      "pairs": 2,
+      "residues": 48,
+      "median_pair_distance": 5.602436995008348,
+      "mean_distance_between_pair_centres": 8.424063271367327
+    },
+    {
+      "domain": "2JN4",
+      "pairs": 5,
+      "residues": 66,
+      "median_pair_distance": 5.49074931134176,
+      "mean_distance_between_pair_centres": 15.105005365678412
+    },
+    {
+      "domain": "2JT1",
+      "pairs": 1,
+      "residues": 67,
+      "median_pair_distance": 7.750978389855051,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2JTV",
+      "pairs": 4,
+      "residues": 63,
+      "median_pair_distance": 6.396957109623069,
+      "mean_distance_between_pair_centres": 6.837477996388618
+    },
+    {
+      "domain": "2JVD",
+      "pairs": 5,
+      "residues": 39,
+      "median_pair_distance": 6.211518574390646,
+      "mean_distance_between_pair_centres": 7.262809183412529
+    },
+    {
+      "domain": "2JWT",
+      "pairs": 7,
+      "residues": 50,
+      "median_pair_distance": 9.964497930151825,
+      "mean_distance_between_pair_centres": 5.272695991006205
+    },
+    {
+      "domain": "2JY8",
+      "pairs": 2,
+      "residues": 45,
+      "median_pair_distance": 4.967369269770088,
+      "mean_distance_between_pair_centres": 2.3620811798073325
+    },
+    {
+      "domain": "2JZ2",
+      "pairs": 2,
+      "residues": 56,
+      "median_pair_distance": 4.640964062643508,
+      "mean_distance_between_pair_centres": 9.1767264451982
+    },
+    {
+      "domain": "2K1B",
+      "pairs": 3,
+      "residues": 49,
+      "median_pair_distance": 5.783953146421571,
+      "mean_distance_between_pair_centres": 11.461442654016937
+    },
+    {
+      "domain": "2K28",
+      "pairs": 5,
+      "residues": 50,
+      "median_pair_distance": 7.440275129321496,
+      "mean_distance_between_pair_centres": 9.983848961758817
+    },
+    {
+      "domain": "2K2A",
+      "pairs": 4,
+      "residues": 63,
+      "median_pair_distance": 6.2656091179971405,
+      "mean_distance_between_pair_centres": 8.809069313578465
+    },
+    {
+      "domain": "2K52",
+      "pairs": 9,
+      "residues": 71,
+      "median_pair_distance": 7.05992386644502,
+      "mean_distance_between_pair_centres": 8.794904989555457
+    },
+    {
+      "domain": "2K5N",
+      "pairs": 5,
+      "residues": 67,
+      "median_pair_distance": 5.139823537826956,
+      "mean_distance_between_pair_centres": 10.44499656320364
+    },
+    {
+      "domain": "2K5P",
+      "pairs": 2,
+      "residues": 64,
+      "median_pair_distance": 5.472336934466411,
+      "mean_distance_between_pair_centres": 16.200570059414577
+    },
+    {
+      "domain": "2KCF",
+      "pairs": 1,
+      "residues": 36,
+      "median_pair_distance": 4.835409806831269,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2KCM",
+      "pairs": 3,
+      "residues": 68,
+      "median_pair_distance": 5.056461312024448,
+      "mean_distance_between_pair_centres": 8.802764619325908
+    },
+    {
+      "domain": "2KGT",
+      "pairs": 11,
+      "residues": 63,
+      "median_pair_distance": 5.129711980218773,
+      "mean_distance_between_pair_centres": 11.815077095430926
+    },
+    {
+      "domain": "2KRU",
+      "pairs": 2,
+      "residues": 52,
+      "median_pair_distance": 6.6460465733944,
+      "mean_distance_between_pair_centres": 13.246528384825966
+    },
+    {
+      "domain": "2KT8",
+      "pairs": 2,
+      "residues": 67,
+      "median_pair_distance": 4.582171255185061,
+      "mean_distance_between_pair_centres": 6.483327328617614
+    },
+    {
+      "domain": "2KVS",
+      "pairs": 4,
+      "residues": 67,
+      "median_pair_distance": 5.768839778020681,
+      "mean_distance_between_pair_centres": 11.573554460786335
+    },
+    {
+      "domain": "2KVT",
+      "pairs": 4,
+      "residues": 52,
+      "median_pair_distance": 5.380233359705066,
+      "mean_distance_between_pair_centres": 7.780256824810313
+    },
+    {
+      "domain": "2KWH",
+      "pairs": 1,
+      "residues": 52,
+      "median_pair_distance": 5.550579879616183,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2KXD",
+      "pairs": 2,
+      "residues": 71,
+      "median_pair_distance": 4.885164744469179,
+      "mean_distance_between_pair_centres": 11.435668323276957
+    },
+    {
+      "domain": "2KYB",
+      "pairs": 1,
+      "residues": 58,
+      "median_pair_distance": 5.701584779690643,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2L09",
+      "pairs": 3,
+      "residues": 52,
+      "median_pair_distance": 4.917097822903262,
+      "mean_distance_between_pair_centres": 12.200859962228412
+    },
+    {
+      "domain": "2L2P",
+      "pairs": 1,
+      "residues": 55,
+      "median_pair_distance": 4.926360624233674,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2L7F",
+      "pairs": 1,
+      "residues": 51,
+      "median_pair_distance": 5.537322457650448,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2L7M",
+      "pairs": 3,
+      "residues": 52,
+      "median_pair_distance": 5.594207539947012,
+      "mean_distance_between_pair_centres": 10.10782257652556
+    },
+    {
+      "domain": "2L8D",
+      "pairs": 5,
+      "residues": 60,
+      "median_pair_distance": 5.331652182954173,
+      "mean_distance_between_pair_centres": 11.104541654177547
+    },
+    {
+      "domain": "2L9R",
+      "pairs": 4,
+      "residues": 61,
+      "median_pair_distance": 6.231912120377558,
+      "mean_distance_between_pair_centres": 9.731032922089808
+    },
+    {
+      "domain": "2LC2",
+      "pairs": 1,
+      "residues": 64,
+      "median_pair_distance": 4.6311724217524,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2LGW",
+      "pairs": 9,
+      "residues": 65,
+      "median_pair_distance": 5.5740564223911475,
+      "mean_distance_between_pair_centres": 12.868401562374588
+    },
+    {
+      "domain": "2LHR",
+      "pairs": 3,
+      "residues": 55,
+      "median_pair_distance": 6.440136955065475,
+      "mean_distance_between_pair_centres": 10.517606411074661
+    },
+    {
+      "domain": "2LJ3",
+      "pairs": 1,
+      "residues": 59,
+      "median_pair_distance": 4.420288678355746,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2LLV",
+      "pairs": 2,
+      "residues": 69,
+      "median_pair_distance": 8.538956471984461,
+      "mean_distance_between_pair_centres": 10.33227804020004
+    },
+    {
+      "domain": "2LO1",
+      "pairs": 3,
+      "residues": 65,
+      "median_pair_distance": 4.793543991662119,
+      "mean_distance_between_pair_centres": 10.589202537824443
+    },
+    {
+      "domain": "2LP5",
+      "pairs": 1,
+      "residues": 57,
+      "median_pair_distance": 4.892438042530534,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2LQK",
+      "pairs": 1,
+      "residues": 62,
+      "median_pair_distance": 4.020901515829503,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2LSS",
+      "pairs": 1,
+      "residues": 69,
+      "median_pair_distance": 4.362966880461047,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2LUM",
+      "pairs": 1,
+      "residues": 56,
+      "median_pair_distance": 5.25176817843286,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2LVN",
+      "pairs": 6,
+      "residues": 46,
+      "median_pair_distance": 4.963083331881547,
+      "mean_distance_between_pair_centres": 6.038916019872341
+    },
+    {
+      "domain": "2LXK",
+      "pairs": 1,
+      "residues": 66,
+      "median_pair_distance": 5.067808402060994,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2LYP",
+      "pairs": 1,
+      "residues": 64,
+      "median_pair_distance": 7.823572841100158,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2M0C",
+      "pairs": 2,
+      "residues": 48,
+      "median_pair_distance": 6.932411734914721,
+      "mean_distance_between_pair_centres": 2.5539500288768378
+    },
+    {
+      "domain": "2M0X",
+      "pairs": 1,
+      "residues": 72,
+      "median_pair_distance": 5.368746781139897,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2M0Y",
+      "pairs": 5,
+      "residues": 66,
+      "median_pair_distance": 8.031214914320248,
+      "mean_distance_between_pair_centres": 8.906007659840371
+    },
+    {
+      "domain": "2M2J",
+      "pairs": 6,
+      "residues": 71,
+      "median_pair_distance": 5.263291228282842,
+      "mean_distance_between_pair_centres": 15.35567441835021
+    },
+    {
+      "domain": "2M2L",
+      "pairs": 6,
+      "residues": 52,
+      "median_pair_distance": 6.545620732818373,
+      "mean_distance_between_pair_centres": 13.565128992718208
+    },
+    {
+      "domain": "2M51",
+      "pairs": 5,
+      "residues": 60,
+      "median_pair_distance": 5.540787669636872,
+      "mean_distance_between_pair_centres": 7.1853702774627335
+    },
+    {
+      "domain": "2M7O",
+      "pairs": 1,
+      "residues": 60,
+      "median_pair_distance": 5.653870355782842,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2M8E",
+      "pairs": 2,
+      "residues": 38,
+      "median_pair_distance": 4.780910219895773,
+      "mean_distance_between_pair_centres": 7.126872473252205
+    },
+    {
+      "domain": "2M8I",
+      "pairs": 2,
+      "residues": 43,
+      "median_pair_distance": 5.272330223541873,
+      "mean_distance_between_pair_centres": 9.246025592112538
+    },
+    {
+      "domain": "2M8U",
+      "pairs": 1,
+      "residues": 67,
+      "median_pair_distance": 7.106904670811337,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2M9F",
+      "pairs": 2,
+      "residues": 33,
+      "median_pair_distance": 5.370475358599431,
+      "mean_distance_between_pair_centres": 3.255480225711715
+    },
+    {
+      "domain": "2MA4",
+      "pairs": 5,
+      "residues": 70,
+      "median_pair_distance": 5.231858082937647,
+      "mean_distance_between_pair_centres": 11.346794182290306
+    },
+    {
+      "domain": "2MC5",
+      "pairs": 3,
+      "residues": 69,
+      "median_pair_distance": 12.677007375559896,
+      "mean_distance_between_pair_centres": 4.423792980111493
+    },
+    {
+      "domain": "2MCD",
+      "pairs": 1,
+      "residues": 55,
+      "median_pair_distance": 16.34224482744032,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2MCH",
+      "pairs": 5,
+      "residues": 64,
+      "median_pair_distance": 6.199621762656171,
+      "mean_distance_between_pair_centres": 14.196921856439484
+    },
+    {
+      "domain": "2MI6",
+      "pairs": 1,
+      "residues": 55,
+      "median_pair_distance": 6.839489016001122,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2MKX",
+      "pairs": 2,
+      "residues": 47,
+      "median_pair_distance": 5.225552121557794,
+      "mean_distance_between_pair_centres": 3.0135236435110313
+    },
+    {
+      "domain": "2MKY",
+      "pairs": 3,
+      "residues": 55,
+      "median_pair_distance": 5.553011525289678,
+      "mean_distance_between_pair_centres": 15.24112526616409
+    },
+    {
+      "domain": "2MPK",
+      "pairs": 1,
+      "residues": 71,
+      "median_pair_distance": 4.189926371668123,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2MRL",
+      "pairs": 1,
+      "residues": 71,
+      "median_pair_distance": 4.5133573977694255,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2MW9",
+      "pairs": 1,
+      "residues": 37,
+      "median_pair_distance": 5.406386686133355,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2MWA",
+      "pairs": 1,
+      "residues": 37,
+      "median_pair_distance": 6.168993272812023,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2MWB",
+      "pairs": 2,
+      "residues": 37,
+      "median_pair_distance": 5.535245143895694,
+      "mean_distance_between_pair_centres": 12.922575149713776
+    },
+    {
+      "domain": "2MXD",
+      "pairs": 13,
+      "residues": 53,
+      "median_pair_distance": 6.77963819093615,
+      "mean_distance_between_pair_centres": 10.215143398987287
+    },
+    {
+      "domain": "2MYX",
+      "pairs": 2,
+      "residues": 52,
+      "median_pair_distance": 4.400325602639376,
+      "mean_distance_between_pair_centres": 7.2210199591193485
+    },
+    {
+      "domain": "2N4R",
+      "pairs": 1,
+      "residues": 37,
+      "median_pair_distance": 5.61321877357368,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2N4S",
+      "pairs": 2,
+      "residues": 37,
+      "median_pair_distance": 4.924100065192527,
+      "mean_distance_between_pair_centres": 8.526107464722692
+    },
+    {
+      "domain": "2N4T",
+      "pairs": 1,
+      "residues": 30,
+      "median_pair_distance": 4.284790076538172,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2N88",
+      "pairs": 2,
+      "residues": 48,
+      "median_pair_distance": 6.2222992948089555,
+      "mean_distance_between_pair_centres": 13.036097613933396
+    },
+    {
+      "domain": "2N9L",
+      "pairs": 1,
+      "residues": 57,
+      "median_pair_distance": 5.274779426668001,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2O2W",
+      "pairs": 1,
+      "residues": 67,
+      "median_pair_distance": 9.069210164066108,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2OCH",
+      "pairs": 4,
+      "residues": 62,
+      "median_pair_distance": 7.864545846933044,
+      "mean_distance_between_pair_centres": 8.52162254238869
+    },
+    {
+      "domain": "2ON8",
+      "pairs": 1,
+      "residues": 56,
+      "median_pair_distance": 5.297736309028602,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2OP7",
+      "pairs": 2,
+      "residues": 39,
+      "median_pair_distance": 5.462522974714824,
+      "mean_distance_between_pair_centres": 12.556461265022083
+    },
+    {
+      "domain": "2PDD",
+      "pairs": 2,
+      "residues": 43,
+      "median_pair_distance": 5.646395675471202,
+      "mean_distance_between_pair_centres": 10.564947160303264
+    },
+    {
+      "domain": "2PFU",
+      "pairs": 3,
+      "residues": 72,
+      "median_pair_distance": 9.445894240356493,
+      "mean_distance_between_pair_centres": 9.093288236805863
+    },
+    {
+      "domain": "2PTL",
+      "pairs": 1,
+      "residues": 62,
+      "median_pair_distance": 4.71388968899358,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2RJV",
+      "pairs": 2,
+      "residues": 64,
+      "median_pair_distance": 8.19003061623814,
+      "mean_distance_between_pair_centres": 8.501707313828206
+    },
+    {
+      "domain": "2ROT",
+      "pairs": 4,
+      "residues": 69,
+      "median_pair_distance": 5.849826891857095,
+      "mean_distance_between_pair_centres": 9.344610073111255
+    },
+    {
+      "domain": "2RRT",
+      "pairs": 2,
+      "residues": 67,
+      "median_pair_distance": 5.213381961014084,
+      "mean_distance_between_pair_centres": 6.179446779445551
+    },
+    {
+      "domain": "2RU9",
+      "pairs": 1,
+      "residues": 68,
+      "median_pair_distance": 8.488116163201349,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2WQG",
+      "pairs": 2,
+      "residues": 41,
+      "median_pair_distance": 6.8634129384817495,
+      "mean_distance_between_pair_centres": 14.098912555583853
+    },
+    {
+      "domain": "2WXC",
+      "pairs": 1,
+      "residues": 44,
+      "median_pair_distance": 5.815515970229985,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2YSB",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 6.665353854072565,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "2YSF",
+      "pairs": 5,
+      "residues": 34,
+      "median_pair_distance": 6.301106966240139,
+      "mean_distance_between_pair_centres": 8.494873554082785
+    },
+    {
+      "domain": "2YSH",
+      "pairs": 2,
+      "residues": 37,
+      "median_pair_distance": 4.965167870042071,
+      "mean_distance_between_pair_centres": 12.91477225892892
+    },
+    {
+      "domain": "3DKM",
+      "pairs": 18,
+      "residues": 72,
+      "median_pair_distance": 6.820426095769099,
+      "mean_distance_between_pair_centres": 10.495813189165306
+    },
+    {
+      "domain": "3I35",
+      "pairs": 6,
+      "residues": 57,
+      "median_pair_distance": 6.135596604332532,
+      "mean_distance_between_pair_centres": 9.751943398864228
+    },
+    {
+      "domain": "3L1X",
+      "pairs": 9,
+      "residues": 69,
+      "median_pair_distance": 5.18038203224434,
+      "mean_distance_between_pair_centres": 12.794044747706865
+    },
+    {
+      "domain": "3MYC",
+      "pairs": 2,
+      "residues": 63,
+      "median_pair_distance": 6.677589746053517,
+      "mean_distance_between_pair_centres": 9.279633007290752
+    },
+    {
+      "domain": "3QF6",
+      "pairs": 1,
+      "residues": 64,
+      "median_pair_distance": 5.112108469115263,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "3ZGK",
+      "pairs": 7,
+      "residues": 69,
+      "median_pair_distance": 4.622571362348016,
+      "mean_distance_between_pair_centres": 14.227186561110557
+    },
+    {
+      "domain": "4AME",
+      "pairs": 1,
+      "residues": 64,
+      "median_pair_distance": 5.096588466807968,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "4C26",
+      "pairs": 6,
+      "residues": 62,
+      "median_pair_distance": 6.678832725189469,
+      "mean_distance_between_pair_centres": 7.391821699689684
+    },
+    {
+      "domain": "4G3O",
+      "pairs": 7,
+      "residues": 47,
+      "median_pair_distance": 5.322050826514155,
+      "mean_distance_between_pair_centres": 3.803515325104429
+    },
+    {
+      "domain": "4HCK",
+      "pairs": 3,
+      "residues": 59,
+      "median_pair_distance": 4.761726682622596,
+      "mean_distance_between_pair_centres": 11.66460794727071
+    },
+    {
+      "domain": "4L5E",
+      "pairs": 1,
+      "residues": 44,
+      "median_pair_distance": 4.694900318430626,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "4UZW",
+      "pairs": 4,
+      "residues": 44,
+      "median_pair_distance": 6.585317460898562,
+      "mean_distance_between_pair_centres": 11.43064261119317
+    },
+    {
+      "domain": "5AHT",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 5.34857485691282,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "5ECA",
+      "pairs": 4,
+      "residues": 59,
+      "median_pair_distance": 5.548649760431841,
+      "mean_distance_between_pair_centres": 9.087157871815853
+    },
+    {
+      "domain": "5FW9",
+      "pairs": 1,
+      "residues": 56,
+      "median_pair_distance": 4.447240717568592,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "5JRT",
+      "pairs": 1,
+      "residues": 59,
+      "median_pair_distance": 5.106643320225136,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "5KPH",
+      "pairs": 3,
+      "residues": 69,
+      "median_pair_distance": 11.026897569126142,
+      "mean_distance_between_pair_centres": 2.8066055879113736
+    },
+    {
+      "domain": "5UB0",
+      "pairs": 1,
+      "residues": 56,
+      "median_pair_distance": 5.365599127776878,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "5UBS",
+      "pairs": 2,
+      "residues": 56,
+      "median_pair_distance": 4.810962231179869,
+      "mean_distance_between_pair_centres": 6.949821490513264
+    },
+    {
+      "domain": "5UCE",
+      "pairs": 4,
+      "residues": 56,
+      "median_pair_distance": 5.086271989571294,
+      "mean_distance_between_pair_centres": 8.720922338570857
+    },
+    {
+      "domain": "5UOI",
+      "pairs": 1,
+      "residues": 40,
+      "median_pair_distance": 7.871309230363141,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "5UP5",
+      "pairs": 2,
+      "residues": 39,
+      "median_pair_distance": 5.665041572460245,
+      "mean_distance_between_pair_centres": 8.77902689653016
+    },
+    {
+      "domain": "5VNT",
+      "pairs": 10,
+      "residues": 62,
+      "median_pair_distance": 6.307260769084099,
+      "mean_distance_between_pair_centres": 10.857861568899931
+    },
+    {
+      "domain": "5Z2S",
+      "pairs": 1,
+      "residues": 47,
+      "median_pair_distance": 4.322676254359098,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "5ZD0",
+      "pairs": 2,
+      "residues": 72,
+      "median_pair_distance": 5.391534332101775,
+      "mean_distance_between_pair_centres": 9.838291429409885
+    },
+    {
+      "domain": "6ACV",
+      "pairs": 3,
+      "residues": 66,
+      "median_pair_distance": 4.935202630085212,
+      "mean_distance_between_pair_centres": 11.553880217561632
+    },
+    {
+      "domain": "6AME",
+      "pairs": 2,
+      "residues": 64,
+      "median_pair_distance": 4.696331566037493,
+      "mean_distance_between_pair_centres": 10.668350973791592
+    },
+    {
+      "domain": "6EWS",
+      "pairs": 1,
+      "residues": 56,
+      "median_pair_distance": 6.91683569271383,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "6EWT",
+      "pairs": 1,
+      "residues": 57,
+      "median_pair_distance": 4.703834712232139,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "6EWU",
+      "pairs": 3,
+      "residues": 56,
+      "median_pair_distance": 6.706693522146364,
+      "mean_distance_between_pair_centres": 8.092805821508955
+    },
+    {
+      "domain": "6HQ1",
+      "pairs": 2,
+      "residues": 70,
+      "median_pair_distance": 6.466400973619601,
+      "mean_distance_between_pair_centres": 16.92628867324435
+    },
+    {
+      "domain": "6IPY",
+      "pairs": 1,
+      "residues": 59,
+      "median_pair_distance": 6.312871771230586,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "6IWS",
+      "pairs": 5,
+      "residues": 65,
+      "median_pair_distance": 8.773538054855635,
+      "mean_distance_between_pair_centres": 8.298428851679173
+    },
+    {
+      "domain": "6M3N",
+      "pairs": 7,
+      "residues": 64,
+      "median_pair_distance": 6.48299028226944,
+      "mean_distance_between_pair_centres": 8.500671599249111
+    },
+    {
+      "domain": "6NJF",
+      "pairs": 1,
+      "residues": 56,
+      "median_pair_distance": 5.24527272884833,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "6NMW",
+      "pairs": 4,
+      "residues": 59,
+      "median_pair_distance": 5.700981913164169,
+      "mean_distance_between_pair_centres": 9.605621495440465
+    },
+    {
+      "domain": "6SCW",
+      "pairs": 2,
+      "residues": 61,
+      "median_pair_distance": 5.00261530806036,
+      "mean_distance_between_pair_centres": 6.959182620825524
+    },
+    {
+      "domain": "7BPM",
+      "pairs": 4,
+      "residues": 69,
+      "median_pair_distance": 16.001171968809484,
+      "mean_distance_between_pair_centres": 9.669649572331343
+    },
+    {
+      "domain": "8AME",
+      "pairs": 1,
+      "residues": 64,
+      "median_pair_distance": 5.095312944265543,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "8MSI",
+      "pairs": 1,
+      "residues": 64,
+      "median_pair_distance": 5.069547218440715,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "9AME",
+      "pairs": 1,
+      "residues": 64,
+      "median_pair_distance": 6.918262498633598,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "EEHEE_rd3_0019",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 4.411863665164644,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "EEHEE_rd3_0144",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 9.659896997380459,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "EHEE_rd2_0152",
+      "pairs": 3,
+      "residues": 40,
+      "median_pair_distance": 10.004566657282064,
+      "mean_distance_between_pair_centres": 5.199424467212469
+    },
+    {
+      "domain": "EHEE_rd2_0251",
+      "pairs": 1,
+      "residues": 40,
+      "median_pair_distance": 10.855479169525406,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "EHEE_rd2_0341",
+      "pairs": 1,
+      "residues": 40,
+      "median_pair_distance": 6.3754909614868085,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "EHEE_rd2_0487",
+      "pairs": 1,
+      "residues": 40,
+      "median_pair_distance": 5.387466658829548,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "EHEE_rd2_0628",
+      "pairs": 1,
+      "residues": 40,
+      "median_pair_distance": 5.630710345951033,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "EHEE_rd4_0929",
+      "pairs": 3,
+      "residues": 40,
+      "median_pair_distance": 8.006096801812978,
+      "mean_distance_between_pair_centres": 3.909443705579855
+    },
+    {
+      "domain": "HEEH_KT_rd6_0280",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 4.985611797964219,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "HEEH_rd2_0750",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 10.528964858902324,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "HHH_rd1_0244",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 4.60027151372612,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "HHH_rd1_0493",
+      "pairs": 3,
+      "residues": 43,
+      "median_pair_distance": 5.3590910609915925,
+      "mean_distance_between_pair_centres": 9.985456564273978
+    },
+    {
+      "domain": "HHH_rd1_0949",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 7.221330833025171,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "HHH_rd2_0158",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 7.042156274891944,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "HHH_rd3_0159",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 6.208194906734162,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "HHH_rd3_0164",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 8.149638090124004,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "HHH_rd3_0224",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 4.52421075990056,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "HHH_rd4_0125",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 6.4665759873367294,
+      "mean_distance_between_pair_centres": null
+    },
+    {
+      "domain": "HHH_rd4_0676",
+      "pairs": 1,
+      "residues": 43,
+      "median_pair_distance": 7.52964633963641,
+      "mean_distance_between_pair_centres": null
+    }
+  ],
+  "enrichment": {
+    "contact_fraction_ratio": 5.214950335003509,
+    "median_distance_difference": 8.36200569466203
+  },
+  "distinct_site_pairs": 578,
+  "domains_with_pairs": 208
+}
