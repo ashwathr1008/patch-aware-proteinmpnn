@@ -19,7 +19,7 @@ Fine-tuning/DPO, multiple property heads, SKEMPI/interface prediction, region-sp
 
 ## Work still needed for the mid-report
 
-Completed today: expanded scoring of 85 pairs/17 patches/seven sources/six groups, per-protein/group summaries, explicit-order and null audits, controls and the first exception analysis. Both checkpoints prefer the original in 84/85 averaged comparisons. [Actual results](../Documentation/Midreport/controlled_scoring_results.md) provide the evidence; this convenience panel remains a limited diagnostic.
+Completed today: expanded scoring of 85 pairs/17 patches/seven sources/seven homology clusters, per-protein/group summaries, explicit-order and null audits, controls and the first exception analysis. Both checkpoints prefer the original in 84/85 averaged comparisons. [Actual results](../Documentation/Midreport/controlled_scoring_results.md) provide the evidence; this convenience panel remains a limited diagnostic.
 
 1. Obtain an independent team review of the experiment and interpretation, including mappings, exclusions, patch overlap and leakage precautions. Expand data only if a concrete limitation warrants it.
 2. Review the order-sensitive exception and whether further diagnostics are needed. Distinguish sequence identity from structural recovery and arrangement sensitivity from added predictive value.
