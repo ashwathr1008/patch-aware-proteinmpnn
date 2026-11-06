@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "purpose": "full_autoregressive_swap_scoring",
+  "model_type": "vanilla",
+  "model_name": "v_48_020",
+  "upstream_commit": "8907e6671bfbfc92303b5f79c4b5e6ce47cdef57",
+  "device": "cuda",
+  "orders": 8,
+  "order_seed": 137,
+  "batch_size": 256,
+  "site_pairs_requested": 578,
+  "site_pairs_scored": 578,
+  "variant_order_rows": 1609152,
+  "skipped": [],
+  "elapsed_seconds": 1488.471928060986,
+  "scores_sha256": "addcf3e50c3515602d1e3e120f94949d136c24979a351ef2d59b8138f1cedd15"
+}

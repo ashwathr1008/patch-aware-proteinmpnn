@@ -1,0 +1,2061 @@
+{
+  "schema_version": 1,
+  "purpose": "model_versus_measured_swap_effect",
+  "sign_convention": "Model reports negative log probability, lower means preferred; measurement reports stability, higher means preferred. Agreement is a negative correlation.",
+  "checkpoints": {
+    "vanilla": {
+      "variants_scored": 201144,
+      "contrasts_matched": 100572,
+      "contrasts_unmatched": 0,
+      "orders_per_variant": 8,
+      "all": {
+        "count": 100572,
+        "spearman": -0.409104000885062,
+        "sign_agreement": 0.6417889671081415
+      },
+      "resolved": {
+        "count": 69633,
+        "spearman": -0.4772024943629194,
+        "sign_agreement": 0.6919563999827668
+      },
+      "below_measurement_error": {
+        "count": 30939,
+        "spearman": -0.06863685523630662,
+        "sign_agreement": 0.5288794078670933
+      },
+      "per_domain_resolved": {
+        "domains": 199,
+        "minimum_contrasts": 20,
+        "median": -0.496577018779381,
+        "p25": -0.6205718535648805,
+        "p75": -0.3400885229210341,
+        "agreeing_in_sign": 193,
+        "agreeing_fraction": 0.9698492462311558,
+        "per_domain": [
+          {
+            "domain": "1A0N",
+            "count": 170,
+            "spearman": -0.40802755234762855
+          },
+          {
+            "domain": "1CSQ",
+            "count": 131,
+            "spearman": -0.32700048043559493
+          },
+          {
+            "domain": "1E0L",
+            "count": 96,
+            "spearman": -0.4457406402604449
+          },
+          {
+            "domain": "1E6H",
+            "count": 129,
+            "spearman": -0.6415921288014311
+          },
+          {
+            "domain": "1EKL",
+            "count": 227,
+            "spearman": -0.43128512482328585
+          },
+          {
+            "domain": "1EM7",
+            "count": 147,
+            "spearman": -0.36368238520880397
+          },
+          {
+            "domain": "1ENH",
+            "count": 128,
+            "spearman": -0.2376396264420436
+          },
+          {
+            "domain": "1F0M",
+            "count": 256,
+            "spearman": -0.40679574845502403
+          },
+          {
+            "domain": "1GL5",
+            "count": 1072,
+            "spearman": -0.6296632561580641
+          },
+          {
+            "domain": "1GXI",
+            "count": 252,
+            "spearman": -0.46246709004374
+          },
+          {
+            "domain": "1GYZ",
+            "count": 132,
+            "spearman": -0.0672726229174602
+          },
+          {
+            "domain": "1H8K",
+            "count": 129,
+            "spearman": -0.71208072450805
+          },
+          {
+            "domain": "1H92",
+            "count": 434,
+            "spearman": -0.22227028161720802
+          },
+          {
+            "domain": "1I2T",
+            "count": 144,
+            "spearman": -0.8985772847841813
+          },
+          {
+            "domain": "1I6C",
+            "count": 27,
+            "spearman": -0.27472527472527475
+          },
+          {
+            "domain": "1IFY",
+            "count": 64,
+            "spearman": -0.7418956043956044
+          },
+          {
+            "domain": "1IGD",
+            "count": 358,
+            "spearman": -0.3400885229210341
+          },
+          {
+            "domain": "1K1V",
+            "count": 245,
+            "spearman": -0.7286913805906209
+          },
+          {
+            "domain": "1LP1",
+            "count": 315,
+            "spearman": -0.6430832786230674
+          },
+          {
+            "domain": "1MSJ",
+            "count": 119,
+            "spearman": -0.5562313060817548
+          },
+          {
+            "domain": "1O6X",
+            "count": 303,
+            "spearman": -0.7521098702759784
+          },
+          {
+            "domain": "1OPS",
+            "count": 297,
+            "spearman": -0.43497463296121014
+          },
+          {
+            "domain": "1ORC",
+            "count": 409,
+            "spearman": -0.6179204975567661
+          },
+          {
+            "domain": "1PGA",
+            "count": 435,
+            "spearman": -0.6975653740795438
+          },
+          {
+            "domain": "1PGX",
+            "count": 404,
+            "spearman": -0.3984769527407662
+          },
+          {
+            "domain": "1PSE",
+            "count": 123,
+            "spearman": -0.380260798906244
+          },
+          {
+            "domain": "1PV0",
+            "count": 633,
+            "spearman": -0.47237396228250444
+          },
+          {
+            "domain": "1PWT",
+            "count": 139,
+            "spearman": -0.6264354975646812
+          },
+          {
+            "domain": "1QKH",
+            "count": 416,
+            "spearman": -0.19879234703062387
+          },
+          {
+            "domain": "1QKX",
+            "count": 140,
+            "spearman": -0.6405720408475651
+          },
+          {
+            "domain": "1QLY",
+            "count": 323,
+            "spearman": -0.5894054545286205
+          },
+          {
+            "domain": "1QP2",
+            "count": 1161,
+            "spearman": -0.3227793827005429
+          },
+          {
+            "domain": "1R69",
+            "count": 136,
+            "spearman": -0.2958017270168408
+          },
+          {
+            "domain": "1S1N",
+            "count": 165,
+            "spearman": -0.9008067747709241
+          },
+          {
+            "domain": "1SRM",
+            "count": 105,
+            "spearman": -0.43363052042297323
+          },
+          {
+            "domain": "1TG0",
+            "count": 446,
+            "spearman": -0.24952071264637565
+          },
+          {
+            "domain": "1TUC",
+            "count": 112,
+            "spearman": -0.13861174701882667
+          },
+          {
+            "domain": "1TUD",
+            "count": 1156,
+            "spearman": -0.664482564595313
+          },
+          {
+            "domain": "1UFM",
+            "count": 788,
+            "spearman": -0.676237650690957
+          },
+          {
+            "domain": "1UZC",
+            "count": 309,
+            "spearman": -0.6444027316247799
+          },
+          {
+            "domain": "1V1C",
+            "count": 823,
+            "spearman": -0.46347908739190136
+          },
+          {
+            "domain": "1VII",
+            "count": 40,
+            "spearman": -0.59906191369606
+          },
+          {
+            "domain": "1W4G",
+            "count": 69,
+            "spearman": -0.18699305809280234
+          },
+          {
+            "domain": "1W4H",
+            "count": 270,
+            "spearman": -0.5159933606771012
+          },
+          {
+            "domain": "1WCL",
+            "count": 246,
+            "spearman": -0.5203245315110343
+          },
+          {
+            "domain": "1Y0M",
+            "count": 1128,
+            "spearman": -0.5611608297187246
+          },
+          {
+            "domain": "1YP5",
+            "count": 754,
+            "spearman": -0.39150330013058593
+          },
+          {
+            "domain": "1YU5",
+            "count": 609,
+            "spearman": -0.5626297406886351
+          },
+          {
+            "domain": "1ZLM",
+            "count": 683,
+            "spearman": -0.496577018779381
+          },
+          {
+            "domain": "1ZRJ",
+            "count": 327,
+            "spearman": -0.5015972335667522
+          },
+          {
+            "domain": "2AME",
+            "count": 113,
+            "spearman": -0.5467845498702508
+          },
+          {
+            "domain": "2AMI",
+            "count": 313,
+            "spearman": 0.002205584245021782
+          },
+          {
+            "domain": "2BTT",
+            "count": 1177,
+            "spearman": -0.5217020411048215
+          },
+          {
+            "domain": "2CDT",
+            "count": 348,
+            "spearman": -0.30573404742101834
+          },
+          {
+            "domain": "2D1U",
+            "count": 313,
+            "spearman": -0.35345465872927667
+          },
+          {
+            "domain": "2EKK",
+            "count": 151,
+            "spearman": -0.7436284419658418
+          },
+          {
+            "domain": "2EXD",
+            "count": 165,
+            "spearman": -0.5432078647182967
+          },
+          {
+            "domain": "2HBB",
+            "count": 293,
+            "spearman": -0.7279957941379366
+          },
+          {
+            "domain": "2JN4",
+            "count": 700,
+            "spearman": -0.3103366566637308
+          },
+          {
+            "domain": "2JT1",
+            "count": 140,
+            "spearman": -0.22504646738536221
+          },
+          {
+            "domain": "2JTV",
+            "count": 653,
+            "spearman": -0.547719971580397
+          },
+          {
+            "domain": "2JVD",
+            "count": 521,
+            "spearman": -0.5088736378894563
+          },
+          {
+            "domain": "2JWT",
+            "count": 837,
+            "spearman": -0.5129249756950929
+          },
+          {
+            "domain": "2JY8",
+            "count": 206,
+            "spearman": -0.7433241702615422
+          },
+          {
+            "domain": "2JZ2",
+            "count": 301,
+            "spearman": -0.5500033002574201
+          },
+          {
+            "domain": "2K1B",
+            "count": 309,
+            "spearman": -0.5686997937859197
+          },
+          {
+            "domain": "2K28",
+            "count": 684,
+            "spearman": -0.6069588962092206
+          },
+          {
+            "domain": "2K2A",
+            "count": 466,
+            "spearman": -0.8034954364492917
+          },
+          {
+            "domain": "2K52",
+            "count": 1355,
+            "spearman": -0.6155242405484799
+          },
+          {
+            "domain": "2K5N",
+            "count": 766,
+            "spearman": -0.7164967840002787
+          },
+          {
+            "domain": "2K5P",
+            "count": 214,
+            "spearman": -0.48456275580017816
+          },
+          {
+            "domain": "2KCM",
+            "count": 477,
+            "spearman": -0.5159337912160207
+          },
+          {
+            "domain": "2KGT",
+            "count": 1373,
+            "spearman": -0.5007920578185934
+          },
+          {
+            "domain": "2KRU",
+            "count": 303,
+            "spearman": -0.7228801217521543
+          },
+          {
+            "domain": "2KT8",
+            "count": 325,
+            "spearman": -0.2909048642790974
+          },
+          {
+            "domain": "2KVS",
+            "count": 499,
+            "spearman": -0.40900876451698576
+          },
+          {
+            "domain": "2KVT",
+            "count": 528,
+            "spearman": -0.44314158649950286
+          },
+          {
+            "domain": "2KWH",
+            "count": 102,
+            "spearman": -0.5830275203419828
+          },
+          {
+            "domain": "2KXD",
+            "count": 260,
+            "spearman": -0.588562416148623
+          },
+          {
+            "domain": "2KYB",
+            "count": 138,
+            "spearman": -0.7372673742947883
+          },
+          {
+            "domain": "2L09",
+            "count": 428,
+            "spearman": -0.5541324004630271
+          },
+          {
+            "domain": "2L2P",
+            "count": 104,
+            "spearman": -0.37366904939720474
+          },
+          {
+            "domain": "2L7F",
+            "count": 119,
+            "spearman": -0.0012676256943455347
+          },
+          {
+            "domain": "2L7M",
+            "count": 425,
+            "spearman": -0.3938550280595895
+          },
+          {
+            "domain": "2L8D",
+            "count": 626,
+            "spearman": -0.7581528960361985
+          },
+          {
+            "domain": "2L9R",
+            "count": 433,
+            "spearman": -0.6111152499441258
+          },
+          {
+            "domain": "2LC2",
+            "count": 119,
+            "spearman": -0.810155248540094
+          },
+          {
+            "domain": "2LGW",
+            "count": 1230,
+            "spearman": -0.6583197335882632
+          },
+          {
+            "domain": "2LHR",
+            "count": 408,
+            "spearman": -0.7348306689598219
+          },
+          {
+            "domain": "2LJ3",
+            "count": 113,
+            "spearman": -0.6519978042451261
+          },
+          {
+            "domain": "2LLV",
+            "count": 280,
+            "spearman": -0.4183079959110266
+          },
+          {
+            "domain": "2LO1",
+            "count": 405,
+            "spearman": -0.6500503088075639
+          },
+          {
+            "domain": "2LP5",
+            "count": 149,
+            "spearman": -0.3955160529657174
+          },
+          {
+            "domain": "2LQK",
+            "count": 77,
+            "spearman": -0.31886534518113463
+          },
+          {
+            "domain": "2LSS",
+            "count": 152,
+            "spearman": -0.5651453331419706
+          },
+          {
+            "domain": "2LUM",
+            "count": 115,
+            "spearman": -0.28381598674347036
+          },
+          {
+            "domain": "2LVN",
+            "count": 624,
+            "spearman": -0.17076453883195455
+          },
+          {
+            "domain": "2LXK",
+            "count": 159,
+            "spearman": -0.4929603534750418
+          },
+          {
+            "domain": "2LYP",
+            "count": 124,
+            "spearman": -0.3147631785995279
+          },
+          {
+            "domain": "2M0C",
+            "count": 237,
+            "spearman": -0.22764527394308937
+          },
+          {
+            "domain": "2M0X",
+            "count": 163,
+            "spearman": -0.056342516390399076
+          },
+          {
+            "domain": "2M0Y",
+            "count": 621,
+            "spearman": -0.2006612760417841
+          },
+          {
+            "domain": "2M2J",
+            "count": 764,
+            "spearman": -0.5338277373488423
+          },
+          {
+            "domain": "2M2L",
+            "count": 786,
+            "spearman": -0.33677708377905685
+          },
+          {
+            "domain": "2M51",
+            "count": 675,
+            "spearman": -0.46223591772553196
+          },
+          {
+            "domain": "2M7O",
+            "count": 140,
+            "spearman": -0.6202750869213444
+          },
+          {
+            "domain": "2M8E",
+            "count": 42,
+            "spearman": -0.24495583826270156
+          },
+          {
+            "domain": "2M8I",
+            "count": 80,
+            "spearman": -0.5969760900140647
+          },
+          {
+            "domain": "2M8U",
+            "count": 123,
+            "spearman": 0.061936515716294126
+          },
+          {
+            "domain": "2MA4",
+            "count": 717,
+            "spearman": -0.32210446818638866
+          },
+          {
+            "domain": "2MC5",
+            "count": 351,
+            "spearman": -0.19653207903207903
+          },
+          {
+            "domain": "2MCD",
+            "count": 106,
+            "spearman": -0.6919464946973323
+          },
+          {
+            "domain": "2MCH",
+            "count": 728,
+            "spearman": -0.4965363599782062
+          },
+          {
+            "domain": "2MI6",
+            "count": 175,
+            "spearman": -0.7723914017017466
+          },
+          {
+            "domain": "2MKX",
+            "count": 252,
+            "spearman": -0.37920818139075546
+          },
+          {
+            "domain": "2MKY",
+            "count": 415,
+            "spearman": -0.551952122872762
+          },
+          {
+            "domain": "2MPK",
+            "count": 101,
+            "spearman": -0.6246243447874199
+          },
+          {
+            "domain": "2MRL",
+            "count": 151,
+            "spearman": -0.8112408504705473
+          },
+          {
+            "domain": "2MXD",
+            "count": 1566,
+            "spearman": -0.6369433897267769
+          },
+          {
+            "domain": "2MYX",
+            "count": 271,
+            "spearman": -0.6096754938137616
+          },
+          {
+            "domain": "2N4S",
+            "count": 35,
+            "spearman": -0.37254901960784315
+          },
+          {
+            "domain": "2N88",
+            "count": 280,
+            "spearman": -0.7486440242495804
+          },
+          {
+            "domain": "2N9L",
+            "count": 105,
+            "spearman": -0.36537424839311633
+          },
+          {
+            "domain": "2O2W",
+            "count": 168,
+            "spearman": -0.8299487246976883
+          },
+          {
+            "domain": "2OCH",
+            "count": 416,
+            "spearman": -0.17123935698521814
+          },
+          {
+            "domain": "2ON8",
+            "count": 140,
+            "spearman": -0.35656775491460935
+          },
+          {
+            "domain": "2OP7",
+            "count": 152,
+            "spearman": -0.2839856751344665
+          },
+          {
+            "domain": "2PDD",
+            "count": 27,
+            "spearman": -0.47435897435897434
+          },
+          {
+            "domain": "2PFU",
+            "count": 434,
+            "spearman": -0.6187658195678398
+          },
+          {
+            "domain": "2PTL",
+            "count": 105,
+            "spearman": -0.16077130416753058
+          },
+          {
+            "domain": "2RJV",
+            "count": 298,
+            "spearman": -0.59887805350309
+          },
+          {
+            "domain": "2ROT",
+            "count": 564,
+            "spearman": -0.7062221141616666
+          },
+          {
+            "domain": "2RRT",
+            "count": 249,
+            "spearman": 0.08138981733385153
+          },
+          {
+            "domain": "2RU9",
+            "count": 151,
+            "spearman": -0.5327361449982573
+          },
+          {
+            "domain": "2WQG",
+            "count": 208,
+            "spearman": -0.3556365449958127
+          },
+          {
+            "domain": "2WXC",
+            "count": 33,
+            "spearman": -0.14605614973262032
+          },
+          {
+            "domain": "2YSB",
+            "count": 73,
+            "spearman": -0.4683759101567321
+          },
+          {
+            "domain": "2YSF",
+            "count": 237,
+            "spearman": -0.4099257381562365
+          },
+          {
+            "domain": "2YSH",
+            "count": 108,
+            "spearman": -0.5239742014156831
+          },
+          {
+            "domain": "3DKM",
+            "count": 2044,
+            "spearman": -0.4071509129561036
+          },
+          {
+            "domain": "3I35",
+            "count": 864,
+            "spearman": -0.6872030288213585
+          },
+          {
+            "domain": "3L1X",
+            "count": 1236,
+            "spearman": -0.3521632517190614
+          },
+          {
+            "domain": "3MYC",
+            "count": 312,
+            "spearman": -0.42472770749585725
+          },
+          {
+            "domain": "3QF6",
+            "count": 120,
+            "spearman": -0.5942287658865198
+          },
+          {
+            "domain": "3ZGK",
+            "count": 1057,
+            "spearman": -0.6205718535648805
+          },
+          {
+            "domain": "4AME",
+            "count": 124,
+            "spearman": -0.5158332022029898
+          },
+          {
+            "domain": "4C26",
+            "count": 825,
+            "spearman": -0.47792315969903104
+          },
+          {
+            "domain": "4G3O",
+            "count": 741,
+            "spearman": -0.015049450401982675
+          },
+          {
+            "domain": "4HCK",
+            "count": 459,
+            "spearman": -0.5376635382967819
+          },
+          {
+            "domain": "4L5E",
+            "count": 68,
+            "spearman": -0.28388746803069054
+          },
+          {
+            "domain": "4UZW",
+            "count": 469,
+            "spearman": -0.5964315667396011
+          },
+          {
+            "domain": "5AHT",
+            "count": 32,
+            "spearman": -0.3852639296187683
+          },
+          {
+            "domain": "5ECA",
+            "count": 521,
+            "spearman": -0.5427558035540033
+          },
+          {
+            "domain": "5FW9",
+            "count": 118,
+            "spearman": -0.6762021627425416
+          },
+          {
+            "domain": "5JRT",
+            "count": 112,
+            "spearman": -0.11471965011788021
+          },
+          {
+            "domain": "5KPH",
+            "count": 439,
+            "spearman": -0.5203276721406344
+          },
+          {
+            "domain": "5UB0",
+            "count": 80,
+            "spearman": 0.022315986872948897
+          },
+          {
+            "domain": "5UBS",
+            "count": 234,
+            "spearman": -0.2334806094280115
+          },
+          {
+            "domain": "5UCE",
+            "count": 461,
+            "spearman": -0.20619660448954044
+          },
+          {
+            "domain": "5UOI",
+            "count": 91,
+            "spearman": -0.527281414237936
+          },
+          {
+            "domain": "5UP5",
+            "count": 227,
+            "spearman": -0.7388600834275467
+          },
+          {
+            "domain": "5VNT",
+            "count": 870,
+            "spearman": -0.34165156914526607
+          },
+          {
+            "domain": "5Z2S",
+            "count": 77,
+            "spearman": -0.5135653819864346
+          },
+          {
+            "domain": "5ZD0",
+            "count": 319,
+            "spearman": -0.12486876737446029
+          },
+          {
+            "domain": "6ACV",
+            "count": 412,
+            "spearman": -0.6314361934595699
+          },
+          {
+            "domain": "6AME",
+            "count": 241,
+            "spearman": -0.20500068584753608
+          },
+          {
+            "domain": "6EWS",
+            "count": 153,
+            "spearman": -0.6384912816801361
+          },
+          {
+            "domain": "6EWT",
+            "count": 166,
+            "spearman": -0.7661063415337999
+          },
+          {
+            "domain": "6EWU",
+            "count": 415,
+            "spearman": -0.2841293266712334
+          },
+          {
+            "domain": "6HQ1",
+            "count": 243,
+            "spearman": -0.4055282080617401
+          },
+          {
+            "domain": "6IPY",
+            "count": 161,
+            "spearman": -0.493630664826317
+          },
+          {
+            "domain": "6IWS",
+            "count": 654,
+            "spearman": -0.5965639470765655
+          },
+          {
+            "domain": "6M3N",
+            "count": 649,
+            "spearman": -0.7033359233359233
+          },
+          {
+            "domain": "6NJF",
+            "count": 112,
+            "spearman": -0.19509174155191855
+          },
+          {
+            "domain": "6NMW",
+            "count": 569,
+            "spearman": -0.42532924863955723
+          },
+          {
+            "domain": "6SCW",
+            "count": 214,
+            "spearman": -0.17401789568097567
+          },
+          {
+            "domain": "7BPM",
+            "count": 601,
+            "spearman": -0.40216079513103853
+          },
+          {
+            "domain": "8AME",
+            "count": 129,
+            "spearman": -0.48540362254025043
+          },
+          {
+            "domain": "8MSI",
+            "count": 127,
+            "spearman": -0.5399793775778028
+          },
+          {
+            "domain": "9AME",
+            "count": 95,
+            "spearman": -0.47494400895856664
+          },
+          {
+            "domain": "EEHEE_rd3_0019",
+            "count": 139,
+            "spearman": -0.6073059564770544
+          },
+          {
+            "domain": "EEHEE_rd3_0144",
+            "count": 113,
+            "spearman": 0.20393905116774236
+          },
+          {
+            "domain": "EHEE_rd2_0152",
+            "count": 324,
+            "spearman": -0.6373023559401269
+          },
+          {
+            "domain": "EHEE_rd2_0251",
+            "count": 110,
+            "spearman": -0.062101300633410725
+          },
+          {
+            "domain": "EHEE_rd2_0341",
+            "count": 123,
+            "spearman": -0.7442829319884949
+          },
+          {
+            "domain": "EHEE_rd2_0487",
+            "count": 77,
+            "spearman": -0.4409274935590725
+          },
+          {
+            "domain": "EHEE_rd2_0628",
+            "count": 116,
+            "spearman": -0.7891438895936647
+          },
+          {
+            "domain": "EHEE_rd4_0929",
+            "count": 258,
+            "spearman": -0.42277800118719494
+          },
+          {
+            "domain": "HEEH_KT_rd6_0280",
+            "count": 128,
+            "spearman": -0.4921202618568028
+          },
+          {
+            "domain": "HEEH_rd2_0750",
+            "count": 85,
+            "spearman": 0.06099276920070354
+          },
+          {
+            "domain": "HHH_rd1_0244",
+            "count": 126,
+            "spearman": -0.7486014248218973
+          },
+          {
+            "domain": "HHH_rd1_0493",
+            "count": 397,
+            "spearman": -0.5315831888240531
+          },
+          {
+            "domain": "HHH_rd1_0949",
+            "count": 134,
+            "spearman": -0.3398271798900236
+          },
+          {
+            "domain": "HHH_rd2_0158",
+            "count": 124,
+            "spearman": -0.6908198269079465
+          },
+          {
+            "domain": "HHH_rd3_0159",
+            "count": 104,
+            "spearman": -0.5902699242505067
+          },
+          {
+            "domain": "HHH_rd3_0164",
+            "count": 102,
+            "spearman": -0.5098359636077828
+          },
+          {
+            "domain": "HHH_rd3_0224",
+            "count": 137,
+            "spearman": -0.4837026527526275
+          },
+          {
+            "domain": "HHH_rd4_0125",
+            "count": 84,
+            "spearman": -0.4717829300394857
+          },
+          {
+            "domain": "HHH_rd4_0676",
+            "count": 135,
+            "spearman": -0.8673446493025071
+          }
+        ]
+      }
+    },
+    "soluble": {
+      "variants_scored": 201144,
+      "contrasts_matched": 100572,
+      "contrasts_unmatched": 0,
+      "orders_per_variant": 8,
+      "all": {
+        "count": 100572,
+        "spearman": -0.4008858540059597,
+        "sign_agreement": 0.6374438213419242
+      },
+      "resolved": {
+        "count": 69633,
+        "spearman": -0.4696612995666771,
+        "sign_agreement": 0.6854652248215645
+      },
+      "below_measurement_error": {
+        "count": 30939,
+        "spearman": -0.06706407712656182,
+        "sign_agreement": 0.5293642328452762
+      },
+      "per_domain_resolved": {
+        "domains": 199,
+        "minimum_contrasts": 20,
+        "median": -0.48109384559978635,
+        "p25": -0.6205917077574832,
+        "p75": -0.30616474040988795,
+        "agreeing_in_sign": 192,
+        "agreeing_fraction": 0.964824120603015,
+        "per_domain": [
+          {
+            "domain": "1A0N",
+            "count": 170,
+            "spearman": -0.5172232704978597
+          },
+          {
+            "domain": "1CSQ",
+            "count": 131,
+            "spearman": 0.05311482410719052
+          },
+          {
+            "domain": "1E0L",
+            "count": 96,
+            "spearman": -0.5410200759631036
+          },
+          {
+            "domain": "1E6H",
+            "count": 129,
+            "spearman": -0.4038014311270125
+          },
+          {
+            "domain": "1EKL",
+            "count": 227,
+            "spearman": -0.4465610246035345
+          },
+          {
+            "domain": "1EM7",
+            "count": 147,
+            "spearman": -0.3462247542482376
+          },
+          {
+            "domain": "1ENH",
+            "count": 128,
+            "spearman": -0.31577321003479214
+          },
+          {
+            "domain": "1F0M",
+            "count": 256,
+            "spearman": -0.29192106317235067
+          },
+          {
+            "domain": "1GL5",
+            "count": 1072,
+            "spearman": -0.5514617094420915
+          },
+          {
+            "domain": "1GXI",
+            "count": 252,
+            "spearman": -0.49337601598124725
+          },
+          {
+            "domain": "1GYZ",
+            "count": 132,
+            "spearman": -0.14920716085842642
+          },
+          {
+            "domain": "1H8K",
+            "count": 129,
+            "spearman": -0.47662678890876564
+          },
+          {
+            "domain": "1H92",
+            "count": 434,
+            "spearman": -0.2558755668621134
+          },
+          {
+            "domain": "1I2T",
+            "count": 144,
+            "spearman": -0.8732738525841974
+          },
+          {
+            "domain": "1I6C",
+            "count": 27,
+            "spearman": -0.39133089133089133
+          },
+          {
+            "domain": "1IFY",
+            "count": 64,
+            "spearman": -0.7929945054945055
+          },
+          {
+            "domain": "1IGD",
+            "count": 358,
+            "spearman": -0.264900663117677
+          },
+          {
+            "domain": "1K1V",
+            "count": 245,
+            "spearman": -0.7041828166692506
+          },
+          {
+            "domain": "1LP1",
+            "count": 315,
+            "spearman": -0.6480152651240292
+          },
+          {
+            "domain": "1MSJ",
+            "count": 119,
+            "spearman": -0.5362127902008261
+          },
+          {
+            "domain": "1O6X",
+            "count": 303,
+            "spearman": -0.7371453640658594
+          },
+          {
+            "domain": "1OPS",
+            "count": 297,
+            "spearman": -0.49525272679635096
+          },
+          {
+            "domain": "1ORC",
+            "count": 409,
+            "spearman": -0.593058269285411
+          },
+          {
+            "domain": "1PGA",
+            "count": 435,
+            "spearman": -0.6574994496579132
+          },
+          {
+            "domain": "1PGX",
+            "count": 404,
+            "spearman": -0.3119342372616087
+          },
+          {
+            "domain": "1PSE",
+            "count": 123,
+            "spearman": -0.07826546800634585
+          },
+          {
+            "domain": "1PV0",
+            "count": 633,
+            "spearman": -0.48109384559978635
+          },
+          {
+            "domain": "1PWT",
+            "count": 139,
+            "spearman": -0.4119665758076768
+          },
+          {
+            "domain": "1QKH",
+            "count": 416,
+            "spearman": -0.2509092818423667
+          },
+          {
+            "domain": "1QKX",
+            "count": 140,
+            "spearman": -0.32113446021298464
+          },
+          {
+            "domain": "1QLY",
+            "count": 323,
+            "spearman": -0.5020785837854084
+          },
+          {
+            "domain": "1QP2",
+            "count": 1161,
+            "spearman": -0.3662535888388779
+          },
+          {
+            "domain": "1R69",
+            "count": 136,
+            "spearman": -0.3427842183101951
+          },
+          {
+            "domain": "1S1N",
+            "count": 165,
+            "spearman": -0.8286458472470815
+          },
+          {
+            "domain": "1SRM",
+            "count": 105,
+            "spearman": -0.2241343562098279
+          },
+          {
+            "domain": "1TG0",
+            "count": 446,
+            "spearman": -0.2821967244047838
+          },
+          {
+            "domain": "1TUC",
+            "count": 112,
+            "spearman": -0.1585659616633068
+          },
+          {
+            "domain": "1TUD",
+            "count": 1156,
+            "spearman": -0.6161233735356048
+          },
+          {
+            "domain": "1UFM",
+            "count": 788,
+            "spearman": -0.6833806344862523
+          },
+          {
+            "domain": "1UZC",
+            "count": 309,
+            "spearman": -0.6085007382220035
+          },
+          {
+            "domain": "1V1C",
+            "count": 823,
+            "spearman": -0.4202949635879005
+          },
+          {
+            "domain": "1VII",
+            "count": 40,
+            "spearman": -0.5774859287054409
+          },
+          {
+            "domain": "1W4G",
+            "count": 69,
+            "spearman": -0.2206795761782974
+          },
+          {
+            "domain": "1W4H",
+            "count": 270,
+            "spearman": -0.34721982164059556
+          },
+          {
+            "domain": "1WCL",
+            "count": 246,
+            "spearman": -0.4882849041660705
+          },
+          {
+            "domain": "1Y0M",
+            "count": 1128,
+            "spearman": -0.5543118782931695
+          },
+          {
+            "domain": "1YP5",
+            "count": 754,
+            "spearman": -0.4315753375907371
+          },
+          {
+            "domain": "1YU5",
+            "count": 609,
+            "spearman": -0.5362184786443214
+          },
+          {
+            "domain": "1ZLM",
+            "count": 683,
+            "spearman": -0.4441052976576123
+          },
+          {
+            "domain": "1ZRJ",
+            "count": 327,
+            "spearman": -0.5092958032636554
+          },
+          {
+            "domain": "2AME",
+            "count": 113,
+            "spearman": -0.5001996140794464
+          },
+          {
+            "domain": "2AMI",
+            "count": 313,
+            "spearman": 0.0012890692872785218
+          },
+          {
+            "domain": "2BTT",
+            "count": 1177,
+            "spearman": -0.557330646758316
+          },
+          {
+            "domain": "2CDT",
+            "count": 348,
+            "spearman": -0.1603491129095865
+          },
+          {
+            "domain": "2D1U",
+            "count": 313,
+            "spearman": -0.2501068354327344
+          },
+          {
+            "domain": "2EKK",
+            "count": 151,
+            "spearman": -0.659410944579993
+          },
+          {
+            "domain": "2EXD",
+            "count": 165,
+            "spearman": -0.4349317447172281
+          },
+          {
+            "domain": "2HBB",
+            "count": 293,
+            "spearman": -0.7718276894188411
+          },
+          {
+            "domain": "2JN4",
+            "count": 700,
+            "spearman": -0.3359319042342069
+          },
+          {
+            "domain": "2JT1",
+            "count": 140,
+            "spearman": -0.09416369639850429
+          },
+          {
+            "domain": "2JTV",
+            "count": 653,
+            "spearman": -0.5221096185427653
+          },
+          {
+            "domain": "2JVD",
+            "count": 521,
+            "spearman": -0.4631844494112017
+          },
+          {
+            "domain": "2JWT",
+            "count": 837,
+            "spearman": -0.5185686297598806
+          },
+          {
+            "domain": "2JY8",
+            "count": 206,
+            "spearman": -0.7644822864438016
+          },
+          {
+            "domain": "2JZ2",
+            "count": 301,
+            "spearman": -0.5988224681525159
+          },
+          {
+            "domain": "2K1B",
+            "count": 309,
+            "spearman": -0.5654312802762537
+          },
+          {
+            "domain": "2K28",
+            "count": 684,
+            "spearman": -0.5778134138501076
+          },
+          {
+            "domain": "2K2A",
+            "count": 466,
+            "spearman": -0.7414635202026835
+          },
+          {
+            "domain": "2K52",
+            "count": 1355,
+            "spearman": -0.6244306817782234
+          },
+          {
+            "domain": "2K5N",
+            "count": 766,
+            "spearman": -0.7204068052920972
+          },
+          {
+            "domain": "2K5P",
+            "count": 214,
+            "spearman": -0.5257613929611138
+          },
+          {
+            "domain": "2KCM",
+            "count": 477,
+            "spearman": -0.4721754336849605
+          },
+          {
+            "domain": "2KGT",
+            "count": 1373,
+            "spearman": -0.5131287597293194
+          },
+          {
+            "domain": "2KRU",
+            "count": 303,
+            "spearman": -0.6599166059861475
+          },
+          {
+            "domain": "2KT8",
+            "count": 325,
+            "spearman": -0.27074755737332423
+          },
+          {
+            "domain": "2KVS",
+            "count": 499,
+            "spearman": -0.4379841128039211
+          },
+          {
+            "domain": "2KVT",
+            "count": 528,
+            "spearman": -0.4634441157068075
+          },
+          {
+            "domain": "2KWH",
+            "count": 102,
+            "spearman": -0.6774459856037003
+          },
+          {
+            "domain": "2KXD",
+            "count": 260,
+            "spearman": -0.5724254000116069
+          },
+          {
+            "domain": "2KYB",
+            "count": 138,
+            "spearman": -0.675996429134065
+          },
+          {
+            "domain": "2L09",
+            "count": 428,
+            "spearman": -0.5895840026374728
+          },
+          {
+            "domain": "2L2P",
+            "count": 104,
+            "spearman": -0.4100074682598954
+          },
+          {
+            "domain": "2L7F",
+            "count": 119,
+            "spearman": -0.005298390542657741
+          },
+          {
+            "domain": "2L7M",
+            "count": 425,
+            "spearman": -0.43986665832955557
+          },
+          {
+            "domain": "2L8D",
+            "count": 626,
+            "spearman": -0.7663915373679625
+          },
+          {
+            "domain": "2L9R",
+            "count": 433,
+            "spearman": -0.5795517702971328
+          },
+          {
+            "domain": "2LC2",
+            "count": 119,
+            "spearman": -0.788441817404928
+          },
+          {
+            "domain": "2LGW",
+            "count": 1230,
+            "spearman": -0.6324731632295109
+          },
+          {
+            "domain": "2LHR",
+            "count": 408,
+            "spearman": -0.7176162800353797
+          },
+          {
+            "domain": "2LJ3",
+            "count": 113,
+            "spearman": -0.566770909574822
+          },
+          {
+            "domain": "2LLV",
+            "count": 280,
+            "spearman": -0.6081752136051298
+          },
+          {
+            "domain": "2LO1",
+            "count": 405,
+            "spearman": -0.6345598927708863
+          },
+          {
+            "domain": "2LP5",
+            "count": 149,
+            "spearman": -0.547317250136042
+          },
+          {
+            "domain": "2LQK",
+            "count": 77,
+            "spearman": -0.3182606866817393
+          },
+          {
+            "domain": "2LSS",
+            "count": 152,
+            "spearman": -0.6426198921534455
+          },
+          {
+            "domain": "2LUM",
+            "count": 115,
+            "spearman": -0.1466977037796891
+          },
+          {
+            "domain": "2LVN",
+            "count": 624,
+            "spearman": -0.1614707000864304
+          },
+          {
+            "domain": "2LXK",
+            "count": 159,
+            "spearman": -0.6558753283974206
+          },
+          {
+            "domain": "2LYP",
+            "count": 124,
+            "spearman": -0.3427537372147915
+          },
+          {
+            "domain": "2M0C",
+            "count": 237,
+            "spearman": -0.17999707928655265
+          },
+          {
+            "domain": "2M0X",
+            "count": 163,
+            "spearman": -0.1775815917668379
+          },
+          {
+            "domain": "2M0Y",
+            "count": 621,
+            "spearman": -0.17531601899496263
+          },
+          {
+            "domain": "2M2J",
+            "count": 764,
+            "spearman": -0.41930678222583523
+          },
+          {
+            "domain": "2M2L",
+            "count": 786,
+            "spearman": -0.30616474040988795
+          },
+          {
+            "domain": "2M51",
+            "count": 675,
+            "spearman": -0.43302848157447565
+          },
+          {
+            "domain": "2M7O",
+            "count": 140,
+            "spearman": -0.642736874330323
+          },
+          {
+            "domain": "2M8E",
+            "count": 42,
+            "spearman": -0.17737622558949842
+          },
+          {
+            "domain": "2M8I",
+            "count": 80,
+            "spearman": -0.5988982653539615
+          },
+          {
+            "domain": "2M8U",
+            "count": 123,
+            "spearman": -0.014045994505423638
+          },
+          {
+            "domain": "2MA4",
+            "count": 717,
+            "spearman": -0.29463890687943045
+          },
+          {
+            "domain": "2MC5",
+            "count": 351,
+            "spearman": -0.26747668997669
+          },
+          {
+            "domain": "2MCD",
+            "count": 106,
+            "spearman": -0.6924906164193768
+          },
+          {
+            "domain": "2MCH",
+            "count": 728,
+            "spearman": -0.548538421914549
+          },
+          {
+            "domain": "2MI6",
+            "count": 175,
+            "spearman": -0.69243618450515
+          },
+          {
+            "domain": "2MKX",
+            "count": 252,
+            "spearman": -0.4161063256854007
+          },
+          {
+            "domain": "2MKY",
+            "count": 415,
+            "spearman": -0.6210479039905441
+          },
+          {
+            "domain": "2MPK",
+            "count": 101,
+            "spearman": -0.5369132207338381
+          },
+          {
+            "domain": "2MRL",
+            "count": 151,
+            "spearman": -0.7825444405716278
+          },
+          {
+            "domain": "2MXD",
+            "count": 1566,
+            "spearman": -0.662329503259323
+          },
+          {
+            "domain": "2MYX",
+            "count": 271,
+            "spearman": -0.623664471938837
+          },
+          {
+            "domain": "2N4S",
+            "count": 35,
+            "spearman": -0.25770308123249297
+          },
+          {
+            "domain": "2N88",
+            "count": 280,
+            "spearman": -0.7137631128676932
+          },
+          {
+            "domain": "2N9L",
+            "count": 105,
+            "spearman": -0.08859630935102633
+          },
+          {
+            "domain": "2O2W",
+            "count": 168,
+            "spearman": -0.7483334261316757
+          },
+          {
+            "domain": "2OCH",
+            "count": 416,
+            "spearman": -0.14568411998853187
+          },
+          {
+            "domain": "2ON8",
+            "count": 140,
+            "spearman": 0.07430408256981041
+          },
+          {
+            "domain": "2OP7",
+            "count": 152,
+            "spearman": -0.28766257287160246
+          },
+          {
+            "domain": "2PDD",
+            "count": 27,
+            "spearman": -0.4804639804639805
+          },
+          {
+            "domain": "2PFU",
+            "count": 434,
+            "spearman": -0.6121799616788918
+          },
+          {
+            "domain": "2PTL",
+            "count": 105,
+            "spearman": -0.11224341696039809
+          },
+          {
+            "domain": "2RJV",
+            "count": 298,
+            "spearman": -0.5434758802135516
+          },
+          {
+            "domain": "2ROT",
+            "count": 564,
+            "spearman": -0.6448242245308089
+          },
+          {
+            "domain": "2RRT",
+            "count": 249,
+            "spearman": 0.11427050136027983
+          },
+          {
+            "domain": "2RU9",
+            "count": 151,
+            "spearman": -0.41330080167305683
+          },
+          {
+            "domain": "2WQG",
+            "count": 208,
+            "spearman": -0.2461607804857233
+          },
+          {
+            "domain": "2WXC",
+            "count": 33,
+            "spearman": -0.19385026737967914
+          },
+          {
+            "domain": "2YSB",
+            "count": 73,
+            "spearman": -0.40935456003949156
+          },
+          {
+            "domain": "2YSF",
+            "count": 237,
+            "spearman": -0.3350166498695595
+          },
+          {
+            "domain": "2YSH",
+            "count": 108,
+            "spearman": -0.617365457715282
+          },
+          {
+            "domain": "3DKM",
+            "count": 2044,
+            "spearman": -0.4189055910932244
+          },
+          {
+            "domain": "3I35",
+            "count": 864,
+            "spearman": -0.6709840655329239
+          },
+          {
+            "domain": "3L1X",
+            "count": 1236,
+            "spearman": -0.36423635493500156
+          },
+          {
+            "domain": "3MYC",
+            "count": 312,
+            "spearman": -0.37769655121185275
+          },
+          {
+            "domain": "3QF6",
+            "count": 120,
+            "spearman": -0.6205917077574832
+          },
+          {
+            "domain": "3ZGK",
+            "count": 1057,
+            "spearman": -0.6249882634985415
+          },
+          {
+            "domain": "4AME",
+            "count": 124,
+            "spearman": -0.5789834775767112
+          },
+          {
+            "domain": "4C26",
+            "count": 825,
+            "spearman": -0.47691568592671113
+          },
+          {
+            "domain": "4G3O",
+            "count": 741,
+            "spearman": -0.09307378790993488
+          },
+          {
+            "domain": "4HCK",
+            "count": 459,
+            "spearman": -0.5375140069318025
+          },
+          {
+            "domain": "4L5E",
+            "count": 68,
+            "spearman": -0.4113448104744818
+          },
+          {
+            "domain": "4UZW",
+            "count": 469,
+            "spearman": -0.562713786689652
+          },
+          {
+            "domain": "5AHT",
+            "count": 32,
+            "spearman": -0.44831378299120234
+          },
+          {
+            "domain": "5ECA",
+            "count": 521,
+            "spearman": -0.47824119093561146
+          },
+          {
+            "domain": "5FW9",
+            "count": 118,
+            "spearman": -0.636212242393698
+          },
+          {
+            "domain": "5JRT",
+            "count": 112,
+            "spearman": -0.3771483240509789
+          },
+          {
+            "domain": "5KPH",
+            "count": 439,
+            "spearman": -0.5174212874840078
+          },
+          {
+            "domain": "5UB0",
+            "count": 80,
+            "spearman": 0.18928738865447725
+          },
+          {
+            "domain": "5UBS",
+            "count": 234,
+            "spearman": -0.22404651021215718
+          },
+          {
+            "domain": "5UCE",
+            "count": 461,
+            "spearman": -0.23650694302396652
+          },
+          {
+            "domain": "5UOI",
+            "count": 91,
+            "spearman": -0.5228061793279185
+          },
+          {
+            "domain": "5UP5",
+            "count": 227,
+            "spearman": -0.7082446770311612
+          },
+          {
+            "domain": "5VNT",
+            "count": 870,
+            "spearman": -0.25241533842874586
+          },
+          {
+            "domain": "5Z2S",
+            "count": 77,
+            "spearman": -0.48895841001104157
+          },
+          {
+            "domain": "5ZD0",
+            "count": 319,
+            "spearman": -0.2703281185307861
+          },
+          {
+            "domain": "6ACV",
+            "count": 412,
+            "spearman": -0.6218858332319522
+          },
+          {
+            "domain": "6AME",
+            "count": 241,
+            "spearman": -0.27416240869654673
+          },
+          {
+            "domain": "6EWS",
+            "count": 153,
+            "spearman": -0.6322691756128289
+          },
+          {
+            "domain": "6EWT",
+            "count": 166,
+            "spearman": -0.6917446596401938
+          },
+          {
+            "domain": "6EWU",
+            "count": 415,
+            "spearman": -0.2669094437952479
+          },
+          {
+            "domain": "6HQ1",
+            "count": 243,
+            "spearman": -0.38870322700427024
+          },
+          {
+            "domain": "6IPY",
+            "count": 161,
+            "spearman": -0.5573585231193927
+          },
+          {
+            "domain": "6IWS",
+            "count": 654,
+            "spearman": -0.5579435719167795
+          },
+          {
+            "domain": "6M3N",
+            "count": 649,
+            "spearman": -0.6582442416340721
+          },
+          {
+            "domain": "6NJF",
+            "count": 112,
+            "spearman": -0.00426247992619674
+          },
+          {
+            "domain": "6NMW",
+            "count": 569,
+            "spearman": -0.4102737691527018
+          },
+          {
+            "domain": "6SCW",
+            "count": 214,
+            "spearman": -0.19367192067860325
+          },
+          {
+            "domain": "7BPM",
+            "count": 601,
+            "spearman": -0.516137445343033
+          },
+          {
+            "domain": "8AME",
+            "count": 129,
+            "spearman": -0.49477862254025046
+          },
+          {
+            "domain": "8MSI",
+            "count": 127,
+            "spearman": -0.5735318241469817
+          },
+          {
+            "domain": "9AME",
+            "count": 95,
+            "spearman": -0.4808510638297872
+          },
+          {
+            "domain": "EEHEE_rd3_0019",
+            "count": 139,
+            "spearman": -0.4636757674605657
+          },
+          {
+            "domain": "EEHEE_rd3_0144",
+            "count": 113,
+            "spearman": 0.11098542817220042
+          },
+          {
+            "domain": "EHEE_rd2_0152",
+            "count": 324,
+            "spearman": -0.6781773438120188
+          },
+          {
+            "domain": "EHEE_rd2_0251",
+            "count": 110,
+            "spearman": -0.032112345873813765
+          },
+          {
+            "domain": "EHEE_rd2_0341",
+            "count": 123,
+            "spearman": -0.7217693567734197
+          },
+          {
+            "domain": "EHEE_rd2_0487",
+            "count": 77,
+            "spearman": -0.42673116357326885
+          },
+          {
+            "domain": "EHEE_rd2_0628",
+            "count": 116,
+            "spearman": -0.8385807096451774
+          },
+          {
+            "domain": "EHEE_rd4_0929",
+            "count": 258,
+            "spearman": -0.51765716619576
+          },
+          {
+            "domain": "HEEH_KT_rd6_0280",
+            "count": 128,
+            "spearman": -0.2856791338582677
+          },
+          {
+            "domain": "HEEH_rd2_0750",
+            "count": 85,
+            "spearman": 0.19034590580418215
+          },
+          {
+            "domain": "HHH_rd1_0244",
+            "count": 126,
+            "spearman": -0.6448863892013499
+          },
+          {
+            "domain": "HHH_rd1_0493",
+            "count": 397,
+            "spearman": -0.5609370798730696
+          },
+          {
+            "domain": "HHH_rd1_0949",
+            "count": 134,
+            "spearman": -0.4225264654172745
+          },
+          {
+            "domain": "HHH_rd2_0158",
+            "count": 124,
+            "spearman": -0.6327553107789142
+          },
+          {
+            "domain": "HHH_rd3_0159",
+            "count": 104,
+            "spearman": -0.6208151072228743
+          },
+          {
+            "domain": "HHH_rd3_0164",
+            "count": 102,
+            "spearman": -0.4412810784219484
+          },
+          {
+            "domain": "HHH_rd3_0224",
+            "count": 137,
+            "spearman": -0.45068792353501225
+          },
+          {
+            "domain": "HHH_rd4_0125",
+            "count": 84,
+            "spearman": -0.4326819884580338
+          },
+          {
+            "domain": "HHH_rd4_0676",
+            "count": 135,
+            "spearman": -0.8292166617890937
+          }
+        ]
+      }
+    }
+  }
+}
