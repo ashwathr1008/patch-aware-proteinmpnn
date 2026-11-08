@@ -37,6 +37,32 @@ Clustered with the declared HSSP length-dependent threshold:
 **59 domains (+28%) buy 10 clusters (+12%).** For the paired sign test the required win rate is
 essentially unchanged: 52 of 84 (62%) becomes about 58 of 94 (62%).
 
+The gain depends on the threshold, so the full sweep is recorded. All three were computed from
+one alignment pass over the 267-domain set's 35,511 pairs, 8,439 of which got a null; HSSP
+reproduced 94 clusters by a second code path, which is an independent check on the determinism
+fix.
+
+| Threshold | 208: clusters | 208: largest | 267: clusters | 267: largest | Clusters of only new domains |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| identity ≥ 0.25 | 42 | 127 | 44 | **192** | 11 |
+| **HSSP (declared)** | **84** | **35** | **94** | **63** | **23** |
+| identity ≥ 0.40 | 106 | 16 | 126 | 24 | 27 |
+
+Three things to take from it.
+
+**The 0.25 floor collapses further as the set grows.** Adding 59 domains gains 2 clusters while
+the largest grows to 192 of 267, nearly three quarters of the data in one group. More data makes
+a chaining threshold worse, not better, because each new domain is another potential bridge.
+
+**At 0.40 the expansion is worth about twice as much**, +20 clusters rather than +10. So the
+value of acquiring more domains is itself threshold-dependent, and the conservative primary
+choice is the one that benefits least from them.
+
+**Bridging is most of the story.** At the declared threshold, 23 clusters consist entirely of
+new domains, yet the net gain is only 10. Roughly 13 families that were distinct among our 208
+are merged by new domains that sit between them. The new data partly *reveals* that our
+families were less separate than our subset showed.
+
 And the largest cluster grows from 35 to 63. Some of the new domains do not form new families,
 they **bridge existing ones**, merging clusters that were separate in the 208-domain set. The
 net +10 is 17 new singletons minus the merging of families that were previously distinct.

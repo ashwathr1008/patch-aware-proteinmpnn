@@ -1,0 +1,27 @@
+{
+  "domains": 267,
+  "new_vs_ours": 59,
+  "results": {
+    "identity >= 0.25": {
+      "clusters": 44,
+      "singletons": 33,
+      "largest": 192,
+      "related_pairs": 1353,
+      "clusters_of_only_new_domains": 11
+    },
+    "identity >= 0.40": {
+      "clusters": 126,
+      "singletons": 101,
+      "largest": 24,
+      "related_pairs": 481,
+      "clusters_of_only_new_domains": 27
+    },
+    "HSSP length-dependent": {
+      "clusters": 94,
+      "singletons": 75,
+      "largest": 63,
+      "related_pairs": 804,
+      "clusters_of_only_new_domains": 23
+    }
+  }
+}
