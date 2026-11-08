@@ -49,7 +49,8 @@ document. Checked November 8, 2026.
 | >30% identity → 90% of pairs homologous; <25% → fewer than 10% | Rost 1999, *Twilight zone of protein sequence alignments*, Protein Engineering 12(2):85–94, [doi:10.1093/protein/12.2.85](https://doi.org/10.1093/protein/12.2.85) | Verified in secondary sources; full text not read |
 | Unambiguous separation needs >40% **for long alignments** | Rost 1999, same | Verified by quotation |
 | Threshold ∝ inverse square root of alignment length, 7–80 residues | Sander & Schneider 1991, *Proteins* 9(1):56–68 (the HSSP curve), as revised by Rost 1999 | Verified in secondary sources |
-| The curve's implemented form, `290.15 · L^-0.562`, valid 10–80 residues | EGCG `fastacheck` documentation | **Formula not verified against the 1991 paper.** Its values are plausible across our range (42.9% at L=30, 29.9% at L=57), but the coefficients should be checked against the original before publication |
+| The curve's implemented form, `290.15 · L^-0.562` | [HSSP documentation](https://swift.cmbi.umcn.nl/gv/hssp/HSSP_2.html); [Sander & Schneider 1991](https://orbilu.uni.lu/bitstream/10993/17193/1/hssp.pdf) | **Verified.** HSSP states it as `t(L) = 290.15 * L ** -0.562`, the identity needed for 50-50 confidence that an alignment is relevant |
+| The curve is calibrated for roughly 10–80 residues | Rost 1999 on the HSSP curve | Verified; implemented by clamping rather than extrapolating |
 | S669 built non-redundant at 25% identity, re-checked against UniProt | Pancotti et al., *Briefings in Bioinformatics* 2022 (S669 benchmark) | Verified by quotation |
 | ProtDDG benchmark clusters with MMseqs2 at 25% | [protddg-bench.github.io](https://protddg-bench.github.io) | Verified by quotation |
 | 40% identity clustering described as standard in protein design | Recent design preprint (DS-ProGen, arXiv 2505.12511) | Verified by quotation; one paper, not a convention survey |
@@ -83,6 +84,30 @@ range of 10–80 residues rather than extrapolated beyond the data it was fitted
 
 Across the 21,528 pairs here the floor runs from 26.2% to 42.9%, median 32.9%. It is
 implemented as `--identity-threshold hssp`, evaluated per pair on the shorter sequence.
+
+### The curve is a 50-50 threshold, and HSSP's own +5 margin runs the other way
+
+Two details emerged from verifying the formula, and the second decides whether to change
+anything.
+
+The curve gives the identity needed to be **50-50 certain** an alignment is relevant, not the
+identity above which homology is established. HSSP's own files therefore apply
+`t(L) + 5`, five percentage points of safety margin, so that only confident homologues enter an
+alignment family; Abagyan and Batalov describe the margin as 3% rather than 5%, so the sources
+disagree on its size.
+
+**That margin serves the opposite purpose to ours, so it is deliberately not adopted here.**
+HSSP raises the bar to keep doubtful relatives *out* of a family. This project uses the same
+curve to decide whether two domains must be kept *together*, so that a split cannot put
+relatives on both sides. Raising the floor would call fewer pairs related, merge less, and leave
+more opportunity for leakage; lowering it merges more and costs power. For a leakage guard the
+conservative direction is therefore the **lower** floor, and the bare 50-50 curve is already one
+step more conservative than HSSP's own usage.
+
+Adding +5 would move the floor at this dataset's median length from 29.9% to 34.9%, between the
+0.30 and 0.40 fixed thresholds, and would raise the cluster count and the available power. It is
+recorded here as a measured, rejected option rather than left unexamined: the reason for
+rejecting it is the direction of the guarantee, not the resulting number.
 
 ## The four clusterings, measured
 
