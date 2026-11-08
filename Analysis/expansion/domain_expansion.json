@@ -1,0 +1,1376 @@
+{
+  "ours": {
+    "label": "ours (208)",
+    "domains": 208,
+    "clusters": 84,
+    "singletons": 58,
+    "largest": 35,
+    "cluster_members": {
+      "1A0N": [
+        "1A0N",
+        "1E6H",
+        "1GL5",
+        "1H8K",
+        "1H92",
+        "1PWT",
+        "1QKX",
+        "1QLY",
+        "1S1N",
+        "1SRM",
+        "1TG0",
+        "1TUC",
+        "1TUD",
+        "1Y0M",
+        "1YP5",
+        "1ZLM",
+        "2BTT",
+        "2CDT",
+        "2KGT",
+        "2KXD",
+        "2L2P",
+        "2LJ3",
+        "2LP5",
+        "2M0Y",
+        "2M51",
+        "2MC5",
+        "2O2W",
+        "2ROT",
+        "3I35",
+        "4HCK",
+        "5ECA",
+        "5FW9",
+        "6IPY",
+        "6NMW",
+        "6SCW"
+      ],
+      "1CSQ": [
+        "1CSQ",
+        "2K5N",
+        "2KCM",
+        "2LSS",
+        "2LXK"
+      ],
+      "1E0L": [
+        "1E0L",
+        "1I6C",
+        "2KCF",
+        "2M8I",
+        "2M9F",
+        "2MW9",
+        "2MWA",
+        "2MWB",
+        "2N4R",
+        "2N4S",
+        "2N4T",
+        "2OP7",
+        "2YSB",
+        "2YSF",
+        "2YSH",
+        "5AHT"
+      ],
+      "1EKL": [
+        "1EKL",
+        "1MSJ",
+        "1OPS",
+        "2AME",
+        "3QF6",
+        "4AME",
+        "6AME",
+        "8AME",
+        "8MSI",
+        "9AME"
+      ],
+      "1EM7": [
+        "1EM7",
+        "1IGD",
+        "1PGA",
+        "1PGX",
+        "2LUM",
+        "2N9L",
+        "2ON8",
+        "5UB0",
+        "5UBS",
+        "5UCE",
+        "6NJF"
+      ],
+      "1ENH": [
+        "1ENH",
+        "2JWT",
+        "2L7F",
+        "2L7M",
+        "2L9R",
+        "2M0C",
+        "5Z2S"
+      ],
+      "1F0M": [
+        "1F0M"
+      ],
+      "1GXI": [
+        "1GXI",
+        "1PSE",
+        "1QP2"
+      ],
+      "1GYZ": [
+        "1GYZ"
+      ],
+      "1I2T": [
+        "1I2T"
+      ],
+      "1IFY": [
+        "1IFY",
+        "2EKK"
+      ],
+      "1K1V": [
+        "1K1V"
+      ],
+      "1LP1": [
+        "1LP1"
+      ],
+      "1O6X": [
+        "1O6X"
+      ],
+      "1ORC": [
+        "1ORC"
+      ],
+      "1PV0": [
+        "1PV0"
+      ],
+      "1QKH": [
+        "1QKH"
+      ],
+      "1R69": [
+        "1R69"
+      ],
+      "1UFM": [
+        "1UFM"
+      ],
+      "1UZC": [
+        "1UZC"
+      ],
+      "1V1C": [
+        "1V1C"
+      ],
+      "1VII": [
+        "1VII",
+        "1YU5",
+        "2RJV",
+        "3MYC",
+        "5VNT"
+      ],
+      "1W4F": [
+        "1W4F",
+        "1W4G",
+        "1W4H",
+        "2BTH",
+        "2PDD",
+        "2WXC"
+      ],
+      "1WCL": [
+        "1WCL"
+      ],
+      "1ZRJ": [
+        "1ZRJ"
+      ],
+      "2AMI": [
+        "2AMI",
+        "2K2A",
+        "2M8U",
+        "2RRT"
+      ],
+      "2D1U": [
+        "2D1U"
+      ],
+      "2EXD": [
+        "2EXD"
+      ],
+      "2HBB": [
+        "2HBB"
+      ],
+      "2JN4": [
+        "2JN4"
+      ],
+      "2JT1": [
+        "2JT1"
+      ],
+      "2JTV": [
+        "2JTV"
+      ],
+      "2JVD": [
+        "2JVD"
+      ],
+      "2JY8": [
+        "2JY8"
+      ],
+      "2JZ2": [
+        "2JZ2"
+      ],
+      "2K1B": [
+        "2K1B",
+        "2K28",
+        "2M2L",
+        "2N88"
+      ],
+      "2K52": [
+        "2K52"
+      ],
+      "2K5P": [
+        "2K5P"
+      ],
+      "2KRU": [
+        "2KRU"
+      ],
+      "2KT8": [
+        "2KT8",
+        "2KYB"
+      ],
+      "2KVS": [
+        "2KVS"
+      ],
+      "2KVT": [
+        "2KVT"
+      ],
+      "2KWH": [
+        "2KWH"
+      ],
+      "2L09": [
+        "2L09"
+      ],
+      "2L8D": [
+        "2L8D"
+      ],
+      "2LC2": [
+        "2LC2",
+        "3ZGK",
+        "EHEE_rd2_0152",
+        "EHEE_rd2_0251",
+        "EHEE_rd2_0341",
+        "EHEE_rd2_0487",
+        "EHEE_rd2_0628"
+      ],
+      "2LGW": [
+        "2LGW",
+        "2LO1",
+        "2OCH",
+        "6IWS"
+      ],
+      "2LHR": [
+        "2LHR"
+      ],
+      "2LLV": [
+        "2LLV"
+      ],
+      "2LQK": [
+        "2LQK"
+      ],
+      "2LVN": [
+        "2LVN",
+        "4G3O"
+      ],
+      "2LYP": [
+        "2LYP"
+      ],
+      "2M0X": [
+        "2M0X",
+        "5ZD0"
+      ],
+      "2M2J": [
+        "2M2J",
+        "2MA4"
+      ],
+      "2M7O": [
+        "2M7O"
+      ],
+      "2M8E": [
+        "2M8E"
+      ],
+      "2MCD": [
+        "2MCD",
+        "2MCH"
+      ],
+      "2MI6": [
+        "2MI6"
+      ],
+      "2MKX": [
+        "2MKX",
+        "7BPM"
+      ],
+      "2MKY": [
+        "2MKY"
+      ],
+      "2MPK": [
+        "2MPK"
+      ],
+      "2MRL": [
+        "2MRL"
+      ],
+      "2MXD": [
+        "2MXD"
+      ],
+      "2MYX": [
+        "2MYX"
+      ],
+      "2PFU": [
+        "2PFU"
+      ],
+      "2PTL": [
+        "2PTL"
+      ],
+      "2RU9": [
+        "2RU9"
+      ],
+      "2WQG": [
+        "2WQG",
+        "4UZW"
+      ],
+      "3DKM": [
+        "3DKM"
+      ],
+      "3L1X": [
+        "3L1X"
+      ],
+      "4C26": [
+        "4C26"
+      ],
+      "4L5E": [
+        "4L5E"
+      ],
+      "5JRT": [
+        "5JRT"
+      ],
+      "5KPH": [
+        "5KPH"
+      ],
+      "5UOI": [
+        "5UOI",
+        "HHH_rd1_0244",
+        "HHH_rd1_0493",
+        "HHH_rd1_0949",
+        "HHH_rd2_0158",
+        "HHH_rd3_0159"
+      ],
+      "5UP5": [
+        "5UP5",
+        "EEHEE_rd3_0019",
+        "EEHEE_rd3_0144",
+        "EHEE_rd4_0929"
+      ],
+      "6ACV": [
+        "6ACV"
+      ],
+      "6EWS": [
+        "6EWS",
+        "6EWT",
+        "6EWU"
+      ],
+      "6HQ1": [
+        "6HQ1"
+      ],
+      "6M3N": [
+        "6M3N"
+      ],
+      "HEEH_KT_rd6_0280": [
+        "HEEH_KT_rd6_0280",
+        "HEEH_rd2_0750"
+      ],
+      "HHH_rd3_0164": [
+        "HHH_rd3_0164",
+        "HHH_rd3_0224"
+      ],
+      "HHH_rd4_0125": [
+        "HHH_rd4_0125"
+      ],
+      "HHH_rd4_0676": [
+        "HHH_rd4_0676"
+      ]
+    }
+  },
+  "final": {
+    "label": "final double list (267)",
+    "domains": 267,
+    "clusters": 94,
+    "singletons": 75,
+    "largest": 63,
+    "cluster_members": {
+      "1A0N": [
+        "1A0N",
+        "1E6H",
+        "1GL5",
+        "1H8K",
+        "1H92",
+        "1PWT",
+        "1QKX",
+        "1QLY",
+        "1S1N",
+        "1SRM",
+        "1TG0",
+        "1TUC",
+        "1TUD",
+        "1V1C",
+        "1Y0M",
+        "1YP5",
+        "1ZLM",
+        "2BTT",
+        "2CDT",
+        "2KGT",
+        "2KXD",
+        "2L0A",
+        "2L2P",
+        "2LJ3",
+        "2LP5",
+        "2M0Y",
+        "2M51",
+        "2MC5",
+        "2O2W",
+        "2ROT",
+        "3I35",
+        "4HCK",
+        "5ECA",
+        "5FW9",
+        "6CQ7",
+        "6IPY",
+        "6NMW",
+        "6SCW"
+      ],
+      "1CSQ": [
+        "1CSQ",
+        "2K5N",
+        "2KCM",
+        "2LSS",
+        "2LXK",
+        "2YTY"
+      ],
+      "1E0L": [
+        "1E0L",
+        "1I6C",
+        "1WR3",
+        "1WR4",
+        "1YIU",
+        "2DMV",
+        "2KCF",
+        "2M8I",
+        "2M9E",
+        "2M9F",
+        "2MW9",
+        "2MWA",
+        "2MWB",
+        "2N4R",
+        "2N4S",
+        "2N4T",
+        "2OP7",
+        "2YSB",
+        "2YSF",
+        "2YSG",
+        "2YSH",
+        "5AHT",
+        "5YDX",
+        "6SVC"
+      ],
+      "1EGL": [
+        "1EGL"
+      ],
+      "1EKL": [
+        "1EKL",
+        "1MSJ",
+        "1OPS",
+        "2AME",
+        "3QF6",
+        "4AME",
+        "5XR0",
+        "6AME",
+        "8AME",
+        "8MSI",
+        "9AME"
+      ],
+      "1EM7": [
+        "1EM7",
+        "1IGD",
+        "1K1V",
+        "1MHX",
+        "1PGA",
+        "1PGX",
+        "2AMI",
+        "2K2A",
+        "2LC2",
+        "2LUM",
+        "2M0X",
+        "2M7K",
+        "2M8U",
+        "2MAZ",
+        "2MKX",
+        "2N9L",
+        "2ON8",
+        "2RRT",
+        "3ZGK",
+        "5UB0",
+        "5UBS",
+        "5UCE",
+        "5UOI",
+        "5UP5",
+        "5ZD0",
+        "6MRR",
+        "6NJF",
+        "6XQC",
+        "7BPM",
+        "EEHEE_rd3_0019",
+        "EEHEE_rd3_0144",
+        "EEHEE_rd4_0134",
+        "EHEE_rd1_0284",
+        "EHEE_rd2_0152",
+        "EHEE_rd2_0251",
+        "EHEE_rd2_0341",
+        "EHEE_rd2_0487",
+        "EHEE_rd2_0628",
+        "EHEE_rd2_1106",
+        "EHEE_rd4_0929",
+        "HEEH_KT_rd6_0280",
+        "HEEH_rd2_0750",
+        "HHH_rd1_0056",
+        "HHH_rd1_0061",
+        "HHH_rd1_0244",
+        "HHH_rd1_0493",
+        "HHH_rd1_0949",
+        "HHH_rd2_0058",
+        "HHH_rd2_0074",
+        "HHH_rd2_0139",
+        "HHH_rd2_0158",
+        "HHH_rd2_0165",
+        "HHH_rd3_0078",
+        "HHH_rd3_0091",
+        "HHH_rd3_0159",
+        "HHH_rd3_0164",
+        "HHH_rd3_0224",
+        "HHH_rd4_0017",
+        "HHH_rd4_0125",
+        "HHH_rd4_0395",
+        "HHH_rd4_0518",
+        "HHH_rd4_0676",
+        "HHH_rd4_0977"
+      ],
+      "1ENH": [
+        "1ENH",
+        "2JWT",
+        "2L7F",
+        "2L7M",
+        "2L9R",
+        "2M0C",
+        "5Z2S"
+      ],
+      "1F0M": [
+        "1F0M"
+      ],
+      "1GXI": [
+        "1GXI",
+        "1PSE",
+        "1QP2"
+      ],
+      "1GYZ": [
+        "1GYZ"
+      ],
+      "1I2T": [
+        "1I2T"
+      ],
+      "1IFY": [
+        "1IFY",
+        "2EKK"
+      ],
+      "1LP1": [
+        "1LP1"
+      ],
+      "1O6X": [
+        "1O6X"
+      ],
+      "1ORC": [
+        "1ORC"
+      ],
+      "1PV0": [
+        "1PV0"
+      ],
+      "1QCV": [
+        "1QCV"
+      ],
+      "1QK9": [
+        "1QK9"
+      ],
+      "1QKH": [
+        "1QKH"
+      ],
+      "1R69": [
+        "1R69"
+      ],
+      "1UFM": [
+        "1UFM"
+      ],
+      "1UZC": [
+        "1UZC",
+        "2K1B",
+        "2K28",
+        "2KIS",
+        "2M2L",
+        "2N88"
+      ],
+      "1VII": [
+        "1VII",
+        "1YU5",
+        "2L3X",
+        "2RJV",
+        "3MYC",
+        "3MYE",
+        "5VNT"
+      ],
+      "1W4F": [
+        "1W4F",
+        "1W4G",
+        "1W4H",
+        "2BTH",
+        "2PDD",
+        "2WXC"
+      ],
+      "1WCL": [
+        "1WCL"
+      ],
+      "1ZHC": [
+        "1ZHC"
+      ],
+      "1ZRJ": [
+        "1ZRJ"
+      ],
+      "2A3D": [
+        "2A3D"
+      ],
+      "2BN8": [
+        "2BN8"
+      ],
+      "2CJJ": [
+        "2CJJ"
+      ],
+      "2D1U": [
+        "2D1U"
+      ],
+      "2EXD": [
+        "2EXD"
+      ],
+      "2HBB": [
+        "2HBB"
+      ],
+      "2JN4": [
+        "2JN4"
+      ],
+      "2JT1": [
+        "2JT1"
+      ],
+      "2JTV": [
+        "2JTV"
+      ],
+      "2JVD": [
+        "2JVD"
+      ],
+      "2JY8": [
+        "2JY8"
+      ],
+      "2JZ2": [
+        "2JZ2"
+      ],
+      "2K52": [
+        "2K52"
+      ],
+      "2K57": [
+        "2K57"
+      ],
+      "2K5P": [
+        "2K5P"
+      ],
+      "2K9D": [
+        "2K9D"
+      ],
+      "2KNA": [
+        "2KNA"
+      ],
+      "2KRU": [
+        "2KRU"
+      ],
+      "2KT8": [
+        "2KT8",
+        "2KYB"
+      ],
+      "2KVS": [
+        "2KVS"
+      ],
+      "2KVT": [
+        "2KVT"
+      ],
+      "2KVV": [
+        "2KVV"
+      ],
+      "2KWH": [
+        "2KWH"
+      ],
+      "2L09": [
+        "2L09"
+      ],
+      "2L7K": [
+        "2L7K"
+      ],
+      "2L8D": [
+        "2L8D"
+      ],
+      "2LCL": [
+        "2LCL"
+      ],
+      "2LGW": [
+        "2LGW",
+        "2LO1",
+        "2OCH",
+        "6IWS"
+      ],
+      "2LHR": [
+        "2LHR"
+      ],
+      "2LLV": [
+        "2LLV"
+      ],
+      "2LMR": [
+        "2LMR"
+      ],
+      "2LQK": [
+        "2LQK"
+      ],
+      "2LVN": [
+        "2LVN",
+        "4G3O"
+      ],
+      "2LXE": [
+        "2LXE"
+      ],
+      "2LYP": [
+        "2LYP"
+      ],
+      "2M2J": [
+        "2M2J",
+        "2MA4"
+      ],
+      "2M7O": [
+        "2M7O"
+      ],
+      "2M8E": [
+        "2M8E"
+      ],
+      "2MCD": [
+        "2MCD",
+        "2MCH"
+      ],
+      "2MI6": [
+        "2MI6"
+      ],
+      "2MKY": [
+        "2MKY"
+      ],
+      "2MPK": [
+        "2MPK"
+      ],
+      "2MRL": [
+        "2MRL"
+      ],
+      "2MXD": [
+        "2MXD"
+      ],
+      "2MYX": [
+        "2MYX"
+      ],
+      "2N78": [
+        "2N78"
+      ],
+      "2PFU": [
+        "2PFU"
+      ],
+      "2PTL": [
+        "2PTL"
+      ],
+      "2RU9": [
+        "2RU9"
+      ],
+      "2WQG": [
+        "2WQG",
+        "4UZW"
+      ],
+      "3DKM": [
+        "3DKM"
+      ],
+      "3L1X": [
+        "3L1X"
+      ],
+      "4C26": [
+        "4C26"
+      ],
+      "4CVD": [
+        "4CVD"
+      ],
+      "4L5E": [
+        "4L5E"
+      ],
+      "4UZX": [
+        "4UZX"
+      ],
+      "5JRT": [
+        "5JRT"
+      ],
+      "5KPH": [
+        "5KPH"
+      ],
+      "5LWC": [
+        "5LWC"
+      ],
+      "5OAO": [
+        "5OAO"
+      ],
+      "5VWE": [
+        "5VWE",
+        "6L34"
+      ],
+      "6A6C": [
+        "6A6C"
+      ],
+      "6ACV": [
+        "6ACV"
+      ],
+      "6EWS": [
+        "6EWS",
+        "6EWT",
+        "6EWU"
+      ],
+      "6HQ1": [
+        "6HQ1"
+      ],
+      "6M3N": [
+        "6M3N"
+      ],
+      "HEEH_rd2_0779": [
+        "HEEH_rd2_0779"
+      ]
+    }
+  },
+  "union": {
+    "label": "union",
+    "domains": 267,
+    "clusters": 94,
+    "singletons": 75,
+    "largest": 63,
+    "cluster_members": {
+      "1A0N": [
+        "1A0N",
+        "1E6H",
+        "1GL5",
+        "1H8K",
+        "1H92",
+        "1PWT",
+        "1QKX",
+        "1QLY",
+        "1S1N",
+        "1SRM",
+        "1TG0",
+        "1TUC",
+        "1TUD",
+        "1V1C",
+        "1Y0M",
+        "1YP5",
+        "1ZLM",
+        "2BTT",
+        "2CDT",
+        "2KGT",
+        "2KXD",
+        "2L0A",
+        "2L2P",
+        "2LJ3",
+        "2LP5",
+        "2M0Y",
+        "2M51",
+        "2MC5",
+        "2O2W",
+        "2ROT",
+        "3I35",
+        "4HCK",
+        "5ECA",
+        "5FW9",
+        "6CQ7",
+        "6IPY",
+        "6NMW",
+        "6SCW"
+      ],
+      "1CSQ": [
+        "1CSQ",
+        "2K5N",
+        "2KCM",
+        "2LSS",
+        "2LXK",
+        "2YTY"
+      ],
+      "1E0L": [
+        "1E0L",
+        "1I6C",
+        "1WR3",
+        "1WR4",
+        "1YIU",
+        "2DMV",
+        "2KCF",
+        "2M8I",
+        "2M9E",
+        "2M9F",
+        "2MW9",
+        "2MWA",
+        "2MWB",
+        "2N4R",
+        "2N4S",
+        "2N4T",
+        "2OP7",
+        "2YSB",
+        "2YSF",
+        "2YSG",
+        "2YSH",
+        "5AHT",
+        "5YDX",
+        "6SVC"
+      ],
+      "1EGL": [
+        "1EGL"
+      ],
+      "1EKL": [
+        "1EKL",
+        "1MSJ",
+        "1OPS",
+        "2AME",
+        "3QF6",
+        "4AME",
+        "5XR0",
+        "6AME",
+        "8AME",
+        "8MSI",
+        "9AME"
+      ],
+      "1EM7": [
+        "1EM7",
+        "1IGD",
+        "1K1V",
+        "1MHX",
+        "1PGA",
+        "1PGX",
+        "2AMI",
+        "2K2A",
+        "2LC2",
+        "2LUM",
+        "2M0X",
+        "2M7K",
+        "2M8U",
+        "2MAZ",
+        "2MKX",
+        "2N9L",
+        "2ON8",
+        "2RRT",
+        "3ZGK",
+        "5UB0",
+        "5UBS",
+        "5UCE",
+        "5UOI",
+        "5UP5",
+        "5ZD0",
+        "6MRR",
+        "6NJF",
+        "6XQC",
+        "7BPM",
+        "EEHEE_rd3_0019",
+        "EEHEE_rd3_0144",
+        "EEHEE_rd4_0134",
+        "EHEE_rd1_0284",
+        "EHEE_rd2_0152",
+        "EHEE_rd2_0251",
+        "EHEE_rd2_0341",
+        "EHEE_rd2_0487",
+        "EHEE_rd2_0628",
+        "EHEE_rd2_1106",
+        "EHEE_rd4_0929",
+        "HEEH_KT_rd6_0280",
+        "HEEH_rd2_0750",
+        "HHH_rd1_0056",
+        "HHH_rd1_0061",
+        "HHH_rd1_0244",
+        "HHH_rd1_0493",
+        "HHH_rd1_0949",
+        "HHH_rd2_0058",
+        "HHH_rd2_0074",
+        "HHH_rd2_0139",
+        "HHH_rd2_0158",
+        "HHH_rd2_0165",
+        "HHH_rd3_0078",
+        "HHH_rd3_0091",
+        "HHH_rd3_0159",
+        "HHH_rd3_0164",
+        "HHH_rd3_0224",
+        "HHH_rd4_0017",
+        "HHH_rd4_0125",
+        "HHH_rd4_0395",
+        "HHH_rd4_0518",
+        "HHH_rd4_0676",
+        "HHH_rd4_0977"
+      ],
+      "1ENH": [
+        "1ENH",
+        "2JWT",
+        "2L7F",
+        "2L7M",
+        "2L9R",
+        "2M0C",
+        "5Z2S"
+      ],
+      "1F0M": [
+        "1F0M"
+      ],
+      "1GXI": [
+        "1GXI",
+        "1PSE",
+        "1QP2"
+      ],
+      "1GYZ": [
+        "1GYZ"
+      ],
+      "1I2T": [
+        "1I2T"
+      ],
+      "1IFY": [
+        "1IFY",
+        "2EKK"
+      ],
+      "1LP1": [
+        "1LP1"
+      ],
+      "1O6X": [
+        "1O6X"
+      ],
+      "1ORC": [
+        "1ORC"
+      ],
+      "1PV0": [
+        "1PV0"
+      ],
+      "1QCV": [
+        "1QCV"
+      ],
+      "1QK9": [
+        "1QK9"
+      ],
+      "1QKH": [
+        "1QKH"
+      ],
+      "1R69": [
+        "1R69"
+      ],
+      "1UFM": [
+        "1UFM"
+      ],
+      "1UZC": [
+        "1UZC",
+        "2K1B",
+        "2K28",
+        "2KIS",
+        "2M2L",
+        "2N88"
+      ],
+      "1VII": [
+        "1VII",
+        "1YU5",
+        "2L3X",
+        "2RJV",
+        "3MYC",
+        "3MYE",
+        "5VNT"
+      ],
+      "1W4F": [
+        "1W4F",
+        "1W4G",
+        "1W4H",
+        "2BTH",
+        "2PDD",
+        "2WXC"
+      ],
+      "1WCL": [
+        "1WCL"
+      ],
+      "1ZHC": [
+        "1ZHC"
+      ],
+      "1ZRJ": [
+        "1ZRJ"
+      ],
+      "2A3D": [
+        "2A3D"
+      ],
+      "2BN8": [
+        "2BN8"
+      ],
+      "2CJJ": [
+        "2CJJ"
+      ],
+      "2D1U": [
+        "2D1U"
+      ],
+      "2EXD": [
+        "2EXD"
+      ],
+      "2HBB": [
+        "2HBB"
+      ],
+      "2JN4": [
+        "2JN4"
+      ],
+      "2JT1": [
+        "2JT1"
+      ],
+      "2JTV": [
+        "2JTV"
+      ],
+      "2JVD": [
+        "2JVD"
+      ],
+      "2JY8": [
+        "2JY8"
+      ],
+      "2JZ2": [
+        "2JZ2"
+      ],
+      "2K52": [
+        "2K52"
+      ],
+      "2K57": [
+        "2K57"
+      ],
+      "2K5P": [
+        "2K5P"
+      ],
+      "2K9D": [
+        "2K9D"
+      ],
+      "2KNA": [
+        "2KNA"
+      ],
+      "2KRU": [
+        "2KRU"
+      ],
+      "2KT8": [
+        "2KT8",
+        "2KYB"
+      ],
+      "2KVS": [
+        "2KVS"
+      ],
+      "2KVT": [
+        "2KVT"
+      ],
+      "2KVV": [
+        "2KVV"
+      ],
+      "2KWH": [
+        "2KWH"
+      ],
+      "2L09": [
+        "2L09"
+      ],
+      "2L7K": [
+        "2L7K"
+      ],
+      "2L8D": [
+        "2L8D"
+      ],
+      "2LCL": [
+        "2LCL"
+      ],
+      "2LGW": [
+        "2LGW",
+        "2LO1",
+        "2OCH",
+        "6IWS"
+      ],
+      "2LHR": [
+        "2LHR"
+      ],
+      "2LLV": [
+        "2LLV"
+      ],
+      "2LMR": [
+        "2LMR"
+      ],
+      "2LQK": [
+        "2LQK"
+      ],
+      "2LVN": [
+        "2LVN",
+        "4G3O"
+      ],
+      "2LXE": [
+        "2LXE"
+      ],
+      "2LYP": [
+        "2LYP"
+      ],
+      "2M2J": [
+        "2M2J",
+        "2MA4"
+      ],
+      "2M7O": [
+        "2M7O"
+      ],
+      "2M8E": [
+        "2M8E"
+      ],
+      "2MCD": [
+        "2MCD",
+        "2MCH"
+      ],
+      "2MI6": [
+        "2MI6"
+      ],
+      "2MKY": [
+        "2MKY"
+      ],
+      "2MPK": [
+        "2MPK"
+      ],
+      "2MRL": [
+        "2MRL"
+      ],
+      "2MXD": [
+        "2MXD"
+      ],
+      "2MYX": [
+        "2MYX"
+      ],
+      "2N78": [
+        "2N78"
+      ],
+      "2PFU": [
+        "2PFU"
+      ],
+      "2PTL": [
+        "2PTL"
+      ],
+      "2RU9": [
+        "2RU9"
+      ],
+      "2WQG": [
+        "2WQG",
+        "4UZW"
+      ],
+      "3DKM": [
+        "3DKM"
+      ],
+      "3L1X": [
+        "3L1X"
+      ],
+      "4C26": [
+        "4C26"
+      ],
+      "4CVD": [
+        "4CVD"
+      ],
+      "4L5E": [
+        "4L5E"
+      ],
+      "4UZX": [
+        "4UZX"
+      ],
+      "5JRT": [
+        "5JRT"
+      ],
+      "5KPH": [
+        "5KPH"
+      ],
+      "5LWC": [
+        "5LWC"
+      ],
+      "5OAO": [
+        "5OAO"
+      ],
+      "5VWE": [
+        "5VWE",
+        "6L34"
+      ],
+      "6A6C": [
+        "6A6C"
+      ],
+      "6ACV": [
+        "6ACV"
+      ],
+      "6EWS": [
+        "6EWS",
+        "6EWT",
+        "6EWU"
+      ],
+      "6HQ1": [
+        "6HQ1"
+      ],
+      "6M3N": [
+        "6M3N"
+      ],
+      "HEEH_rd2_0779": [
+        "HEEH_rd2_0779"
+      ]
+    }
+  },
+  "new_domains": [
+    "1EGL",
+    "1MHX",
+    "1QCV",
+    "1QK9",
+    "1WR3",
+    "1WR4",
+    "1YIU",
+    "1ZHC",
+    "2A3D",
+    "2BN8",
+    "2CJJ",
+    "2DMV",
+    "2K57",
+    "2K9D",
+    "2KIS",
+    "2KNA",
+    "2KVV",
+    "2L0A",
+    "2L3X",
+    "2L7K",
+    "2LCL",
+    "2LMR",
+    "2LXE",
+    "2M7K",
+    "2M9E",
+    "2MAZ",
+    "2N78",
+    "2YSG",
+    "2YTY",
+    "3MYE",
+    "4CVD",
+    "4UZX",
+    "5LWC",
+    "5OAO",
+    "5VWE",
+    "5XR0",
+    "5YDX",
+    "6A6C",
+    "6CQ7",
+    "6L34",
+    "6MRR",
+    "6SVC",
+    "6XQC",
+    "EEHEE_rd4_0134",
+    "EHEE_rd1_0284",
+    "EHEE_rd2_1106",
+    "HEEH_rd2_0779",
+    "HHH_rd1_0056",
+    "HHH_rd1_0061",
+    "HHH_rd2_0058",
+    "HHH_rd2_0074",
+    "HHH_rd2_0139",
+    "HHH_rd2_0165",
+    "HHH_rd3_0078",
+    "HHH_rd3_0091",
+    "HHH_rd4_0017",
+    "HHH_rd4_0395",
+    "HHH_rd4_0518",
+    "HHH_rd4_0977"
+  ]
+}
