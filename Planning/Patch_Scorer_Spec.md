@@ -170,7 +170,7 @@ Each falsifies a specific way the result could be hollow. None is optional.
 | Frozen ProteinMPNN, full model | The scorer adding nothing | **−0.497 per-domain median** |
 | Frozen ProteinMPNN, first-order | Crediting the joint term wrongly | −0.448 |
 | SAP surrogate | Re-deriving a closed-form statistic | measured on the same contrasts |
-| ThermoMPNN-D (published) | A trained head on these features already doing better | **−0.501** on double-mutant contrasts, where frozen reaches −0.423; an upper bound, see the caveat |
+| ThermoMPNN-D (published) | A trained head on these features already doing better | **−0.459 vs frozen −0.392** on the 81 domains it did not train on, 45/81, p = 0.37 |
 
 The composition control is the cheapest and should run whenever the dataset changes:
 composition is identical within every contrast, so it is a guaranteed null.
@@ -178,24 +178,30 @@ composition is identical within every contrast, so it is a guaranteed null.
 ## Success criteria, declared in advance
 
 **Primary.** On held-out clusters, per-domain median Spearman against measured ΔΔG, tested
-paired across domains with the same sign test used for the baseline comparison. **The comparator
-must be computed on the same contrast subset as the scorer**, never quoted from a run over a
-different one: restricting to double mutants moved the frozen baseline by 0.074, so a
-mismatched comparison would manufacture or hide an effect of that size.
+paired across domains with the same sign test used for the baseline comparison.
 
-Three numbers bound the problem, all on resolved double-mutant contrasts:
+**The comparator must be recomputed on whatever subset the scorer is evaluated on**, never
+quoted across subsets. This rule is not pedantry; two subset effects measured here are each
+larger than the signal being chased. Restricting to double mutants moved the frozen baseline by
+0.074. Restricting to domains ThermoMPNN did not train on moved it by a further 0.031, and
+moved ThermoMPNN-D by 0.083.
 
-| | Per-domain median |
-| --- | ---: |
-| Frozen ProteinMPNN, full model | −0.423 |
-| ThermoMPNN-D (published, trained on this data) | −0.501 |
-| Measurement-noise ceiling | ~0.98 |
+The bar for this project is therefore **frozen ProteinMPNN recomputed on our own held-out
+clusters, over exactly the contrasts the scorer is scored on**. Nothing else is a valid target.
+For orientation only, on resolved double-mutant contrasts:
 
-**What counts as meaningful.** Beating −0.423 is the minimum, and it is a weaker bar than it
-looks, because ThermoMPNN-D already clears it by 0.078 with a light head on the same frozen
-features. The real target is **−0.501 or better**, which would match a published model trained
-on this dataset. Beating it would be a genuine result, though only once ThermoMPNN-D's training
-split is known, since any domain it trained on makes its score an upper bound.
+| | All 198 domains | The 81 ThermoMPNN never trained on |
+| --- | ---: | ---: |
+| Frozen ProteinMPNN, full model | −0.423 | −0.392 |
+| ThermoMPNN-D | −0.501 | −0.459 |
+| Measurement-noise ceiling | ~0.98 | ~0.98 |
+
+**What counts as meaningful.** Beating the frozen model on held-out clusters, paired, with the
+sign test significant. The headroom to the noise ceiling is roughly 0.6, so this is not a
+contest for hundredths. ThermoMPNN-D is the nearest published analogue of the proposed
+architecture and it improves on the frozen likelihood by about 0.07 in median on clean domains
+without that improvement being consistent enough to reach significance, which is the realistic
+expectation to hold for a first frozen head here too.
 
 **Reporting rule.** Improving a score the model was trained on is expected by construction. The
 held-out cluster result is the claim; everything else is diagnostic.
@@ -314,20 +320,36 @@ The most likely single outcome, and the decomposition says why: 89% of the pilot
 first-order burial and only 11% joint structure. There may simply not be much left for a
 patch-level objective to extract.
 
-**ThermoMPNN-D has now been run, and it selects route A or B.** On the 54,857 resolved
-double-mutant contrasts it reaches a per-domain median of **−0.501** against the frozen model's
-**−0.423** on the identical set, stronger in 137 of 198 domains, sign test p = 6.9 × 10⁻⁸.
+**ThermoMPNN-D has been run, and its split membership resolved. The result is inconclusive,
+and that is itself informative.**
 
-A light trained head on frozen ProteinMPNN features therefore extracts substantially more
-arrangement signal than the frozen likelihood does. That is the encouraging reading for this
-project: the information is present in the representation and a small supervised readout can
-reach it, which is precisely the architecture proposed here. It also rules out route C as a
-first move, since the representation is demonstrably not the binding constraint.
+Across all 198 domains it reached −0.501 against the frozen model's −0.423, stronger in 137 of
+198, p = 6.9 × 10⁻⁸. That comparison is contaminated: `mega_splits.pkl`, retrieved from the
+original ThermoMPNN repository, labels splits at the domain level and shows **111 of our 208
+domains in its training split and 13 more in validation**. Splitting on membership:
 
-The caveat is load-bearing rather than decorative. ThermoMPNN-D trained on this dataset, and
-until `mega_splits.pkl` is obtained we cannot say how much of that 137-of-198 is generalisation.
-**Retrieving that split file is now the highest-value small task in the plan**, because it
-decides whether −0.501 is a target or a mirage.
+| Domain group | n | ThermoMPNN-D | Frozen | Stronger | p |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Trained or validated on | 117 | −0.542 | −0.463 | 92/117 | 3.4 × 10⁻¹⁰ |
+| **Never trained on** | **81** | **−0.459** | **−0.392** | **45/81** | **0.37** |
+
+**The significance came almost entirely from the contaminated domains.** On the 81 it never
+saw, ThermoMPNN-D wins 45 of 81, which is chance. The median gap of 0.067 survives, so the
+advantage is probably real but inconsistent: it is carried by a subset rather than holding
+broadly.
+
+Two consequences. First, **route C is back in contention** rather than ruled out: the closest
+published analogue of this architecture does not reliably beat the frozen likelihood out of
+distribution, which is weak evidence that the frozen representation, not the head, is the
+constraint. Second, **route B becomes the most attractive first move**, because ThermoMPNN-D's
+objective is absolute ΔΔG while route B targets the interaction term directly; its difficulty
+is evidence about its own objective, not about a sharper one.
+
+A confound to carry with this. Clean and contaminated groups are not a controlled contrast: the
+splits came from homology clustering, and the frozen model also drops on the clean group
+(−0.392 against −0.463) despite having no exposure to those splits at all. Part of the gap
+between groups is domain difficulty. The paired comparison within the clean group is the part
+that holds, and that is the comparison reported above.
 
 **Route A — unfreeze the top of the decoder.** Train the last decoder layer with the head,
 everything below frozen. The gate the plan held shut is open now that the target is measured
