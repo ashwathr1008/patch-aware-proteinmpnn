@@ -38,9 +38,14 @@ residues, so they are tertiary contacts rather than helix neighbours.
 
 **The frozen baseline is 0.48, not 0.44.** Both checkpoints were scored on an L40S. The full
 autoregressive model reaches a per-domain median Spearman of **−0.501** (vanilla) against
-measured stability; its first-order term alone reaches **−0.448**. The full model is stronger in
-135 of 199 domains, sign test p = 5.3 × 10⁻⁷. Any scorer must beat the full model, not the
-first-order term.
+measured stability; its first-order term alone reaches **−0.456**. The full model is stronger in
+**136 of 199 domains, sign test p = 2.5 × 10⁻⁷**, so the joint term is worth about **0.045** of
+median correlation. Any scorer must beat the full model, not the first-order term.
+
+Both per-domain blocks are now committed, in `swap_prediction_comparison.json` and
+`swap_first_order_summary.json`, so this paired test is reproducible from the repository. It was
+not: the first-order per-domain median existed only as a hand computation, which the
+mid-project report correctly declined to quote.
 
 **There is room.** The measurement-noise ceiling is **0.98**, so roughly **0.50 of correlation
 remains unexplained**. The target is not a sliver.

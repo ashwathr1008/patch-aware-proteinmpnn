@@ -27,6 +27,7 @@ against 14.0 for all pairs, which would be impossible under a numbering mismatch
 
 import argparse
 import csv
+from collections import defaultdict
 import importlib
 import json
 import math
@@ -218,15 +219,46 @@ def run(args):
         return {"count": len(subset), "spearman": spearman(predicted, measured),
                 "sign_agreement": sign / len(subset)}
 
+    def per_domain(subset, minimum):
+        """Per-domain correlations, so the first-order term is comparable to the full model.
+
+        The full-model comparison reports a per-domain median because pooling tens of
+        thousands of contrasts from two hundred domains overstates significance. Without the
+        same block here, the two terms could only be compared pooled, and an earlier version
+        of this script omitted it -- so the first-order per-domain median existed nowhere in
+        the committed results and had to be recomputed by hand to be quoted at all.
+        """
+        grouped = defaultdict(list)
+        for row in subset:
+            grouped[row["domain"]].append(row)
+        values = {}
+        for domain, entries in grouped.items():
+            if len(entries) < minimum:
+                continue
+            rho = spearman([e["model_first_order_difference"] for e in entries],
+                           [e["measured_difference"] for e in entries])
+            if rho is not None and rho == rho:
+                values[domain] = rho
+        if not values:
+            return None
+        ordered = sorted(values.values())
+        return {"domains": len(values), "minimum_contrasts": minimum,
+                "median": statistics.median(ordered),
+                "p25": ordered[len(ordered) // 4], "p75": ordered[(3 * len(ordered)) // 4],
+                "agreeing_in_sign": sum(1 for v in ordered if v < 0),
+                "per_domain": [{"domain": d, "spearman": v}
+                               for d, v in sorted(values.items())]}
+
     resolved = [r for r in rows if str(r["resolved"]).lower() == "true"]
     summary = {
-        "schema_version": 1, "purpose": "model_versus_measured_arrangement_effect",
+        "schema_version": 2, "purpose": "model_versus_measured_arrangement_effect",
         "model_type": args.model_type, "model_name": baseline.MODEL,
         "term": "first-order only; the joint term requires full autoregressive scoring",
         "domains_scored": len(marginals), "domains_skipped": skipped,
         "contrasts_scored": len(rows), "contrasts_dropped": len(dropped),
         "all_contrasts": agreement(rows),
         "resolved_contrasts_only": agreement(resolved),
+        "per_domain_resolved": per_domain(resolved, args.minimum_per_domain),
     }
     write_json(output / "swap_first_order_summary.json", summary)
     for label in ("all_contrasts", "resolved_contrasts_only"):
@@ -234,6 +266,11 @@ def run(args):
         if block:
             print("{:<26} n={:<7} spearman={:+.3f}  sign agreement={:.1%}".format(
                 label, block["count"], block["spearman"], block["sign_agreement"]), flush=True)
+    block = summary["per_domain_resolved"]
+    if block:
+        print("{:<26} domains={:<5} median={:+.3f}  p25={:+.3f} p75={:+.3f}".format(
+            "per_domain_resolved", block["domains"], block["median"],
+            block["p25"], block["p75"]), flush=True)
     print("Complete: " + str(output / "swap_first_order_summary.json"), flush=True)
 
 
@@ -246,6 +283,9 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--model-type", default="vanilla", choices=("vanilla", "soluble"))
     parser.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
+    parser.add_argument("--minimum-per-domain", type=int, default=20,
+                        help="contrasts a domain needs before its correlation is reported; "
+                             "matches the full-model comparison so the two are comparable")
     run(parser.parse_args())
 
 

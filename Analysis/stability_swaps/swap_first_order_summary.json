@@ -1,21 +1,827 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "purpose": "model_versus_measured_arrangement_effect",
   "model_type": "vanilla",
   "model_name": "v_48_020",
   "term": "first-order only; the joint term requires full autoregressive scoring",
   "domains_scored": 208,
   "domains_skipped": [],
-  "contrasts_scored": 100572,
+  "contrasts_scored": 98505,
   "contrasts_dropped": 0,
   "all_contrasts": {
-    "count": 100572,
-    "spearman": -0.37328213019490175,
-    "sign_agreement": 0.6263174641053176
+    "count": 98505,
+    "spearman": -0.3755550088318427,
+    "sign_agreement": 0.6273387137708746
   },
   "resolved_contrasts_only": {
-    "count": 69633,
-    "spearman": -0.4377674239565917,
-    "sign_agreement": 0.6703861674780636
+    "count": 68273,
+    "spearman": -0.44004653262104215,
+    "sign_agreement": 0.6714660261010942
+  },
+  "per_domain_resolved": {
+    "domains": 199,
+    "minimum_contrasts": 20,
+    "median": -0.45585201942910375,
+    "p25": -0.5959919081360155,
+    "p75": -0.2905982905982906,
+    "agreeing_in_sign": 190,
+    "per_domain": [
+      {
+        "domain": "1A0N",
+        "spearman": -0.48162199791159066
+      },
+      {
+        "domain": "1CSQ",
+        "spearman": -0.22499332728340363
+      },
+      {
+        "domain": "1E0L",
+        "spearman": -0.44511665762344005
+      },
+      {
+        "domain": "1E6H",
+        "spearman": -0.49092687835420395
+      },
+      {
+        "domain": "1EKL",
+        "spearman": -0.4347352827118672
+      },
+      {
+        "domain": "1EM7",
+        "spearman": -0.3932745997325254
+      },
+      {
+        "domain": "1ENH",
+        "spearman": -0.21267853872917047
+      },
+      {
+        "domain": "1F0M",
+        "spearman": -0.4478556305790799
+      },
+      {
+        "domain": "1GL5",
+        "spearman": -0.6006681135280169
+      },
+      {
+        "domain": "1GXI",
+        "spearman": -0.4922842040458531
+      },
+      {
+        "domain": "1GYZ",
+        "spearman": -0.09699300297934288
+      },
+      {
+        "domain": "1H8K",
+        "spearman": -0.49816077817531307
+      },
+      {
+        "domain": "1H92",
+        "spearman": -0.2668146003838472
+      },
+      {
+        "domain": "1I2T",
+        "spearman": -0.7653605015673981
+      },
+      {
+        "domain": "1I6C",
+        "spearman": -0.2905982905982906
+      },
+      {
+        "domain": "1IFY",
+        "spearman": -0.748992673992674
+      },
+      {
+        "domain": "1IGD",
+        "spearman": -0.1506570042156076
+      },
+      {
+        "domain": "1K1V",
+        "spearman": -0.6967316374029879
+      },
+      {
+        "domain": "1LP1",
+        "spearman": -0.5961411025750298
+      },
+      {
+        "domain": "1MSJ",
+        "spearman": -0.3855932203389831
+      },
+      {
+        "domain": "1O6X",
+        "spearman": -0.7788902539609137
+      },
+      {
+        "domain": "1OPS",
+        "spearman": -0.42075067746208683
+      },
+      {
+        "domain": "1ORC",
+        "spearman": -0.6484311423459497
+      },
+      {
+        "domain": "1PGA",
+        "spearman": -0.6063581048401878
+      },
+      {
+        "domain": "1PGX",
+        "spearman": -0.3395951340378041
+      },
+      {
+        "domain": "1PSE",
+        "spearman": -0.09017683249280933
+      },
+      {
+        "domain": "1PV0",
+        "spearman": -0.5959919081360155
+      },
+      {
+        "domain": "1PWT",
+        "spearman": -0.6752535859511148
+      },
+      {
+        "domain": "1QKH",
+        "spearman": -0.36158658414755973
+      },
+      {
+        "domain": "1QKX",
+        "spearman": -0.6231265443572194
+      },
+      {
+        "domain": "1QLY",
+        "spearman": -0.5180794412857948
+      },
+      {
+        "domain": "1QP2",
+        "spearman": -0.23925039141558788
+      },
+      {
+        "domain": "1R69",
+        "spearman": -0.43475502122990317
+      },
+      {
+        "domain": "1S1N",
+        "spearman": -0.8666984070844612
+      },
+      {
+        "domain": "1SRM",
+        "spearman": -0.4351233671988389
+      },
+      {
+        "domain": "1TG0",
+        "spearman": -0.2510188073900474
+      },
+      {
+        "domain": "1TUC",
+        "spearman": 0.007841596337171559
+      },
+      {
+        "domain": "1TUD",
+        "spearman": -0.6200646394179653
+      },
+      {
+        "domain": "1UFM",
+        "spearman": -0.6271116367693776
+      },
+      {
+        "domain": "1UZC",
+        "spearman": -0.6228061192971875
+      },
+      {
+        "domain": "1V1C",
+        "spearman": -0.4058619418526243
+      },
+      {
+        "domain": "1VII",
+        "spearman": -0.5294559099437148
+      },
+      {
+        "domain": "1W4G",
+        "spearman": -0.23518450858604312
+      },
+      {
+        "domain": "1W4H",
+        "spearman": -0.4981301183150846
+      },
+      {
+        "domain": "1WCL",
+        "spearman": -0.4684615586137684
+      },
+      {
+        "domain": "1Y0M",
+        "spearman": -0.5606990352535612
+      },
+      {
+        "domain": "1YP5",
+        "spearman": -0.33339986620174844
+      },
+      {
+        "domain": "1YU5",
+        "spearman": -0.47465540618079965
+      },
+      {
+        "domain": "1ZLM",
+        "spearman": -0.43567015437719686
+      },
+      {
+        "domain": "1ZRJ",
+        "spearman": -0.3416044681356365
+      },
+      {
+        "domain": "2AME",
+        "spearman": -0.45585201942910375
+      },
+      {
+        "domain": "2AMI",
+        "spearman": 0.030768995966081902
+      },
+      {
+        "domain": "2BTT",
+        "spearman": -0.4952425393816702
+      },
+      {
+        "domain": "2CDT",
+        "spearman": -0.3143004230938212
+      },
+      {
+        "domain": "2D1U",
+        "spearman": -0.36890783663336113
+      },
+      {
+        "domain": "2EKK",
+        "spearman": -0.7173231090972464
+      },
+      {
+        "domain": "2EXD",
+        "spearman": -0.5326396495071194
+      },
+      {
+        "domain": "2HBB",
+        "spearman": -0.7041207525134511
+      },
+      {
+        "domain": "2JN4",
+        "spearman": -0.21734014034430973
+      },
+      {
+        "domain": "2JT1",
+        "spearman": 0.09003957927882618
+      },
+      {
+        "domain": "2JTV",
+        "spearman": -0.5060629549543431
+      },
+      {
+        "domain": "2JVD",
+        "spearman": -0.4200784555308349
+      },
+      {
+        "domain": "2JWT",
+        "spearman": -0.41601084774102615
+      },
+      {
+        "domain": "2JY8",
+        "spearman": -0.7427695813471431
+      },
+      {
+        "domain": "2JZ2",
+        "spearman": -0.4892988053068139
+      },
+      {
+        "domain": "2K1B",
+        "spearman": -0.536745152748911
+      },
+      {
+        "domain": "2K28",
+        "spearman": -0.5727556179369703
+      },
+      {
+        "domain": "2K2A",
+        "spearman": -0.7213763670122298
+      },
+      {
+        "domain": "2K52",
+        "spearman": -0.5555074360048092
+      },
+      {
+        "domain": "2K5N",
+        "spearman": -0.5903345162405993
+      },
+      {
+        "domain": "2K5P",
+        "spearman": -0.5361914586847317
+      },
+      {
+        "domain": "2KCM",
+        "spearman": -0.3865014388166256
+      },
+      {
+        "domain": "2KGT",
+        "spearman": -0.3768314822797438
+      },
+      {
+        "domain": "2KRU",
+        "spearman": -0.5496063243480152
+      },
+      {
+        "domain": "2KT8",
+        "spearman": -0.31328579169069964
+      },
+      {
+        "domain": "2KVS",
+        "spearman": -0.42231508800733997
+      },
+      {
+        "domain": "2KVT",
+        "spearman": -0.405147715085014
+      },
+      {
+        "domain": "2KWH",
+        "spearman": -0.5321485318149176
+      },
+      {
+        "domain": "2KXD",
+        "spearman": -0.43716371623348366
+      },
+      {
+        "domain": "2KYB",
+        "spearman": -0.649333659064497
+      },
+      {
+        "domain": "2L09",
+        "spearman": -0.5953796935126925
+      },
+      {
+        "domain": "2L2P",
+        "spearman": -0.10997546143177211
+      },
+      {
+        "domain": "2L7F",
+        "spearman": -0.04606181455633101
+      },
+      {
+        "domain": "2L7M",
+        "spearman": -0.2986028132650089
+      },
+      {
+        "domain": "2L8D",
+        "spearman": -0.7181391988203489
+      },
+      {
+        "domain": "2L9R",
+        "spearman": -0.5976338003681121
+      },
+      {
+        "domain": "2LC2",
+        "spearman": -0.768758011679248
+      },
+      {
+        "domain": "2LGW",
+        "spearman": -0.634158984475521
+      },
+      {
+        "domain": "2LHR",
+        "spearman": -0.6874018285639169
+      },
+      {
+        "domain": "2LJ3",
+        "spearman": -0.5288359172266951
+      },
+      {
+        "domain": "2LLV",
+        "spearman": -0.47733954332507883
+      },
+      {
+        "domain": "2LO1",
+        "spearman": -0.6970855213600178
+      },
+      {
+        "domain": "2LP5",
+        "spearman": -0.0869399600943225
+      },
+      {
+        "domain": "2LQK",
+        "spearman": -0.2873705242126295
+      },
+      {
+        "domain": "2LSS",
+        "spearman": -0.542579295921924
+      },
+      {
+        "domain": "2LUM",
+        "spearman": 0.16048291643651857
+      },
+      {
+        "domain": "2LVN",
+        "spearman": -0.1313095443881961
+      },
+      {
+        "domain": "2LXK",
+        "spearman": -0.6300286449261363
+      },
+      {
+        "domain": "2LYP",
+        "spearman": -0.35412116443745084
+      },
+      {
+        "domain": "2M0C",
+        "spearman": -0.2653513239666173
+      },
+      {
+        "domain": "2M0X",
+        "spearman": -0.07028890329803093
+      },
+      {
+        "domain": "2M0Y",
+        "spearman": -0.3040929894144016
+      },
+      {
+        "domain": "2M2J",
+        "spearman": -0.40068906567382223
+      },
+      {
+        "domain": "2M2L",
+        "spearman": -0.3236410778569857
+      },
+      {
+        "domain": "2M51",
+        "spearman": -0.3106600311721935
+      },
+      {
+        "domain": "2M7O",
+        "spearman": -0.564287948523169
+      },
+      {
+        "domain": "2M8E",
+        "spearman": -0.14836723118061745
+      },
+      {
+        "domain": "2M8I",
+        "spearman": -0.5801922175339896
+      },
+      {
+        "domain": "2M8U",
+        "spearman": 0.0524822329132863
+      },
+      {
+        "domain": "2MA4",
+        "spearman": -0.16674221269719272
+      },
+      {
+        "domain": "2MC5",
+        "spearman": -0.29522477522477525
+      },
+      {
+        "domain": "2MCD",
+        "spearman": -0.7060231251731869
+      },
+      {
+        "domain": "2MCH",
+        "spearman": -0.48640831378107857
+      },
+      {
+        "domain": "2MI6",
+        "spearman": -0.7174025974025974
+      },
+      {
+        "domain": "2MKX",
+        "spearman": -0.39143407548049847
+      },
+      {
+        "domain": "2MKY",
+        "spearman": -0.46253156438462883
+      },
+      {
+        "domain": "2MPK",
+        "spearman": -0.7727548048922539
+      },
+      {
+        "domain": "2MRL",
+        "spearman": -0.7551237364935518
+      },
+      {
+        "domain": "2MXD",
+        "spearman": -0.6166156754328567
+      },
+      {
+        "domain": "2MYX",
+        "spearman": -0.5437594964184936
+      },
+      {
+        "domain": "2N4S",
+        "spearman": -0.296078431372549
+      },
+      {
+        "domain": "2N88",
+        "spearman": -0.7756968474452116
+      },
+      {
+        "domain": "2N9L",
+        "spearman": -0.03791208791208791
+      },
+      {
+        "domain": "2O2W",
+        "spearman": -0.8203644346419038
+      },
+      {
+        "domain": "2OCH",
+        "spearman": -0.27343646861935844
+      },
+      {
+        "domain": "2ON8",
+        "spearman": -0.022868513699678555
+      },
+      {
+        "domain": "2OP7",
+        "spearman": -0.19719243570554748
+      },
+      {
+        "domain": "2PDD",
+        "spearman": -0.3962148962148962
+      },
+      {
+        "domain": "2PFU",
+        "spearman": -0.6239207992914317
+      },
+      {
+        "domain": "2PTL",
+        "spearman": -0.21192204022392702
+      },
+      {
+        "domain": "2RJV",
+        "spearman": -0.5766554231684082
+      },
+      {
+        "domain": "2ROT",
+        "spearman": -0.6352415125549606
+      },
+      {
+        "domain": "2RRT",
+        "spearman": 0.0775483870967742
+      },
+      {
+        "domain": "2RU9",
+        "spearman": -0.23794353433252005
+      },
+      {
+        "domain": "2WQG",
+        "spearman": -0.3963397395891675
+      },
+      {
+        "domain": "2WXC",
+        "spearman": -0.04679144385026738
+      },
+      {
+        "domain": "2YSB",
+        "spearman": -0.5070035789213871
+      },
+      {
+        "domain": "2YSF",
+        "spearman": -0.43607694096733307
+      },
+      {
+        "domain": "2YSH",
+        "spearman": -0.5115417226366382
+      },
+      {
+        "domain": "3DKM",
+        "spearman": -0.38933141378643044
+      },
+      {
+        "domain": "3I35",
+        "spearman": -0.6255295933574622
+      },
+      {
+        "domain": "3L1X",
+        "spearman": -0.29943709792075085
+      },
+      {
+        "domain": "3MYC",
+        "spearman": -0.41686889895287005
+      },
+      {
+        "domain": "3QF6",
+        "spearman": -0.5529689561775123
+      },
+      {
+        "domain": "3ZGK",
+        "spearman": -0.517395936977871
+      },
+      {
+        "domain": "4AME",
+        "spearman": -0.5259669551534225
+      },
+      {
+        "domain": "4C26",
+        "spearman": -0.4876214825531203
+      },
+      {
+        "domain": "4G3O",
+        "spearman": -0.03259154142843375
+      },
+      {
+        "domain": "4HCK",
+        "spearman": -0.3925029565018843
+      },
+      {
+        "domain": "4L5E",
+        "spearman": -0.13997786006031224
+      },
+      {
+        "domain": "4UZW",
+        "spearman": -0.5872446279242087
+      },
+      {
+        "domain": "5AHT",
+        "spearman": -0.2536656891495601
+      },
+      {
+        "domain": "5ECA",
+        "spearman": -0.4793436922465978
+      },
+      {
+        "domain": "5FW9",
+        "spearman": -0.6368915232325003
+      },
+      {
+        "domain": "5JRT",
+        "spearman": -0.21602829124953019
+      },
+      {
+        "domain": "5KPH",
+        "spearman": -0.41407407302342863
+      },
+      {
+        "domain": "5UB0",
+        "spearman": 0.12386310360993906
+      },
+      {
+        "domain": "5UBS",
+        "spearman": -0.16125304093526174
+      },
+      {
+        "domain": "5UCE",
+        "spearman": -0.27987692775017114
+      },
+      {
+        "domain": "5UOI",
+        "spearman": -0.49440993788819876
+      },
+      {
+        "domain": "5UP5",
+        "spearman": -0.6087676893688355
+      },
+      {
+        "domain": "5VNT",
+        "spearman": -0.14562638049071638
+      },
+      {
+        "domain": "5Z2S",
+        "spearman": -0.5053893474946106
+      },
+      {
+        "domain": "5ZD0",
+        "spearman": -0.16117103862305554
+      },
+      {
+        "domain": "6ACV",
+        "spearman": -0.5477971867121335
+      },
+      {
+        "domain": "6AME",
+        "spearman": -0.27644113713521484
+      },
+      {
+        "domain": "6EWS",
+        "spearman": -0.5402074705480279
+      },
+      {
+        "domain": "6EWT",
+        "spearman": -0.7053865981071811
+      },
+      {
+        "domain": "6EWU",
+        "spearman": -0.3774459040174074
+      },
+      {
+        "domain": "6HQ1",
+        "spearman": -0.3025778567258945
+      },
+      {
+        "domain": "6IPY",
+        "spearman": -0.5522716816195077
+      },
+      {
+        "domain": "6IWS",
+        "spearman": -0.5623539510736968
+      },
+      {
+        "domain": "6M3N",
+        "spearman": -0.6055259680683409
+      },
+      {
+        "domain": "6NJF",
+        "spearman": 0.034552567738408445
+      },
+      {
+        "domain": "6NMW",
+        "spearman": -0.41098913339439097
+      },
+      {
+        "domain": "6SCW",
+        "spearman": -0.06389364222719494
+      },
+      {
+        "domain": "7BPM",
+        "spearman": -0.6190703755092565
+      },
+      {
+        "domain": "8AME",
+        "spearman": -0.43445885509839
+      },
+      {
+        "domain": "8MSI",
+        "spearman": -0.47722745594300714
+      },
+      {
+        "domain": "9AME",
+        "spearman": -0.3347984322508399
+      },
+      {
+        "domain": "EEHEE_rd3_0019",
+        "spearman": -0.6001921444211091
+      },
+      {
+        "domain": "EEHEE_rd3_0144",
+        "spearman": 0.2047100830286671
+      },
+      {
+        "domain": "EHEE_rd2_0152",
+        "spearman": -0.5973922010731827
+      },
+      {
+        "domain": "EHEE_rd2_0251",
+        "spearman": -0.26409846042873564
+      },
+      {
+        "domain": "EHEE_rd2_0341",
+        "spearman": -0.8528782035572867
+      },
+      {
+        "domain": "EHEE_rd2_0487",
+        "spearman": -0.09196067090803933
+      },
+      {
+        "domain": "EHEE_rd2_0628",
+        "spearman": -0.7893053473263368
+      },
+      {
+        "domain": "EHEE_rd4_0929",
+        "spearman": -0.394480976057304
+      },
+      {
+        "domain": "HEEH_KT_rd6_0280",
+        "spearman": -0.35699162241347737
+      },
+      {
+        "domain": "HEEH_rd2_0750",
+        "spearman": -0.03801055305843268
+      },
+      {
+        "domain": "HHH_rd1_0244",
+        "spearman": -0.6193415823022123
+      },
+      {
+        "domain": "HHH_rd1_0493",
+        "spearman": -0.35130062187895433
+      },
+      {
+        "domain": "HHH_rd1_0949",
+        "spearman": -0.5061484557164054
+      },
+      {
+        "domain": "HHH_rd2_0158",
+        "spearman": -0.6168119590873328
+      },
+      {
+        "domain": "HHH_rd3_0159",
+        "spearman": -0.6041502187133255
+      },
+      {
+        "domain": "HHH_rd3_0164",
+        "spearman": -0.5243792797326563
+      },
+      {
+        "domain": "HHH_rd3_0224",
+        "spearman": -0.5189949035786958
+      },
+      {
+        "domain": "HHH_rd4_0125",
+        "spearman": -0.08354763592183861
+      },
+      {
+        "domain": "HHH_rd4_0676",
+        "spearman": -0.9031021363769388
+      }
+    ]
   }
 }
