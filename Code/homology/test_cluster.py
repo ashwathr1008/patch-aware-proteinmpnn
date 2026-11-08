@@ -1,5 +1,9 @@
 """Check that clustering separates unrelated short sequences and merges genuine relatives."""
 import random
+from pathlib import Path
+import os
+import subprocess
+import sys
 import unittest
 
 import cluster
@@ -150,6 +154,52 @@ class SplitTest(unittest.TestCase):
             cluster.assign_splits(self.clusters, {})
         with self.assertRaises(ValueError):
             cluster.assign_splits(self.clusters, {"dev": 0.0, "test": 0.0})
+
+
+class TestNullIsReproducibleAcrossProcesses(unittest.TestCase):
+    """The null must not depend on per-process string hash randomisation.
+
+    Seeding from `hash()` of a tuple containing sequence text made every z-score differ
+    between runs, so clusters and the splits built on them could not be regenerated. A
+    same-process check cannot catch that, because one process has one hash seed; these run
+    the computation in subprocesses with PYTHONHASHSEED set differently on purpose.
+    """
+
+    SEQUENCES = ("MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQ", "MKTAYIAKQRQISFVKSHFSRQAAARLGLIEVQ")
+
+    def _in_subprocess(self, hashseed):
+        script = (
+            "import sys; sys.path.insert(0, %r)\n"
+            "import cluster\n"
+            "print(repr(cluster.null_statistics(%r, %r, shuffles=25, seed=0)))\n"
+            % (str(Path(__file__).resolve().parent), self.SEQUENCES[0], self.SEQUENCES[1]))
+        env = dict(os.environ, PYTHONHASHSEED=hashseed)
+        out = subprocess.run([sys.executable, "-c", script], capture_output=True,
+                             text=True, env=env, check=True)
+        return out.stdout.strip()
+
+    def test_identical_under_different_hash_seeds(self):
+        first = self._in_subprocess("0")
+        second = self._in_subprocess("12345")
+        third = self._in_subprocess("98765")
+        self.assertEqual(first, second)
+        self.assertEqual(first, third)
+
+    def test_relatedness_is_stable_too(self):
+        """The z-score is what thresholds act on, so it is the value that must be stable."""
+        script = (
+            "import sys; sys.path.insert(0, %r)\n"
+            "import cluster\n"
+            "r = cluster.relatedness(%r, %r, shuffles=25, seed=0)\n"
+            "print('%%.12f' %% r['z'])\n"
+            % (str(Path(__file__).resolve().parent), self.SEQUENCES[0], self.SEQUENCES[1]))
+        values = set()
+        for seed in ("1", "777", "31337"):
+            env = dict(os.environ, PYTHONHASHSEED=seed)
+            out = subprocess.run([sys.executable, "-c", script], capture_output=True,
+                                 text=True, env=env, check=True)
+            values.add(out.stdout.strip())
+        self.assertEqual(len(values), 1, "z-score varied with PYTHONHASHSEED: %s" % values)
 
 
 if __name__ == "__main__":

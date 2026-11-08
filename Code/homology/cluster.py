@@ -25,6 +25,7 @@ only for pairs whose raw score already places them among the candidates; everyth
 reach the threshold and is rejected without further work.
 """
 
+import hashlib
 import itertools
 import random
 import statistics
@@ -79,11 +80,19 @@ def null_statistics(a, b, shuffles=DEFAULT_SHUFFLES, seed=0):
     Shuffling holds length and composition fixed, so the null isolates the contribution of
     residue order. The seed is derived from the pair, so a pair's null never depends on the
     order sequences were handed in.
+
+    The derivation goes through SHA-256 rather than `hash()`. Python randomises string hashing
+    per process, so seeding from a tuple containing sequence text made every z-score change
+    between runs: clusters, and any split built on them, could not be regenerated. That defect
+    silently invalidated the promise this module exists to keep, and it is why the pair key is
+    hashed explicitly here.
     """
     if shuffles < 2:
         raise ValueError("A null distribution needs at least two shuffles")
     letters = list(b)
-    rng = random.Random((seed, len(a), len(b), a[:8], b[:8]).__hash__() & 0xFFFFFFFF)
+    key = "homology_null_v1|%d|%d|%d|%s|%s" % (seed, len(a), len(b), a[:8], b[:8])
+    digest = hashlib.sha256(key.encode("utf-8")).digest()
+    rng = random.Random(int.from_bytes(digest[:8], "big"))
     scores = []
     for _ in range(shuffles):
         rng.shuffle(letters)

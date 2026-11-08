@@ -1,0 +1,2284 @@
+{
+  "schema_version": 1,
+  "purpose": "homology_clusters_and_independent_evidence_for_the_scored_domains",
+  "settings": {
+    "z_threshold": 4.0,
+    "identity_threshold": 0.4,
+    "shuffles": 300,
+    "candidate_quantile": 0.8,
+    "matrix": "blosum62",
+    "gap_open": 11,
+    "gap_extend": 1
+  },
+  "related_pair_count": 326,
+  "blocks": [
+    {
+      "label": "all domains",
+      "domains": 208,
+      "clusters": 106,
+      "singleton_clusters": 80,
+      "largest_cluster": 16,
+      "cluster_sizes_top10": [
+        16,
+        12,
+        12,
+        11,
+        10,
+        7,
+        7,
+        5,
+        4,
+        4
+      ],
+      "contrasts": 100572,
+      "contrasts_per_cluster_median": 570.0,
+      "effective_clusters_kish": 45.2
+    },
+    {
+      "label": "all domains, resolved contrasts",
+      "domains": 208,
+      "clusters": 106,
+      "singleton_clusters": 80,
+      "largest_cluster": 16,
+      "cluster_sizes_top10": [
+        16,
+        12,
+        12,
+        11,
+        10,
+        7,
+        7,
+        5,
+        4,
+        4
+      ],
+      "contrasts": 69633,
+      "contrasts_per_cluster_median": 408.5,
+      "effective_clusters_kish": 44.5
+    },
+    {
+      "label": "clean (ThermoMPNN clean)",
+      "domains": 84,
+      "clusters": 48,
+      "singleton_clusters": 34,
+      "largest_cluster": 9,
+      "cluster_sizes_top10": [
+        9,
+        8,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "contrasts": 21293,
+      "contrasts_per_cluster_median": 247.5,
+      "effective_clusters_kish": 22.3
+    },
+    {
+      "label": "contaminated (ThermoMPNN contaminated)",
+      "domains": 124,
+      "clusters": 70,
+      "singleton_clusters": 55,
+      "largest_cluster": 13,
+      "cluster_sizes_top10": [
+        13,
+        9,
+        8,
+        7,
+        5,
+        4,
+        4,
+        4,
+        3,
+        2
+      ],
+      "contrasts": 48340,
+      "contrasts_per_cluster_median": 421.5,
+      "effective_clusters_kish": 33.6
+    }
+  ],
+  "thermompnn_comparable_clusters": 48,
+  "splits": {
+    "fractions": {
+      "train": 0.7,
+      "val": 0.15,
+      "test": 0.15
+    },
+    "seed": 0,
+    "counts": {
+      "test": {
+        "clusters": 29,
+        "domains": 31,
+        "resolved_contrasts": 10177
+      },
+      "train": {
+        "clusters": 48,
+        "domains": 146,
+        "resolved_contrasts": 47922
+      },
+      "val": {
+        "clusters": 29,
+        "domains": 31,
+        "resolved_contrasts": 11534
+      }
+    },
+    "assignment": {
+      "train": [
+        "1A0N",
+        "1CSQ",
+        "1E0L",
+        "1E6H",
+        "1EKL",
+        "1EM7",
+        "1ENH",
+        "1GL5",
+        "1GXI",
+        "1H8K",
+        "1H92",
+        "1I6C",
+        "1IGD",
+        "1K1V",
+        "1MSJ",
+        "1OPS",
+        "1ORC",
+        "1PGA",
+        "1PGX",
+        "1PSE",
+        "1PWT",
+        "1QKX",
+        "1QLY",
+        "1QP2",
+        "1R69",
+        "1SRM",
+        "1TUC",
+        "1TUD",
+        "1UFM",
+        "1VII",
+        "1W4F",
+        "1W4G",
+        "1W4H",
+        "1WCL",
+        "1Y0M",
+        "1YP5",
+        "1YU5",
+        "1ZLM",
+        "2AME",
+        "2AMI",
+        "2BTH",
+        "2BTT",
+        "2CDT",
+        "2EKK",
+        "2JN4",
+        "2JVD",
+        "2JWT",
+        "2K1B",
+        "2K28",
+        "2K2A",
+        "2K52",
+        "2KCF",
+        "2KCM",
+        "2KT8",
+        "2KVS",
+        "2KXD",
+        "2KYB",
+        "2L09",
+        "2L2P",
+        "2L7F",
+        "2L7M",
+        "2L9R",
+        "2LC2",
+        "2LGW",
+        "2LJ3",
+        "2LLV",
+        "2LO1",
+        "2LP5",
+        "2LSS",
+        "2LUM",
+        "2LXK",
+        "2M0C",
+        "2M0Y",
+        "2M2L",
+        "2M7O",
+        "2M8I",
+        "2M8U",
+        "2M9F",
+        "2MC5",
+        "2MCD",
+        "2MCH",
+        "2MKY",
+        "2MW9",
+        "2MWA",
+        "2MWB",
+        "2MXD",
+        "2N4R",
+        "2N4S",
+        "2N4T",
+        "2N88",
+        "2N9L",
+        "2OCH",
+        "2ON8",
+        "2OP7",
+        "2PDD",
+        "2PFU",
+        "2RJV",
+        "2ROT",
+        "2RRT",
+        "2WXC",
+        "2YSB",
+        "2YSF",
+        "2YSH",
+        "3DKM",
+        "3I35",
+        "3MYC",
+        "3QF6",
+        "3ZGK",
+        "4AME",
+        "4HCK",
+        "4L5E",
+        "5AHT",
+        "5ECA",
+        "5FW9",
+        "5UB0",
+        "5UBS",
+        "5UCE",
+        "5UOI",
+        "5VNT",
+        "5Z2S",
+        "6ACV",
+        "6AME",
+        "6EWS",
+        "6EWT",
+        "6EWU",
+        "6IPY",
+        "6IWS",
+        "6NJF",
+        "6NMW",
+        "6SCW",
+        "7BPM",
+        "8AME",
+        "8MSI",
+        "9AME",
+        "EHEE_rd2_0152",
+        "EHEE_rd2_0251",
+        "EHEE_rd2_0341",
+        "EHEE_rd2_0487",
+        "EHEE_rd2_0628",
+        "HEEH_KT_rd6_0280",
+        "HEEH_rd2_0750",
+        "HHH_rd1_0244",
+        "HHH_rd1_0493",
+        "HHH_rd1_0949",
+        "HHH_rd3_0164",
+        "HHH_rd4_0676"
+      ],
+      "val": [
+        "1F0M",
+        "1I2T",
+        "1O6X",
+        "1PV0",
+        "1S1N",
+        "1V1C",
+        "1ZRJ",
+        "2EXD",
+        "2JT1",
+        "2JY8",
+        "2K5N",
+        "2KGT",
+        "2KWH",
+        "2LHR",
+        "2LVN",
+        "2LYP",
+        "2M51",
+        "2M8E",
+        "2MKX",
+        "2MPK",
+        "2O2W",
+        "2PTL",
+        "2WQG",
+        "4C26",
+        "4G3O",
+        "4UZW",
+        "5KPH",
+        "6M3N",
+        "EEHEE_rd3_0144",
+        "HHH_rd3_0159",
+        "HHH_rd4_0125"
+      ],
+      "test": [
+        "1GYZ",
+        "1IFY",
+        "1LP1",
+        "1QKH",
+        "1TG0",
+        "1UZC",
+        "2D1U",
+        "2HBB",
+        "2JTV",
+        "2JZ2",
+        "2K5P",
+        "2KRU",
+        "2KVT",
+        "2L8D",
+        "2LQK",
+        "2M0X",
+        "2M2J",
+        "2MA4",
+        "2MI6",
+        "2MRL",
+        "2MYX",
+        "2RU9",
+        "3L1X",
+        "5JRT",
+        "5UP5",
+        "5ZD0",
+        "6HQ1",
+        "EEHEE_rd3_0019",
+        "EHEE_rd4_0929",
+        "HHH_rd2_0158",
+        "HHH_rd3_0224"
+      ]
+    }
+  },
+  "clusters": {
+    "1A0N": [
+      "1A0N",
+      "1GL5",
+      "1H92",
+      "1QLY",
+      "1SRM",
+      "1ZLM",
+      "2L2P",
+      "2LP5",
+      "4HCK",
+      "5ECA",
+      "6IPY",
+      "6NMW"
+    ],
+    "1CSQ": [
+      "1CSQ",
+      "2LSS",
+      "2LXK"
+    ],
+    "1E0L": [
+      "1E0L",
+      "1I6C",
+      "2KCF",
+      "2M8I",
+      "2M9F",
+      "2MW9",
+      "2MWA",
+      "2MWB",
+      "2N4R",
+      "2N4S",
+      "2N4T",
+      "2OP7",
+      "2YSB",
+      "2YSF",
+      "2YSH",
+      "5AHT"
+    ],
+    "1E6H": [
+      "1E6H",
+      "1H8K",
+      "1PWT",
+      "1QKX",
+      "1TUC",
+      "1TUD",
+      "2CDT",
+      "2KXD",
+      "2LJ3",
+      "2ROT",
+      "5FW9",
+      "6SCW"
+    ],
+    "1EKL": [
+      "1EKL",
+      "1MSJ",
+      "1OPS",
+      "2AME",
+      "3QF6",
+      "4AME",
+      "6AME",
+      "8AME",
+      "8MSI",
+      "9AME"
+    ],
+    "1EM7": [
+      "1EM7",
+      "1IGD",
+      "1PGA",
+      "1PGX",
+      "2LUM",
+      "2N9L",
+      "2ON8",
+      "5UB0",
+      "5UBS",
+      "5UCE",
+      "6NJF"
+    ],
+    "1ENH": [
+      "1ENH",
+      "2JWT",
+      "2L7F",
+      "2L7M",
+      "2L9R",
+      "2M0C",
+      "5Z2S"
+    ],
+    "1F0M": [
+      "1F0M"
+    ],
+    "1GXI": [
+      "1GXI",
+      "1PSE",
+      "1QP2"
+    ],
+    "1GYZ": [
+      "1GYZ"
+    ],
+    "1I2T": [
+      "1I2T"
+    ],
+    "1IFY": [
+      "1IFY"
+    ],
+    "1K1V": [
+      "1K1V"
+    ],
+    "1LP1": [
+      "1LP1"
+    ],
+    "1O6X": [
+      "1O6X"
+    ],
+    "1ORC": [
+      "1ORC"
+    ],
+    "1PV0": [
+      "1PV0"
+    ],
+    "1QKH": [
+      "1QKH"
+    ],
+    "1R69": [
+      "1R69"
+    ],
+    "1S1N": [
+      "1S1N"
+    ],
+    "1TG0": [
+      "1TG0"
+    ],
+    "1UFM": [
+      "1UFM"
+    ],
+    "1UZC": [
+      "1UZC"
+    ],
+    "1V1C": [
+      "1V1C"
+    ],
+    "1VII": [
+      "1VII",
+      "1YU5",
+      "2RJV",
+      "3MYC",
+      "5VNT"
+    ],
+    "1W4F": [
+      "1W4F",
+      "1W4G",
+      "2PDD"
+    ],
+    "1W4H": [
+      "1W4H",
+      "2BTH",
+      "2WXC"
+    ],
+    "1WCL": [
+      "1WCL"
+    ],
+    "1Y0M": [
+      "1Y0M",
+      "3I35"
+    ],
+    "1YP5": [
+      "1YP5",
+      "2BTT"
+    ],
+    "1ZRJ": [
+      "1ZRJ"
+    ],
+    "2AMI": [
+      "2AMI",
+      "2K2A",
+      "2M8U",
+      "2RRT"
+    ],
+    "2D1U": [
+      "2D1U"
+    ],
+    "2EKK": [
+      "2EKK"
+    ],
+    "2EXD": [
+      "2EXD"
+    ],
+    "2HBB": [
+      "2HBB"
+    ],
+    "2JN4": [
+      "2JN4"
+    ],
+    "2JT1": [
+      "2JT1"
+    ],
+    "2JTV": [
+      "2JTV"
+    ],
+    "2JVD": [
+      "2JVD"
+    ],
+    "2JY8": [
+      "2JY8"
+    ],
+    "2JZ2": [
+      "2JZ2"
+    ],
+    "2K1B": [
+      "2K1B",
+      "2K28",
+      "2M2L",
+      "2N88"
+    ],
+    "2K52": [
+      "2K52"
+    ],
+    "2K5N": [
+      "2K5N"
+    ],
+    "2K5P": [
+      "2K5P"
+    ],
+    "2KCM": [
+      "2KCM"
+    ],
+    "2KGT": [
+      "2KGT"
+    ],
+    "2KRU": [
+      "2KRU"
+    ],
+    "2KT8": [
+      "2KT8",
+      "2KYB"
+    ],
+    "2KVS": [
+      "2KVS"
+    ],
+    "2KVT": [
+      "2KVT"
+    ],
+    "2KWH": [
+      "2KWH"
+    ],
+    "2L09": [
+      "2L09"
+    ],
+    "2L8D": [
+      "2L8D"
+    ],
+    "2LC2": [
+      "2LC2",
+      "3ZGK",
+      "EHEE_rd2_0152",
+      "EHEE_rd2_0251",
+      "EHEE_rd2_0341",
+      "EHEE_rd2_0487",
+      "EHEE_rd2_0628"
+    ],
+    "2LGW": [
+      "2LGW",
+      "2LO1",
+      "2OCH",
+      "6IWS"
+    ],
+    "2LHR": [
+      "2LHR"
+    ],
+    "2LLV": [
+      "2LLV"
+    ],
+    "2LQK": [
+      "2LQK"
+    ],
+    "2LVN": [
+      "2LVN",
+      "4G3O"
+    ],
+    "2LYP": [
+      "2LYP"
+    ],
+    "2M0X": [
+      "2M0X",
+      "5ZD0"
+    ],
+    "2M0Y": [
+      "2M0Y"
+    ],
+    "2M2J": [
+      "2M2J"
+    ],
+    "2M51": [
+      "2M51"
+    ],
+    "2M7O": [
+      "2M7O"
+    ],
+    "2M8E": [
+      "2M8E"
+    ],
+    "2MA4": [
+      "2MA4"
+    ],
+    "2MC5": [
+      "2MC5"
+    ],
+    "2MCD": [
+      "2MCD",
+      "2MCH"
+    ],
+    "2MI6": [
+      "2MI6"
+    ],
+    "2MKX": [
+      "2MKX"
+    ],
+    "2MKY": [
+      "2MKY"
+    ],
+    "2MPK": [
+      "2MPK"
+    ],
+    "2MRL": [
+      "2MRL"
+    ],
+    "2MXD": [
+      "2MXD"
+    ],
+    "2MYX": [
+      "2MYX"
+    ],
+    "2O2W": [
+      "2O2W"
+    ],
+    "2PFU": [
+      "2PFU"
+    ],
+    "2PTL": [
+      "2PTL"
+    ],
+    "2RU9": [
+      "2RU9"
+    ],
+    "2WQG": [
+      "2WQG",
+      "4UZW"
+    ],
+    "3DKM": [
+      "3DKM"
+    ],
+    "3L1X": [
+      "3L1X"
+    ],
+    "4C26": [
+      "4C26"
+    ],
+    "4L5E": [
+      "4L5E"
+    ],
+    "5JRT": [
+      "5JRT"
+    ],
+    "5KPH": [
+      "5KPH"
+    ],
+    "5UOI": [
+      "5UOI",
+      "HHH_rd1_0244",
+      "HHH_rd1_0949"
+    ],
+    "5UP5": [
+      "5UP5",
+      "EHEE_rd4_0929"
+    ],
+    "6ACV": [
+      "6ACV"
+    ],
+    "6EWS": [
+      "6EWS",
+      "6EWT",
+      "6EWU"
+    ],
+    "6HQ1": [
+      "6HQ1"
+    ],
+    "6M3N": [
+      "6M3N"
+    ],
+    "7BPM": [
+      "7BPM"
+    ],
+    "EEHEE_rd3_0019": [
+      "EEHEE_rd3_0019"
+    ],
+    "EEHEE_rd3_0144": [
+      "EEHEE_rd3_0144"
+    ],
+    "HEEH_KT_rd6_0280": [
+      "HEEH_KT_rd6_0280",
+      "HEEH_rd2_0750"
+    ],
+    "HHH_rd1_0493": [
+      "HHH_rd1_0493"
+    ],
+    "HHH_rd2_0158": [
+      "HHH_rd2_0158"
+    ],
+    "HHH_rd3_0159": [
+      "HHH_rd3_0159"
+    ],
+    "HHH_rd3_0164": [
+      "HHH_rd3_0164"
+    ],
+    "HHH_rd3_0224": [
+      "HHH_rd3_0224"
+    ],
+    "HHH_rd4_0125": [
+      "HHH_rd4_0125"
+    ],
+    "HHH_rd4_0676": [
+      "HHH_rd4_0676"
+    ]
+  },
+  "membership": {
+    "1A0N": "1A0N",
+    "1GL5": "1A0N",
+    "1H92": "1A0N",
+    "1QLY": "1A0N",
+    "1SRM": "1A0N",
+    "1ZLM": "1A0N",
+    "2L2P": "1A0N",
+    "2LP5": "1A0N",
+    "4HCK": "1A0N",
+    "5ECA": "1A0N",
+    "6IPY": "1A0N",
+    "6NMW": "1A0N",
+    "1CSQ": "1CSQ",
+    "2LSS": "1CSQ",
+    "2LXK": "1CSQ",
+    "1E0L": "1E0L",
+    "1I6C": "1E0L",
+    "2KCF": "1E0L",
+    "2M8I": "1E0L",
+    "2M9F": "1E0L",
+    "2MW9": "1E0L",
+    "2MWA": "1E0L",
+    "2MWB": "1E0L",
+    "2N4R": "1E0L",
+    "2N4S": "1E0L",
+    "2N4T": "1E0L",
+    "2OP7": "1E0L",
+    "2YSB": "1E0L",
+    "2YSF": "1E0L",
+    "2YSH": "1E0L",
+    "5AHT": "1E0L",
+    "1E6H": "1E6H",
+    "1H8K": "1E6H",
+    "1PWT": "1E6H",
+    "1QKX": "1E6H",
+    "1TUC": "1E6H",
+    "1TUD": "1E6H",
+    "2CDT": "1E6H",
+    "2KXD": "1E6H",
+    "2LJ3": "1E6H",
+    "2ROT": "1E6H",
+    "5FW9": "1E6H",
+    "6SCW": "1E6H",
+    "1EKL": "1EKL",
+    "1MSJ": "1EKL",
+    "1OPS": "1EKL",
+    "2AME": "1EKL",
+    "3QF6": "1EKL",
+    "4AME": "1EKL",
+    "6AME": "1EKL",
+    "8AME": "1EKL",
+    "8MSI": "1EKL",
+    "9AME": "1EKL",
+    "1EM7": "1EM7",
+    "1IGD": "1EM7",
+    "1PGA": "1EM7",
+    "1PGX": "1EM7",
+    "2LUM": "1EM7",
+    "2N9L": "1EM7",
+    "2ON8": "1EM7",
+    "5UB0": "1EM7",
+    "5UBS": "1EM7",
+    "5UCE": "1EM7",
+    "6NJF": "1EM7",
+    "1ENH": "1ENH",
+    "2JWT": "1ENH",
+    "2L7F": "1ENH",
+    "2L7M": "1ENH",
+    "2L9R": "1ENH",
+    "2M0C": "1ENH",
+    "5Z2S": "1ENH",
+    "1F0M": "1F0M",
+    "1GXI": "1GXI",
+    "1PSE": "1GXI",
+    "1QP2": "1GXI",
+    "1GYZ": "1GYZ",
+    "1I2T": "1I2T",
+    "1IFY": "1IFY",
+    "1K1V": "1K1V",
+    "1LP1": "1LP1",
+    "1O6X": "1O6X",
+    "1ORC": "1ORC",
+    "1PV0": "1PV0",
+    "1QKH": "1QKH",
+    "1R69": "1R69",
+    "1S1N": "1S1N",
+    "1TG0": "1TG0",
+    "1UFM": "1UFM",
+    "1UZC": "1UZC",
+    "1V1C": "1V1C",
+    "1VII": "1VII",
+    "1YU5": "1VII",
+    "2RJV": "1VII",
+    "3MYC": "1VII",
+    "5VNT": "1VII",
+    "1W4F": "1W4F",
+    "1W4G": "1W4F",
+    "2PDD": "1W4F",
+    "1W4H": "1W4H",
+    "2BTH": "1W4H",
+    "2WXC": "1W4H",
+    "1WCL": "1WCL",
+    "1Y0M": "1Y0M",
+    "3I35": "1Y0M",
+    "1YP5": "1YP5",
+    "2BTT": "1YP5",
+    "1ZRJ": "1ZRJ",
+    "2AMI": "2AMI",
+    "2K2A": "2AMI",
+    "2M8U": "2AMI",
+    "2RRT": "2AMI",
+    "2D1U": "2D1U",
+    "2EKK": "2EKK",
+    "2EXD": "2EXD",
+    "2HBB": "2HBB",
+    "2JN4": "2JN4",
+    "2JT1": "2JT1",
+    "2JTV": "2JTV",
+    "2JVD": "2JVD",
+    "2JY8": "2JY8",
+    "2JZ2": "2JZ2",
+    "2K1B": "2K1B",
+    "2K28": "2K1B",
+    "2M2L": "2K1B",
+    "2N88": "2K1B",
+    "2K52": "2K52",
+    "2K5N": "2K5N",
+    "2K5P": "2K5P",
+    "2KCM": "2KCM",
+    "2KGT": "2KGT",
+    "2KRU": "2KRU",
+    "2KT8": "2KT8",
+    "2KYB": "2KT8",
+    "2KVS": "2KVS",
+    "2KVT": "2KVT",
+    "2KWH": "2KWH",
+    "2L09": "2L09",
+    "2L8D": "2L8D",
+    "2LC2": "2LC2",
+    "3ZGK": "2LC2",
+    "EHEE_rd2_0152": "2LC2",
+    "EHEE_rd2_0251": "2LC2",
+    "EHEE_rd2_0341": "2LC2",
+    "EHEE_rd2_0487": "2LC2",
+    "EHEE_rd2_0628": "2LC2",
+    "2LGW": "2LGW",
+    "2LO1": "2LGW",
+    "2OCH": "2LGW",
+    "6IWS": "2LGW",
+    "2LHR": "2LHR",
+    "2LLV": "2LLV",
+    "2LQK": "2LQK",
+    "2LVN": "2LVN",
+    "4G3O": "2LVN",
+    "2LYP": "2LYP",
+    "2M0X": "2M0X",
+    "5ZD0": "2M0X",
+    "2M0Y": "2M0Y",
+    "2M2J": "2M2J",
+    "2M51": "2M51",
+    "2M7O": "2M7O",
+    "2M8E": "2M8E",
+    "2MA4": "2MA4",
+    "2MC5": "2MC5",
+    "2MCD": "2MCD",
+    "2MCH": "2MCD",
+    "2MI6": "2MI6",
+    "2MKX": "2MKX",
+    "2MKY": "2MKY",
+    "2MPK": "2MPK",
+    "2MRL": "2MRL",
+    "2MXD": "2MXD",
+    "2MYX": "2MYX",
+    "2O2W": "2O2W",
+    "2PFU": "2PFU",
+    "2PTL": "2PTL",
+    "2RU9": "2RU9",
+    "2WQG": "2WQG",
+    "4UZW": "2WQG",
+    "3DKM": "3DKM",
+    "3L1X": "3L1X",
+    "4C26": "4C26",
+    "4L5E": "4L5E",
+    "5JRT": "5JRT",
+    "5KPH": "5KPH",
+    "5UOI": "5UOI",
+    "HHH_rd1_0244": "5UOI",
+    "HHH_rd1_0949": "5UOI",
+    "5UP5": "5UP5",
+    "EHEE_rd4_0929": "5UP5",
+    "6ACV": "6ACV",
+    "6EWS": "6EWS",
+    "6EWT": "6EWS",
+    "6EWU": "6EWS",
+    "6HQ1": "6HQ1",
+    "6M3N": "6M3N",
+    "7BPM": "7BPM",
+    "EEHEE_rd3_0019": "EEHEE_rd3_0019",
+    "EEHEE_rd3_0144": "EEHEE_rd3_0144",
+    "HEEH_KT_rd6_0280": "HEEH_KT_rd6_0280",
+    "HEEH_rd2_0750": "HEEH_KT_rd6_0280",
+    "HHH_rd1_0493": "HHH_rd1_0493",
+    "HHH_rd2_0158": "HHH_rd2_0158",
+    "HHH_rd3_0159": "HHH_rd3_0159",
+    "HHH_rd3_0164": "HHH_rd3_0164",
+    "HHH_rd3_0224": "HHH_rd3_0224",
+    "HHH_rd4_0125": "HHH_rd4_0125",
+    "HHH_rd4_0676": "HHH_rd4_0676"
+  },
+  "related_pairs": [
+    {
+      "a": "1A0N",
+      "b": "1H92"
+    },
+    {
+      "a": "1A0N",
+      "b": "1QLY"
+    },
+    {
+      "a": "1A0N",
+      "b": "1SRM"
+    },
+    {
+      "a": "1A0N",
+      "b": "1ZLM"
+    },
+    {
+      "a": "1A0N",
+      "b": "2L2P"
+    },
+    {
+      "a": "1A0N",
+      "b": "2LP5"
+    },
+    {
+      "a": "1A0N",
+      "b": "4HCK"
+    },
+    {
+      "a": "1A0N",
+      "b": "5ECA"
+    },
+    {
+      "a": "1A0N",
+      "b": "6IPY"
+    },
+    {
+      "a": "1A0N",
+      "b": "6NMW"
+    },
+    {
+      "a": "1CSQ",
+      "b": "2LSS"
+    },
+    {
+      "a": "1CSQ",
+      "b": "2LXK"
+    },
+    {
+      "a": "1E0L",
+      "b": "2MW9"
+    },
+    {
+      "a": "1E0L",
+      "b": "2MWA"
+    },
+    {
+      "a": "1E0L",
+      "b": "2MWB"
+    },
+    {
+      "a": "1E0L",
+      "b": "2N4R"
+    },
+    {
+      "a": "1E0L",
+      "b": "2N4S"
+    },
+    {
+      "a": "1E0L",
+      "b": "2N4T"
+    },
+    {
+      "a": "1E6H",
+      "b": "1H8K"
+    },
+    {
+      "a": "1E6H",
+      "b": "1PWT"
+    },
+    {
+      "a": "1E6H",
+      "b": "1QKX"
+    },
+    {
+      "a": "1E6H",
+      "b": "1TUC"
+    },
+    {
+      "a": "1E6H",
+      "b": "1TUD"
+    },
+    {
+      "a": "1E6H",
+      "b": "2CDT"
+    },
+    {
+      "a": "1E6H",
+      "b": "2KXD"
+    },
+    {
+      "a": "1E6H",
+      "b": "2LJ3"
+    },
+    {
+      "a": "1E6H",
+      "b": "2ROT"
+    },
+    {
+      "a": "1E6H",
+      "b": "5FW9"
+    },
+    {
+      "a": "1E6H",
+      "b": "6SCW"
+    },
+    {
+      "a": "1EKL",
+      "b": "1MSJ"
+    },
+    {
+      "a": "1EKL",
+      "b": "1OPS"
+    },
+    {
+      "a": "1EKL",
+      "b": "2AME"
+    },
+    {
+      "a": "1EKL",
+      "b": "3QF6"
+    },
+    {
+      "a": "1EKL",
+      "b": "4AME"
+    },
+    {
+      "a": "1EKL",
+      "b": "6AME"
+    },
+    {
+      "a": "1EKL",
+      "b": "8AME"
+    },
+    {
+      "a": "1EKL",
+      "b": "8MSI"
+    },
+    {
+      "a": "1EKL",
+      "b": "9AME"
+    },
+    {
+      "a": "1EM7",
+      "b": "1IGD"
+    },
+    {
+      "a": "1EM7",
+      "b": "1PGA"
+    },
+    {
+      "a": "1EM7",
+      "b": "1PGX"
+    },
+    {
+      "a": "1EM7",
+      "b": "2LUM"
+    },
+    {
+      "a": "1EM7",
+      "b": "2N9L"
+    },
+    {
+      "a": "1EM7",
+      "b": "2ON8"
+    },
+    {
+      "a": "1EM7",
+      "b": "5UB0"
+    },
+    {
+      "a": "1EM7",
+      "b": "5UBS"
+    },
+    {
+      "a": "1EM7",
+      "b": "5UCE"
+    },
+    {
+      "a": "1EM7",
+      "b": "6NJF"
+    },
+    {
+      "a": "1ENH",
+      "b": "2JWT"
+    },
+    {
+      "a": "1ENH",
+      "b": "2L9R"
+    },
+    {
+      "a": "1ENH",
+      "b": "5Z2S"
+    },
+    {
+      "a": "1GL5",
+      "b": "1QLY"
+    },
+    {
+      "a": "1GL5",
+      "b": "4HCK"
+    },
+    {
+      "a": "1GXI",
+      "b": "1PSE"
+    },
+    {
+      "a": "1GXI",
+      "b": "1QP2"
+    },
+    {
+      "a": "1H8K",
+      "b": "1PWT"
+    },
+    {
+      "a": "1H8K",
+      "b": "1QKX"
+    },
+    {
+      "a": "1H8K",
+      "b": "1TUC"
+    },
+    {
+      "a": "1H8K",
+      "b": "1TUD"
+    },
+    {
+      "a": "1H8K",
+      "b": "2CDT"
+    },
+    {
+      "a": "1H8K",
+      "b": "2KXD"
+    },
+    {
+      "a": "1H8K",
+      "b": "2LJ3"
+    },
+    {
+      "a": "1H8K",
+      "b": "2ROT"
+    },
+    {
+      "a": "1H8K",
+      "b": "5FW9"
+    },
+    {
+      "a": "1H8K",
+      "b": "6SCW"
+    },
+    {
+      "a": "1H92",
+      "b": "1QLY"
+    },
+    {
+      "a": "1H92",
+      "b": "1SRM"
+    },
+    {
+      "a": "1H92",
+      "b": "2L2P"
+    },
+    {
+      "a": "1H92",
+      "b": "2LP5"
+    },
+    {
+      "a": "1H92",
+      "b": "4HCK"
+    },
+    {
+      "a": "1H92",
+      "b": "5ECA"
+    },
+    {
+      "a": "1H92",
+      "b": "6IPY"
+    },
+    {
+      "a": "1H92",
+      "b": "6NMW"
+    },
+    {
+      "a": "1I6C",
+      "b": "2KCF"
+    },
+    {
+      "a": "1I6C",
+      "b": "2M8I"
+    },
+    {
+      "a": "1I6C",
+      "b": "2M9F"
+    },
+    {
+      "a": "1I6C",
+      "b": "2YSB"
+    },
+    {
+      "a": "1I6C",
+      "b": "2YSH"
+    },
+    {
+      "a": "1IGD",
+      "b": "1PGA"
+    },
+    {
+      "a": "1IGD",
+      "b": "1PGX"
+    },
+    {
+      "a": "1IGD",
+      "b": "2LUM"
+    },
+    {
+      "a": "1IGD",
+      "b": "2N9L"
+    },
+    {
+      "a": "1IGD",
+      "b": "2ON8"
+    },
+    {
+      "a": "1IGD",
+      "b": "5UB0"
+    },
+    {
+      "a": "1IGD",
+      "b": "5UBS"
+    },
+    {
+      "a": "1IGD",
+      "b": "5UCE"
+    },
+    {
+      "a": "1IGD",
+      "b": "6NJF"
+    },
+    {
+      "a": "1MSJ",
+      "b": "1OPS"
+    },
+    {
+      "a": "1MSJ",
+      "b": "2AME"
+    },
+    {
+      "a": "1MSJ",
+      "b": "3QF6"
+    },
+    {
+      "a": "1MSJ",
+      "b": "4AME"
+    },
+    {
+      "a": "1MSJ",
+      "b": "6AME"
+    },
+    {
+      "a": "1MSJ",
+      "b": "8AME"
+    },
+    {
+      "a": "1MSJ",
+      "b": "8MSI"
+    },
+    {
+      "a": "1MSJ",
+      "b": "9AME"
+    },
+    {
+      "a": "1OPS",
+      "b": "2AME"
+    },
+    {
+      "a": "1OPS",
+      "b": "3QF6"
+    },
+    {
+      "a": "1OPS",
+      "b": "4AME"
+    },
+    {
+      "a": "1OPS",
+      "b": "6AME"
+    },
+    {
+      "a": "1OPS",
+      "b": "8AME"
+    },
+    {
+      "a": "1OPS",
+      "b": "8MSI"
+    },
+    {
+      "a": "1OPS",
+      "b": "9AME"
+    },
+    {
+      "a": "1PGA",
+      "b": "1PGX"
+    },
+    {
+      "a": "1PGA",
+      "b": "2LUM"
+    },
+    {
+      "a": "1PGA",
+      "b": "2N9L"
+    },
+    {
+      "a": "1PGA",
+      "b": "2ON8"
+    },
+    {
+      "a": "1PGA",
+      "b": "5UB0"
+    },
+    {
+      "a": "1PGA",
+      "b": "5UBS"
+    },
+    {
+      "a": "1PGA",
+      "b": "5UCE"
+    },
+    {
+      "a": "1PGA",
+      "b": "6NJF"
+    },
+    {
+      "a": "1PGX",
+      "b": "2LUM"
+    },
+    {
+      "a": "1PGX",
+      "b": "2N9L"
+    },
+    {
+      "a": "1PGX",
+      "b": "2ON8"
+    },
+    {
+      "a": "1PGX",
+      "b": "5UB0"
+    },
+    {
+      "a": "1PGX",
+      "b": "5UBS"
+    },
+    {
+      "a": "1PGX",
+      "b": "5UCE"
+    },
+    {
+      "a": "1PGX",
+      "b": "6NJF"
+    },
+    {
+      "a": "1PSE",
+      "b": "1QP2"
+    },
+    {
+      "a": "1PWT",
+      "b": "1QKX"
+    },
+    {
+      "a": "1PWT",
+      "b": "1TUC"
+    },
+    {
+      "a": "1PWT",
+      "b": "1TUD"
+    },
+    {
+      "a": "1PWT",
+      "b": "2CDT"
+    },
+    {
+      "a": "1PWT",
+      "b": "2KXD"
+    },
+    {
+      "a": "1PWT",
+      "b": "2LJ3"
+    },
+    {
+      "a": "1PWT",
+      "b": "2ROT"
+    },
+    {
+      "a": "1PWT",
+      "b": "5FW9"
+    },
+    {
+      "a": "1PWT",
+      "b": "6SCW"
+    },
+    {
+      "a": "1QKX",
+      "b": "1TUC"
+    },
+    {
+      "a": "1QKX",
+      "b": "1TUD"
+    },
+    {
+      "a": "1QKX",
+      "b": "2CDT"
+    },
+    {
+      "a": "1QKX",
+      "b": "2KXD"
+    },
+    {
+      "a": "1QKX",
+      "b": "2LJ3"
+    },
+    {
+      "a": "1QKX",
+      "b": "2ROT"
+    },
+    {
+      "a": "1QKX",
+      "b": "5FW9"
+    },
+    {
+      "a": "1QKX",
+      "b": "6SCW"
+    },
+    {
+      "a": "1QLY",
+      "b": "1SRM"
+    },
+    {
+      "a": "1QLY",
+      "b": "2L2P"
+    },
+    {
+      "a": "1QLY",
+      "b": "4HCK"
+    },
+    {
+      "a": "1QLY",
+      "b": "6IPY"
+    },
+    {
+      "a": "1QLY",
+      "b": "6NMW"
+    },
+    {
+      "a": "1SRM",
+      "b": "1ZLM"
+    },
+    {
+      "a": "1SRM",
+      "b": "2L2P"
+    },
+    {
+      "a": "1SRM",
+      "b": "2LP5"
+    },
+    {
+      "a": "1SRM",
+      "b": "4HCK"
+    },
+    {
+      "a": "1SRM",
+      "b": "5ECA"
+    },
+    {
+      "a": "1SRM",
+      "b": "6IPY"
+    },
+    {
+      "a": "1SRM",
+      "b": "6NMW"
+    },
+    {
+      "a": "1TUC",
+      "b": "1TUD"
+    },
+    {
+      "a": "1TUC",
+      "b": "2CDT"
+    },
+    {
+      "a": "1TUC",
+      "b": "2KXD"
+    },
+    {
+      "a": "1TUC",
+      "b": "2LJ3"
+    },
+    {
+      "a": "1TUC",
+      "b": "2ROT"
+    },
+    {
+      "a": "1TUC",
+      "b": "5FW9"
+    },
+    {
+      "a": "1TUC",
+      "b": "6SCW"
+    },
+    {
+      "a": "1TUD",
+      "b": "2CDT"
+    },
+    {
+      "a": "1TUD",
+      "b": "2KXD"
+    },
+    {
+      "a": "1TUD",
+      "b": "2LJ3"
+    },
+    {
+      "a": "1TUD",
+      "b": "2ROT"
+    },
+    {
+      "a": "1TUD",
+      "b": "5FW9"
+    },
+    {
+      "a": "1TUD",
+      "b": "6SCW"
+    },
+    {
+      "a": "1VII",
+      "b": "1YU5"
+    },
+    {
+      "a": "1VII",
+      "b": "2RJV"
+    },
+    {
+      "a": "1VII",
+      "b": "3MYC"
+    },
+    {
+      "a": "1VII",
+      "b": "5VNT"
+    },
+    {
+      "a": "1W4F",
+      "b": "1W4G"
+    },
+    {
+      "a": "1W4F",
+      "b": "2PDD"
+    },
+    {
+      "a": "1W4G",
+      "b": "2PDD"
+    },
+    {
+      "a": "1W4H",
+      "b": "2BTH"
+    },
+    {
+      "a": "1W4H",
+      "b": "2WXC"
+    },
+    {
+      "a": "1Y0M",
+      "b": "3I35"
+    },
+    {
+      "a": "1YP5",
+      "b": "2BTT"
+    },
+    {
+      "a": "1YU5",
+      "b": "2RJV"
+    },
+    {
+      "a": "1YU5",
+      "b": "3MYC"
+    },
+    {
+      "a": "1YU5",
+      "b": "5VNT"
+    },
+    {
+      "a": "1ZLM",
+      "b": "2L2P"
+    },
+    {
+      "a": "1ZLM",
+      "b": "2LP5"
+    },
+    {
+      "a": "1ZLM",
+      "b": "6IPY"
+    },
+    {
+      "a": "2AME",
+      "b": "3QF6"
+    },
+    {
+      "a": "2AME",
+      "b": "4AME"
+    },
+    {
+      "a": "2AME",
+      "b": "6AME"
+    },
+    {
+      "a": "2AME",
+      "b": "8AME"
+    },
+    {
+      "a": "2AME",
+      "b": "8MSI"
+    },
+    {
+      "a": "2AME",
+      "b": "9AME"
+    },
+    {
+      "a": "2AMI",
+      "b": "2K2A"
+    },
+    {
+      "a": "2AMI",
+      "b": "2RRT"
+    },
+    {
+      "a": "2BTH",
+      "b": "2WXC"
+    },
+    {
+      "a": "2CDT",
+      "b": "2KXD"
+    },
+    {
+      "a": "2CDT",
+      "b": "2LJ3"
+    },
+    {
+      "a": "2CDT",
+      "b": "2ROT"
+    },
+    {
+      "a": "2CDT",
+      "b": "5FW9"
+    },
+    {
+      "a": "2CDT",
+      "b": "6SCW"
+    },
+    {
+      "a": "2JWT",
+      "b": "2L9R"
+    },
+    {
+      "a": "2JWT",
+      "b": "5Z2S"
+    },
+    {
+      "a": "2K1B",
+      "b": "2K28"
+    },
+    {
+      "a": "2K1B",
+      "b": "2M2L"
+    },
+    {
+      "a": "2K1B",
+      "b": "2N88"
+    },
+    {
+      "a": "2K28",
+      "b": "2N88"
+    },
+    {
+      "a": "2K2A",
+      "b": "2RRT"
+    },
+    {
+      "a": "2KCF",
+      "b": "2M8I"
+    },
+    {
+      "a": "2KCF",
+      "b": "2M9F"
+    },
+    {
+      "a": "2KCF",
+      "b": "2YSB"
+    },
+    {
+      "a": "2KCF",
+      "b": "2YSH"
+    },
+    {
+      "a": "2KCF",
+      "b": "5AHT"
+    },
+    {
+      "a": "2KT8",
+      "b": "2KYB"
+    },
+    {
+      "a": "2KXD",
+      "b": "2LJ3"
+    },
+    {
+      "a": "2KXD",
+      "b": "2ROT"
+    },
+    {
+      "a": "2KXD",
+      "b": "5FW9"
+    },
+    {
+      "a": "2KXD",
+      "b": "6SCW"
+    },
+    {
+      "a": "2L2P",
+      "b": "2LP5"
+    },
+    {
+      "a": "2L2P",
+      "b": "4HCK"
+    },
+    {
+      "a": "2L2P",
+      "b": "5ECA"
+    },
+    {
+      "a": "2L2P",
+      "b": "6IPY"
+    },
+    {
+      "a": "2L2P",
+      "b": "6NMW"
+    },
+    {
+      "a": "2L7F",
+      "b": "2L7M"
+    },
+    {
+      "a": "2L7F",
+      "b": "2M0C"
+    },
+    {
+      "a": "2L7F",
+      "b": "5Z2S"
+    },
+    {
+      "a": "2L7M",
+      "b": "2M0C"
+    },
+    {
+      "a": "2LC2",
+      "b": "3ZGK"
+    },
+    {
+      "a": "2LGW",
+      "b": "2LO1"
+    },
+    {
+      "a": "2LGW",
+      "b": "2OCH"
+    },
+    {
+      "a": "2LGW",
+      "b": "6IWS"
+    },
+    {
+      "a": "2LJ3",
+      "b": "2ROT"
+    },
+    {
+      "a": "2LJ3",
+      "b": "5FW9"
+    },
+    {
+      "a": "2LJ3",
+      "b": "6SCW"
+    },
+    {
+      "a": "2LO1",
+      "b": "2OCH"
+    },
+    {
+      "a": "2LO1",
+      "b": "6IWS"
+    },
+    {
+      "a": "2LP5",
+      "b": "4HCK"
+    },
+    {
+      "a": "2LP5",
+      "b": "5ECA"
+    },
+    {
+      "a": "2LP5",
+      "b": "6IPY"
+    },
+    {
+      "a": "2LP5",
+      "b": "6NMW"
+    },
+    {
+      "a": "2LSS",
+      "b": "2LXK"
+    },
+    {
+      "a": "2LUM",
+      "b": "2N9L"
+    },
+    {
+      "a": "2LUM",
+      "b": "2ON8"
+    },
+    {
+      "a": "2LUM",
+      "b": "5UB0"
+    },
+    {
+      "a": "2LUM",
+      "b": "5UBS"
+    },
+    {
+      "a": "2LUM",
+      "b": "5UCE"
+    },
+    {
+      "a": "2LUM",
+      "b": "6NJF"
+    },
+    {
+      "a": "2LVN",
+      "b": "4G3O"
+    },
+    {
+      "a": "2M0C",
+      "b": "5Z2S"
+    },
+    {
+      "a": "2M0X",
+      "b": "5ZD0"
+    },
+    {
+      "a": "2M8I",
+      "b": "2M9F"
+    },
+    {
+      "a": "2M8I",
+      "b": "2YSH"
+    },
+    {
+      "a": "2M8U",
+      "b": "2RRT"
+    },
+    {
+      "a": "2M9F",
+      "b": "2YSB"
+    },
+    {
+      "a": "2M9F",
+      "b": "2YSH"
+    },
+    {
+      "a": "2MCD",
+      "b": "2MCH"
+    },
+    {
+      "a": "2MW9",
+      "b": "2MWA"
+    },
+    {
+      "a": "2MW9",
+      "b": "2MWB"
+    },
+    {
+      "a": "2MW9",
+      "b": "2N4R"
+    },
+    {
+      "a": "2MW9",
+      "b": "2N4S"
+    },
+    {
+      "a": "2MW9",
+      "b": "2N4T"
+    },
+    {
+      "a": "2MWA",
+      "b": "2MWB"
+    },
+    {
+      "a": "2MWA",
+      "b": "2N4R"
+    },
+    {
+      "a": "2MWA",
+      "b": "2N4S"
+    },
+    {
+      "a": "2MWA",
+      "b": "2N4T"
+    },
+    {
+      "a": "2MWB",
+      "b": "2N4R"
+    },
+    {
+      "a": "2MWB",
+      "b": "2N4S"
+    },
+    {
+      "a": "2MWB",
+      "b": "2N4T"
+    },
+    {
+      "a": "2N4R",
+      "b": "2N4S"
+    },
+    {
+      "a": "2N4R",
+      "b": "2N4T"
+    },
+    {
+      "a": "2N4S",
+      "b": "2N4T"
+    },
+    {
+      "a": "2N4T",
+      "b": "2YSH"
+    },
+    {
+      "a": "2N9L",
+      "b": "2ON8"
+    },
+    {
+      "a": "2N9L",
+      "b": "5UB0"
+    },
+    {
+      "a": "2N9L",
+      "b": "5UBS"
+    },
+    {
+      "a": "2N9L",
+      "b": "5UCE"
+    },
+    {
+      "a": "2N9L",
+      "b": "6NJF"
+    },
+    {
+      "a": "2OCH",
+      "b": "6IWS"
+    },
+    {
+      "a": "2ON8",
+      "b": "5UB0"
+    },
+    {
+      "a": "2ON8",
+      "b": "5UBS"
+    },
+    {
+      "a": "2ON8",
+      "b": "5UCE"
+    },
+    {
+      "a": "2ON8",
+      "b": "6NJF"
+    },
+    {
+      "a": "2OP7",
+      "b": "2YSB"
+    },
+    {
+      "a": "2OP7",
+      "b": "2YSF"
+    },
+    {
+      "a": "2OP7",
+      "b": "5AHT"
+    },
+    {
+      "a": "2RJV",
+      "b": "3MYC"
+    },
+    {
+      "a": "2RJV",
+      "b": "5VNT"
+    },
+    {
+      "a": "2ROT",
+      "b": "5FW9"
+    },
+    {
+      "a": "2ROT",
+      "b": "6SCW"
+    },
+    {
+      "a": "2WQG",
+      "b": "4UZW"
+    },
+    {
+      "a": "2YSB",
+      "b": "2YSF"
+    },
+    {
+      "a": "2YSB",
+      "b": "2YSH"
+    },
+    {
+      "a": "2YSB",
+      "b": "5AHT"
+    },
+    {
+      "a": "2YSF",
+      "b": "5AHT"
+    },
+    {
+      "a": "2YSH",
+      "b": "5AHT"
+    },
+    {
+      "a": "3MYC",
+      "b": "5VNT"
+    },
+    {
+      "a": "3QF6",
+      "b": "4AME"
+    },
+    {
+      "a": "3QF6",
+      "b": "6AME"
+    },
+    {
+      "a": "3QF6",
+      "b": "8AME"
+    },
+    {
+      "a": "3QF6",
+      "b": "8MSI"
+    },
+    {
+      "a": "3QF6",
+      "b": "9AME"
+    },
+    {
+      "a": "3ZGK",
+      "b": "EHEE_rd2_0251"
+    },
+    {
+      "a": "4AME",
+      "b": "6AME"
+    },
+    {
+      "a": "4AME",
+      "b": "8AME"
+    },
+    {
+      "a": "4AME",
+      "b": "8MSI"
+    },
+    {
+      "a": "4AME",
+      "b": "9AME"
+    },
+    {
+      "a": "4HCK",
+      "b": "5ECA"
+    },
+    {
+      "a": "4HCK",
+      "b": "6IPY"
+    },
+    {
+      "a": "4HCK",
+      "b": "6NMW"
+    },
+    {
+      "a": "5ECA",
+      "b": "6IPY"
+    },
+    {
+      "a": "5ECA",
+      "b": "6NMW"
+    },
+    {
+      "a": "5FW9",
+      "b": "6SCW"
+    },
+    {
+      "a": "5UB0",
+      "b": "5UBS"
+    },
+    {
+      "a": "5UB0",
+      "b": "5UCE"
+    },
+    {
+      "a": "5UB0",
+      "b": "6NJF"
+    },
+    {
+      "a": "5UBS",
+      "b": "5UCE"
+    },
+    {
+      "a": "5UBS",
+      "b": "6NJF"
+    },
+    {
+      "a": "5UCE",
+      "b": "6NJF"
+    },
+    {
+      "a": "5UOI",
+      "b": "HHH_rd1_0244"
+    },
+    {
+      "a": "5UOI",
+      "b": "HHH_rd1_0949"
+    },
+    {
+      "a": "5UP5",
+      "b": "EHEE_rd4_0929"
+    },
+    {
+      "a": "6AME",
+      "b": "8AME"
+    },
+    {
+      "a": "6AME",
+      "b": "8MSI"
+    },
+    {
+      "a": "6AME",
+      "b": "9AME"
+    },
+    {
+      "a": "6EWS",
+      "b": "6EWT"
+    },
+    {
+      "a": "6EWS",
+      "b": "6EWU"
+    },
+    {
+      "a": "6EWT",
+      "b": "6EWU"
+    },
+    {
+      "a": "6IPY",
+      "b": "6NMW"
+    },
+    {
+      "a": "8AME",
+      "b": "8MSI"
+    },
+    {
+      "a": "8AME",
+      "b": "9AME"
+    },
+    {
+      "a": "8MSI",
+      "b": "9AME"
+    },
+    {
+      "a": "EHEE_rd2_0152",
+      "b": "EHEE_rd2_0487"
+    },
+    {
+      "a": "EHEE_rd2_0152",
+      "b": "EHEE_rd2_0628"
+    },
+    {
+      "a": "EHEE_rd2_0251",
+      "b": "EHEE_rd2_0341"
+    },
+    {
+      "a": "EHEE_rd2_0251",
+      "b": "EHEE_rd2_0487"
+    },
+    {
+      "a": "HEEH_KT_rd6_0280",
+      "b": "HEEH_rd2_0750"
+    }
+  ]
+}
