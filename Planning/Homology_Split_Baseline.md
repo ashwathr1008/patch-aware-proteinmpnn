@@ -39,6 +39,36 @@ MMseqs2-based splits still leak; that structural similarity above TM-score 0.5 s
 conventional sequence splitting; and, in one ddG preprint, that random splits inflate Pearson
 R to about 0.55 through homologous leakage alone. `DataSAIL` exists for this problem.
 
+## Where each claim comes from
+
+Recorded so the threshold choice can be defended from the sources rather than from this
+document. Checked November 8, 2026.
+
+| Claim used above | Source | Status |
+| --- | --- | --- |
+| >30% identity → 90% of pairs homologous; <25% → fewer than 10% | Rost 1999, *Twilight zone of protein sequence alignments*, Protein Engineering 12(2):85–94, [doi:10.1093/protein/12.2.85](https://doi.org/10.1093/protein/12.2.85) | Verified in secondary sources; full text not read |
+| Unambiguous separation needs >40% **for long alignments** | Rost 1999, same | Verified by quotation |
+| Threshold ∝ inverse square root of alignment length, 7–80 residues | Sander & Schneider 1991, *Proteins* 9(1):56–68 (the HSSP curve), as revised by Rost 1999 | Verified in secondary sources |
+| The curve's implemented form, `290.15 · L^-0.562`, valid 10–80 residues | EGCG `fastacheck` documentation | **Formula not verified against the 1991 paper.** Its values are plausible across our range (42.9% at L=30, 29.9% at L=57), but the coefficients should be checked against the original before publication |
+| S669 built non-redundant at 25% identity, re-checked against UniProt | Pancotti et al., *Briefings in Bioinformatics* 2022 (S669 benchmark) | Verified by quotation |
+| ProtDDG benchmark clusters with MMseqs2 at 25% | [protddg-bench.github.io](https://protddg-bench.github.io) | Verified by quotation |
+| 40% identity clustering described as standard in protein design | Recent design preprint (DS-ProGen, arXiv 2505.12511) | Verified by quotation; one paper, not a convention survey |
+| Sequence splits still leak; TM-score >0.5 pairs survive them | [Revealing data leakage in protein interaction benchmarks](https://arxiv.org/abs/2404.10457); DS-ProGen | Verified; the PPI paper concerns complexes, not ddG |
+| Random splits inflate ddG correlation to Pearson R ≈ 0.55 | A 2026 preprint | **Provisional** — preprint, not peer reviewed |
+| Leakage-aware splitting tooling exists | [DataSAIL](https://datasail.readthedocs.io/en/dev/other.html) | Verified |
+| ThermoMPNN's clustering of this dataset | [Kuhlman-Lab/ThermoMPNN](https://github.com/Kuhlman-Lab/ThermoMPNN) `dataset_splits/megascale_clusters.tsv`, with `mega_splits.pkl` sha256 `9e06230f…` | Measured directly, not cited |
+| Dataset of record | Tsuboyama et al., *Nature* 620:434–444 (2023); data [Zenodo 7844779](https://zenodo.org/records/7844779), version `v2_230420` | Verified against the Zenodo API |
+
+**A correction this sweep settles.** The mid-project report cites the final data release as
+Zenodo record **7992926**. The Zenodo API confirms that `v2_230420` is record **7844779**
+(doi 10.5281/zenodo.7844779). The record number in the report is wrong and should be changed.
+
+**What could not be confirmed.** ThermoMPNN's and ProteinGym's own documented split protocols
+were not located; ThermoMPNN's clustering was therefore measured from its shipped files rather
+than quoted from its paper. The exact coefficients of the HSSP curve were not verified against
+Sander & Schneider 1991, which is the one load-bearing formula here and the one thing to check
+before this appears in the report.
+
 ## The HSSP curve applied to these lengths
 
 `identity_floor(L) = 290.15 · L^(-0.562)`, as a percentage, clamped to the curve's calibrated
