@@ -46,6 +46,25 @@ DEFAULT_SHUFFLES = 300
 # Pairs scoring below this quantile of all raw scores cannot clear the Z threshold in
 # practice, so no null is built for them.
 DEFAULT_CANDIDATE_QUANTILE = 0.80
+# Sander & Schneider's length-dependent homology threshold, the HSSP curve, as a percentage:
+# 290.15 * L ** -0.562, calibrated for alignments of roughly 10 to 80 residues. A fixed
+# identity floor is calibrated for full-length proteins; on a 57-residue domain the same floor
+# sits inside the chance distribution, which is why short-domain clustering over-merges.
+HSSP_COEFFICIENT = 290.15
+HSSP_EXPONENT = -0.562
+HSSP_CALIBRATED_RANGE = (10, 80)
+
+
+def hssp_threshold(length):
+    """The identity a pair of this alignment length needs before homology is credible.
+
+    Returned as a fraction, to match `identity`. Outside the curve's calibrated range the
+    nearest calibrated endpoint is used rather than extrapolating a fitted curve beyond the
+    data it came from.
+    """
+    low, high = HSSP_CALIBRATED_RANGE
+    clamped = min(high, max(low, length))
+    return HSSP_COEFFICIENT * clamped ** HSSP_EXPONENT / 100.0
 
 
 def _align(a, b):
@@ -141,11 +160,18 @@ def related_pairs(sequences, z_threshold=DEFAULT_Z, identity_threshold=DEFAULT_I
         if score < cutoff:
             # Below the candidate cutoff; recorded as screened, never as related.
             evidence.append({"a": a, "b": b, "score": score, "screened": True,
-                             "z": None, "identity": None, "related": False})
+                             "z": None, "identity": None, "identity_floor": None,
+                             "related": False})
             continue
         record = relatedness(sequences[a], sequences[b], shuffles, seed)
-        is_related = record["z"] >= z_threshold and record["identity"] >= identity_threshold
-        evidence.append({"a": a, "b": b, "screened": False, "related": is_related, **record})
+        # A callable floor is evaluated per pair, so a length-dependent curve can be used in
+        # place of one global number. Identity is measured over the shorter sequence, so that
+        # is the length handed to the curve.
+        floor = (identity_threshold(min(len(sequences[a]), len(sequences[b])))
+                 if callable(identity_threshold) else identity_threshold)
+        is_related = record["z"] >= z_threshold and record["identity"] >= floor
+        evidence.append({"a": a, "b": b, "screened": False, "related": is_related,
+                         "identity_floor": floor, **record})
         if is_related:
             related.append((a, b))
     return related, evidence
@@ -184,7 +210,10 @@ def cluster(sequences, **kwargs):
         "evidence": evidence,
         "settings": {
             "z_threshold": kwargs.get("z_threshold", DEFAULT_Z),
-            "identity_threshold": kwargs.get("identity_threshold", DEFAULT_IDENTITY),
+            "identity_threshold": (
+                "hssp_length_dependent"
+                if callable(kwargs.get("identity_threshold")) else
+                kwargs.get("identity_threshold", DEFAULT_IDENTITY)),
             "shuffles": kwargs.get("shuffles", DEFAULT_SHUFFLES),
             "candidate_quantile": kwargs.get("candidate_quantile", DEFAULT_CANDIDATE_QUANTILE),
             "matrix": "blosum62", "gap_open": GAP_OPEN, "gap_extend": GAP_EXTEND,

@@ -96,9 +96,11 @@ def run(args):
           % (len(sequences), len(sequences) * (len(sequences) - 1) // 2,
              100 * (1 - args.candidate_quantile)), flush=True)
 
+    floor = (homology.hssp_threshold if args.identity_threshold == "hssp"
+             else float(args.identity_threshold))
     result = homology.cluster(
         sequences, z_threshold=args.z_threshold,
-        identity_threshold=args.identity_threshold, shuffles=args.shuffles,
+        identity_threshold=floor, shuffles=args.shuffles,
         seed=args.seed, candidate_quantile=args.candidate_quantile)
     clusters = result["clusters"]
     membership = {d: root for root, members in clusters.items() for d in members}
@@ -182,7 +184,8 @@ def main():
     parser.add_argument("--membership", help="thermompnn_split_membership.json")
     parser.add_argument("--splits", help="e.g. 'train:0.7,val:0.15,test:0.15'")
     parser.add_argument("--z-threshold", type=float, default=homology.DEFAULT_Z)
-    parser.add_argument("--identity-threshold", type=float, default=homology.DEFAULT_IDENTITY)
+    parser.add_argument("--identity-threshold", default=str(homology.DEFAULT_IDENTITY),
+                        help="a fraction, or 'hssp' for the length-dependent HSSP curve")
     parser.add_argument("--shuffles", type=int, default=homology.DEFAULT_SHUFFLES)
     parser.add_argument("--candidate-quantile", type=float,
                         default=homology.DEFAULT_CANDIDATE_QUANTILE)

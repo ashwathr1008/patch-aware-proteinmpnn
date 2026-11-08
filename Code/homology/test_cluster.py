@@ -156,6 +156,48 @@ class SplitTest(unittest.TestCase):
             cluster.assign_splits(self.clusters, {"dev": 0.0, "test": 0.0})
 
 
+class TestHsspThreshold(unittest.TestCase):
+    """The length-dependent identity floor, which replaces one global number.
+
+    A fixed floor is calibrated for full-length proteins. These domains are a median of 57
+    residues, where the same floor sits inside the chance distribution and the clustering
+    over-merges; the curve raises the bar as alignments shorten.
+    """
+
+    def test_floor_rises_as_sequences_shorten(self):
+        floors = [cluster.hssp_threshold(L) for L in (30, 40, 57, 72, 80)]
+        self.assertEqual(floors, sorted(floors, reverse=True))
+
+    def test_calibrated_values(self):
+        self.assertAlmostEqual(cluster.hssp_threshold(30), 0.4290, places=3)
+        self.assertAlmostEqual(cluster.hssp_threshold(57), 0.2991, places=3)
+        self.assertAlmostEqual(cluster.hssp_threshold(80), 0.2472, places=3)
+
+    def test_clamped_outside_the_calibrated_range(self):
+        """The curve was fitted on 10-80 residues; beyond that it is held, not extrapolated."""
+        low, high = cluster.HSSP_CALIBRATED_RANGE
+        self.assertEqual(cluster.hssp_threshold(1), cluster.hssp_threshold(low))
+        self.assertEqual(cluster.hssp_threshold(5000), cluster.hssp_threshold(high))
+
+    def test_a_callable_floor_is_applied_per_pair(self):
+        """Two short sequences must face a higher bar than two long ones, in one call."""
+        short_a, short_b = "ACDEFGHIKL" * 3, "ACDEFGHIKM" * 3
+        long_a, long_b = "ACDEFGHIKL" * 8, "ACDEFGHIKM" * 8
+        sequences = {"sa": short_a, "sb": short_b, "la": long_a, "lb": long_b}
+        _, evidence = cluster.related_pairs(
+            sequences, identity_threshold=cluster.hssp_threshold,
+            shuffles=10, candidate_quantile=0.0)
+        floors = {(e["a"], e["b"]): e["identity_floor"] for e in evidence
+                  if not e["screened"]}
+        self.assertGreater(floors[("sa", "sb")], floors[("la", "lb")])
+
+    def test_settings_record_names_the_curve(self):
+        sequences = {"a": "ACDEFGHIKL" * 3, "b": "ACDEFGHIKM" * 3}
+        result = cluster.cluster(sequences, identity_threshold=cluster.hssp_threshold,
+                                 shuffles=10, candidate_quantile=0.0)
+        self.assertEqual(result["settings"]["identity_threshold"], "hssp_length_dependent")
+
+
 class TestNullIsReproducibleAcrossProcesses(unittest.TestCase):
     """The null must not depend on per-process string hash randomisation.
 
