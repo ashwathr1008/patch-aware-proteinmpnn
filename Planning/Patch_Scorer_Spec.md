@@ -11,17 +11,33 @@ Four results from this week set the terms.
 
 **There are measured arrangement labels.** The mega-scale stability dataset measured all 400
 identity combinations at 578 contacting site pairs across 208 domains. Among them are
-**100,572 composition-matched swap contrasts**: the same two residues in opposite arrangements
-on the same backbone, both measured. **69,633 of those resolve above twice their own
+**98,505 composition-matched swap contrasts**: the same two residues in opposite arrangements
+on the same backbone, both measured. **68,273 of those resolve above twice their own
 measurement error.** The earlier claim in this project's planning, that such labels cannot
 exist, was correct only for patch-wide permutations.
+
+**Repeated measurements are averaged when they agree, and dropped when they do not.** The
+source table measures 5,952 variants more than once. The original extraction assigned straight
+into a table, so whichever row the reader reached last silently won and the other measurement
+vanished. Of those 5,952, **2,930 have replicates agreeing within their own stated error and are
+averaged**; the remaining **3,022 disagree and are dropped**, with a median disagreement of
+0.214 kcal/mol against a median measurement uncertainty of 0.12. The consistency test is the
+negation of the `resolved` rule — two replicates agree exactly when their difference would not
+be called resolved — so one threshold governs both decisions. Declared before any scorer was
+trained.
+
+This cost 2,067 contrasts and moved the frozen per-domain median by 0.004, from −0.497 to
+−0.501. **That the statistic barely moved is not evidence the defect was harmless.** A median
+over 199 domains is robust to a 2% change in membership almost by construction; 3,022
+arbitrarily-resolved measurements sitting inside a *training* signal is a different matter, and
+is why this was fixed before training rather than after.
 
 **The pairs are genuinely contacts**, verified rather than assumed: median 5.6 Å apart against
 14.0 Å for all pairs in the same domains, 5.2× enriched, and a median sequence separation of 12
 residues, so they are tertiary contacts rather than helix neighbours.
 
 **The frozen baseline is 0.48, not 0.44.** Both checkpoints were scored on an L40S. The full
-autoregressive model reaches a per-domain median Spearman of **−0.497** (vanilla) against
+autoregressive model reaches a per-domain median Spearman of **−0.501** (vanilla) against
 measured stability; its first-order term alone reaches **−0.448**. The full model is stronger in
 135 of 199 domains, sign test p = 5.3 × 10⁻⁷. Any scorer must beat the full model, not the
 first-order term.
@@ -29,15 +45,15 @@ first-order term.
 **There is room.** The measurement-noise ceiling is **0.98**, so roughly **0.50 of correlation
 remains unexplained**. The target is not a sliver.
 
-**Part of the frozen model's 0.497 is native-sequence recognition, not arrangement.** Splitting
+**Part of the frozen model's 0.501 is native-sequence recognition, not arrangement.** Splitting
 the resolved contrasts by whether both arrangements are genuine double mutants, the frozen model
-reaches **−0.672** on the 14,776 contrasts where one arrangement restores a wild-type residue
-and only **−0.423** on the 54,857 where neither does. ProteinMPNN is trained to recover native
+reaches **−0.680** on the 14,481 contrasts where one arrangement restores a wild-type residue
+and only **−0.423** on the 53,792 where neither does. ProteinMPNN is trained to recover native
 sequence, so it prefers the arrangement containing a wild-type residue strongly, and the
 measurement usually agrees because wild type is usually more stable. Composition is matched
 inside every contrast, so this is not a composition artefact, but it is a nativeness one.
 **The double-mutant subset is the honest measure of arrangement sensitivity**, and the number to
-beat there is −0.423 rather than −0.497.
+beat there is −0.423 rather than −0.501.
 
 Two consequences for the design. The head trained on these contrasts has **real labels**, so it
 is a stability head and may be called one; the naming problem in the original proposal applied
@@ -90,7 +106,7 @@ same network to each of the twenty identities:
 | Networks where the preference reverses | 5 of 74 |
 
 **About ninety per cent of a swap effect is independent of the third residue.** Pairwise labels
-therefore carry to patch scale, and the 100,572 measured contrasts are usable for training a
+therefore carry to patch scale, and the 98,505 measured contrasts are usable for training a
 patch-level model. This is the result that keeps the whole strategy viable.
 
 The remaining tenth is real. The five networks that reverse are mostly weak-effect pairs, mean
@@ -138,10 +154,10 @@ domain and construct in ways the model has no access to, and the quantity of int
 ordering. A margin ranking loss over each contrast, with the margin scaled by the measured
 difference, uses the magnitude without demanding the model reproduce it.
 
-**Drop contrasts below the measurement floor.** Of 100,572 contrasts, 30,939 have an effect
+**Drop contrasts below the measurement floor.** Of 98,505 contrasts, 30,232 have an effect
 smaller than twice their own error. The frozen baseline scores ρ = −0.069 on those against
 −0.477 on resolved ones, which is the expected behaviour and confirms they carry no learnable
-signal. Train on the **69,633 resolved** contrasts. This is a rule declared before training,
+signal. Train on the **68,273 resolved** contrasts. This is a rule declared before training,
 not a filter tuned afterwards.
 
 ## Splits
@@ -167,7 +183,7 @@ Each falsifies a specific way the result could be hollow. None is optional.
 | Composition-only model | Broken contrasts | Chance, by construction |
 | Shuffled labels | A leaking split | Chance |
 | Contrasts below measurement error | A pipeline artefact | Near zero; baseline gives −0.069 |
-| Frozen ProteinMPNN, full model | The scorer adding nothing | **−0.497 per-domain median** |
+| Frozen ProteinMPNN, full model | The scorer adding nothing | **−0.501 per-domain median** |
 | Frozen ProteinMPNN, first-order | Crediting the joint term wrongly | −0.448 |
 | SAP surrogate | Re-deriving a closed-form statistic | measured on the same contrasts |
 | ThermoMPNN-D (published) | A trained head on these features already doing better | **−0.459 vs frozen −0.392** on the 81 domains it did not train on, 45/81, p = 0.37 |
@@ -226,7 +242,7 @@ Three steps, in order of evidence:
 
 **Pairwise training therefore generalizes**, which is the result that keeps this strategy
 viable: about ninety per cent of a swap effect is independent of its surroundings, so the
-100,572 measured pairwise contrasts are legitimate training data for a patch-level model. The
+98,505 measured pairwise contrasts are legitimate training data for a patch-level model. The
 remaining tenth bounds how far they carry, and the sign-reversing networks are the subject of
 route D in [Next steps](#next-steps).
 
@@ -278,7 +294,7 @@ dependency downgrades. Reproduce one number from their `benchmark.ipynb` first. 
 patched into running is only a baseline if it still computes what the paper computed.
 
 **The caveat that decides how to read the result.** ThermoMPNN-D was trained on the Tsuboyama
-mega-scale dataset — the same source as our 100,572 contrasts. Its config references a
+mega-scale dataset — the same source as our 98,505 contrasts. Its config references a
 `mega_splits.pkl` that **is not in the repository**, existing only as a path on the author's
 machine, so nothing in the checkout reveals whether our 208 domains were in its training set.
 Until that file is obtained, its score is **not a clean baseline**: for any domain it trained
@@ -288,7 +304,7 @@ training set. If it cannot be obtained, the comparison is reported as an upper b
 labelled as one.
 
 **Join** on `(domain, site_i, site_j, aa_i, aa_j)` and compute the same per-domain Spearman
-against measured ΔΔG, so the number is directly comparable to the frozen model's −0.497.
+against measured ΔΔG, so the number is directly comparable to the frozen model's −0.501.
 
 ### 2. The first optimization run
 
@@ -300,9 +316,9 @@ memorize domains, and a negative result from it would be uninterpretable.
 | Features | `Code/scorer/features.py`: per patch member, 21 conditional log-probabilities and a 21-way identity one-hot. **84 dimensions at k = 2.** |
 | Head | Two dense layers, width 64, one scalar output. Roughly 6k parameters. |
 | Loss | Margin ranking per contrast, margin scaled by the measured ΔΔG difference. Not regression onto ΔΔG. |
-| Training set | The **69,633 resolved** contrasts. The 30,939 below twice their own error are dropped, a rule declared before training and not tuned after. |
+| Training set | The **68,273 resolved** contrasts. The 30,232 below twice their own error are dropped, a rule declared before training and not tuned after. |
 | Splits | Whole clusters from `Code/homology/cluster.py`, fixed before training and never redrawn. |
-| Primary test | Per-domain median Spearman on held-out clusters against the frozen model's **−0.497**, paired sign test. |
+| Primary test | Per-domain median Spearman on held-out clusters against the frozen model's **−0.501**, paired sign test. |
 
 **Cache the features once.** They depend on sequence, so they cannot be cached per structure
 the way the first-order term was. But each contrast needs only its two target positions:
@@ -314,7 +330,7 @@ and sequence hash, then training is minutes and ablations are free.
 `Code/homology/cluster.py` cannot run and the split cannot be fixed. Reinstall it first — and
 check it does not drag `numpy` back above 2, which broke every scoring script last time.
 
-### 3. If the scorer does not clear −0.497
+### 3. If the scorer does not clear −0.501
 
 The most likely single outcome, and the decomposition says why: 89% of the pilot effect was
 first-order burial and only 11% joint structure. There may simply not be much left for a
@@ -353,7 +369,7 @@ that holds, and that is the comparison reported above.
 
 **Route A — unfreeze the top of the decoder.** Train the last decoder layer with the head,
 everything below frozen. The gate the plan held shut is open now that the target is measured
-ΔΔG. Cheap, and the obvious next increment if capacity is the limit. Risk: 69,633 contrasts
+ΔΔG. Cheap, and the obvious next increment if capacity is the limit. Risk: 68,273 contrasts
 across 208 domains is a small set for fine-tuning, so cluster-held-out evaluation is the only
 number worth reporting.
 
@@ -368,7 +384,7 @@ before A.**
 
 **Route C — information ProteinMPNN does not have.** Its features are backbone-only: N, Cα, C,
 O and a virtual CB. It never sees side-chain volume or burial depth. If a trained head
-saturates near −0.497, the ceiling is the representation, not the model, and the test is to add
+saturates near −0.501, the ceiling is the representation, not the model, and the test is to add
 explicit per-site SASA and a SAP term as input features. The machinery already exists in
 `Code/descriptors/sap.py`. A gain here would be a cleaner finding than a gain from more
 capacity, because it names what was missing.
@@ -402,7 +418,7 @@ once, the head is small, and the baseline scoring is already done and retrieved.
 
 ## Risks, and what each would mean
 
-- **The head does not beat −0.497.** The most likely single outcome. Section 3 is the response,
+- **The head does not beat −0.501.** The most likely single outcome. Section 3 is the response,
   and the finding is real either way.
 - **ThermoMPNN-D trained on our domains.** Then it is a memorization ceiling, not a baseline,
   and the comparison must be labelled as one. `mega_splits.pkl` decides this and is not in the

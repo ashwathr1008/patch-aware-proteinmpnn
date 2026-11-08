@@ -5,37 +5,37 @@
   "checkpoints": {
     "vanilla": {
       "variants_scored": 201144,
-      "contrasts_matched": 100572,
+      "contrasts_matched": 98505,
       "contrasts_unmatched": 0,
       "orders_per_variant": 8,
       "all": {
-        "count": 100572,
-        "spearman": -0.409104000885062,
-        "sign_agreement": 0.6417889671081415
+        "count": 98505,
+        "spearman": -0.41224589468176626,
+        "sign_agreement": 0.6432160804020101
       },
       "resolved": {
-        "count": 69633,
-        "spearman": -0.4772024943629194,
-        "sign_agreement": 0.6919563999827668
+        "count": 68273,
+        "spearman": -0.48038469083931673,
+        "sign_agreement": 0.6936856443982248
       },
       "below_measurement_error": {
-        "count": 30939,
-        "spearman": -0.06863685523630662,
-        "sign_agreement": 0.5288794078670933
+        "count": 30232,
+        "spearman": -0.06904998313336978,
+        "sign_agreement": 0.5292405398253506
       },
       "per_domain_resolved": {
         "domains": 199,
         "minimum_contrasts": 20,
-        "median": -0.496577018779381,
-        "p25": -0.6205718535648805,
+        "median": -0.5010062994497679,
+        "p25": -0.6220608606282676,
         "p75": -0.3400885229210341,
         "agreeing_in_sign": 193,
         "agreeing_fraction": 0.9698492462311558,
         "per_domain": [
           {
             "domain": "1A0N",
-            "count": 170,
-            "spearman": -0.40802755234762855
+            "count": 169,
+            "spearman": -0.40690666799264086
           },
           {
             "domain": "1CSQ",
@@ -74,8 +74,8 @@
           },
           {
             "domain": "1GL5",
-            "count": 1072,
-            "spearman": -0.6296632561580641
+            "count": 1071,
+            "spearman": -0.6291187098357267
           },
           {
             "domain": "1GXI",
@@ -94,8 +94,8 @@
           },
           {
             "domain": "1H92",
-            "count": 434,
-            "spearman": -0.22227028161720802
+            "count": 433,
+            "spearman": -0.22388898940340496
           },
           {
             "domain": "1I2T",
@@ -119,13 +119,13 @@
           },
           {
             "domain": "1K1V",
-            "count": 245,
-            "spearman": -0.7286913805906209
+            "count": 244,
+            "spearman": -0.7308286763399956
           },
           {
             "domain": "1LP1",
             "count": 315,
-            "spearman": -0.6430832786230674
+            "spearman": -0.6430276085278908
           },
           {
             "domain": "1MSJ",
@@ -144,13 +144,13 @@
           },
           {
             "domain": "1ORC",
-            "count": 409,
-            "spearman": -0.6179204975567661
+            "count": 407,
+            "spearman": -0.6122807760738795
           },
           {
             "domain": "1PGA",
-            "count": 435,
-            "spearman": -0.6975653740795438
+            "count": 433,
+            "spearman": -0.7011082612289496
           },
           {
             "domain": "1PGX",
@@ -165,7 +165,7 @@
           {
             "domain": "1PV0",
             "count": 633,
-            "spearman": -0.47237396228250444
+            "spearman": -0.4726666815541723
           },
           {
             "domain": "1PWT",
@@ -174,8 +174,8 @@
           },
           {
             "domain": "1QKH",
-            "count": 416,
-            "spearman": -0.19879234703062387
+            "count": 287,
+            "spearman": -0.35004934090299944
           },
           {
             "domain": "1QKX",
@@ -185,7 +185,7 @@
           {
             "domain": "1QLY",
             "count": 323,
-            "spearman": -0.5894054545286205
+            "spearman": -0.5893904981265325
           },
           {
             "domain": "1QP2",
@@ -199,8 +199,8 @@
           },
           {
             "domain": "1S1N",
-            "count": 165,
-            "spearman": -0.9008067747709241
+            "count": 164,
+            "spearman": -0.8990083386611892
           },
           {
             "domain": "1SRM",
@@ -209,8 +209,8 @@
           },
           {
             "domain": "1TG0",
-            "count": 446,
-            "spearman": -0.24952071264637565
+            "count": 445,
+            "spearman": -0.24874288305537362
           },
           {
             "domain": "1TUC",
@@ -219,18 +219,18 @@
           },
           {
             "domain": "1TUD",
-            "count": 1156,
-            "spearman": -0.664482564595313
+            "count": 1154,
+            "spearman": -0.6639011301874063
           },
           {
             "domain": "1UFM",
-            "count": 788,
-            "spearman": -0.676237650690957
+            "count": 789,
+            "spearman": -0.6761205589253443
           },
           {
             "domain": "1UZC",
-            "count": 309,
-            "spearman": -0.6444027316247799
+            "count": 306,
+            "spearman": -0.6427617877930261
           },
           {
             "domain": "1V1C",
@@ -249,8 +249,8 @@
           },
           {
             "domain": "1W4H",
-            "count": 270,
-            "spearman": -0.5159933606771012
+            "count": 257,
+            "spearman": -0.5647085105420324
           },
           {
             "domain": "1WCL",
@@ -259,8 +259,8 @@
           },
           {
             "domain": "1Y0M",
-            "count": 1128,
-            "spearman": -0.5611608297187246
+            "count": 1036,
+            "spearman": -0.5770979925941983
           },
           {
             "domain": "1YP5",
@@ -294,8 +294,8 @@
           },
           {
             "domain": "2BTT",
-            "count": 1177,
-            "spearman": -0.5217020411048215
+            "count": 1173,
+            "spearman": -0.521426037860989
           },
           {
             "domain": "2CDT",
@@ -315,7 +315,7 @@
           {
             "domain": "2EXD",
             "count": 165,
-            "spearman": -0.5432078647182967
+            "spearman": -0.5426789196698101
           },
           {
             "domain": "2HBB",
@@ -325,7 +325,7 @@
           {
             "domain": "2JN4",
             "count": 700,
-            "spearman": -0.3103366566637308
+            "spearman": -0.31032668579790107
           },
           {
             "domain": "2JT1",
@@ -344,8 +344,8 @@
           },
           {
             "domain": "2JWT",
-            "count": 837,
-            "spearman": -0.5129249756950929
+            "count": 835,
+            "spearman": -0.5159624298956388
           },
           {
             "domain": "2JY8",
@@ -355,7 +355,7 @@
           {
             "domain": "2JZ2",
             "count": 301,
-            "spearman": -0.5500033002574201
+            "spearman": -0.5508728080790302
           },
           {
             "domain": "2K1B",
@@ -364,23 +364,23 @@
           },
           {
             "domain": "2K28",
-            "count": 684,
-            "spearman": -0.6069588962092206
+            "count": 681,
+            "spearman": -0.6057851205127367
           },
           {
             "domain": "2K2A",
             "count": 466,
-            "spearman": -0.8034954364492917
+            "spearman": -0.8037262005946386
           },
           {
             "domain": "2K52",
-            "count": 1355,
-            "spearman": -0.6155242405484799
+            "count": 1348,
+            "spearman": -0.6161430179849439
           },
           {
             "domain": "2K5N",
-            "count": 766,
-            "spearman": -0.7164967840002787
+            "count": 639,
+            "spearman": -0.706550923881849
           },
           {
             "domain": "2K5P",
@@ -394,13 +394,13 @@
           },
           {
             "domain": "2KGT",
-            "count": 1373,
-            "spearman": -0.5007920578185934
+            "count": 1371,
+            "spearman": -0.5014423731309972
           },
           {
             "domain": "2KRU",
             "count": 303,
-            "spearman": -0.7228801217521543
+            "spearman": -0.7224767832307804
           },
           {
             "domain": "2KT8",
@@ -415,7 +415,7 @@
           {
             "domain": "2KVT",
             "count": 528,
-            "spearman": -0.44314158649950286
+            "spearman": -0.44315389649753656
           },
           {
             "domain": "2KWH",
@@ -424,8 +424,8 @@
           },
           {
             "domain": "2KXD",
-            "count": 260,
-            "spearman": -0.588562416148623
+            "count": 259,
+            "spearman": -0.5897424385796479
           },
           {
             "domain": "2KYB",
@@ -434,8 +434,8 @@
           },
           {
             "domain": "2L09",
-            "count": 428,
-            "spearman": -0.5541324004630271
+            "count": 427,
+            "spearman": -0.5541880053108601
           },
           {
             "domain": "2L2P",
@@ -449,18 +449,18 @@
           },
           {
             "domain": "2L7M",
-            "count": 425,
-            "spearman": -0.3938550280595895
+            "count": 424,
+            "spearman": -0.3990236222951645
           },
           {
             "domain": "2L8D",
-            "count": 626,
-            "spearman": -0.7581528960361985
+            "count": 625,
+            "spearman": -0.7579123126075202
           },
           {
             "domain": "2L9R",
-            "count": 433,
-            "spearman": -0.6111152499441258
+            "count": 431,
+            "spearman": -0.6152624147916329
           },
           {
             "domain": "2LC2",
@@ -469,8 +469,8 @@
           },
           {
             "domain": "2LGW",
-            "count": 1230,
-            "spearman": -0.6583197335882632
+            "count": 1227,
+            "spearman": -0.6583946546139374
           },
           {
             "domain": "2LHR",
@@ -504,8 +504,8 @@
           },
           {
             "domain": "2LSS",
-            "count": 152,
-            "spearman": -0.5651453331419706
+            "count": 151,
+            "spearman": -0.5612931334959916
           },
           {
             "domain": "2LUM",
@@ -519,8 +519,8 @@
           },
           {
             "domain": "2LXK",
-            "count": 159,
-            "spearman": -0.4929603534750418
+            "count": 158,
+            "spearman": -0.5010062994497679
           },
           {
             "domain": "2LYP",
@@ -539,28 +539,28 @@
           },
           {
             "domain": "2M0Y",
-            "count": 621,
-            "spearman": -0.2006612760417841
+            "count": 618,
+            "spearman": -0.2010826967637888
           },
           {
             "domain": "2M2J",
             "count": 764,
-            "spearman": -0.5338277373488423
+            "spearman": -0.5338237009583602
           },
           {
             "domain": "2M2L",
             "count": 786,
-            "spearman": -0.33677708377905685
+            "spearman": -0.3368053794370511
           },
           {
             "domain": "2M51",
-            "count": 675,
-            "spearman": -0.46223591772553196
+            "count": 552,
+            "spearman": -0.4863908818408917
           },
           {
             "domain": "2M7O",
-            "count": 140,
-            "spearman": -0.6202750869213444
+            "count": 139,
+            "spearman": -0.6220608606282676
           },
           {
             "domain": "2M8E",
@@ -579,8 +579,8 @@
           },
           {
             "domain": "2MA4",
-            "count": 717,
-            "spearman": -0.32210446818638866
+            "count": 716,
+            "spearman": -0.32044792121461674
           },
           {
             "domain": "2MC5",
@@ -595,7 +595,7 @@
           {
             "domain": "2MCH",
             "count": 728,
-            "spearman": -0.4965363599782062
+            "spearman": -0.4964572365611644
           },
           {
             "domain": "2MI6",
@@ -620,12 +620,12 @@
           {
             "domain": "2MRL",
             "count": 151,
-            "spearman": -0.8112408504705473
+            "spearman": -0.8110491460439178
           },
           {
             "domain": "2MXD",
-            "count": 1566,
-            "spearman": -0.6369433897267769
+            "count": 1515,
+            "spearman": -0.6376493859673068
           },
           {
             "domain": "2MYX",
@@ -649,13 +649,13 @@
           },
           {
             "domain": "2O2W",
-            "count": 168,
-            "spearman": -0.8299487246976883
+            "count": 167,
+            "spearman": -0.8288388798994094
           },
           {
             "domain": "2OCH",
             "count": 416,
-            "spearman": -0.17123935698521814
+            "spearman": -0.17393336489288644
           },
           {
             "domain": "2ON8",
@@ -674,8 +674,8 @@
           },
           {
             "domain": "2PFU",
-            "count": 434,
-            "spearman": -0.6187658195678398
+            "count": 433,
+            "spearman": -0.6198538045926856
           },
           {
             "domain": "2PTL",
@@ -700,7 +700,7 @@
           {
             "domain": "2RU9",
             "count": 151,
-            "spearman": -0.5327361449982573
+            "spearman": -0.5329592192401533
           },
           {
             "domain": "2WQG",
@@ -729,18 +729,18 @@
           },
           {
             "domain": "3DKM",
-            "count": 2044,
-            "spearman": -0.4071509129561036
+            "count": 1813,
+            "spearman": -0.411246735602428
           },
           {
             "domain": "3I35",
-            "count": 864,
-            "spearman": -0.6872030288213585
+            "count": 671,
+            "spearman": -0.6878445355720864
           },
           {
             "domain": "3L1X",
-            "count": 1236,
-            "spearman": -0.3521632517190614
+            "count": 1133,
+            "spearman": -0.3203641006481584
           },
           {
             "domain": "3MYC",
@@ -754,8 +754,8 @@
           },
           {
             "domain": "3ZGK",
-            "count": 1057,
-            "spearman": -0.6205718535648805
+            "count": 1056,
+            "spearman": -0.6201440958840287
           },
           {
             "domain": "4AME",
@@ -764,13 +764,13 @@
           },
           {
             "domain": "4C26",
-            "count": 825,
-            "spearman": -0.47792315969903104
+            "count": 824,
+            "spearman": -0.4782867476118883
           },
           {
             "domain": "4G3O",
-            "count": 741,
-            "spearman": -0.015049450401982675
+            "count": 496,
+            "spearman": -0.07192067360172767
           },
           {
             "domain": "4HCK",
@@ -839,8 +839,8 @@
           },
           {
             "domain": "5VNT",
-            "count": 870,
-            "spearman": -0.34165156914526607
+            "count": 869,
+            "spearman": -0.34189971614395376
           },
           {
             "domain": "5Z2S",
@@ -905,7 +905,7 @@
           {
             "domain": "6NMW",
             "count": 569,
-            "spearman": -0.42532924863955723
+            "spearman": -0.4256908391427094
           },
           {
             "domain": "6SCW",
@@ -935,17 +935,17 @@
           {
             "domain": "EEHEE_rd3_0019",
             "count": 139,
-            "spearman": -0.6073059564770544
+            "spearman": -0.6070199740828455
           },
           {
             "domain": "EEHEE_rd3_0144",
-            "count": 113,
-            "spearman": 0.20393905116774236
+            "count": 112,
+            "spearman": 0.2002767622236649
           },
           {
             "domain": "EHEE_rd2_0152",
-            "count": 324,
-            "spearman": -0.6373023559401269
+            "count": 325,
+            "spearman": -0.6363039868561341
           },
           {
             "domain": "EHEE_rd2_0251",
@@ -1032,37 +1032,37 @@
     },
     "soluble": {
       "variants_scored": 201144,
-      "contrasts_matched": 100572,
+      "contrasts_matched": 98505,
       "contrasts_unmatched": 0,
       "orders_per_variant": 8,
       "all": {
-        "count": 100572,
-        "spearman": -0.4008858540059597,
-        "sign_agreement": 0.6374438213419242
+        "count": 98505,
+        "spearman": -0.4039045701492795,
+        "sign_agreement": 0.6388508197553424
       },
       "resolved": {
-        "count": 69633,
-        "spearman": -0.4696612995666771,
-        "sign_agreement": 0.6854652248215645
+        "count": 68273,
+        "spearman": -0.47279402525608594,
+        "sign_agreement": 0.6870651648528701
       },
       "below_measurement_error": {
-        "count": 30939,
-        "spearman": -0.06706407712656182,
-        "sign_agreement": 0.5293642328452762
+        "count": 30232,
+        "spearman": -0.06799910815232338,
+        "sign_agreement": 0.5299682455676105
       },
       "per_domain_resolved": {
         "domains": 199,
         "minimum_contrasts": 20,
-        "median": -0.48109384559978635,
+        "median": -0.4813726551468914,
         "p25": -0.6205917077574832,
-        "p75": -0.30616474040988795,
+        "p75": -0.3119342372616087,
         "agreeing_in_sign": 192,
         "agreeing_fraction": 0.964824120603015,
         "per_domain": [
           {
             "domain": "1A0N",
-            "count": 170,
-            "spearman": -0.5172232704978597
+            "count": 169,
+            "spearman": -0.5142732832778082
           },
           {
             "domain": "1CSQ",
@@ -1101,8 +1101,8 @@
           },
           {
             "domain": "1GL5",
-            "count": 1072,
-            "spearman": -0.5514617094420915
+            "count": 1071,
+            "spearman": -0.5507994954154071
           },
           {
             "domain": "1GXI",
@@ -1121,8 +1121,8 @@
           },
           {
             "domain": "1H92",
-            "count": 434,
-            "spearman": -0.2558755668621134
+            "count": 433,
+            "spearman": -0.25855304624022496
           },
           {
             "domain": "1I2T",
@@ -1146,13 +1146,13 @@
           },
           {
             "domain": "1K1V",
-            "count": 245,
-            "spearman": -0.7041828166692506
+            "count": 244,
+            "spearman": -0.7082677636932125
           },
           {
             "domain": "1LP1",
             "count": 315,
-            "spearman": -0.6480152651240292
+            "spearman": -0.6480836049650046
           },
           {
             "domain": "1MSJ",
@@ -1171,13 +1171,13 @@
           },
           {
             "domain": "1ORC",
-            "count": 409,
-            "spearman": -0.593058269285411
+            "count": 407,
+            "spearman": -0.5870443492147346
           },
           {
             "domain": "1PGA",
-            "count": 435,
-            "spearman": -0.6574994496579132
+            "count": 433,
+            "spearman": -0.6626721015456768
           },
           {
             "domain": "1PGX",
@@ -1192,7 +1192,7 @@
           {
             "domain": "1PV0",
             "count": 633,
-            "spearman": -0.48109384559978635
+            "spearman": -0.4813726551468914
           },
           {
             "domain": "1PWT",
@@ -1201,8 +1201,8 @@
           },
           {
             "domain": "1QKH",
-            "count": 416,
-            "spearman": -0.2509092818423667
+            "count": 287,
+            "spearman": -0.3806000909659446
           },
           {
             "domain": "1QKX",
@@ -1212,7 +1212,7 @@
           {
             "domain": "1QLY",
             "count": 323,
-            "spearman": -0.5020785837854084
+            "spearman": -0.5020593541255811
           },
           {
             "domain": "1QP2",
@@ -1226,8 +1226,8 @@
           },
           {
             "domain": "1S1N",
-            "count": 165,
-            "spearman": -0.8286458472470815
+            "count": 164,
+            "spearman": -0.8255247371213255
           },
           {
             "domain": "1SRM",
@@ -1236,8 +1236,8 @@
           },
           {
             "domain": "1TG0",
-            "count": 446,
-            "spearman": -0.2821967244047838
+            "count": 445,
+            "spearman": -0.2815694114026356
           },
           {
             "domain": "1TUC",
@@ -1246,18 +1246,18 @@
           },
           {
             "domain": "1TUD",
-            "count": 1156,
-            "spearman": -0.6161233735356048
+            "count": 1154,
+            "spearman": -0.6153981765385067
           },
           {
             "domain": "1UFM",
-            "count": 788,
-            "spearman": -0.6833806344862523
+            "count": 789,
+            "spearman": -0.6832798078898743
           },
           {
             "domain": "1UZC",
-            "count": 309,
-            "spearman": -0.6085007382220035
+            "count": 306,
+            "spearman": -0.6069334723797138
           },
           {
             "domain": "1V1C",
@@ -1276,8 +1276,8 @@
           },
           {
             "domain": "1W4H",
-            "count": 270,
-            "spearman": -0.34721982164059556
+            "count": 257,
+            "spearman": -0.3904928004253009
           },
           {
             "domain": "1WCL",
@@ -1286,8 +1286,8 @@
           },
           {
             "domain": "1Y0M",
-            "count": 1128,
-            "spearman": -0.5543118782931695
+            "count": 1036,
+            "spearman": -0.5847661481806801
           },
           {
             "domain": "1YP5",
@@ -1321,8 +1321,8 @@
           },
           {
             "domain": "2BTT",
-            "count": 1177,
-            "spearman": -0.557330646758316
+            "count": 1173,
+            "spearman": -0.5569034860430527
           },
           {
             "domain": "2CDT",
@@ -1342,7 +1342,7 @@
           {
             "domain": "2EXD",
             "count": 165,
-            "spearman": -0.4349317447172281
+            "spearman": -0.4339272834130313
           },
           {
             "domain": "2HBB",
@@ -1352,7 +1352,7 @@
           {
             "domain": "2JN4",
             "count": 700,
-            "spearman": -0.3359319042342069
+            "spearman": -0.3359210587310236
           },
           {
             "domain": "2JT1",
@@ -1371,8 +1371,8 @@
           },
           {
             "domain": "2JWT",
-            "count": 837,
-            "spearman": -0.5185686297598806
+            "count": 835,
+            "spearman": -0.5204861283594389
           },
           {
             "domain": "2JY8",
@@ -1382,7 +1382,7 @@
           {
             "domain": "2JZ2",
             "count": 301,
-            "spearman": -0.5988224681525159
+            "spearman": -0.5993157466282371
           },
           {
             "domain": "2K1B",
@@ -1391,23 +1391,23 @@
           },
           {
             "domain": "2K28",
-            "count": 684,
-            "spearman": -0.5778134138501076
+            "count": 681,
+            "spearman": -0.5772475737488402
           },
           {
             "domain": "2K2A",
             "count": 466,
-            "spearman": -0.7414635202026835
+            "spearman": -0.7417013993782057
           },
           {
             "domain": "2K52",
-            "count": 1355,
-            "spearman": -0.6244306817782234
+            "count": 1348,
+            "spearman": -0.6248134141965835
           },
           {
             "domain": "2K5N",
-            "count": 766,
-            "spearman": -0.7204068052920972
+            "count": 639,
+            "spearman": -0.7006997181626856
           },
           {
             "domain": "2K5P",
@@ -1421,13 +1421,13 @@
           },
           {
             "domain": "2KGT",
-            "count": 1373,
-            "spearman": -0.5131287597293194
+            "count": 1371,
+            "spearman": -0.512550301195997
           },
           {
             "domain": "2KRU",
             "count": 303,
-            "spearman": -0.6599166059861475
+            "spearman": -0.6595318167229759
           },
           {
             "domain": "2KT8",
@@ -1442,7 +1442,7 @@
           {
             "domain": "2KVT",
             "count": 528,
-            "spearman": -0.4634441157068075
+            "spearman": -0.46344941471258355
           },
           {
             "domain": "2KWH",
@@ -1451,8 +1451,8 @@
           },
           {
             "domain": "2KXD",
-            "count": 260,
-            "spearman": -0.5724254000116069
+            "count": 259,
+            "spearman": -0.5734744199860479
           },
           {
             "domain": "2KYB",
@@ -1461,8 +1461,8 @@
           },
           {
             "domain": "2L09",
-            "count": 428,
-            "spearman": -0.5895840026374728
+            "count": 427,
+            "spearman": -0.5898064964014206
           },
           {
             "domain": "2L2P",
@@ -1476,18 +1476,18 @@
           },
           {
             "domain": "2L7M",
-            "count": 425,
-            "spearman": -0.43986665832955557
+            "count": 424,
+            "spearman": -0.4447674372840264
           },
           {
             "domain": "2L8D",
-            "count": 626,
-            "spearman": -0.7663915373679625
+            "count": 625,
+            "spearman": -0.7659219955763087
           },
           {
             "domain": "2L9R",
-            "count": 433,
-            "spearman": -0.5795517702971328
+            "count": 431,
+            "spearman": -0.5839554968015013
           },
           {
             "domain": "2LC2",
@@ -1496,8 +1496,8 @@
           },
           {
             "domain": "2LGW",
-            "count": 1230,
-            "spearman": -0.6324731632295109
+            "count": 1227,
+            "spearman": -0.6321396531687505
           },
           {
             "domain": "2LHR",
@@ -1531,8 +1531,8 @@
           },
           {
             "domain": "2LSS",
-            "count": 152,
-            "spearman": -0.6426198921534455
+            "count": 151,
+            "spearman": -0.6390728476821192
           },
           {
             "domain": "2LUM",
@@ -1546,8 +1546,8 @@
           },
           {
             "domain": "2LXK",
-            "count": 159,
-            "spearman": -0.6558753283974206
+            "count": 158,
+            "spearman": -0.6567963624138409
           },
           {
             "domain": "2LYP",
@@ -1566,28 +1566,28 @@
           },
           {
             "domain": "2M0Y",
-            "count": 621,
-            "spearman": -0.17531601899496263
+            "count": 618,
+            "spearman": -0.174683281988244
           },
           {
             "domain": "2M2J",
             "count": 764,
-            "spearman": -0.41930678222583523
+            "spearman": -0.4193141822750523
           },
           {
             "domain": "2M2L",
             "count": 786,
-            "spearman": -0.30616474040988795
+            "spearman": -0.3061238414457129
           },
           {
             "domain": "2M51",
-            "count": 675,
-            "spearman": -0.43302848157447565
+            "count": 552,
+            "spearman": -0.4550588748644617
           },
           {
             "domain": "2M7O",
-            "count": 140,
-            "spearman": -0.642736874330323
+            "count": 139,
+            "spearman": -0.6444836677242057
           },
           {
             "domain": "2M8E",
@@ -1606,8 +1606,8 @@
           },
           {
             "domain": "2MA4",
-            "count": 717,
-            "spearman": -0.29463890687943045
+            "count": 716,
+            "spearman": -0.29274968971095755
           },
           {
             "domain": "2MC5",
@@ -1622,7 +1622,7 @@
           {
             "domain": "2MCH",
             "count": 728,
-            "spearman": -0.548538421914549
+            "spearman": -0.5485402880328756
           },
           {
             "domain": "2MI6",
@@ -1647,12 +1647,12 @@
           {
             "domain": "2MRL",
             "count": 151,
-            "spearman": -0.7825444405716278
+            "spearman": -0.7823492506099686
           },
           {
             "domain": "2MXD",
-            "count": 1566,
-            "spearman": -0.662329503259323
+            "count": 1515,
+            "spearman": -0.6659619839775426
           },
           {
             "domain": "2MYX",
@@ -1676,13 +1676,13 @@
           },
           {
             "domain": "2O2W",
-            "count": 168,
-            "spearman": -0.7483334261316757
+            "count": 167,
+            "spearman": -0.7465550826058726
           },
           {
             "domain": "2OCH",
             "count": 416,
-            "spearman": -0.14568411998853187
+            "spearman": -0.14859348850854442
           },
           {
             "domain": "2ON8",
@@ -1701,8 +1701,8 @@
           },
           {
             "domain": "2PFU",
-            "count": 434,
-            "spearman": -0.6121799616788918
+            "count": 433,
+            "spearman": -0.6133605668545696
           },
           {
             "domain": "2PTL",
@@ -1727,7 +1727,7 @@
           {
             "domain": "2RU9",
             "count": 151,
-            "spearman": -0.41330080167305683
+            "spearman": -0.4135308469850122
           },
           {
             "domain": "2WQG",
@@ -1756,18 +1756,18 @@
           },
           {
             "domain": "3DKM",
-            "count": 2044,
-            "spearman": -0.4189055910932244
+            "count": 1813,
+            "spearman": -0.44236257058164663
           },
           {
             "domain": "3I35",
-            "count": 864,
-            "spearman": -0.6709840655329239
+            "count": 671,
+            "spearman": -0.6664769748235616
           },
           {
             "domain": "3L1X",
-            "count": 1236,
-            "spearman": -0.36423635493500156
+            "count": 1133,
+            "spearman": -0.3545506706507084
           },
           {
             "domain": "3MYC",
@@ -1781,8 +1781,8 @@
           },
           {
             "domain": "3ZGK",
-            "count": 1057,
-            "spearman": -0.6249882634985415
+            "count": 1056,
+            "spearman": -0.625249337931771
           },
           {
             "domain": "4AME",
@@ -1791,13 +1791,13 @@
           },
           {
             "domain": "4C26",
-            "count": 825,
-            "spearman": -0.47691568592671113
+            "count": 824,
+            "spearman": -0.47686864516295085
           },
           {
             "domain": "4G3O",
-            "count": 741,
-            "spearman": -0.09307378790993488
+            "count": 496,
+            "spearman": -0.14578566216458083
           },
           {
             "domain": "4HCK",
@@ -1866,8 +1866,8 @@
           },
           {
             "domain": "5VNT",
-            "count": 870,
-            "spearman": -0.25241533842874586
+            "count": 869,
+            "spearman": -0.2528393010518016
           },
           {
             "domain": "5Z2S",
@@ -1932,7 +1932,7 @@
           {
             "domain": "6NMW",
             "count": 569,
-            "spearman": -0.4102737691527018
+            "spearman": -0.4102357927046136
           },
           {
             "domain": "6SCW",
@@ -1962,17 +1962,17 @@
           {
             "domain": "EEHEE_rd3_0019",
             "count": 139,
-            "spearman": -0.4636757674605657
+            "spearman": -0.4633853165914473
           },
           {
             "domain": "EEHEE_rd3_0144",
-            "count": 113,
-            "spearman": 0.11098542817220042
+            "count": 112,
+            "spearman": 0.1124218402979465
           },
           {
             "domain": "EHEE_rd2_0152",
-            "count": 324,
-            "spearman": -0.6781773438120188
+            "count": 325,
+            "spearman": -0.6773152954748046
           },
           {
             "domain": "EHEE_rd2_0251",

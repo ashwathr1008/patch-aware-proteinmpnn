@@ -12,12 +12,12 @@
   "torch_version": "2.2.2",
   "domains_requested": 208,
   "domains_scored": 208,
-  "contrasts_scored": 81769,
-  "contrasts_rejected": 18803,
+  "contrasts_scored": 80093,
+  "contrasts_rejected": 18412,
   "rejection_reasons": {
-    "an arrangement is not a double mutant": 18803
+    "an arrangement is not a double mutant": 18412
   },
-  "elapsed_seconds": 70.3,
+  "elapsed_seconds": 59.8,
   "per_domain": [
     {
       "domain": "1A0N",
@@ -61,8 +61,8 @@
     },
     {
       "domain": "1GL5",
-      "contrasts": 1190,
-      "predictions": 2380
+      "contrasts": 1189,
+      "predictions": 2378
     },
     {
       "domain": "1GXI",
@@ -81,8 +81,8 @@
     },
     {
       "domain": "1H92",
-      "contrasts": 459,
-      "predictions": 918
+      "contrasts": 458,
+      "predictions": 916
     },
     {
       "domain": "1I2T",
@@ -106,8 +106,8 @@
     },
     {
       "domain": "1K1V",
-      "contrasts": 291,
-      "predictions": 582
+      "contrasts": 290,
+      "predictions": 580
     },
     {
       "domain": "1LP1",
@@ -136,8 +136,8 @@
     },
     {
       "domain": "1PGA",
-      "contrasts": 425,
-      "predictions": 850
+      "contrasts": 424,
+      "predictions": 848
     },
     {
       "domain": "1PGX",
@@ -161,8 +161,8 @@
     },
     {
       "domain": "1QKH",
-      "contrasts": 442,
-      "predictions": 884
+      "contrasts": 325,
+      "predictions": 650
     },
     {
       "domain": "1QKX",
@@ -196,8 +196,8 @@
     },
     {
       "domain": "1TG0",
-      "contrasts": 459,
-      "predictions": 918
+      "contrasts": 458,
+      "predictions": 916
     },
     {
       "domain": "1TUC",
@@ -206,8 +206,8 @@
     },
     {
       "domain": "1TUD",
-      "contrasts": 1171,
-      "predictions": 2342
+      "contrasts": 1170,
+      "predictions": 2340
     },
     {
       "domain": "1UFM",
@@ -216,8 +216,8 @@
     },
     {
       "domain": "1UZC",
-      "contrasts": 408,
-      "predictions": 816
+      "contrasts": 403,
+      "predictions": 806
     },
     {
       "domain": "1V1C",
@@ -241,8 +241,8 @@
     },
     {
       "domain": "1W4H",
-      "contrasts": 410,
-      "predictions": 820
+      "contrasts": 377,
+      "predictions": 754
     },
     {
       "domain": "1WCL",
@@ -251,8 +251,8 @@
     },
     {
       "domain": "1Y0M",
-      "contrasts": 1310,
-      "predictions": 2620
+      "contrasts": 1184,
+      "predictions": 2368
     },
     {
       "domain": "1YP5",
@@ -266,8 +266,8 @@
     },
     {
       "domain": "1ZLM",
-      "contrasts": 819,
-      "predictions": 1638
+      "contrasts": 818,
+      "predictions": 1636
     },
     {
       "domain": "1ZRJ",
@@ -291,8 +291,8 @@
     },
     {
       "domain": "2BTT",
-      "contrasts": 1224,
-      "predictions": 2448
+      "contrasts": 1219,
+      "predictions": 2438
     },
     {
       "domain": "2CDT",
@@ -341,8 +341,8 @@
     },
     {
       "domain": "2JWT",
-      "contrasts": 1002,
-      "predictions": 2004
+      "contrasts": 1000,
+      "predictions": 2000
     },
     {
       "domain": "2JY8",
@@ -361,8 +361,8 @@
     },
     {
       "domain": "2K28",
-      "contrasts": 708,
-      "predictions": 1416
+      "contrasts": 704,
+      "predictions": 1408
     },
     {
       "domain": "2K2A",
@@ -371,13 +371,13 @@
     },
     {
       "domain": "2K52",
-      "contrasts": 1309,
-      "predictions": 2618
+      "contrasts": 1303,
+      "predictions": 2606
     },
     {
       "domain": "2K5N",
-      "contrasts": 731,
-      "predictions": 1462
+      "contrasts": 608,
+      "predictions": 1216
     },
     {
       "domain": "2K5P",
@@ -396,8 +396,8 @@
     },
     {
       "domain": "2KGT",
-      "contrasts": 1713,
-      "predictions": 3426
+      "contrasts": 1710,
+      "predictions": 3420
     },
     {
       "domain": "2KRU",
@@ -426,8 +426,8 @@
     },
     {
       "domain": "2KXD",
-      "contrasts": 306,
-      "predictions": 612
+      "contrasts": 305,
+      "predictions": 610
     },
     {
       "domain": "2KYB",
@@ -436,8 +436,8 @@
     },
     {
       "domain": "2L09",
-      "contrasts": 459,
-      "predictions": 918
+      "contrasts": 458,
+      "predictions": 916
     },
     {
       "domain": "2L2P",
@@ -451,8 +451,8 @@
     },
     {
       "domain": "2L7M",
-      "contrasts": 455,
-      "predictions": 910
+      "contrasts": 451,
+      "predictions": 902
     },
     {
       "domain": "2L8D",
@@ -461,8 +461,8 @@
     },
     {
       "domain": "2L9R",
-      "contrasts": 561,
-      "predictions": 1122
+      "contrasts": 559,
+      "predictions": 1118
     },
     {
       "domain": "2LC2",
@@ -471,8 +471,8 @@
     },
     {
       "domain": "2LGW",
-      "contrasts": 1336,
-      "predictions": 2672
+      "contrasts": 1333,
+      "predictions": 2666
     },
     {
       "domain": "2LHR",
@@ -506,8 +506,8 @@
     },
     {
       "domain": "2LSS",
-      "contrasts": 153,
-      "predictions": 306
+      "contrasts": 152,
+      "predictions": 304
     },
     {
       "domain": "2LUM",
@@ -521,8 +521,8 @@
     },
     {
       "domain": "2LXK",
-      "contrasts": 153,
-      "predictions": 306
+      "contrasts": 152,
+      "predictions": 304
     },
     {
       "domain": "2LYP",
@@ -541,8 +541,8 @@
     },
     {
       "domain": "2M0Y",
-      "contrasts": 765,
-      "predictions": 1530
+      "contrasts": 764,
+      "predictions": 1528
     },
     {
       "domain": "2M2J",
@@ -556,13 +556,13 @@
     },
     {
       "domain": "2M51",
-      "contrasts": 747,
-      "predictions": 1494
+      "contrasts": 558,
+      "predictions": 1116
     },
     {
       "domain": "2M7O",
-      "contrasts": 153,
-      "predictions": 306
+      "contrasts": 151,
+      "predictions": 302
     },
     {
       "domain": "2M8E",
@@ -586,8 +586,8 @@
     },
     {
       "domain": "2MA4",
-      "contrasts": 783,
-      "predictions": 1566
+      "contrasts": 782,
+      "predictions": 1564
     },
     {
       "domain": "2MC5",
@@ -646,8 +646,8 @@
     },
     {
       "domain": "2MXD",
-      "contrasts": 1806,
-      "predictions": 3612
+      "contrasts": 1675,
+      "predictions": 3350
     },
     {
       "domain": "2MYX",
@@ -706,8 +706,8 @@
     },
     {
       "domain": "2PFU",
-      "contrasts": 477,
-      "predictions": 954
+      "contrasts": 476,
+      "predictions": 952
     },
     {
       "domain": "2PTL",
@@ -761,18 +761,18 @@
     },
     {
       "domain": "3DKM",
-      "contrasts": 2550,
-      "predictions": 5100
+      "contrasts": 2300,
+      "predictions": 4600
     },
     {
       "domain": "3I35",
-      "contrasts": 919,
-      "predictions": 1838
+      "contrasts": 703,
+      "predictions": 1406
     },
     {
       "domain": "3L1X",
-      "contrasts": 1361,
-      "predictions": 2722
+      "contrasts": 1259,
+      "predictions": 2518
     },
     {
       "domain": "3MYC",
@@ -786,8 +786,8 @@
     },
     {
       "domain": "3ZGK",
-      "contrasts": 1089,
-      "predictions": 2178
+      "contrasts": 1088,
+      "predictions": 2176
     },
     {
       "domain": "4AME",
@@ -801,8 +801,8 @@
     },
     {
       "domain": "4G3O",
-      "contrasts": 1014,
-      "predictions": 2028
+      "contrasts": 677,
+      "predictions": 1354
     },
     {
       "domain": "4HCK",
@@ -871,8 +871,8 @@
     },
     {
       "domain": "5VNT",
-      "contrasts": 1427,
-      "predictions": 2854
+      "contrasts": 1426,
+      "predictions": 2852
     },
     {
       "domain": "5Z2S",
@@ -1194,14 +1194,6 @@
       "site_i": "24",
       "site_j": "41",
       "aa_i": "E",
-      "aa_j": "R",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1A0N",
-      "site_i": "24",
-      "site_j": "41",
-      "aa_i": "E",
       "aa_j": "S",
       "reason": "an arrangement is not a double mutant"
     },
@@ -4994,14 +4986,6 @@
       "site_i": "30",
       "site_j": "40",
       "aa_i": "R",
-      "aa_j": "T",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1GL5",
-      "site_i": "30",
-      "site_j": "40",
-      "aa_i": "R",
       "aa_j": "V",
       "reason": "an arrangement is not a double mutant"
     },
@@ -12089,14 +12073,6 @@
       "domain": "1ORC",
       "site_i": "8",
       "site_j": "16",
-      "aa_i": "E",
-      "aa_j": "Y",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1ORC",
-      "site_i": "8",
-      "site_j": "16",
       "aa_i": "F",
       "aa_j": "K",
       "reason": "an arrangement is not a double mutant"
@@ -12250,14 +12226,6 @@
       "site_i": "8",
       "site_j": "16",
       "aa_i": "L",
-      "aa_j": "Y",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1ORC",
-      "site_i": "8",
-      "site_j": "16",
-      "aa_i": "M",
       "aa_j": "Y",
       "reason": "an arrangement is not a double mutant"
     },
@@ -13082,14 +13050,6 @@
       "site_i": "46",
       "site_j": "49",
       "aa_i": "F",
-      "aa_j": "T",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1PGA",
-      "site_i": "46",
-      "site_j": "49",
-      "aa_i": "G",
       "aa_j": "T",
       "reason": "an arrangement is not a double mutant"
     },
@@ -16505,22 +16465,6 @@
       "domain": "1QKH",
       "site_i": "4",
       "site_j": "27",
-      "aa_i": "A",
-      "aa_j": "D",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "A",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
       "aa_i": "C",
       "aa_j": "D",
       "reason": "an arrangement is not a double mutant"
@@ -16530,214 +16474,6 @@
       "site_i": "4",
       "site_j": "27",
       "aa_i": "C",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "E",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "F",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "G",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "H",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "I",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "K",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "L",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "M",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "N",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "P",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "Q",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "R",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "T",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "V",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "W",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "D",
-      "aa_j": "Y",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "E",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "F",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "G",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "H",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "I",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "K",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "L",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "M",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "N",
       "aa_j": "S",
       "reason": "an arrangement is not a double mutant"
     },
@@ -16747,54 +16483,6 @@
       "site_j": "27",
       "aa_i": "P",
       "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "Q",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "R",
-      "aa_j": "S",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "S",
-      "aa_j": "T",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "S",
-      "aa_j": "V",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "S",
-      "aa_j": "W",
-      "reason": "an arrangement is not a double mutant"
-    },
-    {
-      "domain": "1QKH",
-      "site_i": "4",
-      "site_j": "27",
-      "aa_i": "S",
-      "aa_j": "Y",
       "reason": "an arrangement is not a double mutant"
     },
     {
@@ -17059,6 +16747,318 @@
       "site_j": "30",
       "aa_i": "S",
       "aa_j": "V",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "4",
+      "site_j": "30",
+      "aa_i": "S",
+      "aa_j": "W",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "4",
+      "site_j": "30",
+      "aa_i": "S",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "A",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "D",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "E",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "F",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "G",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "H",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "I",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "K",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "L",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "M",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "N",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "P",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "Q",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "R",
+      "aa_j": "S",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "S",
+      "aa_j": "T",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "S",
+      "aa_j": "V",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "S",
+      "aa_j": "W",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKH",
+      "site_i": "27",
+      "site_j": "30",
+      "aa_i": "S",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "A",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "C",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "D",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "E",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "F",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "G",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "H",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "I",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "K",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "L",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "M",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "N",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "P",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "Q",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "R",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "S",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "T",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "V",
+      "aa_j": "Y",
+      "reason": "an arrangement is not a double mutant"
+    },
+    {
+      "domain": "1QKX",
+      "site_i": "10",
+      "site_j": "52",
+      "aa_i": "W",
+      "aa_j": "Y",
       "reason": "an arrangement is not a double mutant"
     }
   ]

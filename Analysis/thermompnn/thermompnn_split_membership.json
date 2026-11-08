@@ -23,8 +23,8 @@
     "clean": {
       "domains": 81,
       "thermompnn_d_median": -0.45905682590564656,
-      "frozen_median": -0.39153643321113907,
-      "median_gap": -0.06752039269450749,
+      "frozen_median": -0.39304681572722805,
+      "median_gap": -0.06601001017841851,
       "thermompnn_stronger": 45,
       "nonties": 81,
       "p_value": 0.37417441760470777
@@ -58,9 +58,9 @@
     },
     "all": {
       "domains": 198,
-      "thermompnn_d_median": -0.5013783621664184,
+      "thermompnn_d_median": -0.5008667876476076,
       "frozen_median": -0.42283556367034797,
-      "median_gap": -0.07854279849607043,
+      "median_gap": -0.07803122397725964,
       "thermompnn_stronger": 137,
       "nonties": 198,
       "p_value": 6.854404904316157e-08
