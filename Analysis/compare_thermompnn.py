@@ -13,6 +13,15 @@ Both models agree with the measurement by *negative* correlation: ProteinMPNN re
 log probability and ThermoMPNN reports ddG, both lower when the arrangement is preferred, while
 measured stability is higher when the arrangement is more stable.
 
+Restricting to doubles moves the frozen baseline a long way, and `--structures` makes the
+reason reproducible. The excluded contrasts are exactly those where one arrangement returns a
+site to its wild-type residue, and ProteinMPNN is trained to recover native sequence, so it
+prefers those strongly while the measurement usually agrees. Those were its easy wins. Measured
+here, the frozen model reaches -0.67 on the excluded contrasts against -0.42 on the doubles, so
+a substantial part of its apparent arrangement sensitivity is native-sequence recognition.
+Composition is matched inside every contrast either way, so this is not a composition artefact,
+but it is a nativeness one, and the double-mutant subset is the honest measure of arrangement.
+
 A caveat this script cannot resolve, and which must accompany any use of its output:
 ThermoMPNN-D was trained on the same mega-scale dataset these contrasts come from, and the
 split file its config names is not distributed with the model. For any domain it trained on,
@@ -71,6 +80,49 @@ def summarize(label, pooled_rho, domains):
             "p75": values[(3 * len(values)) // 4] if values else None}
 
 
+AA3 = {"ALA": "A", "ARG": "R", "ASN": "N", "ASP": "D", "CYS": "C", "GLN": "Q", "GLU": "E",
+       "GLY": "G", "HIS": "H", "ILE": "I", "LEU": "L", "LYS": "K", "MET": "M", "PHE": "F",
+       "PRO": "P", "SER": "S", "THR": "T", "TRP": "W", "TYR": "Y", "VAL": "V"}
+
+
+def wild_types(path):
+    """Wild-type residue at each PDB residue number, read from the CA records."""
+    out = {}
+    for line in Path(path).read_text(errors="replace").splitlines():
+        if line[:4] == "ATOM" and line[12:16].strip() == "CA":
+            name = line[17:20].strip()
+            if name in AA3:
+                out[int(line[22:26])] = AA3[name]
+    return out
+
+
+def frozen_on_excluded(args, thermo, variants, spearmanr):
+    """The frozen model's per-domain correlation on the contrasts ThermoMPNN-D cannot score."""
+    structures, cache, by_domain = Path(args.structures), {}, defaultdict(list)
+    with Path(args.contrasts or "").open(newline="", encoding="utf-8-sig") as handle:
+        for row in csv.DictReader(handle):
+            if row["resolved"] != "True":
+                continue
+            domain = row["domain"]
+            site_i, site_j = int(row["site_i"]), int(row["site_j"])
+            if (domain, site_i, site_j, row["aa_i"], row["aa_j"]) in thermo:
+                continue                      # scored by ThermoMPNN-D, so not excluded
+            if domain not in cache:
+                cache[domain] = wild_types(structures / (domain + ".pdb"))
+            forward = variants.get((domain, site_i, site_j, row["aa_i"], row["aa_j"]))
+            reverse = variants.get((domain, site_i, site_j, row["aa_j"], row["aa_i"]))
+            if forward is None or reverse is None:
+                continue
+            by_domain[domain].append((forward[0] - reverse[0], float(row["difference"])))
+    domains = per_domain(by_domain, spearmanr)
+    values = sorted(domains.values())
+    return {"note": ("Contrasts where one arrangement restores a wild-type residue; "
+                     "ProteinMPNN's native-sequence training makes these its easy wins."),
+            "contrasts": sum(len(v) for v in by_domain.values()),
+            "domains": len(domains),
+            "median": statistics.median(values) if values else None}
+
+
 def run(args):
     from scipy.stats import spearmanr, binomtest
 
@@ -97,6 +149,10 @@ def run(args):
 
     if not measured_all:
         raise SystemExit("No contrasts matched between the two models")
+
+    nativeness = None
+    if args.structures:
+        nativeness = frozen_on_excluded(args, thermo, variants, spearmanr)
 
     thermo_domains = per_domain(thermo_by_domain, spearmanr)
     frozen_domains = per_domain(frozen_by_domain, spearmanr)
@@ -130,6 +186,7 @@ def run(args):
             "thermompnn_stronger": nonties - better_frozen,
             "p_value": test.pvalue if test else None,
         },
+        "frozen_on_excluded_contrasts": nativeness,
         "per_domain": [{"domain": d, "thermompnn_d": thermo_domains[d],
                         "frozen": frozen_domains[d]} for d in shared],
     }
@@ -154,8 +211,11 @@ def main():
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--thermompnn", required=True,
                         help="thermompnn_pair_predictions.csv")
+    parser.add_argument("--contrasts", help="swap_contrasts.csv; needed with --structures")
     parser.add_argument("--frozen", required=True,
                         help="swap_variant_scores.csv from the full autoregressive run")
+    parser.add_argument("--structures",
+                        help="optional; enables the nativeness split described above")
     parser.add_argument("--output", type=Path, required=True)
     run(parser.parse_args())
 

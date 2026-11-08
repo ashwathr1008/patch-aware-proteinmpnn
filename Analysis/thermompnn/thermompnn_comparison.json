@@ -1,0 +1,1030 @@
+{
+  "schema_version": 1,
+  "purpose": "thermompnn_d_versus_frozen_proteinmpnn_on_identical_contrasts",
+  "sign_convention": "Both models report lower values for the arrangement they prefer; measured stability is higher for the more stable arrangement, so agreement is a negative correlation.",
+  "training_overlap_caveat": "ThermoMPNN-D was trained on this dataset and its split file is not distributed. Treat its score as an upper bound until domain membership is known.",
+  "contrasts_compared": 54857,
+  "contrasts_without_frozen_scores": 0,
+  "minimum_contrasts_per_domain": 20,
+  "thermompnn_d": {
+    "label": "ThermoMPNN-D",
+    "pooled_spearman": -0.48747652941028913,
+    "domains": 198,
+    "median": -0.5013783621664184,
+    "p25": -0.6571763911046233,
+    "p75": -0.3085067873303167
+  },
+  "frozen_proteinmpnn": {
+    "label": "frozen ProteinMPNN, full model",
+    "pooled_spearman": -0.4025940117891989,
+    "domains": 198,
+    "median": -0.42283556367034797,
+    "p25": -0.5799856675930296,
+    "p75": -0.2539374561943891
+  },
+  "paired_sign_test": {
+    "domains": 198,
+    "nonties": 198,
+    "frozen_stronger": 61,
+    "thermompnn_stronger": 137,
+    "p_value": 6.854404904316157e-08
+  },
+  "frozen_on_excluded_contrasts": {
+    "note": "Contrasts where one arrangement restores a wild-type residue; ProteinMPNN's native-sequence training makes these its easy wins.",
+    "contrasts": 14776,
+    "domains": 175,
+    "median": -0.6722886272557013
+  },
+  "per_domain": [
+    {
+      "domain": "1A0N",
+      "thermompnn_d": -0.3420300458491855,
+      "frozen": -0.34261535459955134
+    },
+    {
+      "domain": "1CSQ",
+      "thermompnn_d": -0.7820089955022489,
+      "frozen": -0.364641363528762
+    },
+    {
+      "domain": "1E0L",
+      "thermompnn_d": -0.15871898054996644,
+      "frozen": -0.25513078470824946
+    },
+    {
+      "domain": "1E6H",
+      "thermompnn_d": -0.5591698317959848,
+      "frozen": -0.6220293000542594
+    },
+    {
+      "domain": "1EKL",
+      "thermompnn_d": -0.35527789766121176,
+      "frozen": -0.3345195897392358
+    },
+    {
+      "domain": "1EM7",
+      "thermompnn_d": -0.6410846276908123,
+      "frozen": -0.3235940948947977
+    },
+    {
+      "domain": "1ENH",
+      "thermompnn_d": -0.38556190986235167,
+      "frozen": -0.1260639213511084
+    },
+    {
+      "domain": "1F0M",
+      "thermompnn_d": -0.42643836281538783,
+      "frozen": -0.19907588729385486
+    },
+    {
+      "domain": "1GL5",
+      "thermompnn_d": -0.46886294914530197,
+      "frozen": -0.592084508268642
+    },
+    {
+      "domain": "1GXI",
+      "thermompnn_d": -0.36067354152704767,
+      "frozen": -0.407930283628572
+    },
+    {
+      "domain": "1GYZ",
+      "thermompnn_d": -0.20415144721263573,
+      "frozen": 0.04834118447237827
+    },
+    {
+      "domain": "1H8K",
+      "thermompnn_d": -0.7033073722394111,
+      "frozen": -0.6856929478288702
+    },
+    {
+      "domain": "1H92",
+      "thermompnn_d": -0.2040830639929397,
+      "frozen": -0.19430030918134159
+    },
+    {
+      "domain": "1I2T",
+      "thermompnn_d": -0.9263620584721503,
+      "frozen": -0.8410567364695806
+    },
+    {
+      "domain": "1I6C",
+      "thermompnn_d": -0.25913043478260867,
+      "frozen": -0.09913043478260869
+    },
+    {
+      "domain": "1IFY",
+      "thermompnn_d": -0.6539366515837104,
+      "frozen": -0.701447963800905
+    },
+    {
+      "domain": "1IGD",
+      "thermompnn_d": -0.13769836714389577,
+      "frozen": -0.3131601532818385
+    },
+    {
+      "domain": "1K1V",
+      "thermompnn_d": -0.7101987079391324,
+      "frozen": -0.6763094472656337
+    },
+    {
+      "domain": "1LP1",
+      "thermompnn_d": -0.5926304145667167,
+      "frozen": -0.5669896511735855
+    },
+    {
+      "domain": "1MSJ",
+      "thermompnn_d": -0.5326973167085369,
+      "frozen": -0.4886333862490945
+    },
+    {
+      "domain": "1O6X",
+      "thermompnn_d": -0.7489844874220416,
+      "frozen": -0.7160464110057043
+    },
+    {
+      "domain": "1OPS",
+      "thermompnn_d": -0.2507189751481419,
+      "frozen": -0.35301230102025527
+    },
+    {
+      "domain": "1ORC",
+      "thermompnn_d": -0.5603364118478124,
+      "frozen": -0.5789946054690694
+    },
+    {
+      "domain": "1PGA",
+      "thermompnn_d": -0.680389854192838,
+      "frozen": -0.5768334580151594
+    },
+    {
+      "domain": "1PGX",
+      "thermompnn_d": -0.26330440205366523,
+      "frozen": -0.3103362406991346
+    },
+    {
+      "domain": "1PSE",
+      "thermompnn_d": 0.05108289768483944,
+      "frozen": -0.3488637576016217
+    },
+    {
+      "domain": "1PV0",
+      "thermompnn_d": -0.6505200208915676,
+      "frozen": -0.15555493516751062
+    },
+    {
+      "domain": "1PWT",
+      "thermompnn_d": -0.6635530245155913,
+      "frozen": -0.5842072366136537
+    },
+    {
+      "domain": "1QKH",
+      "thermompnn_d": -0.5628975524430884,
+      "frozen": -0.09768714170805512
+    },
+    {
+      "domain": "1QKX",
+      "thermompnn_d": -0.6184121392765206,
+      "frozen": -0.582807207695434
+    },
+    {
+      "domain": "1QLY",
+      "thermompnn_d": -0.6572505121029399,
+      "frozen": -0.5860356019733994
+    },
+    {
+      "domain": "1QP2",
+      "thermompnn_d": -0.29614412184394895,
+      "frozen": -0.29129231535481537
+    },
+    {
+      "domain": "1R69",
+      "thermompnn_d": -0.36142280729436693,
+      "frozen": -0.1698397313076212
+    },
+    {
+      "domain": "1S1N",
+      "thermompnn_d": -0.7203351034609046,
+      "frozen": -0.869466443874748
+    },
+    {
+      "domain": "1SRM",
+      "thermompnn_d": -0.5287977939663333,
+      "frozen": -0.5564555294892374
+    },
+    {
+      "domain": "1TG0",
+      "thermompnn_d": -0.2580660126312202,
+      "frozen": -0.14495336159657324
+    },
+    {
+      "domain": "1TUC",
+      "thermompnn_d": -0.06505326609173107,
+      "frozen": -0.1366864611620065
+    },
+    {
+      "domain": "1TUD",
+      "thermompnn_d": -0.5250031731052618,
+      "frozen": -0.6153329889582456
+    },
+    {
+      "domain": "1UFM",
+      "thermompnn_d": -0.7189930733672835,
+      "frozen": -0.6496828039727596
+    },
+    {
+      "domain": "1UZC",
+      "thermompnn_d": -0.5479979614881137,
+      "frozen": -0.6024612033215754
+    },
+    {
+      "domain": "1V1C",
+      "thermompnn_d": -0.4370982901339194,
+      "frozen": -0.33645269390821064
+    },
+    {
+      "domain": "1VII",
+      "thermompnn_d": -0.16752199413489735,
+      "frozen": -0.48680351906158353
+    },
+    {
+      "domain": "1W4G",
+      "thermompnn_d": -0.2996047430830039,
+      "frozen": 0.2292490118577075
+    },
+    {
+      "domain": "1W4H",
+      "thermompnn_d": 0.08415546032215163,
+      "frozen": -0.35638539973400324
+    },
+    {
+      "domain": "1WCL",
+      "thermompnn_d": -0.5384736506693591,
+      "frozen": -0.3477932907698348
+    },
+    {
+      "domain": "1Y0M",
+      "thermompnn_d": -0.3304006855652896,
+      "frozen": -0.4790165695097343
+    },
+    {
+      "domain": "1YP5",
+      "thermompnn_d": -0.3952954823573469,
+      "frozen": -0.330332840149799
+    },
+    {
+      "domain": "1YU5",
+      "thermompnn_d": -0.716484446547077,
+      "frozen": -0.4434011215326455
+    },
+    {
+      "domain": "1ZLM",
+      "thermompnn_d": -0.40118367845967845,
+      "frozen": -0.4725759343448028
+    },
+    {
+      "domain": "1ZRJ",
+      "thermompnn_d": -0.4601035129694067,
+      "frozen": -0.4933896114039605
+    },
+    {
+      "domain": "2AME",
+      "thermompnn_d": -0.39685111478989826,
+      "frozen": -0.3882744531717799
+    },
+    {
+      "domain": "2AMI",
+      "thermompnn_d": -0.015727906516657213,
+      "frozen": 0.027000301259987376
+    },
+    {
+      "domain": "2BTT",
+      "thermompnn_d": -0.489383550365494,
+      "frozen": -0.46615736467864416
+    },
+    {
+      "domain": "2CDT",
+      "thermompnn_d": -0.49505888227545425,
+      "frozen": -0.33541954555116255
+    },
+    {
+      "domain": "2D1U",
+      "thermompnn_d": -0.2633094395060285,
+      "frozen": -0.2080834624755402
+    },
+    {
+      "domain": "2EKK",
+      "thermompnn_d": -0.7610283159463486,
+      "frozen": -0.7214672808562523
+    },
+    {
+      "domain": "2EXD",
+      "thermompnn_d": -0.3871095649571691,
+      "frozen": -0.5439743637701219
+    },
+    {
+      "domain": "2HBB",
+      "thermompnn_d": -0.6086017207438571,
+      "frozen": -0.6738410959999203
+    },
+    {
+      "domain": "2JN4",
+      "thermompnn_d": -0.4409120181702556,
+      "frozen": -0.26213342177361365
+    },
+    {
+      "domain": "2JT1",
+      "thermompnn_d": -0.39697262197262195,
+      "frozen": -0.24761319761319758
+    },
+    {
+      "domain": "2JTV",
+      "thermompnn_d": -0.7226535752596304,
+      "frozen": -0.463844329863396
+    },
+    {
+      "domain": "2JVD",
+      "thermompnn_d": -0.47915587257650494,
+      "frozen": -0.40107190206200105
+    },
+    {
+      "domain": "2JWT",
+      "thermompnn_d": -0.5317056754399827,
+      "frozen": -0.484056132054306
+    },
+    {
+      "domain": "2JY8",
+      "thermompnn_d": -0.5148303309593633,
+      "frozen": -0.596142567110309
+    },
+    {
+      "domain": "2JZ2",
+      "thermompnn_d": -0.7721627108167152,
+      "frozen": -0.5062209516049349
+    },
+    {
+      "domain": "2K1B",
+      "thermompnn_d": -0.45905682590564656,
+      "frozen": -0.4849204646458455
+    },
+    {
+      "domain": "2K28",
+      "thermompnn_d": -0.5119042436783116,
+      "frozen": -0.5266256302308038
+    },
+    {
+      "domain": "2K2A",
+      "thermompnn_d": -0.7546385388776148,
+      "frozen": -0.7455600223252751
+    },
+    {
+      "domain": "2K52",
+      "thermompnn_d": -0.6344701739857348,
+      "frozen": -0.5786311451594156
+    },
+    {
+      "domain": "2K5N",
+      "thermompnn_d": -0.7414057183841615,
+      "frozen": -0.6772449394426804
+    },
+    {
+      "domain": "2K5P",
+      "thermompnn_d": -0.5445481435814025,
+      "frozen": -0.6192010283922845
+    },
+    {
+      "domain": "2KCM",
+      "thermompnn_d": -0.6332046217490082,
+      "frozen": -0.42865662405479643
+    },
+    {
+      "domain": "2KGT",
+      "thermompnn_d": -0.4853682959781236,
+      "frozen": -0.44169959697069694
+    },
+    {
+      "domain": "2KRU",
+      "thermompnn_d": -0.7777397783642904,
+      "frozen": -0.6779045801684365
+    },
+    {
+      "domain": "2KT8",
+      "thermompnn_d": -0.459485004631774,
+      "frozen": -0.21851117415470128
+    },
+    {
+      "domain": "2KVS",
+      "thermompnn_d": -0.4245007610043982,
+      "frozen": -0.26559068214737147
+    },
+    {
+      "domain": "2KVT",
+      "thermompnn_d": -0.5032453876845778,
+      "frozen": -0.3714103364708531
+    },
+    {
+      "domain": "2KWH",
+      "thermompnn_d": -0.5973878708109751,
+      "frozen": -0.550572036043333
+    },
+    {
+      "domain": "2KXD",
+      "thermompnn_d": -0.4688034133442342,
+      "frozen": -0.5733064217370754
+    },
+    {
+      "domain": "2KYB",
+      "thermompnn_d": -0.8067385444743935,
+      "frozen": -0.5970039394567697
+    },
+    {
+      "domain": "2L09",
+      "thermompnn_d": -0.4963580054554415,
+      "frozen": -0.3545367748099724
+    },
+    {
+      "domain": "2L2P",
+      "thermompnn_d": -0.6435302390998594,
+      "frozen": -0.2801453352086264
+    },
+    {
+      "domain": "2L7F",
+      "thermompnn_d": -0.06311590145576708,
+      "frozen": 0.026973684210526316
+    },
+    {
+      "domain": "2L7M",
+      "thermompnn_d": -0.4689794208514426,
+      "frozen": -0.3895752027574395
+    },
+    {
+      "domain": "2L8D",
+      "thermompnn_d": -0.7648612810580494,
+      "frozen": -0.6893627353082209
+    },
+    {
+      "domain": "2L9R",
+      "thermompnn_d": -0.6929725761627603,
+      "frozen": -0.5021135056717879
+    },
+    {
+      "domain": "2LC2",
+      "thermompnn_d": -0.8630897317298796,
+      "frozen": -0.7636149324102531
+    },
+    {
+      "domain": "2LGW",
+      "thermompnn_d": -0.7247437697845993,
+      "frozen": -0.60928165224894
+    },
+    {
+      "domain": "2LHR",
+      "thermompnn_d": -0.8652374656314761,
+      "frozen": -0.7265488457621335
+    },
+    {
+      "domain": "2LJ3",
+      "thermompnn_d": -0.5127175368139224,
+      "frozen": -0.6611921942512599
+    },
+    {
+      "domain": "2LLV",
+      "thermompnn_d": -0.5689299600798786,
+      "frozen": -0.3354280025139874
+    },
+    {
+      "domain": "2LO1",
+      "thermompnn_d": -0.67600405502246,
+      "frozen": -0.5799856675930296
+    },
+    {
+      "domain": "2LP5",
+      "thermompnn_d": -0.7617504628970234,
+      "frozen": -0.29297108673978073
+    },
+    {
+      "domain": "2LQK",
+      "thermompnn_d": -0.206011898549212,
+      "frozen": -0.30353825279198415
+    },
+    {
+      "domain": "2LSS",
+      "thermompnn_d": -0.4910214411709925,
+      "frozen": -0.6999769921006213
+    },
+    {
+      "domain": "2LUM",
+      "thermompnn_d": -0.09315518049695265,
+      "frozen": -0.13171589310829818
+    },
+    {
+      "domain": "2LVN",
+      "thermompnn_d": -0.3426700012874853,
+      "frozen": -0.06426619925204198
+    },
+    {
+      "domain": "2LXK",
+      "thermompnn_d": -0.023778801843317966,
+      "frozen": -0.4337204301075268
+    },
+    {
+      "domain": "2LYP",
+      "thermompnn_d": -0.09980538607195456,
+      "frozen": -0.4022328003366294
+    },
+    {
+      "domain": "2M0C",
+      "thermompnn_d": -0.3294082087904208,
+      "frozen": -0.18547292642601265
+    },
+    {
+      "domain": "2M0X",
+      "thermompnn_d": -0.07133832737030413,
+      "frozen": 0.09175983899821111
+    },
+    {
+      "domain": "2M0Y",
+      "thermompnn_d": -0.28901889195196784,
+      "frozen": -0.07718413093374493
+    },
+    {
+      "domain": "2M2J",
+      "thermompnn_d": -0.5750067470845492,
+      "frozen": -0.47814954695891937
+    },
+    {
+      "domain": "2M2L",
+      "thermompnn_d": -0.4041115693295469,
+      "frozen": -0.2932439066551426
+    },
+    {
+      "domain": "2M51",
+      "thermompnn_d": -0.23650430801135677,
+      "frozen": -0.2539374561943891
+    },
+    {
+      "domain": "2M7O",
+      "thermompnn_d": -0.6291855247947648,
+      "frozen": -0.5190932424224612
+    },
+    {
+      "domain": "2M8E",
+      "thermompnn_d": -0.3557422969187675,
+      "frozen": -0.2439775910364146
+    },
+    {
+      "domain": "2M8I",
+      "thermompnn_d": -0.46312864684634625,
+      "frozen": -0.5343150875243124
+    },
+    {
+      "domain": "2M8U",
+      "thermompnn_d": 0.12571860117442163,
+      "frozen": 0.3307029576314289
+    },
+    {
+      "domain": "2MA4",
+      "thermompnn_d": -0.2774620377207641,
+      "frozen": -0.2037725523104146
+    },
+    {
+      "domain": "2MC5",
+      "thermompnn_d": -0.11364469527048213,
+      "frozen": -0.12310071630128068
+    },
+    {
+      "domain": "2MCD",
+      "thermompnn_d": -0.42855404089581306,
+      "frozen": -0.5819133398247323
+    },
+    {
+      "domain": "2MCH",
+      "thermompnn_d": -0.6119752116340131,
+      "frozen": -0.41872864417603856
+    },
+    {
+      "domain": "2MI6",
+      "thermompnn_d": -0.8151376343165374,
+      "frozen": -0.7761933301939296
+    },
+    {
+      "domain": "2MKX",
+      "thermompnn_d": -0.3245382960948471,
+      "frozen": -0.3460353010185037
+    },
+    {
+      "domain": "2MKY",
+      "thermompnn_d": -0.5419061365452057,
+      "frozen": -0.4859163077714212
+    },
+    {
+      "domain": "2MPK",
+      "thermompnn_d": -0.03830171635049684,
+      "frozen": -0.6226287262872628
+    },
+    {
+      "domain": "2MRL",
+      "thermompnn_d": -0.8418211946658251,
+      "frozen": -0.7923143691312239
+    },
+    {
+      "domain": "2MXD",
+      "thermompnn_d": -0.6984077434091536,
+      "frozen": -0.5521565840907876
+    },
+    {
+      "domain": "2MYX",
+      "thermompnn_d": -0.5452003149207358,
+      "frozen": -0.5235184693064044
+    },
+    {
+      "domain": "2N4S",
+      "thermompnn_d": -0.2923076923076923,
+      "frozen": -0.3723076923076923
+    },
+    {
+      "domain": "2N88",
+      "thermompnn_d": -0.8192035020286142,
+      "frozen": -0.7191106128550075
+    },
+    {
+      "domain": "2N9L",
+      "thermompnn_d": -0.24833395038874492,
+      "frozen": -0.2097988399358263
+    },
+    {
+      "domain": "2O2W",
+      "thermompnn_d": -0.8384219254604173,
+      "frozen": -0.7960323694809163
+    },
+    {
+      "domain": "2OCH",
+      "thermompnn_d": -0.11934243059779862,
+      "frozen": -0.11673188491324914
+    },
+    {
+      "domain": "2ON8",
+      "thermompnn_d": -0.35224724307293115,
+      "frozen": -0.14864238717449726
+    },
+    {
+      "domain": "2OP7",
+      "thermompnn_d": -0.33337177565063625,
+      "frozen": -0.054272863568215896
+    },
+    {
+      "domain": "2PFU",
+      "thermompnn_d": -0.4995113366482589,
+      "frozen": -0.5219834002444392
+    },
+    {
+      "domain": "2PTL",
+      "thermompnn_d": -0.02566704575277753,
+      "frozen": -0.002012072434607646
+    },
+    {
+      "domain": "2RJV",
+      "thermompnn_d": -0.6571763911046233,
+      "frozen": -0.49693731368308924
+    },
+    {
+      "domain": "2ROT",
+      "thermompnn_d": -0.5321061825436871,
+      "frozen": -0.6631298064149963
+    },
+    {
+      "domain": "2RRT",
+      "thermompnn_d": -0.04818052552100585,
+      "frozen": 0.08300702902922319
+    },
+    {
+      "domain": "2RU9",
+      "thermompnn_d": -0.7175129948020793,
+      "frozen": -0.5612077749545343
+    },
+    {
+      "domain": "2WQG",
+      "thermompnn_d": -0.7031827577989482,
+      "frozen": -0.2980780421301145
+    },
+    {
+      "domain": "2WXC",
+      "thermompnn_d": 0.09461538461538462,
+      "frozen": 0.04230769230769231
+    },
+    {
+      "domain": "2YSB",
+      "thermompnn_d": -0.541665384970316,
+      "frozen": -0.4354794057030361
+    },
+    {
+      "domain": "2YSF",
+      "thermompnn_d": -0.4556657601450435,
+      "frozen": -0.4112675305284488
+    },
+    {
+      "domain": "2YSH",
+      "thermompnn_d": -0.6402639061019173,
+      "frozen": -0.48294087628490184
+    },
+    {
+      "domain": "3DKM",
+      "thermompnn_d": -0.37160884436763414,
+      "frozen": -0.2536317648480038
+    },
+    {
+      "domain": "3I35",
+      "thermompnn_d": -0.35817325228757874,
+      "frozen": -0.5941251534915047
+    },
+    {
+      "domain": "3L1X",
+      "thermompnn_d": -0.537039398551896,
+      "frozen": -0.26458529035630457
+    },
+    {
+      "domain": "3MYC",
+      "thermompnn_d": -0.6460260810159948,
+      "frozen": -0.4220767679047524
+    },
+    {
+      "domain": "3QF6",
+      "thermompnn_d": -0.5086956521739131,
+      "frozen": -0.47482083134257047
+    },
+    {
+      "domain": "3ZGK",
+      "thermompnn_d": -0.5858438103414622,
+      "frozen": -0.5245341322426791
+    },
+    {
+      "domain": "4AME",
+      "thermompnn_d": -0.5134834508952794,
+      "frozen": -0.3313347802495931
+    },
+    {
+      "domain": "4C26",
+      "thermompnn_d": -0.532197981403298,
+      "frozen": -0.36526465407982495
+    },
+    {
+      "domain": "4G3O",
+      "thermompnn_d": -0.2884697574339831,
+      "frozen": 0.1235806494566028
+    },
+    {
+      "domain": "4HCK",
+      "thermompnn_d": -0.6658258304584581,
+      "frozen": -0.557506503459181
+    },
+    {
+      "domain": "4L5E",
+      "thermompnn_d": 0.28816738816738824,
+      "frozen": -0.13484848484848486
+    },
+    {
+      "domain": "4UZW",
+      "thermompnn_d": -0.7273816834723349,
+      "frozen": -0.47615207423989286
+    },
+    {
+      "domain": "5AHT",
+      "thermompnn_d": -0.6139130434782608,
+      "frozen": -0.5330434782608695
+    },
+    {
+      "domain": "5ECA",
+      "thermompnn_d": -0.2025008476673112,
+      "frozen": -0.4036372597495686
+    },
+    {
+      "domain": "5FW9",
+      "thermompnn_d": -0.6403121363134492,
+      "frozen": -0.6637522007698964
+    },
+    {
+      "domain": "5JRT",
+      "thermompnn_d": -0.6039624510590121,
+      "frozen": -0.15435633756309258
+    },
+    {
+      "domain": "5KPH",
+      "thermompnn_d": -0.6158125627120178,
+      "frozen": -0.5241302571354556
+    },
+    {
+      "domain": "5UB0",
+      "thermompnn_d": 0.34720792834000375,
+      "frozen": 0.3229655040975795
+    },
+    {
+      "domain": "5UBS",
+      "thermompnn_d": -0.30156897846641356,
+      "frozen": -0.11138821157031596
+    },
+    {
+      "domain": "5UCE",
+      "thermompnn_d": -0.02752447467359256,
+      "frozen": -0.1333651526421494
+    },
+    {
+      "domain": "5UOI",
+      "thermompnn_d": -0.4672195483154386,
+      "frozen": -0.5741429100333209
+    },
+    {
+      "domain": "5UP5",
+      "thermompnn_d": -0.8030453614823502,
+      "frozen": -0.7558216817391482
+    },
+    {
+      "domain": "5VNT",
+      "thermompnn_d": -0.5354575492953041,
+      "frozen": -0.24069798129833442
+    },
+    {
+      "domain": "5Z2S",
+      "thermompnn_d": -0.04430157802454705,
+      "frozen": -0.251198129748685
+    },
+    {
+      "domain": "5ZD0",
+      "thermompnn_d": -0.037914078625258,
+      "frozen": 0.2347794364709835
+    },
+    {
+      "domain": "6ACV",
+      "thermompnn_d": -0.6127523915316891,
+      "frozen": -0.6026250103112312
+    },
+    {
+      "domain": "6AME",
+      "thermompnn_d": -0.06707193515704155,
+      "frozen": -0.05734193640128691
+    },
+    {
+      "domain": "6EWS",
+      "thermompnn_d": -0.6862351552191124,
+      "frozen": -0.5493923189110355
+    },
+    {
+      "domain": "6EWT",
+      "thermompnn_d": -0.7721611454034113,
+      "frozen": -0.7290050247061093
+    },
+    {
+      "domain": "6EWU",
+      "thermompnn_d": -0.3277724448758345,
+      "frozen": -0.20298789213184834
+    },
+    {
+      "domain": "6HQ1",
+      "thermompnn_d": -0.2536911831886706,
+      "frozen": -0.38611085731688743
+    },
+    {
+      "domain": "6IPY",
+      "thermompnn_d": -0.39257592800899893,
+      "frozen": -0.4423637045369329
+    },
+    {
+      "domain": "6IWS",
+      "thermompnn_d": -0.6257649567638057,
+      "frozen": -0.5022478324861914
+    },
+    {
+      "domain": "6M3N",
+      "thermompnn_d": -0.7277026591152059,
+      "frozen": -0.6591304739757711
+    },
+    {
+      "domain": "6NJF",
+      "thermompnn_d": -0.0550354729020612,
+      "frozen": 0.03221947021535619
+    },
+    {
+      "domain": "6NMW",
+      "thermompnn_d": -0.2916733002971588,
+      "frozen": -0.41132512205826666
+    },
+    {
+      "domain": "6SCW",
+      "thermompnn_d": -0.47363134602953616,
+      "frozen": -0.1254736214012232
+    },
+    {
+      "domain": "7BPM",
+      "thermompnn_d": -0.7316148663630334,
+      "frozen": -0.27591305583203635
+    },
+    {
+      "domain": "8AME",
+      "thermompnn_d": -0.46384295316334156,
+      "frozen": -0.2928731462712046
+    },
+    {
+      "domain": "8MSI",
+      "thermompnn_d": -0.5557128193357942,
+      "frozen": -0.39304681572722805
+    },
+    {
+      "domain": "9AME",
+      "thermompnn_d": -0.44938581259244975,
+      "frozen": -0.39153643321113907
+    },
+    {
+      "domain": "EEHEE_rd3_0019",
+      "thermompnn_d": -0.6303400982300065,
+      "frozen": -0.6534426837179133
+    },
+    {
+      "domain": "EEHEE_rd3_0144",
+      "thermompnn_d": 0.4201620162016201,
+      "frozen": 0.11395139513951394
+    },
+    {
+      "domain": "EHEE_rd2_0152",
+      "thermompnn_d": -0.6853169197996783,
+      "frozen": -0.5982685224064533
+    },
+    {
+      "domain": "EHEE_rd2_0251",
+      "thermompnn_d": -0.470784428081942,
+      "frozen": 0.09781657796894364
+    },
+    {
+      "domain": "EHEE_rd2_0341",
+      "thermompnn_d": -0.8784042044911611,
+      "frozen": -0.6652810957158783
+    },
+    {
+      "domain": "EHEE_rd2_0487",
+      "thermompnn_d": -0.3085067873303167,
+      "frozen": -0.41846153846153844
+    },
+    {
+      "domain": "EHEE_rd2_0628",
+      "thermompnn_d": -0.8998315014008895,
+      "frozen": -0.7871627578910246
+    },
+    {
+      "domain": "EHEE_rd4_0929",
+      "thermompnn_d": -0.5698380504277816,
+      "frozen": -0.32895565004615857
+    },
+    {
+      "domain": "HEEH_KT_rd6_0280",
+      "thermompnn_d": -0.816201620162016,
+      "frozen": -0.42359435943594353
+    },
+    {
+      "domain": "HEEH_rd2_0750",
+      "thermompnn_d": 0.02583732057416268,
+      "frozen": 0.06706766917293233
+    },
+    {
+      "domain": "HHH_rd1_0244",
+      "thermompnn_d": -0.8501422387136672,
+      "frozen": -0.7307854050711192
+    },
+    {
+      "domain": "HHH_rd1_0493",
+      "thermompnn_d": -0.7318379836116585,
+      "frozen": -0.4629854068760821
+    },
+    {
+      "domain": "HHH_rd1_0949",
+      "thermompnn_d": -0.6894619390032234,
+      "frozen": -0.31186799810653026
+    },
+    {
+      "domain": "HHH_rd2_0158",
+      "thermompnn_d": -0.7956187010078388,
+      "frozen": -0.6575307950727883
+    },
+    {
+      "domain": "HHH_rd3_0159",
+      "thermompnn_d": -0.2310727247436108,
+      "frozen": -0.6143097408920193
+    },
+    {
+      "domain": "HHH_rd3_0164",
+      "thermompnn_d": -0.47574525745257445,
+      "frozen": -0.4846883468834689
+    },
+    {
+      "domain": "HHH_rd3_0224",
+      "thermompnn_d": -0.7205372362311174,
+      "frozen": -0.4026822625835146
+    },
+    {
+      "domain": "HHH_rd4_0125",
+      "thermompnn_d": -0.42473461569159554,
+      "frozen": -0.4540266581530849
+    },
+    {
+      "domain": "HHH_rd4_0676",
+      "thermompnn_d": -0.9071708251164652,
+      "frozen": -0.8402069221755408
+    }
+  ]
+}

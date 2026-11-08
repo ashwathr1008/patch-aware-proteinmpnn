@@ -29,6 +29,16 @@ first-order term.
 **There is room.** The measurement-noise ceiling is **0.98**, so roughly **0.50 of correlation
 remains unexplained**. The target is not a sliver.
 
+**Part of the frozen model's 0.497 is native-sequence recognition, not arrangement.** Splitting
+the resolved contrasts by whether both arrangements are genuine double mutants, the frozen model
+reaches **−0.672** on the 14,776 contrasts where one arrangement restores a wild-type residue
+and only **−0.423** on the 54,857 where neither does. ProteinMPNN is trained to recover native
+sequence, so it prefers the arrangement containing a wild-type residue strongly, and the
+measurement usually agrees because wild type is usually more stable. Composition is matched
+inside every contrast, so this is not a composition artefact, but it is a nativeness one.
+**The double-mutant subset is the honest measure of arrangement sensitivity**, and the number to
+beat there is −0.423 rather than −0.497.
+
 Two consequences for the design. The head trained on these contrasts has **real labels**, so it
 is a stability head and may be called one; the naming problem in the original proposal applied
 to permutation-derived labels and does not apply here. And the fine-tuning gate, which the plan
@@ -160,21 +170,32 @@ Each falsifies a specific way the result could be hollow. None is optional.
 | Frozen ProteinMPNN, full model | The scorer adding nothing | **−0.497 per-domain median** |
 | Frozen ProteinMPNN, first-order | Crediting the joint term wrongly | −0.448 |
 | SAP surrogate | Re-deriving a closed-form statistic | measured on the same contrasts |
-| ThermoMPNN-D (published) | A trained head on these features already doing better | to be measured; **read the caveat in Next steps** |
+| ThermoMPNN-D (published) | A trained head on these features already doing better | **−0.501** on double-mutant contrasts, where frozen reaches −0.423; an upper bound, see the caveat |
 
 The composition control is the cheapest and should run whenever the dataset changes:
 composition is identical within every contrast, so it is a guaranteed null.
 
 ## Success criteria, declared in advance
 
-**Primary.** On held-out clusters, per-domain median Spearman against measured ΔΔG exceeds the
-frozen full model's **−0.497**, tested paired across domains, with the same sign test used for
-the baseline comparison.
+**Primary.** On held-out clusters, per-domain median Spearman against measured ΔΔG, tested
+paired across domains with the same sign test used for the baseline comparison. **The comparator
+must be computed on the same contrast subset as the scorer**, never quoted from a run over a
+different one: restricting to double mutants moved the frozen baseline by 0.074, so a
+mismatched comparison would manufacture or hide an effect of that size.
 
-**What counts as meaningful.** The joint term is worth about +0.03 to +0.05 over the first-order
-term. A scorer that adds less than the model's own joint term adds little. A reasonable target
-is **−0.55 or better**, which would roughly double the joint term's contribution while leaving
-most of the 0.50 headroom still open.
+Three numbers bound the problem, all on resolved double-mutant contrasts:
+
+| | Per-domain median |
+| --- | ---: |
+| Frozen ProteinMPNN, full model | −0.423 |
+| ThermoMPNN-D (published, trained on this data) | −0.501 |
+| Measurement-noise ceiling | ~0.98 |
+
+**What counts as meaningful.** Beating −0.423 is the minimum, and it is a weaker bar than it
+looks, because ThermoMPNN-D already clears it by 0.078 with a light head on the same frozen
+features. The real target is **−0.501 or better**, which would match a published model trained
+on this dataset. Beating it would be a genuine result, though only once ThermoMPNN-D's training
+split is known, since any domain it trained on makes its score an upper bound.
 
 **Reporting rule.** Improving a score the model was trained on is expected by construction. The
 held-out cluster result is the claim; everything else is diagnostic.
@@ -293,13 +314,20 @@ The most likely single outcome, and the decomposition says why: 89% of the pilot
 first-order burial and only 11% joint structure. There may simply not be much left for a
 patch-level objective to extract.
 
-**ThermoMPNN-D's result selects the route**, which is the main reason to run it first.
+**ThermoMPNN-D has now been run, and it selects route A or B.** On the 54,857 resolved
+double-mutant contrasts it reaches a per-domain median of **−0.501** against the frozen model's
+**−0.423** on the identical set, stronger in 137 of 198 domains, sign test p = 6.9 × 10⁻⁸.
 
-| What ThermoMPNN-D scores | What it implies | Route |
-| --- | --- | ---: |
-| Well above −0.497 | The information is in the frozen features; our gap is capacity or training | A, then B |
-| Near −0.497 | A trained head on these features saturates about here | C |
-| Below −0.497 | Composition-matched swaps are a different task from the one it was trained for | C or D |
+A light trained head on frozen ProteinMPNN features therefore extracts substantially more
+arrangement signal than the frozen likelihood does. That is the encouraging reading for this
+project: the information is present in the representation and a small supervised readout can
+reach it, which is precisely the architecture proposed here. It also rules out route C as a
+first move, since the representation is demonstrably not the binding constraint.
+
+The caveat is load-bearing rather than decorative. ThermoMPNN-D trained on this dataset, and
+until `mega_splits.pkl` is obtained we cannot say how much of that 137-of-198 is generalisation.
+**Retrieving that split file is now the highest-value small task in the plan**, because it
+decides whether −0.501 is a target or a mirage.
 
 **Route A — unfreeze the top of the decoder.** Train the last decoder layer with the head,
 everything below frozen. The gate the plan held shut is open now that the target is measured
