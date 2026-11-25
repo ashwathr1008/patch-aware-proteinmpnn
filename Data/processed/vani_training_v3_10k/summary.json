@@ -1,0 +1,26 @@
+{
+  "status": "prepared_and_loader_validated_not_trained",
+  "version": "vani_training_v3_10k",
+  "source_manifest_sha256": "98da33cf425a1ba849a00ef4eaddeb4babd77a7f48e82b262874fcc5030af234",
+  "manifest_sha256": "44d282ee58774a8322f1286b5247cc060c7f65d85806357763f525975d22b1a1",
+  "seed": 137,
+  "total_pairs": 10000,
+  "composition_preserving_pairs": 10000,
+  "pair_counts": {
+    "train": 7000,
+    "validation": 1500,
+    "test": 1500
+  },
+  "parents": 146,
+  "parent_counts": {
+    "train": 95,
+    "test": 23,
+    "validation": 28
+  },
+  "groups": 84,
+  "measurement_records": 19963,
+  "source_labels_and_records_unchanged": true,
+  "source_parent_and_group_assignments_unchanged": true,
+  "selection": "subsample inside existing partitions; no random pair-level repartitioning",
+  "homology_limitations": "sequence-similarity guard; remote homology below threshold is not certified absent"
+}

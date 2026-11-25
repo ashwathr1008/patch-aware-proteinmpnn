@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "train_reference_variant": 206738,
+    "test_reference_variant": 50167,
+    "validation_reference_variant": 49596,
+    "total_pairs": 306501,
+    "composition_preserving_pairs": 0
+  },
+  "manifest_sha256": "791ab3d5d4a598cb749abc15f03a285a7e56e0f3bec8bf8664a4d4756598bc50"
+}

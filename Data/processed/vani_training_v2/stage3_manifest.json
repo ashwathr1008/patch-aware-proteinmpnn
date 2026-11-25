@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "train_reference_variant": 269163,
+    "test_reference_variant": 73882,
+    "train_measured_swap": 29467,
+    "test_measured_swap": 11653,
+    "validation_reference_variant": 71174,
+    "validation_measured_swap": 10486,
+    "total_pairs": 465825,
+    "composition_preserving_pairs": 51898
+  },
+  "manifest_sha256": "9452bbbd86ccf714afd1add30e0868b78707644c890aa896f40698664bc6a8c4"
+}

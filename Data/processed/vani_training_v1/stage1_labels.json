@@ -1,0 +1,23 @@
+{
+  "policy": {
+    "version": "megascale_supervised_v1",
+    "source_filter": "require finite numeric dG_ML AND ddG_ML; never recover filtered labels from raw deltaG",
+    "sequence_filter": "canonical aa_seq; one/two substitutions verified against WT sequence and mutation name",
+    "replicates": "arithmetic mean dG_ML per WT_name/aa_seq; retain every row/name and replicate spread",
+    "reference": "unique WT sequence with at least one accepted measured WT row",
+    "target": "mean measured dG_ML(reference) - mean measured dG_ML(variant)",
+    "units": "kcal/mol",
+    "sign_convention": "positive_destabilizing",
+    "uncertainty": "retain source intervals; no significance-based target filtering or calibrated error claims",
+    "structures": "released AlphaFold models, exact full-chain sequence and complete N/CA/C/O; no gaps or insertions"
+  },
+  "counts": {
+    "source_rows": 776298,
+    "excluded_filtered_censored_or_nonfinite": 168459,
+    "excluded_mutation_annotation_or_not_single_double": 153638,
+    "accepted_source_rows": 454201,
+    "consolidated_sequences": 446159,
+    "parents_with_measured_reference": 412
+  },
+  "rejected_parents": []
+}

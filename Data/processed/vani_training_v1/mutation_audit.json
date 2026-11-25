@@ -1,0 +1,281 @@
+{
+  "counts": {
+    "filtered_source_substitutions_1": 405460,
+    "filtered_source_substitutions_None": 56305,
+    "filtered_source_substitutions_2": 142227,
+    "filtered_source_substitutions_3": 20,
+    "filtered_source_substitutions_4": 23,
+    "filtered_source_substitutions_5": 20,
+    "filtered_source_substitutions_6": 19,
+    "filtered_source_substitutions_7": 20,
+    "filtered_source_substitutions_8": 19,
+    "filtered_source_substitutions_9": 24,
+    "filtered_source_substitutions_10": 15,
+    "filtered_source_substitutions_11": 22,
+    "filtered_source_substitutions_12": 18,
+    "filtered_source_substitutions_13": 21,
+    "filtered_source_substitutions_14": 20,
+    "filtered_source_substitutions_15": 19,
+    "filtered_source_substitutions_16": 20,
+    "filtered_source_substitutions_17": 20,
+    "filtered_source_substitutions_18": 23,
+    "filtered_source_substitutions_19": 21,
+    "filtered_source_substitutions_20": 17,
+    "filtered_source_substitutions_21": 23,
+    "filtered_source_substitutions_22": 18,
+    "filtered_source_substitutions_23": 20,
+    "filtered_source_substitutions_24": 20,
+    "filtered_source_substitutions_25": 23,
+    "filtered_source_substitutions_26": 22,
+    "filtered_source_substitutions_27": 22,
+    "filtered_source_substitutions_28": 18,
+    "filtered_source_substitutions_29": 22,
+    "filtered_source_substitutions_30": 19,
+    "filtered_source_substitutions_31": 24,
+    "filtered_source_substitutions_32": 22,
+    "filtered_source_substitutions_33": 18,
+    "filtered_source_substitutions_34": 27,
+    "filtered_source_substitutions_35": 13,
+    "filtered_source_substitutions_36": 21,
+    "filtered_source_substitutions_37": 24,
+    "filtered_source_substitutions_38": 22,
+    "filtered_source_substitutions_39": 28,
+    "filtered_source_substitutions_40": 18,
+    "filtered_source_substitutions_41": 21,
+    "filtered_source_substitutions_42": 21,
+    "filtered_source_substitutions_43": 24,
+    "filtered_source_substitutions_44": 21,
+    "filtered_source_substitutions_45": 16,
+    "filtered_source_substitutions_46": 18,
+    "filtered_source_substitutions_47": 17,
+    "filtered_source_substitutions_48": 18,
+    "filtered_source_substitutions_49": 21,
+    "filtered_source_substitutions_50": 25,
+    "filtered_source_substitutions_51": 17,
+    "filtered_source_substitutions_52": 21,
+    "filtered_source_substitutions_53": 20,
+    "filtered_source_substitutions_54": 21,
+    "filtered_source_substitutions_55": 18,
+    "filtered_source_substitutions_56": 20,
+    "filtered_source_substitutions_57": 18,
+    "filtered_source_substitutions_58": 17,
+    "filtered_source_substitutions_59": 21,
+    "filtered_source_substitutions_60": 18,
+    "filtered_source_substitutions_61": 19,
+    "filtered_source_substitutions_62": 21,
+    "filtered_source_substitutions_63": 19,
+    "filtered_source_substitutions_64": 20,
+    "filtered_source_substitutions_65": 18,
+    "filtered_source_substitutions_66": 16,
+    "filtered_source_substitutions_67": 15,
+    "filtered_source_substitutions_68": 16,
+    "filtered_source_substitutions_69": 15,
+    "filtered_source_substitutions_70": 10,
+    "filtered_source_substitutions_71": 2,
+    "filtered_source_substitutions_0": 476,
+    "accepted_substitutions_1": 389348,
+    "accepted_substitutions_0": 412,
+    "accepted_substitutions_2": 56399
+  },
+  "double_mutant_examples": [
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27Q",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "Q"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27E",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27N",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "N"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27H",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "H"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27D",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "D"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27R",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "R"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27K",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "K"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27T",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "T"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27S",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "S"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27G",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "G"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27M",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "M"
+        ]
+      ],
+      "annotation_valid": false
+    },
+    {
+      "parent": "1E0L.pdb",
+      "name": "1E0L.pdb_hnet0_T25Q:E27L",
+      "changes": [
+        [
+          25,
+          "T",
+          "Q"
+        ],
+        [
+          27,
+          "E",
+          "L"
+        ]
+      ],
+      "annotation_valid": false
+    }
+  ]
+}
