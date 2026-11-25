@@ -1,0 +1,16 @@
+{
+  "data": "Data/processed/vani_training_v3_10k/stability_pairs.json",
+  "mpnn_dir": "Runs/vendor/ProteinMPNN",
+  "checkpoint": "Runs/vendor/ProteinMPNN/vanilla_model_weights/v_48_020.pt",
+  "output": "Results/stability-head-swaps-v3-10k",
+  "cache_dir": "Data/cache/stability_features",
+  "device": "cpu",
+  "epochs": 30,
+  "orders": 8,
+  "batch_size": 64,
+  "feature_batch_size": 8,
+  "hidden_width": 64,
+  "seed": 137,
+  "lr": 0.001,
+  "threads": 12
+}

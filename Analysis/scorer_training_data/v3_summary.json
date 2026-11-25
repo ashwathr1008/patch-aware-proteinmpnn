@@ -1,0 +1,28 @@
+{
+  "status": "prepared_and_loader_validated_not_trained",
+  "version": "vani_training_v3",
+  "source_manifest_sha256": "9452bbbd86ccf714afd1add30e0868b78707644c890aa896f40698664bc6a8c4",
+  "source_pairs": 465825,
+  "total_pairs": 51898,
+  "composition_preserving_pairs": 51898,
+  "excluded_non_swaps": 413927,
+  "pair_counts": {
+    "train": 29631,
+    "test": 11719,
+    "validation": 10548
+  },
+  "pair_kinds": {
+    "reference_variant": 292,
+    "measured_swap": 51606
+  },
+  "parents": 148,
+  "parent_counts": {
+    "train": 96,
+    "test": 23,
+    "validation": 29
+  },
+  "groups": 84,
+  "split_assignment": "inherited unchanged from v2",
+  "manifest_sha256": "98da33cf425a1ba849a00ef4eaddeb4babd77a7f48e82b262874fcc5030af234",
+  "measurement_records": 103094
+}

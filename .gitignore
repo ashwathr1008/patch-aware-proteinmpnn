@@ -1,8 +1,8 @@
 # Downloaded inputs, model weights, runs, and machine-specific output
 /Runs/
 /Results/
-/Data/raw/
-/Data/processed/
+# /Data/raw/
+# /Data/processed/
 /Data/cache/
 /Papers/*.pdf
 *.pt
@@ -48,3 +48,7 @@ Thumbs.db
 *.toc
 /Documentation/CMU_LTI_Paper_Template__2025_10_8_/CMU_LTI_Paper_Template__2025_10_8_.pdf
 /Documentation/CMU_LTI_Paper_Template__2025_10_8_/main.pdf
+
+/Data/raw/
+/Data/processed/
+/Data/cache/

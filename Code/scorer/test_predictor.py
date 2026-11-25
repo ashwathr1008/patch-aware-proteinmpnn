@@ -156,15 +156,22 @@ class PredictorTests(unittest.TestCase):
                               "variant_sequence": "CADE", "target": 1., "split": split, "is_swap": True})
             raw = {"homology": {"method": "test"}, "parents": list(parents.values())}
             args = SimpleNamespace(data=root / "data.json", checkpoint=root / "checkpoint.pt", mpnn_dir=root,
-                                   device="cpu", seed=7, hidden_width=12, lr=0.01, orders=2, epochs=2, output=root / "run")
+                                   device="cpu", seed=7, hidden_width=12, lr=0.01, orders=2, epochs=2, output=root / "run",
+                                   cache_dir=root / "cache", batch_size=2, feature_batch_size=2)
             with patch.object(train, "load_dataset", return_value=(raw, parents, pairs)), patch.object(
                     train, "load_backbone", return_value=(self.extractor, None)):
                 train.run(args)
                 extractor, head, config = train.load_predictor(args.output / "head.pt", root, args.checkpoint)
+                report = json.loads((args.output / "test_metrics.json").read_text())
+                self.assertTrue((args.output / "splits.json").exists())
+                args.output = root / "cache-only-output"
+                args.precache_only = True
+                train.run(args)
+                self.assertFalse(args.output.exists())
+                with patch.object(self.extractor, "forward", side_effect=AssertionError("Warm cache unexpectedly extracted features")):
+                    train.run(args)
             self.assertEqual(config["backbone_digest_before"], config["backbone_digest_after"])
             self.assertTrue(config["head_nonzero_gradient_verified"])
-            self.assertTrue((args.output / "splits.json").exists())
-            report = json.loads((args.output / "test_metrics.json").read_text())
             self.assertEqual(report["composition_preserving_swaps"]["count"], 1)
 
 
