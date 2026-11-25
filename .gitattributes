@@ -21,3 +21,6 @@ Analysis/paired_*/** -text whitespace=cr-at-eol
 *.pdf binary
 *.docx binary
 *.png binary
+Data/processed/**/*.sqlite filter=lfs diff=lfs merge=lfs -text
+Data/processed/**/stability_pairs.json filter=lfs diff=lfs merge=lfs -text
+Data/raw/**/*.zip filter=lfs diff=lfs merge=lfs -text
