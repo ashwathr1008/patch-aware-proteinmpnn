@@ -1,0 +1,645 @@
+{
+  "v3_parents": 148,
+  "hssp_domains": 208,
+  "exact_string_overlap": 0,
+  "matched": 140,
+  "unmatched": [
+    "1WR4.pdb",
+    "1ZHC.pdb",
+    "2K9D.pdb",
+    "2LCL.pdb",
+    "2M9E.pdb",
+    "5OAO.pdb",
+    "EHEE_rd2_1106.pdb",
+    "HHH_rd4_0395.pdb"
+  ],
+  "hssp_families_touched": 64,
+  "hssp_families_total": 84,
+  "family_coverage": [
+    {
+      "family": "1A0N",
+      "v3_members": 28,
+      "family_size": 35,
+      "covered": 0.8
+    },
+    {
+      "family": "1E0L",
+      "v3_members": 13,
+      "family_size": 16,
+      "covered": 0.812
+    },
+    {
+      "family": "1ENH",
+      "v3_members": 7,
+      "family_size": 7,
+      "covered": 1.0
+    },
+    {
+      "family": "1VII",
+      "v3_members": 5,
+      "family_size": 5,
+      "covered": 1.0
+    },
+    {
+      "family": "1W4F",
+      "v3_members": 5,
+      "family_size": 6,
+      "covered": 0.833
+    },
+    {
+      "family": "2AMI",
+      "v3_members": 4,
+      "family_size": 4,
+      "covered": 1.0
+    },
+    {
+      "family": "2K1B",
+      "v3_members": 4,
+      "family_size": 4,
+      "covered": 1.0
+    },
+    {
+      "family": "2LGW",
+      "v3_members": 4,
+      "family_size": 4,
+      "covered": 1.0
+    },
+    {
+      "family": "1EM7",
+      "v3_members": 3,
+      "family_size": 11,
+      "covered": 0.273
+    },
+    {
+      "family": "2LC2",
+      "v3_members": 3,
+      "family_size": 7,
+      "covered": 0.429
+    },
+    {
+      "family": "5UOI",
+      "v3_members": 3,
+      "family_size": 6,
+      "covered": 0.5
+    },
+    {
+      "family": "6EWS",
+      "v3_members": 3,
+      "family_size": 3,
+      "covered": 1.0
+    },
+    {
+      "family": "1CSQ",
+      "v3_members": 2,
+      "family_size": 5,
+      "covered": 0.4
+    },
+    {
+      "family": "1GXI",
+      "v3_members": 2,
+      "family_size": 3,
+      "covered": 0.667
+    },
+    {
+      "family": "2LVN",
+      "v3_members": 2,
+      "family_size": 2,
+      "covered": 1.0
+    },
+    {
+      "family": "2M2J",
+      "v3_members": 2,
+      "family_size": 2,
+      "covered": 1.0
+    },
+    {
+      "family": "2WQG",
+      "v3_members": 2,
+      "family_size": 2,
+      "covered": 1.0
+    },
+    {
+      "family": "5UP5",
+      "v3_members": 2,
+      "family_size": 4,
+      "covered": 0.5
+    },
+    {
+      "family": "1EKL",
+      "v3_members": 1,
+      "family_size": 10,
+      "covered": 0.1
+    },
+    {
+      "family": "1F0M",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "1GYZ",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "1I2T",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "1IFY",
+      "v3_members": 1,
+      "family_size": 2,
+      "covered": 0.5
+    },
+    {
+      "family": "1K1V",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "1LP1",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "1O6X",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "1ORC",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "1QKH",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "1R69",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "1V1C",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "1WCL",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2D1U",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2EXD",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2HBB",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2JN4",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2JT1",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2JTV",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2JVD",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2JZ2",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2K5P",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2KRU",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2KVS",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2KVT",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2KWH",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2L09",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2LHR",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2LQK",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2M8E",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2MCD",
+      "v3_members": 1,
+      "family_size": 2,
+      "covered": 0.5
+    },
+    {
+      "family": "2MI6",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2MKX",
+      "v3_members": 1,
+      "family_size": 2,
+      "covered": 0.5
+    },
+    {
+      "family": "2MKY",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2MXD",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2MYX",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "2RU9",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "3DKM",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "3L1X",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "4C26",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "5JRT",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "5KPH",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "6ACV",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "6M3N",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    },
+    {
+      "family": "HEEH_KT_rd6_0280",
+      "v3_members": 1,
+      "family_size": 2,
+      "covered": 0.5
+    },
+    {
+      "family": "HHH_rd4_0676",
+      "v3_members": 1,
+      "family_size": 1,
+      "covered": 1.0
+    }
+  ],
+  "v3_groups": 84,
+  "families_crossing_v3_groups": [
+    {
+      "family": "1A0N",
+      "v3_groups": [
+        "1E6H.pdb",
+        "1GL5.pdb",
+        "1TG0.pdb",
+        "1Y0M.pdb",
+        "1YP5.pdb",
+        "2KGT.pdb",
+        "2M0Y.pdb",
+        "2MC5.pdb",
+        "2O2W.pdb",
+        "3I35.pdb"
+      ],
+      "members": [
+        "1E6H.pdb",
+        "1GL5.pdb",
+        "1H8K.pdb",
+        "1H92.pdb",
+        "1PWT.pdb",
+        "1QKX.pdb",
+        "1QLY.pdb",
+        "1SRM.pdb",
+        "1TG0.pdb",
+        "1TUC.pdb",
+        "1TUD.pdb",
+        "1Y0M.pdb",
+        "1YP5.pdb",
+        "1ZLM.pdb",
+        "2BTT.pdb",
+        "2CDT.pdb",
+        "2KGT.pdb",
+        "2KXD.pdb",
+        "2L2P.pdb",
+        "2LJ3.pdb",
+        "2LP5.pdb",
+        "2M0Y.pdb",
+        "2MC5.pdb",
+        "2O2W.pdb",
+        "3I35.pdb",
+        "4HCK.pdb",
+        "6NMW.pdb",
+        "6SCW.pdb"
+      ]
+    },
+    {
+      "family": "1CSQ",
+      "v3_groups": [
+        "2K5N.pdb",
+        "2KCM.pdb"
+      ],
+      "members": [
+        "2K5N.pdb",
+        "2KCM.pdb"
+      ]
+    },
+    {
+      "family": "1ENH",
+      "v3_groups": [
+        "1ENH.pdb",
+        "2L9R.pdb"
+      ],
+      "members": [
+        "1ENH.pdb",
+        "2JWT.pdb",
+        "2L7F.pdb",
+        "2L7M.pdb",
+        "2L9R.pdb",
+        "2M0C.pdb",
+        "5Z2S.pdb"
+      ]
+    },
+    {
+      "family": "1W4F",
+      "v3_groups": [
+        "1W4F.pdb",
+        "1W4H.pdb"
+      ],
+      "members": [
+        "1W4F.pdb",
+        "1W4G.pdb",
+        "1W4H.pdb",
+        "2BTH.pdb",
+        "2WXC.pdb"
+      ]
+    },
+    {
+      "family": "2LC2",
+      "v3_groups": [
+        "2LC2.pdb",
+        "5UP5.pdb"
+      ],
+      "members": [
+        "2LC2.pdb",
+        "3ZGK.pdb",
+        "EHEE_rd2_0487.pdb"
+      ]
+    },
+    {
+      "family": "2M2J",
+      "v3_groups": [
+        "2M2J.pdb",
+        "2MA4.pdb"
+      ],
+      "members": [
+        "2M2J.pdb",
+        "2MA4.pdb"
+      ]
+    },
+    {
+      "family": "5UOI",
+      "v3_groups": [
+        "HHH_rd1_0142.pdb",
+        "HHH_rd1_0335.pdb",
+        "HHH_rd1_0949.pdb"
+      ],
+      "members": [
+        "HHH_rd1_0244.pdb",
+        "HHH_rd1_0493.pdb",
+        "HHH_rd1_0949.pdb"
+      ]
+    },
+    {
+      "family": "5UP5",
+      "v3_groups": [
+        "5UP5.pdb",
+        "EEHEE_rd3_0019.pdb"
+      ],
+      "members": [
+        "5UP5.pdb",
+        "EEHEE_rd3_0019.pdb"
+      ]
+    }
+  ],
+  "families_crossing_count": 8,
+  "families_crossing_v3_train_test": [
+    {
+      "family": "1A0N",
+      "splits": {
+        "test": [
+          "1YP5.pdb",
+          "2BTT.pdb",
+          "2M0Y.pdb",
+          "2O2W.pdb",
+          "3I35.pdb"
+        ],
+        "train": [
+          "1E6H.pdb",
+          "1GL5.pdb",
+          "1H8K.pdb",
+          "1H92.pdb",
+          "1PWT.pdb",
+          "1QKX.pdb",
+          "1QLY.pdb",
+          "1SRM.pdb",
+          "1TG0.pdb",
+          "1TUC.pdb",
+          "1TUD.pdb",
+          "1Y0M.pdb",
+          "1ZLM.pdb",
+          "2CDT.pdb",
+          "2KGT.pdb",
+          "2KXD.pdb",
+          "2L2P.pdb",
+          "2LJ3.pdb",
+          "2LP5.pdb",
+          "4HCK.pdb",
+          "6NMW.pdb",
+          "6SCW.pdb"
+        ],
+        "validation": [
+          "2MC5.pdb"
+        ]
+      },
+      "members": 28
+    },
+    {
+      "family": "1W4F",
+      "splits": {
+        "train": [
+          "1W4F.pdb",
+          "1W4G.pdb"
+        ],
+        "validation": [
+          "1W4H.pdb",
+          "2BTH.pdb",
+          "2WXC.pdb"
+        ]
+      },
+      "members": 5
+    },
+    {
+      "family": "2M2J",
+      "splits": {
+        "test": [
+          "2MA4.pdb"
+        ],
+        "validation": [
+          "2M2J.pdb"
+        ]
+      },
+      "members": 2
+    },
+    {
+      "family": "5UOI",
+      "splits": {
+        "test": [
+          "HHH_rd1_0949.pdb"
+        ],
+        "train": [
+          "HHH_rd1_0493.pdb"
+        ],
+        "validation": [
+          "HHH_rd1_0244.pdb"
+        ]
+      },
+      "members": 3
+    }
+  ],
+  "families_crossing_v3_train_test_count": 4,
+  "parents_in_leaking_families": 38,
+  "test_parents": 23,
+  "test_parents_sharing_a_family_with_train": [
+    "1YP5.pdb",
+    "2BTT.pdb",
+    "2M0Y.pdb",
+    "2O2W.pdb",
+    "3I35.pdb",
+    "HHH_rd1_0949.pdb"
+  ],
+  "test_contamination_fraction": 0.261,
+  "families_crossing_hssp_splits": [],
+  "partition_comparison": {
+    "v3_groups_over_matched_parents": 80,
+    "hssp_families_over_matched_parents": 64,
+    "v3_groups_spanning_multiple_hssp_families": 1,
+    "hssp_families_spanning_multiple_v3_groups": 8,
+    "identical_partitions": false
+  }
+}
